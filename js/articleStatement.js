@@ -58,9 +58,9 @@ $(document).ready(function() {
     if (articleAuthor != undefined && articleSource != undefined) {
         bottom_html += '<a href="' + articleSource + '" target="_blank">' + articleAuthor + '</a></span></strong> <br>';
         bottom_html += '<span style="font-weight: bold; white-space:nowrap;">出　　处</span>：<a href="' + articleSource + '" target="_blank">' + articleSource + '</a>';
-    } else if (window.location.href.search("www.cnblogs.com/wangyang0210") != -1) {
-        bottom_html += '<a href="https://www.cnblogs.com/wangyang0210" target="_blank">BNDong</a></span></strong> <br>';
-        bottom_html += '<span style="font-weight: bold; white-space:nowrap;">出　　处</span>：<a href="https://www.cnblogs.com/wangyang0210" target="_blank">https://www.cnblogs.com/wangyang0210</a>';
+    } else if (window.location.href.search("www.cnblogs.com/bndong") != -1) {
+        bottom_html += '<a href="http://www.cnblogs.com/bndong/" target="_blank">BNDong</a></span></strong> <br>';
+        bottom_html += '<span style="font-weight: bold; white-space:nowrap;">出　　处</span>：<a href="http://www.cnblogs.com/bndong/" target="_blank">http://www.cnblogs.com/bndong/</a>';
     } else {
         var str = window.cnblogsConfig.blogUser;
         var homeUrl = tmp;
@@ -75,7 +75,7 @@ $(document).ready(function() {
     if (window.cnblogsConfig.essaySuffix.aboutHtml != "") {
         bottom_html += '<span style="font-weight: bold; white-space:nowrap;">关于博主</span>：' + window.cnblogsConfig.essaySuffix.aboutHtml;
     } else {
-        bottom_html += '<span style="font-weight: bold; white-space:nowrap;">关于博主</span>：一个在编程路上不断求学之人,有问题大家可以在文章下评论或者<a href="http://msg.cnblogs.com/msg/send/' + tmp[3] + '" target="_blank">直接私信</a>我,我会第一时间进行回复';
+        bottom_html += '<span style="font-weight: bold; white-space:nowrap;">关于博主</span>：一个在编程路上不断求学之人,有问题大家可以在文章下评论或者<a href="http://msg.cnblogs.com/msg/send/' + tmp[3] + '" target="_blank">直接私信</a>我。我会在第一时间回复';
     }
     bottom_html += '<br>';
     if (window.cnblogsConfig.essaySuffix.copyrightHtml != "") {

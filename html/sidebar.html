@@ -15,11 +15,11 @@
             <div class="nav-title"></div>
             <div class="icon-list">
                 <ul>
-                    <li><a href="https://www.cnblogs.com/wangyang0210/" target="_self">首页</a></li>
-                    <li><a href="https://msg.cnblogs.com/send/wangyang0210" target="_blank">联系</a></li>
-                    <li><a href="https://www.cnblogs.com/wangyang0210/rss" target="_blank">订阅</a></li>
+                    <li><a href="https://www.cnblogs.com/bndong/" target="_self">首页</a></li>
+                    <li><a href="https://msg.cnblogs.com/send/BNDong" target="_blank">联系</a></li>
+                    <li><a href="https://www.cnblogs.com/bndong/rss" target="_blank">订阅</a></li>
                     <li><a href="https://i.cnblogs.com/" target="_blank">管理</a></li>
-                    <li><a href="https://github.com/wangyang0210" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/BNDong" target="_blank">GitHub</a></li>
                     <li><a href="https://www.cnblogs.com/" target="_blank">CNBlogs</a></li>
                 </ul>
             </div>
@@ -57,8 +57,7 @@
         </div>
     </div>
     <button class="menu-button" id="open-button">MENU</button>
-    <div class="content-wrap" id="content-wrap"></div>
-    <!-- /content-wrap -->
+    <div class="content-wrap" id="content-wrap"></div><!-- /content-wrap -->
 </div>
 <!-- menu html end -->
 
@@ -81,33 +80,40 @@
 
 <!-- global var -->
 <script type="text/javascript">
+
+    /*!
+     * UPDATES AND DOCS AT: https://github.com/BNDong
+     * https://www.cnblogs.com/bndong/
+     * @author: BNDong, dbnuo@foxmail.com
+     **/
+
     /**
      * 博客全局配置，请仔细配置！！
      */
     window.cnblogsConfig = {
 
         // ---- GitHub文件源配置 ----
-        GhUserName: 'wangyang0210', // GitHub用户名(不是昵称)，注意大小写
+        GhUserName: 'BNDong', // GitHub用户名(不是昵称)，注意大小写
         GhRepositories: 'Cnblogs-Theme-SimpleMemory', // GitHub主题仓库名称
-        GhVersions: '8737d28d244af5227cfd10863cef0c72c4fa25a3', // GitHub提交版本哈希值，根据版本加载代码，我有时候会提交代码进行调试，大家最好加载我仓库代码此处的版本 https://github.com/wangyang0210/Cnblogs-Theme-SimpleMemory/commits/master
+        GhVersions : '3ca05b6fb5d6a2d036a2e7958b0fb8b7e7f01b66', // GitHub提交版本哈希值，根据版本加载代码，我有时候会提交代码进行调试，大家最好加载我仓库代码此处的版本 https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/commits/master
 
         // ---- 基础信息配置 ----
-        blogUser: "wangyang0210", // 博主名称，文章后缀和主页图片上都会使用此名称
-        blogAvatar: "https://pic.cnblogs.com/avatar/1065454/20161119225202.png", // 用户头像URL
-        blogStartDate: "2016-11-17", // 入园时间，年-月-日，入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
+        blogUser      : "BNDong", // 博主名称，文章后缀和主页图片上都会使用此名称
+        blogAvatar    : "https://pic.cnblogs.com/avatar/1065454/20161119225202.png", // 用户头像URL
+        blogStartDate : "2016-11-17", // 入园时间，年-月-日，入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
 
         // ---- 网站配置 ----
-        webpageTitleOnblur: "(◍´꒳`◍) Hi, wangyang0210", // 当前页失去焦点，页面title显示文字
-        webpageTitleOnblurTimeOut: 500, // 当前页失去焦点，页面title变化，延时时间，单位毫秒
-        webpageTitleFocus: "(*´∇｀*) 欢迎回来！", // 当前页获取焦点，页面title显示文字，显示后延时恢复原title
-        webpageTitleFocusTimeOut: 1000, // 当前页获取焦点，页面title变化，延时时间，单位毫秒
-        webpageIcon: "https://files.cnblogs.com/files/wangyang0210/blog_logo.gif", // 网站图标
+        webpageTitleOnblur        : "(◍´꒳`◍) Hi, BNDong", // 当前页失去焦点，页面title显示文字
+        webpageTitleOnblurTimeOut : 500, // 当前页失去焦点，页面title变化，延时时间，单位毫秒
+        webpageTitleFocus         : "(*´∇｀*) 欢迎回来！", // 当前页获取焦点，页面title显示文字，显示后延时恢复原title
+        webpageTitleFocusTimeOut  : 1000, // 当前页获取焦点，页面title变化，延时时间，单位毫秒
+        webpageIcon : "https://files.cnblogs.com/files/bndong/blog_logo.gif", // 网站图标
 
         // ---- 进度条配置 ----
         progressBar: {
-            id: 'top-progress-bar',
-            color: '#77b6ff',
-            height: '2px',
+            id      : 'top-progress-bar',
+            color   : '#77b6ff',
+            height  : '2px',
             duration: 0.2
         },
 
@@ -129,7 +135,7 @@
                     child: '#272633'
                 },
                 alwaysForward: true, // When false the spring will reverse normally.
-                restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
+                restAt: 0.5,         // A number from 0.1 to 0.9 || null for full rotation
                 renderBase: false
             }
         },
@@ -146,15 +152,15 @@
 
         essayTopAnimationRendered: true, // true || false ,是否渲染随笔页头图动效
         essayTopAnimation: { // 随笔页头图动效设置
-            triW: 14,
-            triH: 20,
-            neighbours: ["side", "top", "bottom"],
-            speedTrailAppear: .1,
-            speedTrailDisappear: .1,
-            speedTriOpen: 1,
-            trailMaxLength: 30,
-            trailIntervalCreation: 100,
-            delayBeforeDisappear: 2,
+            triW : 14,
+            triH : 20,
+            neighbours : ["side", "top", "bottom"],
+            speedTrailAppear : .1,
+            speedTrailDisappear : .1,
+            speedTriOpen : 1,
+            trailMaxLength : 30,
+            trailIntervalCreation : 100,
+            delayBeforeDisappear : 2,
             colors: [
                 '#96EDA6', '#5BC6A9',
                 '#38668C', '#374D84',
@@ -164,7 +170,7 @@
         },
 
         bgAnimationRendered: true, // true || false ,是否渲染背景动效
-        backgroundAnimation: { // 背景动效设置
+        backgroundAnimation : { // 背景动效设置
             colorSaturation: "60%",
             colorBrightness: "50%",
             colorAlpha: 0.5,
@@ -178,62 +184,61 @@
         },
 
         // ---- 主页配置 ----
-        homeTopImg: "https://raw.githubusercontent.com/wangyang0210/Cnblogs-Theme-SimpleMemory/master/img/home_top_bg.jpg", // 主页图片Url，推荐尺寸>= 1920*1080
+        homeTopImg    : [ // 主页图片Url，推荐尺寸>= 1920*1080，支持多张，每次刷新随机设置一张
+            "https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/home_top_bg.jpg"
+        ],
         homeBannerText: "", // 主页头图上的标语，设置此选项会固定显示文字，默认为空，自动获取一句。
 
         // ---- 随笔页配置 ----
         essayTopImg: "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-569548.png", // 随笔页图片Url
         essayCodeHighlightingType: 'cnblogs', // 代码主题插件类型：cnblogs || highlightjs || prettify
         essayCodeHighlighting: 'cnblogs', // 代码高亮主题，具体主题参考文档
-        essaySuffix: { // 随笔后缀处配置
-            aboutHtml: '', // 关于博主，不配置使用默认
+        essaySuffix:{ // 随笔后缀处配置
+            aboutHtml    : '', // 关于博主，不配置使用默认
             copyrightHtml: '', // 版权声明，不配置使用默认
-            supportHtml: '' // 声援博主，不配置使用默认
+            supportHtml  : ''  // 声援博主，不配置使用默认
         },
 
         // ---- 页脚配置 ----
         bottomBlogroll: [ // 友情链接，[[链接名,链接]....]
-            ["申请坑位", 'https://msg.cnblogs.com/send/wangyang0210'],
-            ["申请坑位", 'https://msg.cnblogs.com/send/wangyang0210'],
-            ["申请坑位", 'https://msg.cnblogs.com/send/wangyang0210'],
-            ["申请坑位", 'https://msg.cnblogs.com/send/wangyang0210'],
-            ["申请坑位", 'https://msg.cnblogs.com/send/wangyang0210'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
         ],
-        bottomText: { // 页脚标语
+        bottomText: {  // 页脚标语
             icon: "❤️", // 图标
-            left: "学无止境", // 图标左侧文字
-            right: "谦卑而行" // 图标右侧文字
+            left : "事实并非理所当然", // 图标左侧文字
+            right: "世界总是欲盖弥彰"  // 图标右侧文字
         },
 
         // ---- 控制台输出 ----
         consoleList: [
-            ['wangyang0210 CNBlogs', 'https://www.cnblogs.com/wangyang0210'],
-            ['wangyang0210 GitHub', 'https://github.com/wangyang0210'],
-            ['wangyang0210 Email', '2752154874@qq.com']
+            ['BNDong CNBlogs', 'https://www.cnblogs.com/bndong'],
+            ['BNDong GitHub', 'https://github.com/BNDong'],
+            ['BNDong Email', 'dbuo@foxmail.com']
         ],
         themeAuthor: true // 是否显示主题作者（原谅我的臭屁，O(∩_∩)O哈哈~）
     };
 
     // start cache
-    $.ajaxSetup({
-        cache: true
-    });
+    $.ajaxSetup({cache: true});
 
     // load loadingJs
-    $.getScript(getJsDelivrUrl('loading.js'), function() {
+    $.getScript(getJsDelivrUrl('loading.js'), function () {
 
         // Loading start
         pageLoading.initRebound();
         pageLoading.initSpinner();
         pageLoading.spinner.init(pageLoading.spring, true);
 
-        $.getScript(getJsDelivrUrl('jquery.mCustomScrollbar.min.js'), function() {
-            $.getScript(getJsDelivrUrl('require.min.js'), function() {
-                $.getScript(getJsDelivrUrl('config.js'), function() {
+        $.getScript(getJsDelivrUrl('jquery.mCustomScrollbar.min.js'), function () {
+            $.getScript(getJsDelivrUrl('require.min.js'), function () {
+                $.getScript(getJsDelivrUrl('config.js'), function () {
                     var staticResource = [
                         'optiscroll', 'ToProgress', 'rotate',
-                        'snapSvg', 'classie', 'main4', 'tools'
-                    ];
+                        'snapSvg', 'classie', 'main4', 'tools'];
                     require(staticResource, function() {
                         require(['base'], function() {
                             (new Base).init();
@@ -247,18 +252,15 @@
     // get file url
     function getJsDelivrUrl(file, directory) {
         file = setFileNameMin(file, directory);
-        return 'https://cdn.jsdelivr.net/gh/' + (window.cnblogsConfig.GhUserName) + '/' + (window.cnblogsConfig.GhRepositories) + '@' + (window.cnblogsConfig.GhVersions) + '/' + (file ? file : '');
+        return 'https://cdn.jsdelivr.net/gh/'+(window.cnblogsConfig.GhUserName)+'/'+(window.cnblogsConfig.GhRepositories)+'@'+(window.cnblogsConfig.GhVersions)+'/' + (file ? file : '');
     }
 
     // optimization file name
     function setFileNameMin(file, directory) {
         if (typeof file == 'undefined') return '';
-        var suffix = null,
-            fileArr = file.split('.');
-        if (fileArr.length > 0 && $.inArray(fileArr[(fileArr.length - 1)], ['js', 'css']) != -1) {
-            suffix = fileArr.pop();
-            directory = suffix;
-        }
+        var suffix  = null,fileArr = file.split('.');
+        if (fileArr.length > 0 && $.inArray(fileArr[(fileArr.length -1)], ['js', 'css']) != -1)
+            {suffix    = fileArr.pop(); directory = suffix;}
         file.search('.min') == -1 && fileArr.push('min');
         suffix != null && fileArr.push(suffix);
         return (typeof directory !== 'undefined' ? (directory + '/' + fileArr.join('.')) : (fileArr.join('.')));

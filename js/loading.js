@@ -1,8 +1,129 @@
 'use strict';
 
+// Rebound
+// =======
+// **Rebound** is a simple library that models Spring dynamics for the
+// purpose of driving physical animations.
+//
+// Origin
+// ------
+// [Rebound](http://facebook.github.io/rebound) was originally written
+// in Java to provide a lightweight physics system for
+// [Home](https://play.google.com/store/apps/details?id=com.facebook.home) and
+// [Chat Heads](https://play.google.com/store/apps/details?id=com.facebook.orca)
+// on Android. It's now been adopted by several other Android
+// applications. This JavaScript port was written to provide a quick
+// way to demonstrate Rebound animations on the web for a
+// [conference talk](https://www.youtube.com/watch?v=s5kNm-DgyjY). Since then
+// the JavaScript version has been used to build some really nice interfaces.
+// Check out [brandonwalkin.com](http://brandonwalkin.com) for an
+// example.
+//
+// Overview
+// --------
+// The Library provides a SpringSystem for maintaining a set of Spring
+// objects and iterating those Springs through a physics solver loop
+// until equilibrium is achieved. The Spring class is the basic
+// animation driver provided by Rebound. By attaching a listener to
+// a Spring, you can observe its motion. The observer function is
+// notified of position changes on the spring as it solves for
+// equilibrium. These position updates can be mapped to an animation
+// range to drive animated property updates on your user interface
+// elements (translation, rotation, scale, etc).
+//
+// Example
+// -------
+// Here's a simple example. Pressing and releasing on the logo below
+// will cause it to scale up and down with a springy animation.
+//
+// <div style="text-align:center; margin-bottom:50px; margin-top:50px">
+//   <img
+//     src="http://facebook.github.io/rebound/images/rebound.png"
+//     id="logo"
+//   />
+// </div>
+// <script src="../rebound.min.js"></script>
+// <script>
+//
+// function scale(el, val) {
+//   el.style.mozTransform =
+//   el.style.msTransform =
+//   el.style.webkitTransform =
+//   el.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+// }
+// var el = document.getElementById('logo');
+//
+// var springSystem = new rebound.SpringSystem();
+// var spring = springSystem.createSpring(50, 3);
+// spring.addListener({
+//   onSpringUpdate: function(spring) {
+//     var val = spring.getCurrentValue();
+//     val = rebound.MathUtil.mapValueInRange(val, 0, 1, 1, 0.5);
+//     scale(el, val);
+//   }
+// });
+//
+// el.addEventListener('mousedown', function() {
+//   spring.setEndValue(1);
+// });
+//
+// el.addEventListener('mouseout', function() {
+//   spring.setEndValue(0);
+// });
+//
+// el.addEventListener('mouseup', function() {
+//   spring.setEndValue(0);
+// });
+//
+// </script>
+//
+// Here's how it works.
+//
+// ```
+// // Get a reference to the logo element.
+// var el = document.getElementById('logo');
+//
+// // create a SpringSystem and a Spring with a bouncy config.
+// var springSystem = new rebound.SpringSystem();
+// var spring = springSystem.createSpring(50, 3);
+//
+// // Add a listener to the spring. Every time the physics
+// // solver updates the Spring's value onSpringUpdate will
+// // be called.
+// spring.addListener({
+//   onSpringUpdate: function(spring) {
+//     var val = spring.getCurrentValue();
+//     val = rebound.MathUtil
+//                  .mapValueInRange(val, 0, 1, 1, 0.5);
+//     scale(el, val);
+//   }
+// });
+//
+// // Listen for mouse down/up/out and toggle the
+// //springs endValue from 0 to 1.
+// el.addEventListener('mousedown', function() {
+//   spring.setEndValue(1);
+// });
+//
+// el.addEventListener('mouseout', function() {
+//   spring.setEndValue(0);
+// });
+//
+// el.addEventListener('mouseup', function() {
+//   spring.setEndValue(0);
+// });
+//
+// // Helper for scaling an element with css transforms.
+// function scale(el, val) {
+//   el.style.mozTransform =
+//   el.style.msTransform =
+//   el.style.webkitTransform =
+//   el.style.transform = 'scale3d(' +
+//     val + ', ' + val + ', 1)';
+// }
+// ```
 
-
-(function() {
+(function () {
     var rebound = {};
     var util = rebound.util = {};
     var concat = Array.prototype.concat;
@@ -11,7 +132,7 @@
     // Bind a function to a context object.
     util.bind = function bind(func, context) {
         var args = slice.call(arguments, 2);
-        return function() {
+        return function () {
             func.apply(context, concat.call(args, slice.call(arguments)));
         };
     };
@@ -145,8 +266,7 @@
         advance: function advance(time, deltaTime) {
             while (this._idleSpringIndices.length > 0) {
                 this._idleSpringIndices.pop();
-            }
-            for (var i = 0, len = this._activeSprings.length; i < len; i++) {
+            }for (var i = 0, len = this._activeSprings.length; i < len; i++) {
                 var spring = this._activeSprings[i];
                 if (spring.systemShouldAdvance()) {
                     spring.advance(time / 1000.0, deltaTime / 1000.0);
@@ -702,7 +822,7 @@
             _this.springSystem.loop(Date.now());
         };
 
-        this.run = function() {
+        this.run = function () {
             util.onFrame(_run);
         };
     };
@@ -719,7 +839,7 @@
         var running = false;
         timestep = timestep || 16.667;
 
-        this.run = function() {
+        this.run = function () {
             if (running) {
                 return;
             }
@@ -736,16 +856,16 @@
     // verifying the behavior of a SpringSystem or if you want to control your own
     // timing loop for some reason e.g. slowing down or speeding up the
     // simulation.
-    rebound.SteppingSimulationLooper = function(timestep) {
+    rebound.SteppingSimulationLooper = function (timestep) {
         this.springSystem = null;
         var time = 0;
 
         // this.run is NOOP'd here to allow control from the outside using
         // this.step.
-        this.run = function() {};
+        this.run = function () {};
 
         // Perform one step toward resolving the SpringSystem.
-        this.step = function(timestep) {
+        this.step = function (timestep) {
             this.springSystem.loop(time += timestep);
         };
     };
@@ -780,7 +900,7 @@
     // SpringSystem.createSpringWithBouncinessAndSpeed, which uses this Math
     // internally to create a spring to match the provided PopAnimation
     // configuration from Origami.
-    var BouncyConversion = rebound.BouncyConversion = function(bounciness, speed) {
+    var BouncyConversion = rebound.BouncyConversion = function (bounciness, speed) {
         this.bounciness = bounciness;
         this.speed = speed;
         var b = this.normalize(bounciness / 1.7, 0, 20.0);
@@ -865,7 +985,7 @@
     // component values. These are handy when performing color
     // tweening animations.
     var colorCache = {};
-    util.hexToRGB = function(color) {
+    util.hexToRGB = function (color) {
         if (colorCache[color]) {
             return colorCache[color];
         }
@@ -885,7 +1005,7 @@
         return ret;
     };
 
-    util.rgbToHex = function(r, g, b) {
+    util.rgbToHex = function (r, g, b) {
         r = r.toString(16);
         g = g.toString(16);
         b = b.toString(16);
@@ -953,9 +1073,9 @@
 
     var _onFrame;
     if (typeof window !== 'undefined') {
-        _onFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
+        _onFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            };
     }
     if (!_onFrame && typeof process !== 'undefined' && process.title === 'node') {
         _onFrame = setImmediate;
@@ -992,22 +1112,11 @@
  * Create a regular polygon and provide api to compute inscribed child.
  */
 
-var _createClass = function() {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-    return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Polygon = function() {
+var Polygon = function () {
     function Polygon() {
         var radius = arguments.length <= 0 || arguments[0] === undefined ? 100 : arguments[0];
         var sides = arguments.length <= 1 || arguments[1] === undefined ? 3 : arguments[1];
@@ -1071,7 +1180,7 @@ var Polygon = function() {
 
             var inscribedPoints = [];
 
-            points.forEach(function(item, i) {
+            points.forEach(function (item, i) {
 
                 var start = item;
                 var end = points[i + 1];
@@ -1151,11 +1260,11 @@ var Polygon = function() {
             var children = this._getUpdatedChildren(progress);
 
             // child = array of points at a certain progress over the parent sides.
-            children.forEach(function(points, i) {
+            children.forEach(function (points, i) {
 
                 // Draw child.
                 context.beginPath();
-                points.forEach(function(point) {
+                points.forEach(function (point) {
                     return context.lineTo(point.x, point.y);
                 });
                 context.closePath();
@@ -1212,7 +1321,7 @@ var Polygon = function() {
 
             // Draw basePolygon.
             context.beginPath();
-            this.points.forEach(function(point) {
+            this.points.forEach(function (point) {
                 return context.lineTo(point.x, point.y);
             });
             context.closePath();
@@ -1245,22 +1354,11 @@ var Polygon = function() {
  * inscribed children, provide init and complete methods to control spinner.
  */
 
-var _createClass = function() {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-    return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Spinner = function() {
+var Spinner = function () {
     function Spinner(params) {
         _classCallCheck(this, Spinner);
 
@@ -1552,7 +1650,7 @@ var pageLoading = {
         if (spinnerTypeAutoSpin) {
             // Fake loading time, in a real world just call demo.spinner.setComplete();
             // whenever the preload will be completed.
-            setTimeout(function() {
+            setTimeout(function () {
                 pageLoading.spinner.setComplete();
             }, 6000);
         } else {
@@ -1569,7 +1667,7 @@ var pageLoading = {
 
         var oReq = new XMLHttpRequest();
 
-        oReq.addEventListener('progress', function(oEvent) {
+        oReq.addEventListener('progress', function (oEvent) {
             if (oEvent.lengthComputable) {
 
                 var percent = Math.ceil(oEvent.loaded / oEvent.total * 100);
@@ -1581,7 +1679,7 @@ var pageLoading = {
             }
         });
 
-        oReq.addEventListener('load', function(e) {
+        oReq.addEventListener('load', function (e) {
             // Complete the loading animation.
             pageLoading.spinner.setComplete();
         });

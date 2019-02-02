@@ -1,3 +1,9 @@
+/*!
+ * DATE: 2018-03-13
+ * UPDATES AND DOCS AT: https://github.com/BNDong
+ * https://www.cnblogs.com/bndong/
+ * @author: BNDong, dbnuo@foxmail.com
+ **/
 function Base() {
 
     var bndongJs = this,
@@ -160,8 +166,14 @@ function Base() {
     this.homeInit = function() {
 
         // 设置主页图片
+        var homeTopImg = window.cnblogsConfig.homeTopImg,
+            bgImg;
+
+        homeTopImg.length > 0 ?
+            (homeTopImg.length > 1 ? bgImg = homeTopImg[tools.randomNum(0, homeTopImg.length - 1)] : bgImg = homeTopImg[0]) :
+            bgImg = "";
         $('.main-header').css({
-            'background': '#222 url(' + window.cnblogsConfig.homeTopImg + ')  center center no-repeat',
+            'background': '#222 url(' + bgImg + ')  center center no-repeat',
             'background-size': 'cover'
         });
 
@@ -309,10 +321,10 @@ function Base() {
         //     "method": "GET"
         // };
 
-        // $.ajax(settings).done(function(response) {
+        // $.ajax(settings).done(function (response) {
         //     if (response && response.status == "success") {
         //         $('#hitokoto').text(response.data.content).css('display', '-webkit-box');
-        //         $('#hitokotoAuthor').text('《' + response.data.origin.title + '》 - ' + response.data.origin.dynasty + ' - ' + response.data.origin.author).show();
+        //         $('#hitokotoAuthor').text('《'+response.data.origin.title+'》 - '+response.data.origin.dynasty+' - '+response.data.origin.author).show();
         //     } else {
         //         var listIndex = tools.randomNum(0, topTitleList.length - 1);
         //         $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
@@ -740,7 +752,7 @@ function Base() {
         pvHtml += '<div id="cnzzInfo"></div>';
         $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
 
-        if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/wangyang0210") == -1) setTheme();
+        if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/bndong") == -1) setTheme();
 
         window.setInterval(setRunTime, 500);
         setBlogroll();
