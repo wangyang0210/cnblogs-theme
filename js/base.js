@@ -274,45 +274,25 @@ function Base() {
         ];
 
         // ===================  ONE . 每日一句  =================================
-        // var settings = {
-        //     "async": true,
-        //     "crossDomain": true,
-        //     "url": "https://api.hibai.cn/api/index/index",
-        //     "method": "POST",
-        //     "headers": {
-        //         "content-type": "application/x-www-form-urlencoded",
-        //     },
-        //     "data": {
-        //         "TransCode": "030111",
-        //         "OpenId": "123456789",
-        //         "Body": ""
-        //     }
-        // };
-        //
-        // $.ajax(settings).done(function (response) {
-        //     if (response.ResultCode == 1) {
-        //         $('#hitokoto').text(response.Body.word).css('display', '-webkit-box');
-        //         $('#hitokotoAuthor').text('- '+response.Body.word_from).show();
-        //     } else {
-        //         var listIndex = tools.randomNum(0, topTitleList.length - 1);
-        //         $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
-        //     }
-        //     bndongJs.setDomHomePosition();
-        //     return false;
-        // });
-
-        // ===================  今日诗词  =================================
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://v2.jinrishici.com/one.json",
-            "method": "GET"
+            "url": "https://api.hibai.cn/api/index/index",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+            },
+            "data": {
+                "TransCode": "030111",
+                "OpenId": "123456789",
+                "Body": ""
+            }
         };
 
         $.ajax(settings).done(function(response) {
-            if (response && response.status == "success") {
-                $('#hitokoto').text(response.data.content).css('display', '-webkit-box');
-                $('#hitokotoAuthor').text('《' + response.data.origin.title + '》 - ' + response.data.origin.dynasty + ' - ' + response.data.origin.author).show();
+            if (response.ResultCode == 1) {
+                $('#hitokoto').text(response.Body.word).css('display', '-webkit-box');
+                $('#hitokotoAuthor').text('- ' + response.Body.word_from).show();
             } else {
                 var listIndex = tools.randomNum(0, topTitleList.length - 1);
                 $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
@@ -320,6 +300,26 @@ function Base() {
             bndongJs.setDomHomePosition();
             return false;
         });
+
+        // ===================  今日诗词  =================================
+        // var settings = {
+        //     "async": true,
+        //     "crossDomain": true,
+        //     "url": "https://v2.jinrishici.com/one.json",
+        //     "method": "GET"
+        // };
+
+        // $.ajax(settings).done(function(response) {
+        //     if (response && response.status == "success") {
+        //         $('#hitokoto').text(response.data.content).css('display', '-webkit-box');
+        //         $('#hitokotoAuthor').text('《' + response.data.origin.title + '》 - ' + response.data.origin.dynasty + ' - ' + response.data.origin.author).show();
+        //     } else {
+        //         var listIndex = tools.randomNum(0, topTitleList.length - 1);
+        //         $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
+        //     }
+        //     bndongJs.setDomHomePosition();
+        //     return false;
+        // });
     };
 
     /**
@@ -797,7 +797,7 @@ function Base() {
             $('#footer').prepend('<div class="footer-image"></div>');
             setInterval(function() {
                 var footer = $('#footer');
-                var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/wangyang0210/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
+                var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
                 if ($('#ThemeAuthors').length == 0) {
                     $('#footer').append(themeHtml);
                 } else {
