@@ -1,9 +1,4 @@
 # Cnblogs-Theme-SimpleMemory
-[![GitHub issues](https://img.shields.io/github/issues/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/issues)
-[![GitHub forks](https://img.shields.io/github/forks/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/network)
-[![GitHub stars](https://img.shields.io/github/stars/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/stargazers)
-[![BNDong](https://img.shields.io/badge/bndong-%E2%9D%A4%EF%B8%8F-%23ff69b4.svg)](http://www.dbnuo.org)
-
 
 
 原作者的github地址为https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
