@@ -1,9 +1,3 @@
-/*!
- * DATE: 2018-03-13
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
- **/
 function Base() {
 
     var bndongJs = this,
@@ -17,7 +11,6 @@ function Base() {
             setHomeRightMenuTId: null, // 主页右下角菜单设置定时器ID
             setNotHomeRightMenuTId: null, // 非主页右下角菜单设置定时器ID
             setCnzzTId: null, // 网站统计Cnzz设置定时器ID
-            setAmazingTId: null, // 网站统计Amazing设置定时器ID
             setCatalogTId: null, // 文章目录设置定时器ID
         };
 
@@ -744,20 +737,15 @@ function Base() {
      * 添加页脚
      */
     this.addFooter = function() {
-        // var pvHtml =  '<i class="iconfont icon-odps-data cnzz" style="position: relative;top: 2px;left: 3px;cursor: pointer;"></i>';
         var pvHtml = '<span id="amazingStatSpan"></span>';
         pvHtml += '<div>【' + window.cnblogsConfig.bottomText.left + '<span id="footerTextIcon">' + window.cnblogsConfig.bottomText.icon + '</span>' + window.cnblogsConfig.bottomText.right + '】</div>';
         pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>ღゝ◡╹)ノ♡</span></div>";
         pvHtml += '<div id="blogrollInfo"></div>';
         pvHtml += '<div id="cnzzInfo"></div>';
         $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
-
-        if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/bndong") == -1) setTheme();
-
         window.setInterval(setRunTime, 500);
         setBlogroll();
         timeIds.setCnzzTId = window.setInterval(setCnzz, 1000);
-        // timeIds.setAmazingTId = window.setInterval( setAmazing, 1000 );
 
         function setRunTime() {
             var str = window.cnblogsConfig.blogStartDate;
@@ -779,7 +767,7 @@ function Base() {
         }
 
         function setCnzz() {
-            // 请去 CNZZ 配置自己的，谢谢！！
+            //  CNZZ 配置！
             var cnzzStat = $('.id_cnzz_stat_icon a');
             if (cnzzStat.length > 0) {
                 var cnzzInfo = [];
@@ -795,27 +783,6 @@ function Base() {
                 $('#cnzzInfo').text(cnzzInfo.join(' | '));
                 bndongJs.clearIntervalTimeId(timeIds.setCnzzTId);
             }
-        }
-
-        function setAmazing() {
-            // 请去 AmazingCounters.com 配置自己的，谢谢！！
-            if ($('#amazingStat').length > 0) {
-                $('#amazingStat').appendTo('#amazingStatSpan').show();
-                bndongJs.clearIntervalTimeId(timeIds.setAmazingTId);
-            }
-        }
-
-        function setTheme() {
-            $('#footer').prepend('<div class="footer-image"></div>');
-            setInterval(function() {
-                var footer = $('#footer');
-                var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
-                if ($('#ThemeAuthors').length == 0) {
-                    $('#footer').append(themeHtml);
-                } else {
-                    $('#ThemeAuthors').show().css('visibility', 'visible');
-                }
-            }, 3000);
         }
     };
 

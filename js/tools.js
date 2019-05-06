@@ -32,7 +32,7 @@ function myTools() {
      * 控制台输出内容
      */
     this.consoleText = function(list, mode) {
-        var e = ["\n %c %c %c Theme GitHub %c  %c https://github.com/BNDong/Cnblogs-Theme-SimpleMemory  %c \n\n", "background: #fadfa3; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "background: #FCEDC9; padding:5px 0;", "background: #fadfa3; padding:5px 0;"];
+        var e = ["\n %c %c %c Theme GitHub %c  %c https://github.com/wangyang0210/Cnblogs-Theme-BNDong  %c \n\n", "background: #fadfa3; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "background: #FCEDC9; padding:5px 0;", "background: #fadfa3; padding:5px 0;"];
         window.console.log.apply(console, e);
         switch (mode) {
             case 'random':

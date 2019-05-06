@@ -54,13 +54,10 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     overflow: hidden;
-    /*background: url(https://files.cnblogs.com/files/bndong/white_brick_wall.gif) rgb(255, 255, 255);*/
-    /*background-attachment: fixed;*/
 }
 
 body:before {
     content: '';
-    /*background: url(https://files.cnblogs.com/files/bndong/white_brick_wall.gif) #fff;*/
     display: block;
     z-index: -1;
     position: fixed;
@@ -68,8 +65,6 @@ body:before {
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: #fcfcfc;*/
-    /*background-image: linear-gradient(rgba(221, 221, 221, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(221, 221, 221, 0.3) 1px, transparent 1px);*/
     background-size: 20px 20px;
 }
 
@@ -1265,7 +1260,7 @@ button {
     line-height: 1.5;
 }
 .footer-image {
-    background: url(https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/footer.png) no-repeat 50%;
+    background: url(http://cache.wangyangyang.vip/footer.png) no-repeat 50%;
     height: 368px;
     z-index: 1;
     position: absolute;
@@ -2994,10 +2989,6 @@ button {
     max-width: 700px;
 }
 
-/**************************************************
-    自添加样式@ BNDong
-**************************************************/
-
 /* ==========================================================================
    顶部图片区域
    ========================================================================== */
@@ -3008,8 +2999,7 @@ button {
     max-height: 100vh;
     /*margin-bottom: 5rem;*/
     text-align: center;
-    /*background: #222 url(https://files.cnblogs.com/files/bndong/top_bg4.gif) center center no-repeat;*/
-    background: #222 url(https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/home_top_bg.jpg) center center no-repeat;
+    background: #222 url(http://cache.wangyangyang.vip/home_top_bg.jpg) center center no-repeat;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -3229,8 +3219,7 @@ button {
     transition-delay: 0.4s;
     outline: none;
     cursor: pointer;
-    /*background: #000 url(https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/menu_bg.jpeg) 0 -195px no-repeat;*/
-    background: #000 url(https://files.cnblogs.com/files/bndong/me_top_bg.gif) center no-repeat;
+    background: #000 url(http://cache.wangyangyang.vip/me_top_bg.jpg) center no-repeat;
     background-size: 100%;
 }
 
@@ -3759,7 +3748,6 @@ span.cnblogs_code {
 }
 
 .cnblogs_code_copy a {
-    /*background: url(https://files.cnblogs.com/files/bndong/copy_16px.gif) top left;*/
     background-repeat: no-repeat;
     display: inline-block;
     padding: 0;
@@ -3769,7 +3757,6 @@ span.cnblogs_code {
     position: absolute;
     right: 19px;
     top: 19px;
-    /*opacity: 0.3;*/
 }
 
 .code_img_closed , .code_img_opened{
@@ -3813,7 +3800,7 @@ span.cnblogs_code {
     padding: 10px;
     height: 200px;
     position: relative;
-    background: #fff url(https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/comment_bg.jpg) right -65px;
+    background: #fff url(http://cache.wangyangyang.vip/comment_bg.jpg) right -65px;
     background-size: 250px;
     background-repeat: no-repeat;
 }
@@ -3857,7 +3844,7 @@ span.cnblogs_code {
 }
 
 .tbCommentBody_bg {
-    background: url('https://files.cnblogs.com/files/bndong/commentHintBg.gif') center center no-repeat;
+    background: url('http://cache.wangyangyang.vip/commentHintBg.png') center center no-repeat;
 }
 
 .commentbox_main {
@@ -3884,9 +3871,9 @@ span.cnblogs_code {
 .list .out .icon,.list .inc .icon{width:48px;height:48px;}
 .list .icontd {width:48px;}
 .list .out .icontd{display:none;}
-.list .out .topleft,.list .out .topright,.list .out .bottomleft,.list .out .bottomright,.list .inc .topleft,.list .inc .topright,.list .inc .bottomleft,.list .inc .bottomright{background: url(https://files.cnblogs.com/files/bndong/t_o_bubbles.gif) no-repeat;}
-.list .out .top,.list .out .bottom,.list .inc .top,.list .inc .bottom{background:transparent url(https://files.cnblogs.com/files/bndong/t_o_horizontal.gif) repeat-x;}
-.list .out .left,.list .out .right,.list .inc .left,.list .inc .right{background:transparent url(https://files.cnblogs.com/files/bndong/t_o_vertical.gif) repeat-y;}
+.list .out .topleft,.list .out .topright,.list .out .bottomleft,.list .out .bottomright,.list .inc .topleft,.list .inc .topright,.list .inc .bottomleft,.list .inc .bottomright{background: url(http://cache.wangyangyang.vip/t_o_bubbles.jpg) no-repeat;}
+.list .out .top,.list .out .bottom,.list .inc .top,.list .inc .bottom{background:transparent url(http://cache.wangyangyang.vip/t_o_horizontal.jpg) repeat-x;}
+.list .out .left,.list .out .right,.list .inc .left,.list .inc .right{background:transparent url(http://cache.wangyangyang.vip/t_o_vertical.jpg) repeat-y;}
 
 .list .out .topleft{background-position:left top;height:9px;width:18px;}
 .list .out .topright{background-position:-18px top;height:9px;width:11px;}
@@ -3983,12 +3970,10 @@ a#green_channel_digg, a#green_channel_follow, a#green_channel_favorite, a#green_
 }
 
 a#green_channel_digg:hover, a#green_channel_follow:hover, a#green_channel_favorite:hover, a#green_channel_weibo:hover, a#green_channel_wechat:hover {
-    /*box-shadow: 0px 22px 19px -8px rgba(95,193,206, 0.50);*/
     transform: scale(1.02,1.02);
 }
 
 a#green_channel_digg:active, a#green_channel_follow:active, a#green_channel_favorite:active, a#green_channel_weibo:active, a#green_channel_wechat:active {
-    /*box-shadow: 0px 12px 18px -4px rgba(95,193,206, 0.90);*/
     transform: scale(0.95,0.95);
     transition: all 0.4s -0.125s;
 }
