@@ -743,7 +743,7 @@ function Base() {
 
         function setRunTime() {
             var str = window.cnblogsConfig.blogStartDate;
-            str = str ? str : '2016-11-17';
+            str = str ? str : '2018-2-12';
             var runDate = tools.getRunDate(str);
             $('#blogRunTimeSpan').text('This blog has running : '+runDate.daysold+' d '+runDate.hrsold+' h '+runDate.minsold+' m '+runDate.seconds+' s');
         }
