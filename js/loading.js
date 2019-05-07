@@ -1,5 +1,4 @@
 'use strict';
-
 (function () {
     var rebound = {};
     var util = rebound.util = {};

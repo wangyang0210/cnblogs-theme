@@ -51,7 +51,7 @@
     bottom: 0
 }
 #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top,#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
-    background: url("http://cache.wangyangyang.vip/sideToolbar.png") no-repeat scroll 0 -199px transparent;
+    background: url("http:\\cache.wangyangyang.vip/sideToolbar.png") no-repeat scroll 0 -199px transparent;
     height: 10px;
     left: -5px;
     overflow: hidden;
@@ -115,6 +115,7 @@
 #sideCatalog li.h2Offset {
     text-indent: -25px;
     padding: 3px 0 3px 45px;
+    display: none;
 }
 #sideCatalog li.h3Offset {
     padding-left: 90px;
@@ -126,7 +127,7 @@
     font-weight: bold
 }
 .sideCatalog-dot {
-    background: url("http://cache.wangyangyang.vip/sideToolbar.png") repeat scroll 0 -222px transparent;
+    background: url("http:\\cache.wangyangyang.vip/sideToolbar.png") repeat scroll 0 -222px transparent;
     cursor: pointer;
     font-size: 12px;
     height: 10px;
@@ -138,14 +139,14 @@
     width: 6px
 }
 #sideCatalog .highlight .sideCatalog-dot {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
     height: 13px;
     left: -23px;
     top: 3px;
     width: 18px
 }
 #sideCatalogBtn {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
     cursor: pointer;
     display: block;
     height: 45px;
@@ -159,7 +160,7 @@
     right: 1px;
     bottom: 96px;
 }
-#sideCatalogBtn: hover {
+#sideCatalogBtn:hover {
     background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
 }
 .sideCatalogBtnDisable {
@@ -174,7 +175,7 @@
     width: 45px;
     outline: 0
 }
-#sideToolbar-up: hover {
+#sideToolbar-up:hover {
     background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
 }
 

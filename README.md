@@ -1,10 +1,20 @@
 # Cnblogs-Theme-SimpleMemory
+<<<<<<< HEAD
 
 
 原作者的github地址为https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
 
 本主题以阅读为核心，尽可能的美化博客园的显示效果，提高用户体验。
 <br>基于博皮“SimpleMemor”进行的修改，使用插件较多，所以文件较多。[页面效果](https://www.cnblogs.com/wangyang0210)
+=======
+[![GitHub issues](https://img.shields.io/github/issues/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/issues)
+[![GitHub forks](https://img.shields.io/github/forks/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/network)
+[![GitHub stars](https://img.shields.io/github/stars/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/stargazers)
+[![BNDong](https://img.shields.io/badge/bndong-%E2%9D%A4%EF%B8%8F-%23ff69b4.svg)](https://www.cnblogs.com/bndong/)
+
+本主题以阅读为核心，尽可能的美化博客园的显示效果，提高用户体验。
+<br>基于博皮“SimpleMemor”进行的修改，使用插件较多，所以文件较多。[页面效果](https://www.cnblogs.com/bndong/)
+>>>>>>> origin/src
 <br>支持响应，尺寸分别为：(1200px,∞px)，(960px,1200px]，(720px,960px]，(0px,720px]
 # 目录结构
 ```
@@ -40,10 +50,17 @@
 ## 标题与引用
 * 一级标题 `<h1>`
 * 二级标题 `<h2>`
+<<<<<<< HEAD
 * 引入文字 `<h6>`
 * 关键字 `行内代码`
 ## 转载文章和文章后缀
 文章后缀显示的内容可以在相关配置项进行配置。如果需要其它修改，可以修改 articleStatement.js 文件。
+=======
+* 引入文字 `引用` or `<h6>`
+* 关键字 `行内代码`
+## 转载文章和文章后缀
+文章后缀显示的内容可以在相关配置项进行配置。如果需要其它修改，可以修改 ``/js/articleStatement.js`` 文件。
+>>>>>>> origin/src
 <br>关于转载文章在HTML源码中加入如下代码来指定文章作者和来源：
 ```html
 <input id="articleAuthor" type="hidden" value="作者" />
@@ -114,6 +131,34 @@ prettify、desert、sunburst、obsidian、doxy
 播放器的设置，可以参考作者的 [GitHub](https://github.com/metowolf/MetingJS)
 ## Loading
 Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocalautti/spring-loaders)
+<<<<<<< HEAD
+=======
+## 字体图标库及其拓展方法
+本博客使用的图标库为阿里巴巴矢量图标库 iconfont。
+### 字体图标库
+> 图标下方第一行为标题，第二行为图标代码（修改图标使用此代码）
+
+![icon_list](/img/icon_list.png)
+
+### 拓展方法
+大家可以在 iconfont 生成自己的图标库，生成方法参考[官方教程](https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.13&helptype=about)。
+<br>获取样式地址后添加到加载配置文件中：``/js/config.js``
+
+> 为了兼容，请不要删除原有的图标库，除非你能替换掉所有的图标样式引用。
+
+```
+    ...
+        base: {
+            deps: [
+                'tools',
+                'css!https://at.alicdn.com/t/font_543384_ezv3l7gd9r7.css', // 阿里云字体图标
+                // 添加至此位置，.css文件 url 前须添加 css!
+            ]
+        }
+    ...
+```
+
+>>>>>>> origin/src
 # 常见问题
 ## 菜单数据不显示
 这个是大家遇到最多的问题，请以下面的方式进行处理。
@@ -144,3 +189,140 @@ Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocala
 关于优化和建议大家可以私信我，同时也欢迎大家上传代码给我。
 本人学习计划一直排的挺满的，写这个纯是业余消遣，所以可能会出现维护更新和回答不及时的情况。
 感谢阅读使用，拜谢！
+<<<<<<< HEAD
+=======
+
+---
+# 版本更新日志
+## 2019.04.27 - v1.0.0
+* v1.0.0 版本发布
+
+> 1. 经过迭代调试，基本稳定了，发布v1.0.0
+> 2. 配置项 ```GhVersions``` 可以为版本号：```v1.0.0```
+> 3. 以后测试代码不会上传到此库中了，单独开库处理
+
+---
+## 2019.04.28 - 81410de
+* 修改 mCustomScrollbar 插件内部加载协议为https
+> 由于 mCustomScrollbar 插件在http协议下报错：mismatched anonymous define() module
+
+## 2019.04.26 - 70fa051
+* 删除有字库字体引用，增加谷歌字体库引用（侧边栏HTML代码处）
+
+## 2019.04.14 - 2f74751
+* 重构菜单数据处理逻辑，单个数据的处理不会影响其它数据的添加
+
+## 2019.04.12 - a73181b
+* 添加自定义菜单数据配置项
+* 侧边栏菜单支持自定义数据
+* 根据关注状态修改关注图标样式
+
+## 2019.03.11 - 1bdd29a
+* 修复了 MD 格式下，代码长度不限制，滚动条不出现的问题
+* 随笔页图片支持多张随机设置了
+* 解除了随笔目录的数量限制
+* 随笔目录支持折叠了
+* 解除了页面滚动条的隐藏
+
+## 2019.01.25 - 8555b9d
+* 修复遇到数字标题时，目录格式错乱的问题
+
+## 2019.01.22 - 91b3663
+* 更新配置
+* 主页图片支持多张设置，每次刷新页面随机设置其中一张
+
+## 2018.12.18 - df0ffcf
+* 修改了侧边栏 HTML 代码
+* 限制了页面中代码的高度
+* 美化了代码滚动条的样式
+
+## 2018.12.17 - 9d97403
+* 修复主页主体内容定位不准确的问题
+
+## 2018.12.03 - 2d64ffa
+* 修改了代码高亮相关配置项
+* 重构代码高亮设置的逻辑
+* 增加了 highlightjs 插件来处理代码高亮渲染
+* 提升代码主题处理逻辑的优先级
+* 修复了点击文章目录跳转不准确的问题
+
+## 2018.11.23 - 07d2e00
+* 美化 Markdown 样式
+
+## 2018.11.21 - 6f0e937
+* 解决了设置 prettify 代码高亮时，代码换行缺失的问题
+
+## 2018.11.18 - 6432282
+* 增加代码高亮主题的设置和实现
+
+## 2018.11.16 - 087a55f
+* 调整配置项
+* 修改了渲染效果配置项的名称
+* 增加了文件源的配置
+* 增加底部标语图标的设置
+* 增加了主题作者的显示控制
+* 删除了使用博客园文件系统加载文件
+* 屏蔽 AmazingCounters 网站计数器设置
+
+## 2018.10.26 - f73b3b7
+* 解决了设置冲突导致应该隐藏的页面特效显示了出来
+* 屏蔽了随笔页因为尺寸更改而导致 MyTween.js 里疯狂报错
+
+## 2018.10.24 - c249ab4
+* 页面自适应调整
+* 菜单增加我的标签
+
+## 2018.10.17 - f0e24ca
+* 修改随笔目录样式
+* 菜单中未设置的数据相对应的标题不会显示了
+
+## 2018.10.09 - f964276
+* 页面优化
+
+## 2018.10.07 - f43b986
+* 增加页面特效设置
+
+## 2018.09.29 - da79aa5
+* 菜单设置代码重构
+* 菜单添加最新随笔
+
+## 2018.09.21 - d7ebb9e
+* 增加全局配置
+* 限制主页图片上文字显示行数
+
+## 2018.08.29 - d452c8e
+* 修改默认入园时间
+* 添加博客运行时间
+* 定时清除所有定时器
+* 改变统计代码获取方式
+
+## 2018.08.27 - cb90c7d
+* 修改代码注释
+* 显示文章博客和分享按钮
+
+## 2018.08.14 - 210c0c7
+* 更换评论框背景
+* 修改生成文章目录格式
+* 添加文章标题效果
+
+## 2018.07.30 - 00c4bc0
+* 调整页脚
+
+## 2018.07.27 - f5f276e
+* 添加菜单背景
+* 修改图床地址
+* 添加footer图片
+* 修改底部进度条样式与位置
+* 添加背景彩带
+* 修改页脚样式
+* 修改链接默认颜色
+* 取消背景网格样式
+* 修改非主页动画配色
+* 修改主页与非主页头图
+* 取消页面背景效果
+* 添加页面HTML结构
+* 添加博客园文件来源
+
+## 2018.07.26 - 2c69f82
+* 项目成立
+>>>>>>> origin/src
