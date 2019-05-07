@@ -104,7 +104,7 @@ function Base() {
 
         (function () {
             var i = 0,re;
-            re.toString = function () {
+            re = function () {
                 return '欢迎访问本博客，这是您第 ' + (++i) + ' 次打开控制台。';
             };
             console.log(re);
