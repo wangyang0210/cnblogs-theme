@@ -779,7 +779,7 @@ function Base() {
             }
         }
         function setAmazing() {
-            // 请去 AmazingCounters.com 配置自己的，谢谢！！
+            // 请去 AmazingCounters.com 配置自己的
             if ($('#amazingStat').length > 0) {
                 $('#amazingStat').appendTo('#amazingStatSpan').show();
                 bndongJs.clearIntervalTimeId(timeIds.setAmazingTId);
@@ -791,7 +791,7 @@ function Base() {
                 var footer = $('#footer');
                 // var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
                 // if ($('#ThemeAuthors').length == 0) {
-                    $('#footer').append(themeHtml);
+                    // $('#footer').append(themeHtml);
                 // } else {
                 //     $('#ThemeAuthors').show().css('visibility', 'visible');
                 // }
