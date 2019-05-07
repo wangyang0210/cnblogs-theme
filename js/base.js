@@ -103,8 +103,9 @@ function Base() {
         tools.consoleText(window.cnblogsConfig.consoleList, 'banner');
 
         (function () {
-            var i = 0,re;
-            re = function () {
+            var i = 0;
+            var re = res();
+            function res() {
                 return '欢迎访问本博客，这是您第 ' + (++i) + ' 次打开控制台。';
             };
             console.log(re);
