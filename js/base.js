@@ -789,12 +789,12 @@ function Base() {
             $('#footer').prepend('<div class="footer-image"></div>');
             setInterval(function(){
                 var footer = $('#footer');
-                var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
-                if ($('#ThemeAuthors').length == 0) {
+                // var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
+                // if ($('#ThemeAuthors').length == 0) {
                     $('#footer').append(themeHtml);
-                } else {
-                    $('#ThemeAuthors').show().css('visibility', 'visible');
-                }
+                // } else {
+                //     $('#ThemeAuthors').show().css('visibility', 'visible');
+                // }
             },3000);
         }
     };
