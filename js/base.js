@@ -729,7 +729,7 @@ function Base() {
         // var pvHtml =  '<i class="iconfont icon-odps-data cnzz" style="position: relative;top: 2px;left: 3px;cursor: pointer;"></i>';
         var pvHtml = '<span id="amazingStatSpan"></span>';
         pvHtml += '<div>【'+window.cnblogsConfig.bottomText.left+'<span id="footerTextIcon">'+window.cnblogsConfig.bottomText.icon+'</span>'+window.cnblogsConfig.bottomText.right+'】</div>';
-        pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>ღゝ◡╹)ノ♡</span></div>";
+        pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>(^・ω・^ )( ^・ω・^)(^・ω・^ )( ^・ω・^)</span></div>";
         pvHtml += '<div id="blogrollInfo"></div>';
         pvHtml += '<div id="cnzzInfo"></div>';
         $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
