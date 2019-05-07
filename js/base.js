@@ -102,33 +102,14 @@ function Base() {
         // 控制台输出
         tools.consoleText(window.cnblogsConfig.consoleList, 'banner');
 
-         /**
-         * 控制台打开的时候回调方法
-         */
-        function consoleOpenCallback(){
+        (function () {
+            var re = /x/;
             var i = 0;
-            return '这是你第 ' + (++i) + ' 次打开控制台';;
-        }
-    
-        /**
-         * 立即运行函数，用来检测控制台是否打开
-         */
-        !function () {
-            // 创建一个对象
-            let foo = /./;
-            // 将其打印到控制台上，实际上是一个指针
-            console.log(foo);
-            // 要在第一次打印完之后再重写toString方法
-            foo.toString = consoleOpenCallback;
-        }()
-        // (function () {
-        //     var re = /x/;
-        //     var i = 0;
-        //     console.log(re);
-        //     re.toString = function () {
-        //       return '这是你第 ' + (++i) + ' 次打开控制台';
-        //     };
-        //   })();
+            console.log(re);
+            re.toString = function () {
+              return '这是你第 ' + (++i) + ' 次打开控制台';
+            };
+          })();
 
         // 延时清除全部定时器
         setTimeout(bndongJs.clearIntervalAll, 30000);
