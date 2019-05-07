@@ -293,45 +293,25 @@ function Base() {
         ];
 
         // ===================  ONE . 每日一句  =================================
-        // var settings = {
-        //     "async": true,
-        //     "crossDomain": true,
-        //     "url": "https://api.hibai.cn/api/index/index",
-        //     "method": "POST",
-        //     "headers": {
-        //         "content-type": "application/x-www-form-urlencoded",
-        //     },
-        //     "data": {
-        //         "TransCode": "030111",
-        //         "OpenId": "123456789",
-        //         "Body": ""
-        //     }
-        // };
-        //
-        // $.ajax(settings).done(function (response) {
-        //     if (response.ResultCode == 1) {
-        //         $('#hitokoto').text(response.Body.word).css('display', '-webkit-box');
-        //         $('#hitokotoAuthor').text('- '+response.Body.word_from).show();
-        //     } else {
-        //         var listIndex = tools.randomNum(0, topTitleList.length - 1);
-        //         $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
-        //     }
-        //     bndongJs.setDomHomePosition();
-        //     return false;
-        // });
-
-        // ===================  今日诗词  =================================
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://v2.jinrishici.com/one.json",
-            "method": "GET"
+            "url": "https://api.hibai.cn/api/index/index",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+            },
+            "data": {
+                "TransCode": "030111",
+                "OpenId": "123456789",
+                "Body": ""
+            }
         };
-
+        
         $.ajax(settings).done(function (response) {
-            if (response && response.status == "success") {
-                $('#hitokoto').text(response.data.content).css('display', '-webkit-box');
-                $('#hitokotoAuthor').text('《'+response.data.origin.title+'》 - '+response.data.origin.dynasty+' - '+response.data.origin.author).show();
+            if (response.ResultCode == 1) {
+                $('#hitokoto').text(response.Body.word).css('display', '-webkit-box');
+                $('#hitokotoAuthor').text('- '+response.Body.word_from).show();
             } else {
                 var listIndex = tools.randomNum(0, topTitleList.length - 1);
                 $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
@@ -339,6 +319,26 @@ function Base() {
             bndongJs.setDomHomePosition();
             return false;
         });
+
+        // ===================  今日诗词  =================================
+        // var settings = {
+        //     "async": true,
+        //     "crossDomain": true,
+        //     "url": "https://v2.jinrishici.com/one.json",
+        //     "method": "GET"
+        // };
+
+        // $.ajax(settings).done(function (response) {
+        //     if (response && response.status == "success") {
+        //         $('#hitokoto').text(response.data.content).css('display', '-webkit-box');
+        //         $('#hitokotoAuthor').text('《'+response.data.origin.title+'》 - '+response.data.origin.dynasty+' - '+response.data.origin.author).show();
+        //     } else {
+        //         var listIndex = tools.randomNum(0, topTitleList.length - 1);
+        //         $('#hitokoto').text(topTitleList[listIndex]).css('display', '-webkit-box');
+        //     }
+        //     bndongJs.setDomHomePosition();
+        //     return false;
+        // });
     };
 
     /**
@@ -524,7 +524,7 @@ function Base() {
                         var patch = op.text();
                         var html = '<img class="comment-avatar" src="'+patch+'"/>';
                     } else {
-                        var html = '<img class="comment-avatar" src="https://files.cnblogs.com/files/bndong/no_avatar.gif"/>';
+                        var html = '<img class="comment-avatar" src="http:\\cache.wangyangyang.vip/default.png>';
                     }
                     $(commentList[i]).before(html);
                 }

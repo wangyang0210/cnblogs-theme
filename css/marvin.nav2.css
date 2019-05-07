@@ -161,13 +161,13 @@
     bottom: 96px;
 }
 #sideCatalogBtn:hover {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
 }
 .sideCatalogBtnDisable {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent !important;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent !important;
 }
 #sideToolbar-up {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
     border-radius: 2px;
     display: block;
     height: 45px;
@@ -176,7 +176,7 @@
     outline: 0
 }
 #sideToolbar-up:hover {
-    background: url(http://cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
+    background: url(http:\\cache.wangyangyang.vip/list.png) no-repeat scroll 4px 6px transparent;
 }
 
 
