@@ -1,20 +1,9 @@
 # Cnblogs-Theme-SimpleMemory
-<<<<<<< HEAD
-
-
 原作者的github地址为https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
 
 本主题以阅读为核心，尽可能的美化博客园的显示效果，提高用户体验。
 <br>基于博皮“SimpleMemor”进行的修改，使用插件较多，所以文件较多。[页面效果](https://www.cnblogs.com/wangyang0210)
-=======
-[![GitHub issues](https://img.shields.io/github/issues/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/issues)
-[![GitHub forks](https://img.shields.io/github/forks/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/network)
-[![GitHub stars](https://img.shields.io/github/stars/BNDong/Cnblogs-Theme-SimpleMemory.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/stargazers)
-[![BNDong](https://img.shields.io/badge/bndong-%E2%9D%A4%EF%B8%8F-%23ff69b4.svg)](https://www.cnblogs.com/bndong/)
 
-本主题以阅读为核心，尽可能的美化博客园的显示效果，提高用户体验。
-<br>基于博皮“SimpleMemor”进行的修改，使用插件较多，所以文件较多。[页面效果](https://www.cnblogs.com/bndong/)
->>>>>>> origin/src
 <br>支持响应，尺寸分别为：(1200px,∞px)，(960px,1200px]，(720px,960px]，(0px,720px]
 # 目录结构
 ```
@@ -50,17 +39,10 @@
 ## 标题与引用
 * 一级标题 `<h1>`
 * 二级标题 `<h2>`
-<<<<<<< HEAD
-* 引入文字 `<h6>`
-* 关键字 `行内代码`
-## 转载文章和文章后缀
-文章后缀显示的内容可以在相关配置项进行配置。如果需要其它修改，可以修改 articleStatement.js 文件。
-=======
 * 引入文字 `引用` or `<h6>`
 * 关键字 `行内代码`
 ## 转载文章和文章后缀
 文章后缀显示的内容可以在相关配置项进行配置。如果需要其它修改，可以修改 ``/js/articleStatement.js`` 文件。
->>>>>>> origin/src
 <br>关于转载文章在HTML源码中加入如下代码来指定文章作者和来源：
 ```html
 <input id="articleAuthor" type="hidden" value="作者" />
@@ -131,8 +113,7 @@ prettify、desert、sunburst、obsidian、doxy
 播放器的设置，可以参考作者的 [GitHub](https://github.com/metowolf/MetingJS)
 ## Loading
 Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocalautti/spring-loaders)
-<<<<<<< HEAD
-=======
+
 ## 字体图标库及其拓展方法
 本博客使用的图标库为阿里巴巴矢量图标库 iconfont。
 ### 字体图标库
@@ -158,7 +139,6 @@ Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocala
     ...
 ```
 
->>>>>>> origin/src
 # 常见问题
 ## 菜单数据不显示
 这个是大家遇到最多的问题，请以下面的方式进行处理。
@@ -189,8 +169,6 @@ Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocala
 关于优化和建议大家可以私信我，同时也欢迎大家上传代码给我。
 本人学习计划一直排的挺满的，写这个纯是业余消遣，所以可能会出现维护更新和回答不及时的情况。
 感谢阅读使用，拜谢！
-<<<<<<< HEAD
-=======
 
 ---
 # 版本更新日志
@@ -325,4 +303,3 @@ Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocala
 
 ## 2018.07.26 - 2c69f82
 * 项目成立
->>>>>>> origin/src
