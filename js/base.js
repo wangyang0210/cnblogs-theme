@@ -733,14 +733,10 @@ function Base() {
         pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>(^・ω・^ )( ^・ω・^)</span></div>";
         pvHtml += '<div id="blogrollInfo"></div>';
         pvHtml += '<div id="cnzzInfo"></div>';
-        $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
-
-        if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/bndong") == -1 ) setTheme();
-
+        $('#footer').append(pvHtml);
         window.setInterval( setRunTime, 500 );
         setBlogroll();
         timeIds.setCnzzTId    = window.setInterval( setCnzz, 1000 );
-        // timeIds.setAmazingTId = window.setInterval( setAmazing, 1000 );
 
         function setRunTime() {
             var str = window.cnblogsConfig.blogStartDate;
@@ -760,7 +756,6 @@ function Base() {
             }
         }
         function setCnzz() {
-            // 请去 CNZZ 配置自己的，谢谢！！
             var cnzzStat = $('.id_cnzz_stat_icon a');
             if (cnzzStat.length > 0) {
                 var cnzzInfo = [];
@@ -783,18 +778,6 @@ function Base() {
                 $('#amazingStat').appendTo('#amazingStatSpan').show();
                 bndongJs.clearIntervalTimeId(timeIds.setAmazingTId);
             }
-        }
-        function setTheme() {
-            $('#footer').prepend('<div class="footer-image"></div>');
-            setInterval(function(){
-                var footer = $('#footer');
-                // var themeHtml = '<p id="ThemeAuthors" style="color: #444;z-index: 999;">- Theme Author：<a href="https://www.cnblogs.com/bndong/" target="_blank" style="color:#444;">BNDong</a> -</p></div>';
-                // if ($('#ThemeAuthors').length == 0) {
-                    // $('#footer').append(themeHtml);
-                // } else {
-                //     $('#ThemeAuthors').show().css('visibility', 'visible');
-                // }
-            },3000);
         }
     };
 

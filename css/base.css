@@ -1255,7 +1255,7 @@ button {
     font-size: 12px;
     line-height: 1.5;
 }
-.footer-image {
+/* .footer-image {
     background: url(http:\\cache.wangyangyang.vip/footer.png) no-repeat 51%;
     height: 369px;
     z-index: 1;
@@ -1263,8 +1263,7 @@ button {
     bottom: 70px;
     width: 100%;
     pointer-events: none;
-}
-
+} */
 .my-face {
     animation: my-face 5s infinite ease-in-out;
     display: inline-block;
