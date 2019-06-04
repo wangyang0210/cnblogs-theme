@@ -1,5 +1,7 @@
 # Cnblogs-Theme-SimpleMemory
-原作者的github地址为https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
+
+
+`原作者的github地址` | https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
 
 本主题以阅读为核心，尽可能的美化博客园的显示效果，提高用户体验。
 <br>基于博皮“SimpleMemor”进行的修改，使用插件较多，所以文件较多。[页面效果](https://www.cnblogs.com/wangyang0210)
@@ -172,6 +174,10 @@ Loading的设置，可以参考作者的 [GitHub](https://github.com/claudiocala
 
 ---
 # 版本更新日志
+
+## 2019.06.06 - bf023fa
+>删除底部图片
+
 ## 2019.04.27 - v1.0.0
 * v1.0.0 版本发布
 
