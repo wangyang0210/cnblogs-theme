@@ -54,6 +54,9 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     overflow: hidden;
+    -ms-overflow-style: none; //IE 10+
+    overflow: -moz-scrollbars-none; //Firefox
+
 }
 
 body:before {
@@ -66,6 +69,10 @@ body:before {
     right: 0;
     bottom: 0;
     background-size: 20px 20px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 ::-moz-selection {
@@ -1248,7 +1255,7 @@ button {
     margin-top: 200px;
     left: 0;
     right: 0;
-    background:url('http:\\cache.wangyangyang.vip/fr.png') no-repeat;
+    background:url('http:\\cache.wangyangyang.vip/bky-ft.jpg') no-repeat;
     background-size: 100% 105%;
     padding: 17px 0 27px;
     text-align: center;
