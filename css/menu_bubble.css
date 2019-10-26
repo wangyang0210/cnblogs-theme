@@ -200,10 +200,11 @@ body{
 }
 
 .icon-list li a:after {
-	display: inline-block;
+    display: inline-block;
     content: " .......................................................";
-    color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,.2);
     margin-left: 5px;
+    width: 129px;
 }
 
 .menu li a:hover {
