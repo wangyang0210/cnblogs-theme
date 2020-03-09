@@ -868,8 +868,7 @@ button {
 }
 
 #comment_form_container .comment_textarea {
-    width: 362px;
-    height: 200px;
+    width: 100%;
     font-size: 13px;
     padding: 8px;
     margin-bottom: 10px;
