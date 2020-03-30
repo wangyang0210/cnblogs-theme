@@ -203,11 +203,9 @@ body{
     display: inline-block;
     content: " ................................................";
     color: rgba(255,255,255,.2);
-    position: absolute;
     overflow: hidden;
-    width: 237px;
     vertical-align: bottom;
-    margin-left: 5px;
+    margin-left: 7px;
 }
 
 .menu li a:hover {
