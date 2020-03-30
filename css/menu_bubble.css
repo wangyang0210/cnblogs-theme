@@ -201,10 +201,13 @@ body{
 
 .icon-list li a:after {
     display: inline-block;
-    content: " .......................................................";
+    content: " ................................................";
     color: rgba(255,255,255,.2);
+    position: absolute;
+    overflow: hidden;
+    width: 237px;
+    vertical-align: bottom;
     margin-left: 5px;
-    width: 129px;
 }
 
 .menu li a:hover {
