@@ -200,9 +200,9 @@ body{
 }
 
 .icon-list li a:after {
-    display: inline-block;
+    display: initial;
     content: " ................................................";
-    color: rgba(255,255,255,.2);
+    /* color: rgba(255,255,255,.2); */
     overflow: hidden;
     vertical-align: bottom;
     margin-left: 7px;
