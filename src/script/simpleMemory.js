@@ -91,13 +91,13 @@ if (initCheck()) {
         '<div id="rightMenu"></div>';
 
     window.cnblogsConfigDefault = {
-        GhUserName: 'BNDong',
-        GhRepositories: 'Cnblogs-Theme-SimpleMemory',
-        GhVersions: 'v1.3.0',
+        GhUserName: 'wangyang0210',
+        GhRepositories: 'Cnblogs-Theme',
+        GhVersions: '5d4780266ea9d12c139e7e8dc2c3dd83f0fe805b',
         CnVersions: "",
         blogUser: "",
         blogAvatar: "",
-        blogStartDate: "2019-01-01",
+        blogStartDate: "2018-2-12",
         menuCustomList: {},
         menuNavList: [],
         menuUserInfoBgImg: '',
