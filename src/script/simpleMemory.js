@@ -297,7 +297,7 @@ function getVersionConfig() {
     window.cnblogsConfig.CnVersions = window.cnblogsConfig.GhVersions;
 
     if (window.cnblogsConfig.isVersionMapping) {
-        var url = 'https://raw.githubusercontent.com/' + window.cnblogsConfig.GhUserName + '/' + window.cnblogsConfig.GhRepositories + '/master/version.conf';
+        var url = 'https://raw.githubusercontent.com/' + window.cnblogsConfig.GhUserName + '/' + window.cnblogsConfig.GhRepositories + '/theme-simpleMemory/version.conf';
 
         $.ajax({
             type: "get",
