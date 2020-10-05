@@ -1,0 +1,289 @@
+#cnblogs_post_body table, .feedbackCon table, #cnblogs_post_body table td, .feedbackCon table td, body {
+    background-color: #333
+}
+
+#cnblogs_post_body table td, #cnblogs_post_body table th, .feedbackCon table td, .feedbackCon table th {
+    border-bottom: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a
+}
+
+body {
+    color: #ddd
+}
+
+#home {
+    background-color: rgba(51, 51, 51, .9);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3)
+}
+
+#cnblogs_post_body h6, blockquote {
+    background-color: #2a2a2a;
+    border-left: 4px solid #222;
+    color: #ddd
+}
+
+.postBody {
+    color: #ddd
+}
+
+.header__dev {
+    color: #ddd !important
+}
+
+.dev__fe i, .dev__ux i {
+    color: #ddd
+}
+
+#cnblogs_post_body table, .feedbackCon table {
+    border: 1px solid #2a2a2a;
+    color: #ddd
+}
+
+#cnblogs_post_body table th, .feedbackCon table th {
+    background-color: #3e3e3e
+}
+
+#green_channel {
+    border-top: #555 1px dashed;
+    border-bottom: #555 1px dashed
+}
+
+#commentform_title:after, .entrylistTitle:after, .feedback_area_title:after {
+    border-bottom: 1px dashed #555
+}
+
+.comment_textarea, textarea {
+    background-color: #333
+}
+
+#comment_form_container .comment_textarea {
+    border: 1px solid #555
+}
+
+.commentbox_title {
+    border-bottom: 1px dashed #555
+}
+
+footer-background {
+    display: none
+}
+
+.essaySuffix-box {
+    background: #333 !important;
+    border-color: #555 !important;
+    color: #ddd !important
+}
+
+.essaySuffix-box-left img {
+    border: 1px solid #555
+}
+
+#topics .postDesc, .commentbox_tab, .catalog-btn i, #rightMenu i, #sideCatalog a,
+#rightDiggit .rightMenuSpan::before, #rightDiggit .rightMenuSpan::before, #rightBuryit .rightMenuSpan::before, #attention .rightMenuSpan::before, #toUpDown .rightMenuSpan::before
+{
+    color: #999 !important;
+}
+
+.catalog-btn-shadow, div#rightMenu>div, #rightDiggit .rightMenuSpan, #rightDiggit .rightMenuSpan, #rightBuryit .rightMenuSpan, #attention .rightMenuSpan, #toUpDown .rightMenuSpan,
+#rightDiggit .rightMenuSpan::before, #rightDiggit .rightMenuSpan::before, #rightBuryit .rightMenuSpan::before, #attention .rightMenuSpan::before, #toUpDown .rightMenuSpan::before
+{
+    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.5), inset 0 0px 0 0 rgba(0,0,0,.5) !important;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,.5), inset 0 0px 0 0 rgba(0,0,0,.5) !important;
+}
+
+div#rightMenu>div {
+    background: #333 !important;
+}
+
+#sideCatalog-catalog, .catalog-btn {
+    background: rgba(51, 51, 51, 1) !important
+}
+
+#sideCatalog li {
+    border-bottom: 1px dashed #3a3a3a !important
+}
+
+#sideCatalog {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3) !important
+}
+
+#author_profile_info img.author_avatar {
+    border: 3px solid #3a3a3a
+}
+
+.menu-button {
+    color: #f9f9f9 !important;
+    border: 1px solid rgba(255, 255, 255, .6) !important
+}
+
+.menu-button::before {
+    background: linear-gradient(#f9f9f9 20%, transparent 20%, transparent 40%, #f9f9f9 40%, #f9f9f9 60%, transparent 60%, transparent 80%, #f9f9f9 80%) !important
+}
+
+.sb-title {
+    color: #f9f9f9
+}
+
+.menu-button-scroll {
+    background: #333 !important
+}
+
+.introduce-box {
+    opacity: .85
+}
+
+.postTitle a:active, .postTitle a:link, .postTitle a:visited, .entrylistPosttitle a:active, .entrylistPosttitle a:link, .entrylistPosttitle a:visited {
+    color: #ddd
+}
+
+.postTitle a:hover, .entrylistPosttitle a:hover {
+    color: #eee
+}
+
+.entrylistPostSummary, .postCon {
+    color: #ddd
+}
+
+.c_b_p_desc_readmore {
+    color: #999 !important
+}
+
+.postMeta {
+    color: #999
+}
+
+.day, .entrylistItem:not(:last-of-type) {
+    border-bottom: #555 1px solid
+}
+
+.day:after, .entrylistItem:not(:last-of-type):after {
+    border: 1px solid #555;
+    background: #333;
+    box-shadow: rgba(51,51,51,.7) 0 0 0 5px;
+}
+
+.PostList {
+    border-bottom: 1px dashed #555;
+}
+
+span.cnblogs_code {
+    background-color: #282c34;
+    color: #F92672;
+}
+
+.list .inc .bottom, .list .inc .bottomleft, .list .inc .bottomright, .list .inc .left, .list .inc .right, .list .inc .top, .list .inc .topleft, .list .inc .topright, .list .out .bottom, .list .out .bottomleft, .list .out .bottomright, .list .out .conmts, .list .out .left, .list .out .right, .list .out .top, .list .out .topleft, .list .out .topright {
+    background: unset
+}
+
+.postBody .cnblogs-markdown code:not(.language-env), .postBody .cnblogs-post-body code:not(.language-env) {
+    background-color: #282c34 !important;
+    color: #F92672;
+}
+
+.main-header {
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+#nav_next_page a:hover, .pager a:hover {
+    background: #555;
+}
+
+.postBody h1, .postBody h2, .postBody h3, .postBody h4, .postBody h5 {
+    color: #ddd !important;
+}
+
+#sideCatalog li.active:before {
+    background: rgba(0,0,0,.1) !important;
+}
+
+#sideCatalog li.active:after {
+    border-left: 3px solid #567fb5 !important;
+}
+
+#sideCatalog-catalog .active a {
+    color: #567fb5 !important;
+}
+
+.books-item .books-item-span {
+    background: #2a2a2a;
+    box-shadow: 3px 3px 3px 1px rgba(30,30,30,.3);
+}
+
+.books-item .books-item-span ._2girK ._3Oa5I {
+    color: #999;
+}
+
+.books-item .books-item-span ._2girK ._1P9dH {
+    color: #ddd;
+}
+
+.postBody pre, .feedbackItem pre, #cnblogs_post_body img, #EntryTag, #div_digg, #green_channel, .main-header, #btn_comment_submit {
+    filter: brightness(0.8);
+}
+
+.list .inc .conmts {
+    color: #ddd;
+    background: unset;
+}
+
+.feedbackListSubtitle {
+    color: #999;
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    border-bottom: 1px solid #555;
+}
+
+.feedbackCon {
+    border: 1px solid #555;
+    background: #333;
+}
+
+.feedbackListSubtitle-louzhu {
+    background-color: #25282d!important;
+    border-bottom-color: #444!important;
+}
+
+.feedbackListSubtitle-louzhu:after {
+    border-right-color: #25282d !important;
+}
+
+.feedbackAvatar img {
+    border: 1px solid #555;
+}
+
+.feedbackItem:before {
+    background-color: #555;
+}
+
+.feedbackListSubtitle:before {
+    border-right-color: #555;
+}
+
+.feedbackListSubtitle:after {
+    border-right-color: #2a2a2a;
+}
+
+#tbCommentBody, #tbCommentBodyPreview {
+    color: #ddd;
+}
+
+.cnblogs_code_collapse {
+    background-color: #333;
+}
+
+.aplayer {
+    color: #666;
+}
+
+@media only screen and (max-width: 720px) {
+    .menu-button {
+        border: none!important;
+        margin: 0!important;
+    }
+    #home {
+        box-shadow: unset;
+    }
+    .menu-button-scroll {
+        background: #444!important;
+    }
+}
