@@ -1,4 +1,4 @@
-# Cnblogs-Theme-SimpleMemory
+# Cnblogs-Theme
 
 
 `原作者的github地址` | https://github.com/BNDong/Cnblogs-Theme-SimpleMemory
