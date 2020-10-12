@@ -91,13 +91,13 @@ if (initCheck()) {
         '<div id="rightMenu"></div>';
 
     window.cnblogsConfigDefault = {
-        GhUserName: 'wangyang0210',
-        GhRepositories: 'Cnblogs-Theme',
-        GhVersions: '9031e36f08c5d6867e43f65b5c324c23918abc2e',
+        GhUserName: 'BNDong',
+        GhRepositories: 'Cnblogs-Theme-SimpleMemory',
+        GhVersions: 'v1.3.0',
         CnVersions: "",
         blogUser: "",
         blogAvatar: "",
-        blogStartDate: "2018-2-12",
+        blogStartDate: "2019-01-01",
         menuCustomList: {},
         menuNavList: [],
         menuUserInfoBgImg: '',
@@ -174,12 +174,12 @@ if (initCheck()) {
             animateSections: true
         },
         homeTopImg: [
-            "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp"
+            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp"
         ],
         homeBannerText: "",
         homeBannerTextType: "jinrishici",
         essayTopImg: [
-            "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp"
+            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
         ],
         essayCodeHighlightingType: 'cnblogs',
         essayCodeHighlighting: '',
@@ -297,7 +297,7 @@ function getVersionConfig() {
     window.cnblogsConfig.CnVersions = window.cnblogsConfig.GhVersions;
 
     if (window.cnblogsConfig.isVersionMapping) {
-        var url = 'https://raw.githubusercontent.com/' + window.cnblogsConfig.GhUserName + '/' + window.cnblogsConfig.GhRepositories + '/theme-simpleMemory/version.conf';
+        var url = 'https://raw.githubusercontent.com/' + window.cnblogsConfig.GhUserName + '/' + window.cnblogsConfig.GhRepositories + '/master/version.conf';
 
         $.ajax({
             type: "get",
