@@ -60,7 +60,6 @@
 }
 
 #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom, #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top {
-    /*background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/sideToolbar.webp) 0 -199px no-repeat;*/
     height: 10px;
     left: -5px;
     overflow: hidden;
@@ -134,7 +133,6 @@
 }
 
 .sideCatalog-dot {
-    /*background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/sideToolbar.webp) 0 -222px;*/
     cursor: pointer;
     font-size: 12px;
     height: 10px;
@@ -146,9 +144,6 @@
     width: 6px
 }
 
-/*#sideCatalog .highlight .sideCatalog-dot, #sideCatalogBtn, #sideCatalogBtn:hover {*/
-    /*background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/list.webp) 4px 6px no-repeat*/
-/*}*/
 
 #sideCatalog .highlight .sideCatalog-dot {
     height: 13px;
@@ -173,13 +168,6 @@
     bottom: 96px
 }
 
-/*.sideCatalogBtnDisable {*/
-    /*background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/list.webp) 4px 6px no-repeat !important*/
-/*}*/
-
-/*#sideToolbar-up, #sideToolbar-up:hover {*/
-    /*background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/list.webp) 4px 6px no-repeat*/
-/*}*/
 
 #sideToolbar-up {
     border-radius: 2px;

@@ -635,7 +635,7 @@ function Base() {
                 bndongJs.clearIntervalTimeId(timeIds.setMenuRecordTId);
             }
         }
-        
+
         // 添加文章档案
         function setArticle() {
             let sbArticle   = $('#sidebar_articlearchive ul li'),
@@ -819,7 +819,8 @@ function Base() {
         // 设置页脚样式
         switch (parseInt(window.cnblogsConfig.footerStyle)) {
             case 1: init_t1();break;
-            case 2: default: init_t2();break;
+            case 2: init_t2();break;
+            case 3: default:init_t3();break;
         }
 
         // v1.0 页脚
@@ -835,6 +836,19 @@ function Base() {
                 '<figure class="background"></figure>' +
                 '<figure class="foreground"></figure>' +
                 '</footer-background>' +
+                '</footer>';
+            footer.prepend(html);
+            $('#footer .footer-text').css({
+                'padding-bottom': '0',
+                'border-bottom': 'none',
+                'margin-bottom':  '0'
+            });
+        }
+        //v2.0.1 页脚
+        function init_t3() {
+            let html = '<footer>' +
+                '<div id="jsi-flying-fish-container" class="fish">' +
+                '</div>' +
                 '</footer>';
             footer.prepend(html);
             $('#footer .footer-text').css({
@@ -863,7 +877,7 @@ function Base() {
             }
         }
 
-        // 设置网站统计，请去 CNZZ 配置自己的，谢谢！！
+        // 设置网站统计
         function setCnzz() {
             let cnzzStat = $('.id_cnzz_stat_icon a');
             if (cnzzStat.length > 0) {
@@ -1586,7 +1600,7 @@ function Base() {
                 bndongJs.clearIntervalTimeId(timeIds.commentTId);
             }
         },1000);
-        
+
         function setComment() {
             let feedbackItem = $('.feedbackItem');
             if (feedbackItem.length > 0) {
