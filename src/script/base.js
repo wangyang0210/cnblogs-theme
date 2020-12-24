@@ -10,6 +10,7 @@ function Base() {
           tools        = new myTools,
           isHome       = !!$('#topics').length;
 
+
     let progressBar  = new ToProgress(window.cnblogsConfig.progressBar, '#bottomProgressBar'), // 进度条
         temScroll    = 0,  // 上一次页面滚动位置
 

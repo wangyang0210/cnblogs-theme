@@ -3584,7 +3584,7 @@ footer footer-background .clouds {
     left: 0
 }
 
-footer .fish {
+.fish {
     width: 100%;
     position: fixed;
     z-index: -1;

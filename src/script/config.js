@@ -7,7 +7,7 @@ require.config({
         }
     },
     paths: {
-        //-- footer fish
+        //-- 底部鱼跃
         fish: setFileNameMin('lib/fish', 'js'),
         //-- 菜单滚动条
         optiscroll: setFileNameMin('lib/jquery.optiscroll', 'js'),
