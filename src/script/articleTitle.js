@@ -16,7 +16,7 @@ $(document).ready(function () {
         || (s.find('h4').length ? 4 : false)
         || (s.find('h5').length ? 5 : false)
         || (s.find('h6').length ? 6 : false);
-    if (!topLev || topLev > 6) return;
+    if (!topLev || topLev > 4) return;
 
     // 处理标题缩放级别
     let hScale = {};
@@ -24,7 +24,7 @@ $(document).ready(function () {
         hScale['h'+i] = j.toFixed(1);
     }
 
-    let topHT = 'h' + topLev, topTwHT = 'h' + (topLev + 1), topSwHT = 'h' + (topLev + 2), topHTN = 0, topTwHTN = 0, topSwHTN = 0, bw = s.outerWidth(false);
+    let topHT = 'h' + topLev, topTwHT = 'h' + (topLev + 1), topHTN = 0, topTwHTN = 0, bw = s.outerWidth(false);
     h.each(function () {
         let u = $(this), v = u[0], ht = v.tagName.toLowerCase(), ln = 1, rn = 0, style = '', icon = '';
         if (ht === 'h6') return true;
@@ -34,18 +34,12 @@ $(document).ready(function () {
         // 判断标题级别
         switch (ht) {
             case topHT: // 一级标题
-                topHTN++; ln = topHTN; topTwHTN = 0; topSwHTN = 0;
+                topHTN++; ln = topHTN; topTwHTN = 0;
                 break;
 
             case topTwHT: // 二级标题
                 style = 'position: relative;left: -5px;';
                 topTwHTN++; ln = topHTN; rn = topTwHTN;
-                headerStyle += 'left: -' +  (((1 - hScale[ht]) * bw / 2) - ((1 - hScale[ht]) * 10 * 8)).toFixed(2) + 'px;';
-                break;
-
-            case topSwHT: // 三级标题
-                style = 'position: relative;left: -10px;';
-                topTwHTN++; ln = topHTN; rn = topSwHTN;
                 headerStyle += 'left: -' +  (((1 - hScale[ht]) * bw / 2) - ((1 - hScale[ht]) * 10 * 8)).toFixed(2) + 'px;';
                 break;
 
