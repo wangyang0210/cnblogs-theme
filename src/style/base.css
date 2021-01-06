@@ -2334,7 +2334,7 @@ div#tbCommentBodyPreview {
     transition-delay: .4s;
     outline: 0;
     cursor: pointer;
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/me_top_bg.webp) center no-repeat #000;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/me_top_bg.webp) center no-repeat #000;
     background-size: 100%
 }
 
@@ -3499,7 +3499,7 @@ div#green_channel img {
 }
 
 .footer-image {
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/footer.webp) no-repeat 50%;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/footer.webp) no-repeat 50%;
     height: 368px;
     z-index: 1;
     position: absolute;
@@ -3553,7 +3553,7 @@ footer footer-background figure {
 
 footer footer-background .foreground {
     background-repeat: repeat-x !important;
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/foreground.webp) repeat-x;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/foreground.webp) repeat-x;
     background-size: 225em 15em;
     position: absolute;
     top: 1rem;
@@ -3564,7 +3564,7 @@ footer footer-background .foreground {
 
 footer footer-background .background {
     background-repeat: repeat-x !important;
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/background.webp) repeat-x;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/background.webp) repeat-x;
     background-size: 225em 21.313em;
     position: absolute;
     top: -1em;
@@ -3575,7 +3575,7 @@ footer footer-background .background {
 
 footer footer-background .clouds {
     background-repeat: repeat-x !important;
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/clouds.webp) repeat-x;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/clouds.webp) repeat-x;
     background-size: 225em 15em;
     position: absolute;
     top: -2em;
@@ -3623,7 +3623,7 @@ table#blogCalendar>tbody>tr>td>a {
 
 .art-dialog-statusbar {
     padding: 0 0 0 16px !important;
-    background: url(https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/rss.webp) no-repeat 0;
+    background: url(https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/rss.webp) no-repeat 0;
 }
 
 .art-dialog-button button[i-id=cancel]:hover {

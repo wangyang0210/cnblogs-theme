@@ -197,7 +197,7 @@ window.cnblogsConfig = {
 
 ```javascript
 window.cnblogsConfig = {
-    webpageIcon: "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/blog_logo.webp",
+    webpageIcon: "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/blog_logo.webp",
 }
 ```
 
@@ -535,7 +535,7 @@ window.cnblogsConfig = {
 
 ```json
 [
-    "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp"
+    "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp"
 ]
 ```
 
@@ -544,8 +544,8 @@ window.cnblogsConfig = {
 ```javascript
 window.cnblogsConfig = {
     homeTopImg: [
-        "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp",
-        "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp"
+        "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp",
+        "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp"
     ],
 }
 ```
@@ -607,7 +607,7 @@ one：每日获取一句话
 
 ```json
 [
-    "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
+    "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp"
 ]
 ```
 
@@ -616,8 +616,8 @@ one：每日获取一句话
 ```javascript
 window.cnblogsConfig = {
     essayTopImg: [
-        "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp",
-        "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
+        "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp",
+        "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp"
     ],
 }
 ```

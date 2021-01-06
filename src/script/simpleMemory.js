@@ -189,7 +189,7 @@ if (initCheck()) {
         homeBannerText: "",
         homeBannerTextType: "jinrishici",
         essayTopImg: [
-            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
+            "https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp"
         ],
         essayCodeHighlightingType: 'cnblogs',
         essayCodeHighlighting: '',

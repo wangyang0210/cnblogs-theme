@@ -106,7 +106,7 @@ function Base() {
         $('#menuWrap').optiscroll({ forceScrollbars: true, maxTrackSize: 20, preventParentScroll: true });
 
         // 设置菜单个人简介头像
-        let blogAvatar = window.cnblogsConfig.blogAvatar ? window.cnblogsConfig.blogAvatar : 'https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/default_avatar.webp';
+        let blogAvatar = window.cnblogsConfig.blogAvatar ? window.cnblogsConfig.blogAvatar : 'https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/default_avatar.webp';
         $('#menuBlogAvatar').append("<img src='"+blogAvatar+"'>");
 
         // html5-title
@@ -230,7 +230,6 @@ function Base() {
         } else { // 向上滚动
 
             if (homeScroll >= docScroll) { // 滚入头图
-
                 // 设置菜单按钮
                 if (openButton.hasClass('menu-button-scroll')) {
                     openButton.removeClass('menu-button-scroll');
@@ -1613,7 +1612,7 @@ function Base() {
                         let id = idInfo[idInfo.length - 1], idTmp = id.toString().match(/[0-9]/g);
                         if ($.isArray(idTmp)) id = idTmp.join('');
                         let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? $.trim(op.text())
-                            : 'https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/default_avatar.webp';
+                            : 'https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/default_avatar.webp';
                         let ac = $('#a_comment_author_' + id), ah = ac.length ? ac.attr('href') : 'javascropt:void(0);';
                         avatarHtml = '<div class="feedbackAvatar"><a href="' + ah + '" target="_blank"><img src="'+patch+'"/></a></div>';
                         obj.prepend(avatarHtml);
