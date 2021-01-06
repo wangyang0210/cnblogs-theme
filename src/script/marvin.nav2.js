@@ -26,14 +26,14 @@ $(document).ready(function () {
         || (s.find('h4').length ? 4 : false)
         || (s.find('h5').length ? 5 : false)
         || (s.find('h6').length ? 6 : false);
-    if (!topLev || topLev > 4) return;
+    if (!topLev || topLev > 6) return;
 
-    let topHT = 'h' + topLev, topTwHT = 'h' + (topLev + 1);
+    let topHT = 'h' + topLev, topTwHT = 'h' + (topLev + 1), topSwHT = 'h' + (topLev + 2), topPwHT = 'h' + (topLev + 3), topQwHT = 'h' + (topLev + 4), topRwHT = 'h' + (topLev + 5);
 
     o.each(function (ii) {
         let u = $(this),
             v = u[0];
-        if ($.inArray((v.tagName.toLowerCase()), [topHT, topTwHT]) === -1) return true;
+        if ($.inArray((v.tagName.toLowerCase()), [topHT, topTwHT, topSwHT, topPwHT, topQwHT, topRwHT]) === -1) return true;
 
         let lserialNum   = u.find('.dev__fe').length  > 0 ? u.find('.dev__fe').text() : null,
             rserialNum   = u.find('.dev__ux').length > 0  ? u.find('.dev__ux').text() : null,
@@ -65,6 +65,50 @@ $(document).ready(function () {
             if(q){
 
                 if(titleContent.length>30) titleContent = titleContent.substr(0,30) + "...";
+                titleContent = tools.HTMLEncode(titleContent);
+                let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
+
+                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+            }
+        } else if (r && v.localName === topSwHT) {
+            m++; n = 0;
+            if(q){
+
+                if(titleContent.length>34) titleContent = titleContent.substr(0,34) + "...";
+                titleContent = tools.HTMLEncode(titleContent);
+                let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
+
+                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+            }
+        } else if (r && v.localName === topPwHT) {
+            m++; n = 0;
+            if(q){
+
+                if(titleContent.length>38) titleContent = titleContent.substr(0,38) + "...";
+                titleContent = tools.HTMLEncode(titleContent);
+                let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
+
+                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+            }
+        } else if (r && v.localName === topQwHT) {
+            m++; n = 0;
+            if(q){
+
+                if(titleContent.length>42) titleContent = titleContent.substr(0,42) + "...";
+                titleContent = tools.HTMLEncode(titleContent);
+                let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
+
+                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+            }
+        } else if (r && v.localName === topRwHT) {
+            m++; n = 0;
+            if(q){
+
+                if(titleContent.length>46) titleContent = titleContent.substr(0,46) + "...";
                 titleContent = tools.HTMLEncode(titleContent);
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
