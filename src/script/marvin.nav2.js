@@ -81,7 +81,7 @@ $(document).ready(function () {
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
                 j += '<li h="'+(topLev+2)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
-                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+                    'class="h3Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topPwHT) {
             m++; n = 0;
@@ -92,7 +92,7 @@ $(document).ready(function () {
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
                 j += '<li h="'+(topLev+3)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
-                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+                    'class="h4Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topQwHT) {
             m++; n = 0;
@@ -103,7 +103,7 @@ $(document).ready(function () {
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
                 j += '<li h="'+(topLev+4)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
-                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+                    'class="h5Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topRwHT) {
             m++; n = 0;
@@ -114,7 +114,7 @@ $(document).ready(function () {
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
                 j += '<li h="'+(topLev+5)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
-                    'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
+                    'class="h6Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         }
     });
