@@ -128,17 +128,17 @@
 
 #sideCatalog li.h4Offset {
     padding-left: 90px;
-    text-indent: 50px;
+    text-indent: -30px;
 }
 
 #sideCatalog li.h5Offset {
     padding-left: 90px;
-    text-indent: 70px;
+    text-indent: -10px;
 }
 
-#sideCatalog li.h5Offset {
+#sideCatalog li.h6Offset {
     padding-left: 90px;
-    text-indent: 90px;
+    text-indent: 10px;
 }
 
 #sideCatalog a {
