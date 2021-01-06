@@ -80,7 +80,7 @@ $(document).ready(function () {
                 titleContent = tools.HTMLEncode(titleContent);
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
-                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                j += '<li h="'+(topLev+2)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
                     'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topPwHT) {
@@ -91,7 +91,7 @@ $(document).ready(function () {
                 titleContent = tools.HTMLEncode(titleContent);
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
-                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                j += '<li h="'+(topLev+3)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
                     'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topQwHT) {
@@ -102,7 +102,7 @@ $(document).ready(function () {
                 titleContent = tools.HTMLEncode(titleContent);
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
-                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                j += '<li h="'+(topLev+4)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
                     'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         } else if (r && v.localName === topRwHT) {
@@ -113,7 +113,7 @@ $(document).ready(function () {
                 titleContent = tools.HTMLEncode(titleContent);
                 let itemText = lserialNum === null && rserialNum === null ? titleContent : lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent;
 
-                j += '<li h="'+(topLev+1)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
+                j += '<li h="'+(topLev+5)+'" g="'+ (lserialNum === null ? l : lserialNum) +'" ' +
                     'class="h2Offset ceg'+ (lserialNum === null ? l : lserialNum) +'"><a href="#'+hId+'" goto="' + titleId + '" onclick="return false;">' + itemText + '</a></li>';
             }
         }
