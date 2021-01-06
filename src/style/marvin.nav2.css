@@ -126,6 +126,21 @@
     text-indent: -50px
 }
 
+#sideCatalog li.h4Offset {
+    padding-left: 90px;
+    text-indent: 50px;
+}
+
+#sideCatalog li.h5Offset {
+    padding-left: 90px;
+    text-indent: 70px;
+}
+
+#sideCatalog li.h5Offset {
+    padding-left: 90px;
+    text-indent: 90px;
+}
+
 #sideCatalog a {
     text-decoration: none;
     color: #555;
