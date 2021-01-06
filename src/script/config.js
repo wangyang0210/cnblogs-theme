@@ -100,6 +100,7 @@ require.config({
         base: {
             deps: [
                 'tools',
+                'fish',
                 'css!//at.alicdn.com/t/font_543384_kv876ayucyc.css', // 阿里云字体图标
                 'css!'+getJsDelivrUrl('google-fonts.css'), // 谷歌字体
             ]
