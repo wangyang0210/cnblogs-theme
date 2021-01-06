@@ -856,6 +856,7 @@ function Base() {
                 'border-bottom': 'none',
                 'margin-bottom':  '0'
             });
+            require(['fish']);
         }
 
         // 设置运行时间
