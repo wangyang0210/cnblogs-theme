@@ -52,6 +52,7 @@ $(document).ready(function () {
             u.attr('id', hId);
         }
         console.log(v);
+        console.log(v.localName);
         if (v.localName === topHT) {
             l++; m = 0; r = true;
             if(titleContent.length > 26) titleContent = titleContent.substr(0,26) + "...";
