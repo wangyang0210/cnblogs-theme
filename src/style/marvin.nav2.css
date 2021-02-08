@@ -123,22 +123,26 @@
 
 #sideCatalog li.h3Offset {
     padding-left: 90px;
-    text-indent: -50px
+    text-indent: -50px;
+    display: none;
 }
 
 #sideCatalog li.h4Offset {
     padding-left: 90px;
     text-indent: -30px;
+    display: none;
 }
 
 #sideCatalog li.h5Offset {
     padding-left: 90px;
     text-indent: -10px;
+    display: none;
 }
 
 #sideCatalog li.h6Offset {
     padding-left: 90px;
     text-indent: 10px;
+    display: none;
 }
 
 #sideCatalog a {

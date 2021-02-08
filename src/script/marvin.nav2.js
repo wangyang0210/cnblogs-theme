@@ -51,8 +51,6 @@ $(document).ready(function () {
             hId = 'hid-' + tools.randomString(6);
             u.attr('id', hId);
         }
-        console.log(v);
-        console.log(v.localName);
         if (v.localName === topHT) {
             l++; m = 0; r = true;
             if(titleContent.length > 26) titleContent = titleContent.substr(0,26) + "...";
@@ -142,11 +140,10 @@ $(document).ready(function () {
         $sideCatelog.css('visibility', 'hidden');
         $('#' + g).removeClass('sideCatalogBtnDisable');
     }
-
     nav_li.on('activate.bs.scrollspy', function () {
         let gu = $(this).attr("g"),
             catalog = $('#sideCatalog-catalog');
-            catalog.find('.h2Offset').hide();
+            catalog.find('h2Offset').hide();
             catalog.find('.ceg' + gu).show();
     })
 });
