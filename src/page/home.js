@@ -15,6 +15,20 @@ export default function main(_) {
 
         $('#homeTopTitle span').text(_.__config.info.name);
 
+        /**
+         * 博客名字动效
+         */
+        if (_.__config.animate.infoName.enable) {
+            $('#homeTopTitle span').hover(function () {
+                    $('#homeTopTitle span').css("animation", "pageTitleText 2s infinite")
+                    $('#homeTopTitle span').css("-webkit-animation", "pageTitleText 1s infinite")
+                }, function () {
+                    $('#homeTopTitle span').css("animation", "none")
+                    $('#homeTopTitle span').css("-webkit-animation", "none")
+                }
+            );
+        }
+
         // 判断用户是否自定义了设置
         let configTitle = _.__config.banner.home.title,
             hitokoto = $('#hitokoto');
