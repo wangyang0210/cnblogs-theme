@@ -1,0 +1,144 @@
+<div class="container">
+    <div class="menu-wrap optiscroll" id="menuWrap" style="display:none">
+
+        <!--    关闭按钮    -->
+        <div class="close-button" id="close-button">
+            <i class="iconfont icon-close"></i>
+        </div>
+
+        <!--    顶部标题    -->
+        <div class="sidebar-header">
+            <i class="iconfont icon-guangbo"></i>
+        &nbsp;&nbsp;  <span class="sidebar-title-msg"></span>
+        </div>
+
+        <!--    用户信息    -->
+        <div class="sidebar-profile">
+            <div class="user-pic" id="menuBlogAvatar"></div>
+            <div class="sidebar-userinfo" id="introduce"></div>
+        </div>
+
+        <!--    找找看    -->
+        <div class="sidebar-search">
+            <div class="sidebar-search-div">
+                <div class="input-group">
+                    <span id="sb-sidebarSearchBox"></span>
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="iconfont icon-sousuo2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    自定义导航    -->
+        <div class="customize-nav"></div>
+
+        <!--    日历    -->
+        <div id="calendar-box"></div>
+
+        <!--    自定义折叠目录    -->
+        <div class="sidebar-menu" id="customize-sidebar-menu">
+            <ul></ul>
+        </div>
+
+        <!--    折叠目录    -->
+        <div class="sidebar-menu">
+            <ul>
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-collection_fill"></i>
+                        <span class="sidebar-dropdown-title">积分排名</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-sidebarScorerank"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-time_fill"></i>
+                        <span class="sidebar-dropdown-title">最新随笔</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-sidebarRecentposts"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-label_fill"></i>
+                        <span class="sidebar-dropdown-title">我的标签</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-toptags"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-fenleicur"></i>
+                        <span class="sidebar-dropdown-title">随笔分类</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-classify"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-fenlei"></i>
+                        <span class="sidebar-dropdown-title">文章分类</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-ArticleCategory"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-browse_fill"></i>
+                        <span class="sidebar-dropdown-title">阅读排行</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-topview"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-like_fill"></i>
+                        <span class="sidebar-dropdown-title">推荐排行</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-topDiggPosts"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-pinglunzu"></i>
+                        <span class="sidebar-dropdown-title">最新评论</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-recentComments"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-task_fill"></i>
+                        <span class="sidebar-dropdown-title">随笔档案</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-record"></div>
+                </li>
+
+                <li class="ng-star-inserted sidebar-dropdown">
+                    <a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">
+                        <i class="iconfont icon-document_fill"></i>
+                        <span class="sidebar-dropdown-title">文章档案</span>
+                    </a>
+                    <div class="sidebar-submenu" id="sb-articlearchive"></div>
+                </li>
+            </ul>
+        </div>
+
+        <!--    尾部    -->
+        <div class="sidebar-footer"></div>
+
+        <div class="morph-shape" id="morph-shape" style="display: none"
+             data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800"
+                 preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button" id="open-button">MENU</button>
+    <div class="content-wrap" id="content-wrap"></div>
+</div>
