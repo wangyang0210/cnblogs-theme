@@ -5,8 +5,8 @@
  * ----------------------------------------------
  * @describe: 文章目录处理
  */
-import articleDirectoryTemp from '../../template/articleDirectory.html';
 import "../../style/articleDirectory.css";
+import articleDirectoryTemp from '../../template/articleDirectory.html';
 import "bootstrap";
 
 export default function main(_) {

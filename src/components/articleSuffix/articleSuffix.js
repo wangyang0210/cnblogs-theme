@@ -5,8 +5,8 @@
  * ----------------------------------------------
  * @describe: 文章后缀处理
  */
-import suffixTemp from '../../template/articleSuffix.html';
 import "../../style/articleSuffix.css";
+import suffixTemp from '../../template/articleSuffix.html';
 import defaultAvatarImg from './../../images/webp/default_avatar.webp';
 
 export default function main(_) {
