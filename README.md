@@ -41,21 +41,3 @@
 > 推荐大家使用最新版本，新版本的发布往往代表着功能的完善和bug的修复！
 > <br>文档的源文件在 /docs 目录，大家有更完善的文档或建议可以 Pull Request 或 Issues 给我。
 > <br>文档我已经禁止浏览器缓存，但仍可能存在缓存，大家可以尝试强制刷新下(ctrl+f5 / command+shift+r)
-
-# Contributors
-
-<a href="https://github.com/QQ2017" target="_blank">
-    <img width=50 src="https://avatars0.githubusercontent.com/u/23667705?s=50&v=4"/>
-</a>
-
-<a href="https://github.com/alessandrocyc" target="_blank">
-    <img width=50 src="https://avatars1.githubusercontent.com/u/43987494?s=50&v=4"/>
-</a>
-
-<a href="https://github.com/ElderJames" target="_blank">
-    <img width=50 src="https://avatars3.githubusercontent.com/u/7550366?s=50&v=4"/>
-</a>
-
-<a href="https://github.com/sky5454" target="_blank">
-    <img width=50 src="https://avatars2.githubusercontent.com/u/12370628?s=460&v=4"/>
-</a>
