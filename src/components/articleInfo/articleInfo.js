@@ -42,7 +42,7 @@ export default function main(_) {
             let info = postMeta(postDescText);
             let textNum = $('#cnblogs_post_body').text().length;
 
-            return '<span class="postMeta"><i class="iconfont icon-time1"></i>' + info.date.replace(/-/g,"/").substr(2) + '' +
+            return '<span class="postMeta"><i class="iconfont icon-time1"></i>' + info.date.replace(/-/g,"/") + '' +
                 '<i class="iconfont icon-browse"></i>' + info.vnum + '' +
                 '<i class="iconfont icon-interactive"></i>' + info.cnum + '' +
                 '<i class="iconfont icon-hot"></i>' + info.tnum + '' +
