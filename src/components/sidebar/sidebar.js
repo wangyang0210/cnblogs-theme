@@ -239,6 +239,7 @@ export default function main(_) {
         (() => {
             let customData = _.__config.sidebar.customList;
             if (Object.keys(customData).length > 0) {
+                let res = '';
                 $.each(customData, (title, list) => {
                     let html = '<li class="ng-star-inserted sidebar-dropdown">';
                     html += '<a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">';
@@ -246,17 +247,15 @@ export default function main(_) {
                     html += '   <span class="sidebar-dropdown-title">'+ title +'</span>';
                     html += '</a>';
                     html += '<div class="sidebar-submenu"><ul>';
-
                     $.each(list.data, (key, val) => {
-                        html += '<li><a href="' + val[1] + '" target="_blank">';
-                        html += val[0] + '</a></li>';
+                        html += '<li><a href="' + val[1] + '" target="_blank">' + val[0] + '</a></li>';
                     });
 
                     html += '</ul></div>';
                     html += '</li>';
-
-                    $('#customize-sidebar-menu ul').append(html);
+                    res += html;
                 });
+                $('#customize-sidebar-menu ul').append(res);
                 $('#customize-sidebar-menu').show();
                 $('#customize-sidebar-menu .sidebar-dropdown').show();
             }
