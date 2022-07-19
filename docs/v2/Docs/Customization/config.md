@@ -685,6 +685,30 @@ window.cnblogsConfig = {
 
 ?> 动效会消耗GPU，请大家按需选择开启
 
+### infoName - 主页name动效
+
+* 类型：```Object```
+* 默认值：
+
+```json
+{
+  enable: false // 是否开启动效
+}
+```
+
+主页name动效配置。
+
+```javascript
+window.cnblogsConfig = {
+  animate: {
+    infoName: {
+      enable: true,
+    },
+  }
+}
+```
+
+
 ### homeBanner - 主页banner动效
 
 * 类型：```Object```
