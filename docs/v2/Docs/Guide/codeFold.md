@@ -7,9 +7,7 @@
 <details>
 <summary> 代码 </summary>
     // 空一行
-    ```
     代码块内容
-    ```
     // 空一行
 </details>
 ```
