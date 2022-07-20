@@ -4,6 +4,7 @@
 * 修复customList渲染异常
 * 图片灯箱增加style和alt属性
 * 增加配置`animate.infoName`,用以配置是否开启主页博客名称hover效果
+* 增加代码折叠样式
 * 更新文档
 
 
