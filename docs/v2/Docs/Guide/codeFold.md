@@ -15,6 +15,5 @@
 ```
 > 代码块前后需要各空一行
 
-# 效果
 ![codeFold](https://cdn.jsdelivr.net/gh/wangyang0210/pic@ed8fa31afcfb0fef1d226f29ae0952/imgs/codeFold.gif)
 

@@ -17,13 +17,15 @@
 [![GitHub license](https://img.shields.io/github/license/esofar/cnblogs-theme-silence.svg)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/blob/master/LICENSE)
 [![compatibility](https://camo.githubusercontent.com/31ac3f0ce805dc34a29b615131caa26cbf4dc127/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f62726f777365722d2532306368726f6d6525323025374325323066697265666f782532302537432532306f706572612532302537432532307361666172692532302537432532306965253230253345253344253230392d6c69676874677265792e737667)](https://github.com/BNDong/Cnblogs-Theme-SimpleMemory)
 
+# Illustrate
+
+本人一直都很喜欢这个博皮，但是原作者最近一直没有更新，我打算自食其力，每天在视频号上直播更新这个博皮~
+
 # Author
 
 **Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
 
 > Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
-
-原作者最近都没更新，所以我就拿来每天更新一点，比较喜欢这个博皮；
 
 
 # Silence
@@ -36,7 +38,7 @@
 
 # Docs
 
-[永久地址](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/)　[备用地址](https://www.dbnuo.com/Cnblogs-Theme-SimpleMemory/docs/v2/)
+[永久地址](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/)　
 
 > 推荐大家使用最新版本，新版本的发布往往代表着功能的完善和bug的修复！
 > <br>文档的源文件在 /docs 目录，大家有更完善的文档或建议可以 Pull Request 或 Issues 给我。
