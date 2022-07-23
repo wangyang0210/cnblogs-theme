@@ -274,13 +274,15 @@ export default function main(_) {
             let html = '<ul>',
                 ret  = /^[1-9]+[0-9]*$/;
             obj.each((i) => {
-                let p = $(obj[i]),
+                let p = $($('#TopViewPostsBlock ul li')[i]),
                     o = p.text() === p.html() ? {} : $(p.html()),
-                    textArr = $.trim(p.text()).split('.');
+                    textArr =  p.text().trim().split('.');
                 if (ret.test(textArr[0])) textArr.splice(0,1);
-                let text = $.trim(textArr.join('.'));
+                let text = textArr.join('.').trim();
                 o.length > 0 && o.html(text);
-                html += '<li>' + (o.length > 0 ?  o.prop("outerHTML") : '<a href="javascript:void(0);">' + text + '</a>' ) + '</li>';
+                if (o.length >0 && text.length > 0 && o.prop("outerHTML")) {
+                    html += '<li>' + o.prop("outerHTML") + '</li>';
+                }
             });
             html += '</ul>';
             return html;
