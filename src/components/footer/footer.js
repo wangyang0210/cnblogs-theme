@@ -141,8 +141,6 @@ export default function main(_) {
                 todayEnd = moment().endOf('day').format('x'),
                 yesterdayStart =  moment().day(-1).startOf('day').format('x'),
                 yesterdayEnd = moment().day(-1).endOf('day').format('x');
-            let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
-            let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats';
             let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
             let shareRequest = {
                 "async": true,
@@ -159,6 +157,8 @@ export default function main(_) {
                 }
             });
 
+            let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
+            let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats';
             let yesterdayState = {
                 "async": true,
                 "crossDomain": true,
