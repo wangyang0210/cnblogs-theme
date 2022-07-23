@@ -190,7 +190,7 @@ export default function main(_) {
                         $.ajax(todayState).done((response) => {
                             if (response && response.pageviews) todayPageViews = response.pageviews.value;
                         });
-                        cnzzInfo = [`Today:${todayPageViews}`, `Yesterday: ${yesterdayPageViews}`, `Online: ${online}`]
+                        cnzzInfo = [`Today:${todayPageViews || 0}`, `Yesterday: ${yesterdayPageViews || 0}`, `Online: ${online || 0}`]
                         $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
                         _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
                     },1000);
