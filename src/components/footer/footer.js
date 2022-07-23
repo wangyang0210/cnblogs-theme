@@ -156,53 +156,54 @@ export default function main(_) {
                     websiteId = response.websiteId;
                 }
             });
-
-            let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
-            let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats';
-            let yesterdayState = {
-                "async": true,
-                "crossDomain": true,
-                "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
-                "method": "GET",
-                // "headers": {
-                //     "x-umami-share-token": token,
-                // },
-            }
-            $.ajax(yesterdayState).done((response) => {
-                if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
-            });
-
-
-            _.__timeIds.umamiTId = window.setInterval(() => {
-                 let activeParams = {
-                     "async": true,
-                     "crossDomain": true,
-                     "url": activeUrl,
-                     "method": "GET",
-                     // "headers": {
-                     //     "x-umami-share-token": token,
-                     // },
-                 }
-                 $.ajax(activeParams).done((response) => {
-                    if (response) online = response[0].x || 0
-                });
-
-                let todayState = {
+            console.log('websiteId', websiteId)
+            if (websiteId) {
+                let activeUrl = _.__config.umami.url + 'api/website/' + websiteId + '/active';
+                let statsUrl = _.__config.umami.url + 'api/website/' + websiteId + '/stats';
+                let yesterdayState = {
                     "async": true,
                     "crossDomain": true,
-                    "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
+                    "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
                     "method": "GET",
                     // "headers": {
                     //     "x-umami-share-token": token,
                     // },
                 }
-                $.ajax(todayState).done((response) => {
-                    if (response && response.pageviews) todayPageViews = response.pageviews.value;
+                $.ajax(yesterdayState).done((response) => {
+                    if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
                 });
-                cnzzInfo = [`Today:${todayPageViews}`, `Yesterday: ${yesterdayPageViews}`, `Online: ${online}`]
-                $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
-                _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
-            },1000);
+                _.__timeIds.umamiTId = window.setInterval(() => {
+                    let activeParams = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": activeUrl,
+                        "method": "GET",
+                        // "headers": {
+                        //     "x-umami-share-token": token,
+                        // },
+                    }
+                    $.ajax(activeParams).done((response) => {
+                        if (response) online = response[0].x || 0
+                    });
+
+                    let todayState = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
+                        "method": "GET",
+                        // "headers": {
+                        //     "x-umami-share-token": token,
+                        // },
+                    }
+                    $.ajax(todayState).done((response) => {
+                        if (response && response.pageviews) todayPageViews = response.pageviews.value;
+                    });
+                    cnzzInfo = [`Today:${todayPageViews}`, `Yesterday: ${yesterdayPageViews}`, `Online: ${online}`]
+                    $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
+                    _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
+                },1000);
+            }
+
         }
 
     })();
