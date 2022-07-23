@@ -274,7 +274,7 @@ export default function main(_) {
             let html = '<ul>',
                 ret  = /^[1-9]+[0-9]*$/;
             obj.each((i) => {
-                let p = $($('#TopViewPostsBlock ul li')[i]),
+                let p = $(obj[i]),
                     o = p.text() === p.html() ? {} : $(p.html()),
                     textArr =  p.text().trim().split('.');
                 if (ret.test(textArr[0])) textArr.splice(0,1);
