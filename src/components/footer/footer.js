@@ -10,6 +10,7 @@ import footerImg from './../../images/webp/footer.webp';
 import backgroundImg from './../../images/webp/background.webp';
 import cloudsImg from './../../images/webp/clouds.webp';
 import foregroundImg from './../../images/webp/foreground.webp';
+import moment from 'moment';
 
 export default function main(_) {
 
@@ -131,47 +132,77 @@ export default function main(_) {
             }, 1000);
         }
 
-        // if (_.__config.umami.url) {
-        //     let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
-        //     let settings = {
-        //         "async": true,
-        //         "crossDomain": true,
-        //         "url": shareUrl,
-        //         "method": "GET"
-        //     };
-        //     let token = '';
-        //     let websiteId = '';
-        //     $.ajax(settings).done((response) => {
-        //         if (response && response.token) {
-        //             token = response.token;
-        //             websiteId = response.websiteId;
-        //         }
-        //     });
-        //
-        //     let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
-        //     let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats?start_at=1658419200000&end_at=1658505599999';
-        //     _.__timeIds.umamiTId = window.setInterval(() => {
-        //          let activeParams = {
-        //              "async": true,
-        //              "crossDomain": true,
-        //              "url": activeUrl,
-        //              "method": "GET",
-        //              "headers": {
-        //                  "x-umami-share-token": token,
-        //              },
-        //          }
-        //         $.ajax(activeParams).done((response) => {
-        //             console.log(response)
-        //             if (response && response.token) {
-        //             }
-        //         });
-        //
-        //         $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
-        //         _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
-        //     }
-        // },1000);
-        // 获取token: https://umami.wangyangyang.vip/api/share/dW1OhIxN
-        // ActiveUsers_text__O4Rei 在线人数 https://umami.wangyangyang.vip/api/website/1/active
-        // MetricsBar_bar__6c2lS 网站数据 [https://umami.wangyangyang.vip/api/website/4/stats?start_at=1658419200000&end_at=1658505599999]
+        if (_.__config.umami.url) {
+            let cnzzInfo = [],
+                online = '',
+                yesterdayPageViews = '',
+                todayPageViews = '',
+                todayStart = moment().startOf('day').format('x'),
+                todayEnd = moment().endOf('day').format('x'),
+                yesterdayStart =  moment().day(-1).startOf('day').format('x'),
+                yesterdayEnd = moment().day(-1).endOf('day').format('x');
+            let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
+            let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats';
+            let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
+            let shareRequest = {
+                "async": true,
+                "crossDomain": true,
+                "url": shareUrl,
+                "method": "GET"
+            };
+            let token = '';
+            let websiteId = '';
+            $.ajax(shareRequest).done((response) => {
+                if (response && response.token) {
+                    token = response.token;
+                    websiteId = response.websiteId;
+                }
+            });
+
+            let yesterdayState = {
+                "async": true,
+                "crossDomain": true,
+                "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
+                "method": "GET",
+                // "headers": {
+                //     "x-umami-share-token": token,
+                // },
+            }
+            $.ajax(yesterdayState).done((response) => {
+                if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
+            });
+
+
+            _.__timeIds.umamiTId = window.setInterval(() => {
+                 let activeParams = {
+                     "async": true,
+                     "crossDomain": true,
+                     "url": activeUrl,
+                     "method": "GET",
+                     // "headers": {
+                     //     "x-umami-share-token": token,
+                     // },
+                 }
+                 $.ajax(activeParams).done((response) => {
+                    if (response) online = response[0].x || 0
+                });
+
+                let todayState = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
+                    "method": "GET",
+                    // "headers": {
+                    //     "x-umami-share-token": token,
+                    // },
+                }
+                $.ajax(todayState).done((response) => {
+                    if (response && response.pageviews) todayPageViews = response.pageviews.value;
+                });
+                cnzzInfo = [`Today:${todayPageViews}`, `Yesterday: ${yesterdayPageViews}`, `Online: ${online}`]
+                $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
+                _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
+            },1000);
+        }
     })();
 }

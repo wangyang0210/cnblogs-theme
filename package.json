@@ -46,8 +46,10 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "gsap": "^3.10.4",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
   },
   "browserslist": {
     "development": [
