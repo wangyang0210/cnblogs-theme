@@ -280,9 +280,7 @@ export default function main(_) {
                 if (ret.test(textArr[0])) textArr.splice(0,1);
                 let text = textArr.join('.').trim();
                 o.length > 0 && o.html(text);
-                if (o.length >0 && text.length > 0 && o.prop("outerHTML")) {
-                    html += '<li>' + o.prop("outerHTML") + '</li>';
-                }
+                if (text.length > 0) html += '<li>' + (o.length > 0 ?  o.prop("outerHTML") : '<a href="javascript:void(0);">' + text + '</a>' ) + '</li>';
             });
             html += '</ul>';
             return html;
