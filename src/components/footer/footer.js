@@ -132,7 +132,7 @@ export default function main(_) {
             }, 1000);
         }
 
-        if (_.__config.umami.url) {
+        if (_.__config.umami) {
             let cnzzInfo = [],
                 online = '',
                 yesterdayPageViews = '',
@@ -204,5 +204,6 @@ export default function main(_) {
                 _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
             },1000);
         }
+
     })();
 }
