@@ -133,40 +133,41 @@ export default function main(_) {
         }
 
         if (_.__config.umami) {
-            let cnzzInfo = [],
-                online = '',
-                yesterdayPageViews = '',
-                todayPageViews = '',
-                todayStart = moment().startOf('day').format('x'),
-                todayEnd = moment().endOf('day').format('x'),
-                yesterdayStart =  moment().day(-1).startOf('day').format('x'),
-                yesterdayEnd = moment().day(-1).endOf('day').format('x');
-            let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
-            let shareRequest = {
-                "async": true,
-                "crossDomain": true,
-                "url": shareUrl,
-                "method": "GET"
-            };
-            $.ajax(shareRequest).done((response) => {
-                if (response && response.token) {
-                    let activeUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/active';
-                    let statsUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/stats';
-                    let yesterdayState = {
-                        "async": true,
-                        "crossDomain": true,
-                        "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
-                        "method": "GET",
-                        // "headers": {
-                        //     "x-umami-share-token": token,
-                        // },
-                    }
-                    $.ajax(yesterdayState).done((response) => {
-                        if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
-                    });
-                    _.__timeIds.umamiTId = window.setInterval(() => {
+
+            _.__timeIds.umamiTId = window.setInterval(() => {
+                let cnzzInfo = [],
+                    online = '',
+                    yesterdayPageViews = '',
+                    todayPageViews = '',
+                    todayStart = moment().startOf('day').format('x'),
+                    todayEnd = moment().endOf('day').format('x'),
+                    yesterdayStart =  moment().day(-1).startOf('day').format('x'),
+                    yesterdayEnd = moment().day(-1).endOf('day').format('x');
+
+                let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
+                let shareRequest = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": shareUrl,
+                    "method": "GET"
+                };
+                $.ajax(shareRequest).done((response) => {
+                    if (response && response.token) {
+                        let activeUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/active';
+                        let statsUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/stats';
+                        let yesterdayState = {
+                            "crossDomain": true,
+                            "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
+                            "method": "GET",
+                            // "headers": {
+                            //     "x-umami-share-token": token,
+                            // },
+                        }
+                        $.ajax(yesterdayState).done((response) => {
+                            if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
+                        });
+
                         let activeParams = {
-                            "async": true,
                             "crossDomain": true,
                             "url": activeUrl,
                             "method": "GET",
@@ -179,7 +180,6 @@ export default function main(_) {
                         });
 
                         let todayState = {
-                            "async": true,
                             "crossDomain": true,
                             "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
                             "method": "GET",
@@ -190,14 +190,14 @@ export default function main(_) {
                         $.ajax(todayState).done((response) => {
                             if (response && response.pageviews) todayPageViews = response.pageviews.value;
                         });
-                        cnzzInfo = [`Today:${todayPageViews || 0}`, `Yesterday: ${yesterdayPageViews || 0}`, `Online: ${online || 0}`]
+
+                        cnzzInfo = [`Today: ${todayPageViews || 0}`, `Yesterday: ${yesterdayPageViews || 0}`, `Online: ${online || 0}`]
                         $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
-                        _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
-                    },1000);
-                }
-            });
+                    }
+                });
 
-
+                _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
+            },1000);
         }
 
     })();
