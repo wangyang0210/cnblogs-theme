@@ -41,3 +41,10 @@ export function getYesterdayState () {
 export function getYesterdayEnd () {
     return moment().day(-1).endOf('day').format('x')
 }
+
+/**
+ * 获取当天年月日时间
+ */
+export function getToday () {
+    return moment().format('YYYY-MM-DD')
+}
