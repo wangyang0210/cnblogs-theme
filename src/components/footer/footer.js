@@ -120,7 +120,7 @@ export default function main(_) {
                     let cnzzInfo = [];
                     let cnzzArr = $(cnzzStat[1]).text().split('|');
                     $.each(cnzzArr, (i) => {
-                        let str = $.trim(cnzzArr[i]);
+                        let str = cnzzArr[i].trim();
                         if (str !== '') {
                             str = str.replace('今日', 'Today').replace('昨日', 'Yesterday').replace('[', ':').replace(']', '');
                             cnzzInfo.push(str)
@@ -135,7 +135,6 @@ export default function main(_) {
 
         if (_.__config.umami) {
             const baseUrl = _.__config.umami.url
-
             _.__timeIds.umamiTId = window.setInterval(() => {
                 getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
                     Promise.all([
@@ -152,6 +151,5 @@ export default function main(_) {
                 _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
             },1000);
         }
-
     })();
 }

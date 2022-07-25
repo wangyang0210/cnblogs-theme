@@ -19,7 +19,7 @@ export default function main(_) {
     import(/* webpackChunkName: "fonticon" */ '../../style/fonticon.css');
 
     // 谷歌字体
-    // import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
+    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     let loadingObj = loading(_);
 

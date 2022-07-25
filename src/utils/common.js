@@ -1,5 +1,3 @@
-import moment from "moment";
-
 /**
  * UPDATES AND DOCS AT: https://github.com/wangyang0210
  * https://www.cnblogs.com/wangyang0210/
@@ -8,6 +6,8 @@ import moment from "moment";
  * ----------------------------------------------
  * @describe: common function
  */
+
+import moment from "moment";
 
 
 /**
@@ -31,7 +31,7 @@ export  function  getToadyEnd () {
  * @return {string}
  */
 export function getYesterdayState () {
-    return moment().day(-1).startOf('day').format('x')
+    return moment().subtract(1, 'days').startOf('day').format('x')
 }
 
 /**
@@ -39,5 +39,32 @@ export function getYesterdayState () {
  * @return {string}
  */
 export function getYesterdayEnd () {
-    return moment().day(-1).endOf('day').format('x')
+    return moment().subtract(1, 'days').endOf('day').format('x')
+}
+
+/**
+ * 获取当天年月日时间
+ */
+export function getToday () {
+    return moment().format('YYYY-MM-DD')
+}
+
+/**
+ * jsonp跨域请求
+ * @param {string} url 请求地址
+ * @return {Promise<unknown>}
+ */
+export function getJsonp (url= `https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=2022-07-25lback&c=dailysentence&m=getdetail&title=${getToday()}`) {
+        return new Promise(resolve => {
+            window.jsonCallBack = (result) => {
+                resolve(result)
+            }
+            let JSONP = document.createElement("script");
+            JSONP.type = "text/javascript";
+            JSONP.src = `${url}&callback=jsonCallBack`;
+            document.getElementsByTagName("head")[0].appendChild(JSONP);
+            setTimeout(() => {
+                document.getElementsByTagName("head")[0].removeChild(JSONP)
+            }, 500)
+        })
 }

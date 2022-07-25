@@ -201,9 +201,9 @@ export default function main(_) {
                     title.each((i) => {
                         let p = $(title[i]),
                             o = p.text() === p.html() ? {} : $(p.html()),
-                            textArr = $.trim(p.text()).split('.');
+                            textArr = p.text().trim().split('.');
                         if (ret.test(textArr[0])) textArr.splice(0,1);
-                        let text = $.trim(textArr.join('.'));
+                        let text = textArr.join('.').trim();
                         o.length > 0 && o.html(text);
                         html += '<li>' + (o.length > 0 ?  o.prop("outerHTML") : "<a href='javascript:void(0);'>" + text + "</a>")
 

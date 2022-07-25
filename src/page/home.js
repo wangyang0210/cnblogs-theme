@@ -6,6 +6,8 @@
  * @describe: 主页处理
  */
 import postMeta from "../components/postMeta/postMeta";
+import {getJsonp} from "../utils/common";
+const jinrishici = require('jinrishici');
 
 export default function main(_) {
     /**
@@ -54,61 +56,35 @@ export default function main(_) {
             '有时候你以为天要塌下来了，其实是自己站歪了。', '温柔正确的人总是难以生存，因为这世界既不温柔，也不正确。', '死并非生的对立面，而作为生的一部分永存。',
             '不要努力成为一个成功者，要努力成为一个有价值的人。', '不要因为走得太远，忘了我们为什么出发。', '你的问题主要在于读书不多而想得太多。',
             '岁月不饶人，我亦未曾饶过岁月。', '当你凝视深渊时，深渊也在凝视着你。', '有的人25岁就死了，只是到75岁才埋葬'
-        ], settings = {};
+        ];
 
-        switch (_.__config.banner.home.titleSource) {
-            case "one": //  ONE . 每日一句
-                settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=" + _.__tools.getNowFormatDate(),
-                    "method": "POST",
-                    "dataType": 'jsonp',
-                    "headers": {
-                        "content-type": "application/x-www-form-urlencoded",
-                    },
-                    "data": {
-                        "TransCode": "030111",
-                        "OpenId": "123456789",
-                        "Body": ""
-                    }
-                };
-
-                $.ajax(settings).done((response) => {
-                    if (response.errno === 0) {
-                        hitokoto.html(response.note).css('display', '-webkit-box');
-                        $('#hitokotoAuthor').text(response.content).show();
-                    } else {
-                        let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
-                        hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
-                    }
-                    _.__tools.setDomHomePosition();
-                    return false;
-                });
-                break;
-
-            case "jinrishici":
-            default: // 今日诗词
-                settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://v2.jinrishici.com/one.json",
-                    "method": "GET"
-                };
-
-                $.ajax(settings).done((response) => {
-                    if (response && response.status === "success") {
-                        hitokoto.html(response.data.content).css('display', '-webkit-box');
-                        $('#hitokotoAuthor').text('《'+response.data.origin.title+'》 - '+response.data.origin.dynasty+' - '+response.data.origin.author).show();
-                    } else {
-                        let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
-                        hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
-                    }
-                    _.__tools.setDomHomePosition();
-                    return false;
-                });
-                break;
+        if (_.__config.banner.home.titleSource === 'one') {
+            getJsonp().then(r => {
+                if (r.errno === 0) {
+                    hitokoto.html(r.note).css('display', '-webkit-box');
+                    $('#hitokotoAuthor').text(r.content).show();
+                } else {
+                    let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
+                    hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
+                }
+                _.__tools.setDomHomePosition();
+                return false;
+            })
         }
+
+        if (_.__config.banner.home.titleSource === 'jinrishici') {
+            jinrishici.load(r => {
+                if (r && r.status === "success") {
+                    hitokoto.html(r.data.content).css('display', '-webkit-box');
+                    $('#hitokotoAuthor').text('《'+r.data.origin.title+'》 - '+r.data.origin.dynasty+' - '+r.data.origin.author).show();
+                } else {
+                    let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
+                    hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
+                }
+                _.__tools.setDomHomePosition();
+            });
+        }
+
     })();
 
     /**
