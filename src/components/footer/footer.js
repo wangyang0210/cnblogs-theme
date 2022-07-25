@@ -10,7 +10,8 @@ import footerImg from './../../images/webp/footer.webp';
 import backgroundImg from './../../images/webp/background.webp';
 import cloudsImg from './../../images/webp/clouds.webp';
 import foregroundImg from './../../images/webp/foreground.webp';
-import moment from 'moment';
+import {getConfigInfo, getOnline, getWebSiteState} from "../../api";
+import {getToadyEnd, getTodayStart, getYesterdayEnd, getYesterdayState} from "../../utils/common";
 
 export default function main(_) {
 
@@ -133,69 +134,23 @@ export default function main(_) {
         }
 
         if (_.__config.umami) {
+            const baseUrl = _.__config.umami.url
 
             _.__timeIds.umamiTId = window.setInterval(() => {
-                let cnzzInfo = [],
-                    online = '',
-                    yesterdayPageViews = '',
-                    todayPageViews = '',
-                    todayStart = moment().startOf('day').format('x'),
-                    todayEnd = moment().endOf('day').format('x'),
-                    yesterdayStart =  moment().day(-1).startOf('day').format('x'),
-                    yesterdayEnd = moment().day(-1).endOf('day').format('x');
-
-                let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
-                let shareRequest = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": shareUrl,
-                    "method": "GET"
-                };
-                $.ajax(shareRequest).done((response) => {
-                    if (response && response.token) {
-                        let activeUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/active';
-                        let statsUrl = _.__config.umami.url + 'api/website/' + response.websiteId + '/stats';
-                        let yesterdayState = {
-                            "crossDomain": true,
-                            "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
-                            "method": "GET",
-                            // "headers": {
-                            //     "x-umami-share-token": token,
-                            // },
-                        }
-                        $.ajax(yesterdayState).done((response) => {
-                            if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
+                getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
+                    console.log('getConfigInfo', r, r.websiteId)
+                    Promise.all([
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/active`, {'start_at': getTodayStart(),'end_at': getToadyEnd()}),
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/active`, {'start_at': getYesterdayState(),'end_at': getYesterdayEnd()}),
+                        getOnline(baseUrl, `api/website/${r.websiteId}/stats`)])
+                        .then(function (results) {
+                            const todayState = results[0]
+                            const yesterdayState = results[1]
+                            const online = results[2]
+                            console.log(todayState, yesterdayState, online)
+                            // $('#cnzzInfo').text(`Online: ${online} | Today: ${todayState} | Yesterday: ${yesterdayState}`).show();
                         });
-
-                        let activeParams = {
-                            "crossDomain": true,
-                            "url": activeUrl,
-                            "method": "GET",
-                            // "headers": {
-                            //     "x-umami-share-token": response.token,
-                            // },
-                        }
-                        $.ajax(activeParams).done((response) => {
-                            if (response) online = response[0].x || 0
-                        });
-
-                        let todayState = {
-                            "crossDomain": true,
-                            "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
-                            "method": "GET",
-                            // "headers": {
-                            //     "x-umami-share-token": response.token,
-                            // },
-                        }
-                        $.ajax(todayState).done((response) => {
-                            if (response && response.pageviews) todayPageViews = response.pageviews.value;
-                        });
-
-                        cnzzInfo = [`Today: ${todayPageViews || 0}`, `Yesterday: ${yesterdayPageViews || 0}`, `Online: ${online || 0}`]
-                        $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
-                    }
-                });
-
+                })
                 _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
             },1000);
         }
