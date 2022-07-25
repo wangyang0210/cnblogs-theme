@@ -6,8 +6,8 @@
  * @describe: 主页处理
  */
 import postMeta from "../components/postMeta/postMeta";
-import {getToday} from "../utils/common";
-import {getOneSaying, getToadyPoetry} from "../api";
+import {getJsonp} from "../utils/common";
+const jinrishici = require('jinrishici');
 
 export default function main(_) {
     /**
@@ -59,7 +59,7 @@ export default function main(_) {
         ];
 
         if (_.__config.banner.home.titleSource === 'one') {
-            getOneSaying().then(r => {
+            getJsonp().then(r => {
                 if (r.errno === 0) {
                     hitokoto.html(r.note).css('display', '-webkit-box');
                     $('#hitokotoAuthor').text(r.content).show();
@@ -73,7 +73,7 @@ export default function main(_) {
         }
 
         if (_.__config.banner.home.titleSource === 'jinrishici') {
-            getToadyPoetry().then(r => {
+            jinrishici.load(r => {
                 if (r && r.status === "success") {
                     hitokoto.html(r.data.content).css('display', '-webkit-box');
                     $('#hitokotoAuthor').text('《'+r.data.origin.title+'》 - '+r.data.origin.dynasty+' - '+r.data.origin.author).show();
@@ -82,7 +82,7 @@ export default function main(_) {
                     hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
                 }
                 _.__tools.setDomHomePosition();
-            })
+            });
         }
 
     })();
