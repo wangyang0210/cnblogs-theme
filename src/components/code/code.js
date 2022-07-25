@@ -141,7 +141,7 @@ export default function main(_) {
             let code = [];
 
             $.each(codeLine, (j) => {
-                if ($.trim(codeLine[j]) || j < codeLine.length - 1) {
+                if (codeLine[j].trim() || j < codeLine.length - 1) {
                     codeLine[j] !== '</code>' && code.push('<code-line class="line-numbers-rows"></code-line>' + codeLine[j]);
                 }
             });

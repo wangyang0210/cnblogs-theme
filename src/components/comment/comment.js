@@ -25,7 +25,7 @@ export default function main(_) {
 
                     if ($.isArray(idTmp)) id = idTmp.join('');
 
-                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? $.trim(op.text())
+                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim()
                         : defaultAvatarImg;
 
                     let ac = $('#a_comment_author_' + id), ah = ac.length ? ac.attr('href') : 'javascropt:void(0);';
