@@ -138,17 +138,15 @@ export default function main(_) {
 
             _.__timeIds.umamiTId = window.setInterval(() => {
                 getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
-                    console.log('getConfigInfo', r, r.websiteId)
                     Promise.all([
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/active`, {'start_at': getTodayStart(),'end_at': getToadyEnd()}),
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/active`, {'start_at': getYesterdayState(),'end_at': getYesterdayEnd()}),
-                        getOnline(baseUrl, `api/website/${r.websiteId}/stats`)])
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': getTodayStart(),'end_at': getToadyEnd()}),
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': getYesterdayState(),'end_at': getYesterdayEnd()}),
+                        getOnline(baseUrl, `api/website/${r.websiteId}/active`)])
                         .then(function (results) {
                             const todayState = results[0]
                             const yesterdayState = results[1]
                             const online = results[2]
-                            console.log(todayState, yesterdayState, online)
-                            // $('#cnzzInfo').text(`Online: ${online} | Today: ${todayState} | Yesterday: ${yesterdayState}`).show();
+                            $('#cnzzInfo').text(`Online: ${online[0].x} | Today: ${todayState.pageviews.value} / ${todayState.uniques.value} / ${todayState.totaltime.value} | Yesterday: ${yesterdayState.pageviews.value} / ${yesterdayState.uniques.value} / ${yesterdayState.totaltime.value}`).show();
                         });
                 })
                 _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);

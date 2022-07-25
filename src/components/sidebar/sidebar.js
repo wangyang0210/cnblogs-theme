@@ -37,7 +37,7 @@ export default function main(_) {
         $('#menuBlogAvatar').append("<img class='img-responsive img-rounded' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
-        if (_.__config.sidebar.titleMsg) {
+        if (_.__config.sidebar?.titleMsg) {
             $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
             $('.sidebar-header i').show()
         } else {
