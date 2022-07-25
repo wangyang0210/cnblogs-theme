@@ -22,18 +22,7 @@ request.interceptors.request.use(config => {
 
 // 响应拦截器
 request.interceptors.response.use(response => {
-
-    if (response.data.streams && response.data.format) {
-        return response.data
-    }
-
-    if (response.config.responseType === 'stream') {
-        return response.data
-    }
-
-    if (response.status !== 200 || !response.data.success) {
-        return Promise.reject(response.data)
-    }
+    // 涉及到多个不同平台接口,响应信息无法统一
     return response.data
 }, errorHandler)
 

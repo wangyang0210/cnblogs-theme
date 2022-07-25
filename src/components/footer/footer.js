@@ -10,7 +10,8 @@ import footerImg from './../../images/webp/footer.webp';
 import backgroundImg from './../../images/webp/background.webp';
 import cloudsImg from './../../images/webp/clouds.webp';
 import foregroundImg from './../../images/webp/foreground.webp';
-import moment from 'moment';
+import {getConfigInfo, getOnline, getWebSiteState} from "../../api";
+import {getToadyEnd, getTodayStart, getYesterdayEnd, getYesterdayState} from "../../utils/common";
 
 export default function main(_) {
 
@@ -133,74 +134,21 @@ export default function main(_) {
         }
 
         if (_.__config.umami) {
-            let cnzzInfo = [],
-                online = '',
-                yesterdayPageViews = '',
-                todayPageViews = '',
-                todayStart = moment().startOf('day').format('x'),
-                todayEnd = moment().endOf('day').format('x'),
-                yesterdayStart =  moment().day(-1).startOf('day').format('x'),
-                yesterdayEnd = moment().day(-1).endOf('day').format('x');
-            let activeUrl = _.__config.umami.url + '/api/website/' + websiteId + '/active';
-            let statsUrl = _.__config.umami.url + '/api/website/' + websiteId + 'stats';
-            let shareUrl = _.__config.umami.url + 'api/share/' + _.__config.umami.shareId;
-            let shareRequest = {
-                "async": true,
-                "crossDomain": true,
-                "url": shareUrl,
-                "method": "GET"
-            };
-            let token = '';
-            let websiteId = '';
-            $.ajax(shareRequest).done((response) => {
-                if (response && response.token) {
-                    token = response.token;
-                    websiteId = response.websiteId;
-                }
-            });
-
-            let yesterdayState = {
-                "async": true,
-                "crossDomain": true,
-                "url":`${statsUrl}?start_at=${yesterdayStart}&end_at=${yesterdayEnd}`,
-                "method": "GET",
-                // "headers": {
-                //     "x-umami-share-token": token,
-                // },
-            }
-            $.ajax(yesterdayState).done((response) => {
-                if (response && response.pageviews) yesterdayPageViews = response.pageviews.value;
-            });
-
+            const baseUrl = _.__config.umami.url
 
             _.__timeIds.umamiTId = window.setInterval(() => {
-                 let activeParams = {
-                     "async": true,
-                     "crossDomain": true,
-                     "url": activeUrl,
-                     "method": "GET",
-                     // "headers": {
-                     //     "x-umami-share-token": token,
-                     // },
-                 }
-                 $.ajax(activeParams).done((response) => {
-                    if (response) online = response[0].x || 0
-                });
-
-                let todayState = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url":`${statsUrl}?start_at=${todayStart}&end_at=${todayEnd}`,
-                    "method": "GET",
-                    // "headers": {
-                    //     "x-umami-share-token": token,
-                    // },
-                }
-                $.ajax(todayState).done((response) => {
-                    if (response && response.pageviews) todayPageViews = response.pageviews.value;
-                });
-                cnzzInfo = [`Today:${todayPageViews}`, `Yesterday: ${yesterdayPageViews}`, `Online: ${online}`]
-                $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
+                getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
+                    Promise.all([
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': getTodayStart(),'end_at': getToadyEnd()}),
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': getYesterdayState(),'end_at': getYesterdayEnd()}),
+                        getOnline(baseUrl, `api/website/${r.websiteId}/active`)])
+                        .then(function (results) {
+                            const todayState = results[0]
+                            const yesterdayState = results[1]
+                            const online = results[2]
+                            $('#cnzzInfo').text(`Online: ${online[0].x} | Today: ${todayState.pageviews.value} / ${todayState.uniques.value} / ${todayState.totaltime.value} | Yesterday: ${yesterdayState.pageviews.value} / ${yesterdayState.uniques.value} / ${yesterdayState.totaltime.value}`).show();
+                        });
+                })
                 _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
             },1000);
         }
