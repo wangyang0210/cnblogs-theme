@@ -1,4 +1,4 @@
-## 2022.07.25
+## 2022.07.25 - v2.1.2
 * 增加配置`umami`,用于网站统计
 * 调整`sidebar.titleMsg`的默认配置,titleMsg设置为空字符串时获取当前博客状态
 * 谷歌本地字体文件转成CDNJS映射(`https://gstatic.loli.net`)并升级版本
