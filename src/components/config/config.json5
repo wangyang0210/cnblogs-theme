@@ -25,6 +25,8 @@
       pointsRank: false,
       // 最新随笔
       latestPosts: false,
+      // 最新评论
+      latestComment: false,
       // 我的标签
       myTags: false,
       // 随笔分类

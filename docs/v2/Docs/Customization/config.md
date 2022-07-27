@@ -230,7 +230,9 @@ window.cnblogsConfig = {
           // 文章档案
           articleArchive: false,
           // 自定义列表
-          customList: false
+          customList: false,
+          // 最新评论
+          latestComment: false,
       }
   },
 }
