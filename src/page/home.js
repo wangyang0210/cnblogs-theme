@@ -10,6 +10,7 @@ import {getJsonp} from "../utils/common";
 const jinrishici = require('jinrishici');
 
 export default function main(_) {
+
     /**
      * 设置主页标语
      */

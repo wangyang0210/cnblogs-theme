@@ -50,6 +50,16 @@ export function getToday () {
 }
 
 /**
+ * 获取当天的日期
+ * @return {string}
+ */
+export function getTodayDate () {
+   return moment().format('MM-DD')
+}
+
+
+
+/**
  * jsonp跨域请求
  * @param {string} url 请求地址
  * @return {Promise<unknown>}
@@ -68,3 +78,4 @@ export function getJsonp (url= `https://sentence.iciba.com/index.php?callback=on
             }, 500)
         })
 }
+

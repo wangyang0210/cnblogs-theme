@@ -1235,7 +1235,7 @@ window.cnblogsConfig = {
 ## cnzz - 网站统计
 
 * 类型：```String```
-* 相关文档：[网站统计](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/#/Docs/Customization/statistical)
+* 相关文档：[网站统计](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/statistical)
 * 默认值：```""```
 
 cnzz网站ID。
@@ -1243,5 +1243,34 @@ cnzz网站ID。
 ```javascript
 window.cnblogsConfig = {
     cnzz: "123456",
+}
+```
+
+## umami - 网站统计
+
+* 类型：```Object```
+* 相关文档：[网站统计](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/statistical)
+* 默认值：```{}```
+
+
+```js
+window.cnblogsConfig = {
+    umami: {
+        url: 'https://xxxxx/',
+        shareId: 'xxxx'
+    }
+}
+```
+
+## memorialDays - 纪念日
+>网页整体灰色
+
+* 类型：```Array```
+* 默认值：```['12-13']```
+
+
+```javascript
+window.cnblogsConfig = {
+    memorialDays: ['12-13', '07-27'],
 }
 ```
