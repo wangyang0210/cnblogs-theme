@@ -12,6 +12,8 @@ import event from "../event/event";
 import "../../images/webp/rss.webp";
 import "../../style/asset.css";
 import "../../vendor/rotate/jquery.rotate.min"
+import _ from "lodash";
+import {getTodayDate} from "../../utils/common";
 
 export default function main(_) {
 
@@ -22,6 +24,16 @@ export default function main(_) {
     import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     let loadingObj = loading(_);
+
+    /**
+     * 国家公祭日和自定义重要的缅怀的日子
+     */
+    (() => {
+        _.__config.memorialDays.push('12-13')
+        if (_.__config.memorialDays.includes(getTodayDate()) ) {
+            $('html').addClass('htmlGray')
+        }
+    })();
 
     /**
      * 开启 loading

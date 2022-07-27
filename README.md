@@ -21,13 +21,6 @@
 
 本人一直都很喜欢这个博皮，但是原作者最近一直没有更新，我打算自食其力，每天在视频号上直播更新这个博皮~
 
-# Author
-
-**Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
-
-> Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
-
-
 # Silence
 
 📖 本主题以阅读为核心，美化博客园的显示效果，提高用户体验。 
@@ -48,3 +41,12 @@
 [点击链接加入群聊【Cnblogs-Theme】](https://jq.qq.com/?_wv=1027&k=RfUlWnni)
 
 ![img.png](https://user-images.githubusercontent.com/36377605/179775990-6bfd7789-b7ec-4d62-ac4f-db69dfc403cf.png)
+
+
+# Author
+
+**Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
+
+> Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
+
+

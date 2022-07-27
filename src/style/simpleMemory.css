@@ -3689,6 +3689,13 @@ table#blogCalendar > tbody > tr > td > a {
     animation: skyAnim 3s -.4s linear infinite
 }
 
+.htmlGray {
+    filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+}
+
 @keyframes starAnim1 {
     0% {
         transform: translate(5px, 30px) scale(.3)

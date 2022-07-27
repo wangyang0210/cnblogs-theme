@@ -20,6 +20,7 @@ $(document).ready(function(){
     _.__timeIds = {};       // 定时器
     _.__event   = {};       // 事件
 
+
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
 
     // 开启渲染
