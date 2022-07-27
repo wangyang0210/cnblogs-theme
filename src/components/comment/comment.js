@@ -40,6 +40,7 @@ export default function main(_) {
             });
             $(feedbackItem[0]).css('padding-top', '0');
             $(feedbackItem[feedbackItem.length - 1]).css('padding-bottom', '0');
+            _.__config.animate.avatar.enable && $('.feedbackAvatar').addClass('img-rounded')
         }
     }
     _.__timeIds.commentTId = window.setInterval(() =>{

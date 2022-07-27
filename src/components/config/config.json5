@@ -200,6 +200,12 @@
         size: 8,
         sizeF: 36
       }
+    },
+    infoName: {
+      enable: false,
+    },
+    avatar: {
+      enable: false,
     }
   },
 
