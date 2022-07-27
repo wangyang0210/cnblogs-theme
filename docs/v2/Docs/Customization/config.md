@@ -955,6 +955,23 @@ window.cnblogsConfig = {
 }
 ```
 
+### avatar - 头像旋转特效
+
+?> 版本 >= v2.1.2
+
+* 类型：```Object```
+* 默认值：
+
+```javascript
+window.cnblogsConfig = {
+  animate: {
+    avatar: {
+      enable: true,
+    },
+  }
+}
+```
+
 ## code - 代码
 
 ### type - 渲染类型
