@@ -1180,6 +1180,19 @@ div#tbCommentBodyPreview {
     border-color: #98a0a4
 }
 
+.img-rounded {
+    transition: transform .5s ease-out;
+    -webkit-transition: transform .6s ease-out;
+    -moz-transition: transform .5s ease-out;
+    -ms-transition: transform .5s ease-out;
+    -o-transition: transform .5s ease-out;
+}
+
+.img-rounded:hover {
+    transform: rotate(1turn)
+}
+
+
 .PostList {
     border-bottom: 1px dashed #e9e9e9;
     clear: both;

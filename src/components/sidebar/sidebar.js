@@ -34,7 +34,7 @@ export default function main(_) {
 
         // ------- 设置头像 -------
         let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : defaultAvatarImg;
-        $('#menuBlogAvatar').append("<img class='img-responsive img-rounded' alt='用户头像' src='"+blogAvatar+"'>");
+        $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
         if (_.__config.sidebar?.titleMsg) {
@@ -293,6 +293,18 @@ export default function main(_) {
             return html;
         }
     })();
+
+    /**
+     * 头像旋转动效
+     */
+    (() => {
+        if (_.__config.animate.avatar.enable) {
+            $('#menuBlogAvatar').addClass('img-rounded')
+            $('.author_avatar').addClass('img-rounded')
+        }
+    })();
+
+
 
     /**
      * 设置是否默认展开菜单栏

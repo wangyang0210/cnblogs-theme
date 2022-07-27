@@ -31,7 +31,7 @@ export default function main(_) {
             );
         }
 
-        // 判断用户是否自定义了设置
+            // 判断用户是否自定义了设置
         let configTitle = _.__config.banner.home.title,
             hitokoto = $('#hitokoto');
 
