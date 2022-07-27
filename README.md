@@ -38,7 +38,7 @@
 
 # Docs
 
-[永久地址](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/)　
+[永久地址](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/)　[备用地址](https://docs.wangyangyang.vip/docs/v2/#/)
 
 > 推荐大家使用最新版本，新版本的发布往往代表着功能的完善和bug的修复！
 > <br>文档的源文件在 /docs 目录，大家有更完善的文档或建议可以 Pull Request 或 Issues 给我。
