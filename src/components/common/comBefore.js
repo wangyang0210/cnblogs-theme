@@ -29,8 +29,7 @@ export default function main(_) {
      * 国家公祭日和自定义重要的缅怀的日子
      */
     (() => {
-        _.__config.memorialDays.push('12-13')
-        if (_.__config.memorialDays.includes(getTodayDate()) ) {
+        if (getTodayDate() == '12-13' || _.__config.memorialDays.includes(getTodayDate()) ) {
             $('html').addClass('htmlGray')
         }
     })();

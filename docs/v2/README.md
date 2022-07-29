@@ -39,6 +39,10 @@
 
 # Author
 
-**Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
+**Cnblogs-Theme** © [wangyang0210](https://github.com/wangyang0210), Released under the [MIT](./LICENSE) License.<br>
 
-> Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
+> Blog [@Blog](https://www.cnblogs.com/wangyang0210/) · GitHub [@GitHub](https://github.com/wangyang0210) · Email wangyang.0210@foxmail.com
+
+# Original Author
+
+> **Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
