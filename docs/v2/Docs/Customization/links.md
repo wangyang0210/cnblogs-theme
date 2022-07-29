@@ -29,15 +29,43 @@
 ```javascript
 window.cnblogsConfig = {
   links: {
-    page: [
-      {
-        name: 'BNDong', // 昵称
-        introduction: 'IT技术类博客', // 简介
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif', // 头像
-        url: 'https://blog.dbnuo.com' // 友链地址
-      },
-    ],
-  },
+            page: [
+                {
+                   title: '友情链接',
+                   links: [
+                       {
+                            name: '测试', // 昵称
+                            introduction: 'IT技术类博客', // 简介
+                            avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                            url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                       },
+                       {
+                            name: 'helloWorld', // 昵称
+                            introduction: 'IT技术类博客', // 简介
+                            avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                            url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                       },
+                   ]
+                },
+                {
+                   title: '网站',
+                   links: [
+                       {
+                            name: '测试', // 昵称
+                            introduction: 'IT技术类博客', // 简介
+                            avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                            url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                       },
+                       {
+                            name: 'helloWorld', // 昵称
+                            introduction: 'IT技术类博客', // 简介
+                            avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                            url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                       },
+                   ]
+                },
+            ],
+    },
 }
 ```
 
@@ -52,54 +80,40 @@ window.cnblogsConfig = {
 
     // 友链配置
     window.cnblogsConfig.links.page = [
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
-      {
-        name: 'BNDong',
-        introduction: 'IT技术类博客',
-        avatar: 'https://blog.dbnuo.com/images/avatar.gif',
-        url: 'https://blog.dbnuo.com'
-      },
+        {
+            title: '友情链接',
+            links: [
+                {
+                    name: '测试', // 昵称
+                    introduction: 'IT技术类博客', // 简介
+                    avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                    url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                },
+                {
+                    name: 'helloWorld', // 昵称
+                    introduction: 'IT技术类博客', // 简介
+                    avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                    url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                },
+            ]
+        },
+        {
+            title: '网站',
+            links: [
+                {
+                    name: '测试', // 昵称
+                    introduction: 'IT技术类博客', // 简介
+                    avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                    url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                },
+                {
+                    name: 'helloWorld', // 昵称
+                    introduction: 'IT技术类博客', // 简介
+                    avatar: 'https://pic.cnblogs.com/face/1334215/20180504110551.png', // 头像
+                    url: 'https://cnblogs.com/wangyang0210' // 友链地址
+                },
+            ]
+        },
     ];
 ```
 
