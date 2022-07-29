@@ -32,7 +32,7 @@
     "filemanager-webpack-plugin": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-minify-css": "^1.2.4",
-    "highlight.js": "^10.7.1",
+    "highlight.js": "^11.6.0",
     "html-loader": "^2.1.2",
     "imports-loader": "^2.0.0",
     "json5": "^2.2.0",
