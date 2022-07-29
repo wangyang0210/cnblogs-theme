@@ -627,14 +627,14 @@ body{
 .container .menu-wrap .sidebar-menu .sidebar-dropdown-box>i
 , .container .menu-wrap .customize-nav .sidebar-dropdown-box>i {
     margin-right: 14px;
-    font-size: 15px;
-    min-width: 26px;
+    font-size: 17px;
+    min-width: 49px;
     width: 26px;
     height: 26px;
     line-height: 26px;
     text-align: center;
     border-radius: 4px;
-    background-color: rgba(255,255,255,.1);
+    background-color: hsla(0,0%,100%,.1);
     border: none;
     margin-left: 1px;
     display: inline-block;
