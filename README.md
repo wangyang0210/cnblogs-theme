@@ -37,16 +37,22 @@
 > <br>文档的源文件在 /docs 目录，大家有更完善的文档或建议可以 Pull Request 或 Issues 给我。
 > <br>文档我已经禁止浏览器缓存，但仍可能存在缓存，大家可以尝试强制刷新下(ctrl+f5 / command+shift+r)
 
+# Author
+
+**Cnblogs-Theme** © [wangyang0210](https://github.com/wangyang0210), Released under the [MIT](./LICENSE) License.<br>
+
+> Blog [@Blog](https://www.cnblogs.com/wangyang0210/) · GitHub [@GitHub](https://github.com/wangyang0210) · Email wangyang.0210@foxmail.com
+
+# Original Author
+
+> **Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
+
+
+
 # Group
 [点击链接加入群聊【Cnblogs-Theme】](https://jq.qq.com/?_wv=1027&k=RfUlWnni)
 
 ![img.png](https://user-images.githubusercontent.com/36377605/179775990-6bfd7789-b7ec-4d62-ac4f-db69dfc403cf.png)
 
-
-# Author
-
-**Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
-
-> Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
 
 
