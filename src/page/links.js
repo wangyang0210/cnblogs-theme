@@ -10,7 +10,6 @@ import '../style/links.css';
 import linksTemp from '../template/links.html';
 
 export default function main(_) {
-
     /**
      * 文章页公共处理
      */
@@ -26,22 +25,28 @@ export default function main(_) {
             let postBody = $('#cnblogs_post_body'),
                 html = '';
 
-            html += '<div id="links-box">';
+            $.each(_.__config.links.page, (i) => {
+                let list = _.__config.links.page[i];
+                if (list.title) html += '<h1>' + list.title + '</h1>';
 
-            $.each(_.__config.links.page, function (i) {
-                let data = _.__config.links.page[i];
+                html += '<div id="links-box">';
 
-                // 处理模版
-                html += _.__tools.batchTempReplacement(linksTemp, [
-                    ['avatar', typeof data.avatar !== 'undefined' ? data.avatar : ''],
-                    ['name', typeof data.name !== 'undefined' ? data.name : ''],
-                    ['introduction', typeof data.introduction !== 'undefined' ? data.introduction : ''],
-                    ['url', typeof data.url !== 'undefined' ? data.url : ''],
-                    ['icon', i % 3 === 0 ? 'icon-zhifeiji': (i % 3 === 1 ? 'icon-like_fill' : 'icon-flashlight_fill')]
-                ]);
-            });
+                $.each(list.links, (j) => {
+                    let linksHtml = linksTemp,  data = list.links[j];
 
-            html += '</div>';
+                    // 处理模版
+                    linksHtml =  _.__tools.batchTempReplacement(linksHtml, [
+                        ['avatar', typeof data.avatar !== 'undefined' ? data.avatar : ''],
+                        ['name', typeof data.name !== 'undefined' ? data.name : ''],
+                        ['introduction', typeof data.introduction !== 'undefined' ? data.introduction : ''],
+                        ['url', typeof data.url !== 'undefined' ? data.url : ''],
+                        ['icon', j % 3 === 0 ? 'icon-zhifeiji': (j % 3 === 1 ? 'icon-like_fill' : 'icon-flashlight_fill')]
+                    ]);
+                    html += linksHtml;
+                });
+
+                html += '</div>';
+            })
 
             // 插入模版
             let articleSuffixFlg = $('.articleSuffix-flg');
