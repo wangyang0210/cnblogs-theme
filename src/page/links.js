@@ -27,7 +27,7 @@ export default function main(_) {
 
             $.each(_.__config.links.page, (i) => {
                 let list = _.__config.links.page[i];
-                if (list.title) html += '<h1>' + list.title + '</h1>';
+                if (list.title) html += '<h1 class="iconfont ' + list.icon + '" style="'+ list.style +'"> ' + list.title + '</h1>';
 
                 html += '<div id="links-box">';
 

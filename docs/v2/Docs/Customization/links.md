@@ -31,7 +31,9 @@ window.cnblogsConfig = {
   links: {
             page: [
                 {
-                   title: '友情链接',
+                   title: '友情链接', // 标题
+                   icon: 'icon-lianjie', // iconfont
+                   style: 'color: #a78bfa;', 
                    links: [
                        {
                             name: '测试', // 昵称
@@ -49,6 +51,8 @@ window.cnblogsConfig = {
                 },
                 {
                    title: '网站',
+                   icon: 'icon-website',
+                   style: 'color: #a78bfa;',
                    links: [
                        {
                             name: '测试', // 昵称
@@ -82,6 +86,8 @@ window.cnblogsConfig = {
     window.cnblogsConfig.links.page = [
         {
             title: '友情链接',
+            icon: 'icon-lianjie',
+            style: 'color: #a78bfa;',
             links: [
                 {
                     name: '测试', // 昵称
@@ -99,6 +105,8 @@ window.cnblogsConfig = {
         },
         {
             title: '网站',
+            icon: 'icon-website',
+            style: 'color: #a78bfa;',
             links: [
                 {
                     name: '测试', // 昵称

@@ -163,7 +163,7 @@ export default function main(_) {
         _.__timeIds.diggitTId = window.setInterval(() => {
             let diggit = $(".diggit");
             if (diggit.length > 0) {
-                diggit.prepend('<i class="iconfont icon-zan"></i>');
+                diggit.prepend('<i class="iconfont icon-dianzan"></i>');
 
                 let rightDiggit   = $('#rightDiggit');
                 let rightMenuSpan = rightDiggit.find('.rightMenuSpan');

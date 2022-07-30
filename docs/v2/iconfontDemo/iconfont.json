@@ -6,6 +6,20 @@
   "description": "博客园图标",
   "glyphs": [
     {
+      "icon_id": "1486955",
+      "name": "广播",
+      "font_class": "guangbo",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    },
+    {
+      "icon_id": "11468518",
+      "name": "文字",
+      "font_class": "article",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
       "icon_id": "1727422",
       "name": "205设置",
       "font_class": "shezhi-fill",
@@ -466,13 +480,6 @@
       "font_class": "twitter",
       "unicode": "e7a6",
       "unicode_decimal": 59302
-    },
-    {
-      "icon_id": "8190946",
-      "name": "文字",
-      "font_class": "article",
-      "unicode": "e678",
-      "unicode_decimal": 59000
     },
     {
       "icon_id": "9457301",

@@ -2,7 +2,8 @@
 * 修复评论排序导致头像不显示
 * 增加配置`animate.avatar`,控制头像是否旋转
 * 增加配置`memorialDays`,控制网页是否变灰色
-* 调整字体图标相关样式
+* 调整配置`links.page`,支持多级标题、iconfont、styles
+* 字体图标切换
 * 更新文档
 
 
