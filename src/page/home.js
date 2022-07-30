@@ -121,7 +121,7 @@ export default function main(_) {
 
         function postMetaHtml(postDescText) {
             let info = postMeta(postDescText);
-            return '<span class="postMeta"><i class="iconfont icon-time1"></i>发表于 ' + info.date + '' +
+            return '<span class="postMeta"><i class="iconfont icon-schedule"></i>发表于 ' + info.date + '' +
                 '<i class="iconfont icon-browse"></i>阅读：' + info.vnum + '' +
                 '<i class="iconfont icon-interactive"></i>评论：' + info.cnum + '' +
                 '<i class="iconfont icon-hot"></i>推荐：' + info.tnum + '' +

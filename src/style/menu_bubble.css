@@ -597,7 +597,7 @@ body{
 }
 .container .menu-wrap .sidebar-menu .sidebar-dropdown-box:after {
     font-weight: 900;
-    content: "\e63b";
+    content: "\e68c";
     font-variant: normal;
     text-rendering: auto;
     display: flex;
@@ -627,8 +627,8 @@ body{
 .container .menu-wrap .sidebar-menu .sidebar-dropdown-box>i
 , .container .menu-wrap .customize-nav .sidebar-dropdown-box>i {
     margin-right: 14px;
-    font-size: 17px;
-    min-width: 49px;
+    font-size: 15px;
+    min-width: 26px;
     width: 26px;
     height: 26px;
     line-height: 26px;

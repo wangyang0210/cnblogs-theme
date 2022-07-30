@@ -122,7 +122,7 @@ export default function main(_) {
                     attention.attr('onclick', clickStr.replace('unfollow', 'follow'))
                         .attr('clickflg', 'false');
                     attention.find('.rightMenuSpan').text('关注');
-                    attention.find('i').removeClass('icon-dianzan1').addClass('icon-dianzan');
+                    attention.find('i').removeClass('icon-follower').addClass('icon-unfollower');
                 }
                 _.__tools.clearIntervalTimeId(_.__timeIds.followTId);
             }
@@ -163,7 +163,7 @@ export default function main(_) {
         _.__timeIds.diggitTId = window.setInterval(() => {
             let diggit = $(".diggit");
             if (diggit.length > 0) {
-                diggit.prepend('<i class="iconfont icon-zan1"></i>');
+                diggit.prepend('<i class="iconfont icon-dianzan"></i>');
 
                 let rightDiggit   = $('#rightDiggit');
                 let rightMenuSpan = rightDiggit.find('.rightMenuSpan');

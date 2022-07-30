@@ -148,7 +148,7 @@ export default function main(_) {
             listHdl(
                 $('#sidebar_postarchive ul li'),
                 $('#sb-record'),
-                'icon-task_fill',
+                'icon-task-fill',
                 _.__timeIds.recordTId
             );
         }, timeout);
@@ -158,7 +158,7 @@ export default function main(_) {
             listHdl(
                 $('#sidebar_articlearchive ul li'),
                 $('#sb-articlearchive'),
-                'icon-document_fill',
+                'icon-document-fill',
                 _.__timeIds.articleTId
             );
         }, timeout);

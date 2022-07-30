@@ -148,7 +148,7 @@ window.cnblogsConfig = {
                 ['我的博客4', 'https://www.cnblogs.com/bndong/'],
                 ['我的博客5', 'https://www.cnblogs.com/bndong/'],
             ],
-            "icon": "icon-brush_fill" // 配置图标，参考文档：定制化/字体图标库
+            "icon": "icon-brush-fill" // 配置图标，参考文档：定制化/字体图标库
         },
         "title2": { // 标题
             "data": [ // 列表数据 ['列表', '链接']
@@ -158,7 +158,7 @@ window.cnblogsConfig = {
                 ['我的博客9', 'https://www.cnblogs.com/bndong/'],
                 ['我的博客10', 'https://www.cnblogs.com/bndong/'],
             ],
-            "icon": "icon-brush_fill" // 配置图标，参考文档：定制化/字体图标库
+            "icon": "icon-brush-fill" // 配置图标，参考文档：定制化/字体图标库
         },
     },
   },
@@ -567,7 +567,7 @@ window.cnblogsConfig = {
 
 ```json
 {
-    icon:  "icon-xl", // iconfont 图标名称
+    icon:  "icon-xinlv", // iconfont 图标名称
     color: "red", // 图标颜色
     fontSize: "16px" // 图标大小
 }
@@ -1150,6 +1150,24 @@ window.cnblogsConfig = {
     },
 }
 ```
+
+## articleContent - 文章内容
+
+?> 版本 >= v2.1.3 
+
+### link - 链接分享小尾巴
+
+* 类型：```Boolean```
+* 默认值：```false```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        link: false,
+    },
+}
+```
+
 
 ## articleSuffix - 文章后缀
 

@@ -27,7 +27,7 @@ export default function main(_) {
 
             $.each(_.__config.links.page, (i) => {
                 let list = _.__config.links.page[i];
-                if (list.title) html += '<h1>' + list.title + '</h1>';
+                if (list.title) html += '<h1 class="iconfont ' + list.icon + '" style="'+ list.style +'"> ' + list.title + '</h1>';
 
                 html += '<div id="links-box">';
 
@@ -40,7 +40,7 @@ export default function main(_) {
                         ['name', typeof data.name !== 'undefined' ? data.name : ''],
                         ['introduction', typeof data.introduction !== 'undefined' ? data.introduction : ''],
                         ['url', typeof data.url !== 'undefined' ? data.url : ''],
-                        ['icon', j % 3 === 0 ? 'icon-zhifeiji': (j % 3 === 1 ? 'icon-like_fill' : 'icon-flashlight_fill')]
+                        ['icon', j % 3 === 0 ? 'icon-zhifeiji': (j % 3 === 1 ? 'icon-like-fill' : 'icon-flashlight-fill')]
                     ]);
                     html += linksHtml;
                 });
