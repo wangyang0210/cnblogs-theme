@@ -678,7 +678,7 @@ body{
     padding: 3px 20px 3px 40px;
 }
 .container .menu-wrap .sidebar-menu .sidebar-submenu ul>li>a:before {
-    content: "\e64e";
+    content: "\eb99";
     font-weight: 400;
     display: inline-block;
     text-align: center;
