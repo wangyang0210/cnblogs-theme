@@ -6,6 +6,27 @@
   "description": "博客园图标",
   "glyphs": [
     {
+      "icon_id": "11992249",
+      "name": "blog-solid",
+      "font_class": "blog",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "3900513",
+      "name": "心率",
+      "font_class": "xinlv",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "4354255",
+      "name": "形状-椭圆形",
+      "font_class": "yuan",
+      "unicode": "eb99",
+      "unicode_decimal": 60313
+    },
+    {
       "icon_id": "1486955",
       "name": "广播",
       "font_class": "guangbo",
@@ -144,13 +165,6 @@
       "font_class": "fuzhi",
       "unicode": "e60d",
       "unicode_decimal": 58893
-    },
-    {
-      "icon_id": "909392",
-      "name": "i-心率",
-      "font_class": "xinlv",
-      "unicode": "e666",
-      "unicode_decimal": 58982
     },
     {
       "icon_id": "7008895",
@@ -340,13 +354,6 @@
       "font_class": "wechat-fill",
       "unicode": "e9e6",
       "unicode_decimal": 59878
-    },
-    {
-      "icon_id": "24023297",
-      "name": "订阅",
-      "font_class": "subscribe",
-      "unicode": "e809",
-      "unicode_decimal": 59401
     },
     {
       "icon_id": "27402570",
