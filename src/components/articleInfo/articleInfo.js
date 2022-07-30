@@ -92,7 +92,7 @@ export default function main(_) {
      * 设置文章信息-链接icon
      */
     (() => {
-        if (_.__config.articleContent.link) $('#cnblogs_post_body p a').addClass('iconfont icon-fenxiang')
+        if (_.__config.articleContent.link) $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
     })()
 
 }

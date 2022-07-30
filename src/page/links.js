@@ -8,6 +8,7 @@
 import comArticle from "./common/comArticle";
 import '../style/links.css';
 import linksTemp from '../template/links.html';
+import articleDirectory from "../components/articleDirectory/articleDirectory";
 
 export default function main(_) {
     /**
@@ -52,5 +53,12 @@ export default function main(_) {
             let articleSuffixFlg = $('.articleSuffix-flg');
             articleSuffixFlg.length ? articleSuffixFlg.before(html) : postBody.append(html);
         }
+    })();
+
+    /**
+     * 设置文章目录
+     */
+    (() => {
+        articleDirectory(_);
     })();
 }
