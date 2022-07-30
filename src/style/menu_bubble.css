@@ -597,7 +597,7 @@ body{
 }
 .container .menu-wrap .sidebar-menu .sidebar-dropdown-box:after {
     font-weight: 900;
-    content: "\e63b";
+    content: "\e68c";
     font-variant: normal;
     text-rendering: auto;
     display: flex;

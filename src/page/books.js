@@ -27,7 +27,7 @@ export default function main(_) {
                 html = '';
             $.each(_.__config.bookList, (i) => {
                 let list = _.__config.bookList[i];
-                if (list.title) html += '<h1>' + list.title + '</h1>';
+                if (list.title) html += '<h1 class=`iconfont ${list.icon}`>' + list.title + '</h1>';
 
                 html += '<div class="book-cards">';
                 $.each(list.books, (j) => {
@@ -36,13 +36,13 @@ export default function main(_) {
                     // 评星
                     let scoreHtml = '';
                     if (typeof books.score !== 'undefined' && books.score > 0) {
-                        scoreHtml += '<i class="iconfont icon-pingjixingquanxing"></i>'.repeat(parseInt(books.score));
+                        scoreHtml += '<i class="iconfont icon-star-full"></i>'.repeat(parseInt(books.score));
                         if (books.score > parseInt(books.score)) {
-                            scoreHtml += '<i class="iconfont icon-pingjixingbanxing"></i>';
+                            scoreHtml += '<i class="iconfont icon-star-half"></i>';
                         }
-                        scoreHtml += '<i class="iconfont icon-pingjixingxiantiao"></i>'.repeat(parseInt(5 - books.score));
+                        scoreHtml += '<i class="iconfont icon-icon-star"></i>'.repeat(parseInt(5 - books.score));
                     } else {
-                        scoreHtml += '<i class="iconfont icon-pingjixingxiantiao"></i>'.repeat(5);
+                        scoreHtml += '<i class="iconfont icon-icon-star"></i>'.repeat(5);
                     }
 
                     // 图书信息

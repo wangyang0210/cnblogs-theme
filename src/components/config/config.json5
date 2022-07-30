@@ -106,7 +106,7 @@
       left: '',
       right: '',
       iconFont: {
-        icon:  "icon-xl",
+        icon:  "icon-xinlv",
         color: "red",
         fontSize: "16px"
       }

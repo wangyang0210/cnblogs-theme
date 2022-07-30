@@ -42,12 +42,12 @@ export default function main(_) {
             let info = postMeta(postDescText);
             let textNum = $('#cnblogs_post_body').text().length;
 
-            return '<span class="postMeta"><i class="iconfont icon-time1"></i>' + info.date.replace(/-/g,"/") + '' +
+            return '<span class="postMeta"><i class="iconfont icon-schedule"></i>' + info.date.replace(/-/g,"/") + '' +
                 '<i class="iconfont icon-browse"></i>' + info.vnum + '' +
                 '<i class="iconfont icon-interactive"></i>' + info.cnum + '' +
                 '<i class="iconfont icon-hot"></i>' + info.tnum + '' +
-                '<br><i class="iconfont icon-wenzi4"></i>' + textNum + '' +
-                '<i class="iconfont icon-shangwutubiao-"></i>' + _.__tools.minToTime(textNum / 500) + ' ~ ' + _.__tools.minToTime(textNum / 300) +
+                '<br><i class="iconfont icon-article"></i>' + textNum + '' +
+                '<i class="iconfont icon-kafei"></i>' + _.__tools.minToTime(textNum / 500) + ' ~ ' + _.__tools.minToTime(textNum / 300) +
                 '</span>';
         }
     })();
@@ -79,7 +79,7 @@ export default function main(_) {
             if (obj.length > 0) {
                 $.each(obj, (i) => {
                     let tag = $(obj[i]);
-                    tag.prepend('<span class="iconfont icon-label_fill"></span>');
+                    tag.prepend('<span class="iconfont icon-label-fill"></span>');
                     $('#articleInfo').append('<a href="'+tag.attr('href')+'" target="_blank"><span class="article-info-tag article-tag-color">'+(tag.text())+'</span></a>');
                 });
                 _.__tools.setDomHomePosition();

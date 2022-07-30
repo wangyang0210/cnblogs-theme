@@ -40,7 +40,7 @@ export default function main(_) {
                         ['name', typeof data.name !== 'undefined' ? data.name : ''],
                         ['introduction', typeof data.introduction !== 'undefined' ? data.introduction : ''],
                         ['url', typeof data.url !== 'undefined' ? data.url : ''],
-                        ['icon', j % 3 === 0 ? 'icon-zhifeiji': (j % 3 === 1 ? 'icon-like_fill' : 'icon-flashlight_fill')]
+                        ['icon', j % 3 === 0 ? 'icon-zhifeiji': (j % 3 === 1 ? 'icon-like-fill' : 'icon-flashlight-fill')]
                     ]);
                     html += linksHtml;
                 });

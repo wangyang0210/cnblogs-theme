@@ -117,8 +117,8 @@
     font-size: 14px;
 }
 
-#links-box .links-item .links-icon a i.icon-like_fill,
-#links-box .links-item .links-icon a i.icon-flashlight_fill {
+#links-box .links-item .links-icon a i.icon-like-fill,
+#links-box .links-item .links-icon a i.icon-flashlight-fill {
     position: relative;
     top: 4px;
     left: 3px;
