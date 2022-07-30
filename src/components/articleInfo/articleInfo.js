@@ -88,4 +88,11 @@ export default function main(_) {
         }, 1000);
     })();
 
+    /**
+     * 设置文章信息-链接icon
+     */
+    (() => {
+        if (_.__config.articleContent.link) $('#cnblogs_post_body p a').addClass('iconfont icon-fenxiang')
+    })()
+
 }

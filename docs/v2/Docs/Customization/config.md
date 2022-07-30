@@ -1151,6 +1151,24 @@ window.cnblogsConfig = {
 }
 ```
 
+## articleContent - 文章内容
+
+?> 版本 >= v2.1.3 
+
+### link - 链接分享小尾巴
+
+* 类型：```Boolean```
+* 默认值：```false```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        link: false,
+    },
+}
+```
+
+
 ## articleSuffix - 文章后缀
 
 ### imgUrl - 左侧图片
