@@ -2,6 +2,7 @@
 * 修复已知的iconfont缺失
 * 修复`articleContent.link`列表页不显示
 * 优化hljs语言显示
+* 优化request方法
 
 ## 2022.07.27 - v2.1.3
 * 修复评论排序导致头像不显示
