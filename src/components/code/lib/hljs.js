@@ -58,7 +58,7 @@ export default function main(_, setCodeLine) {
             let codeBox = $('code-box');
             $.each(codeBox, function (i, e) {
                 let obj = $(codeBox[i]);
-                let language = $('pre code')[i].result.language
+                let language = $('pre code')[i].result?.language
                 if (language) obj.find('.code-hljs-len').text(language).css('visibility', 'visible');
             });
         }
