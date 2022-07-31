@@ -6,7 +6,7 @@ const request = axios.create({
 
 // 异常拦截处理器
 const errorHandler = error => {
-    error.response && console.error(`errorHandler: ${error.response.status}, ${error.response.data.message}`)
+    error.response && console.error(`errorHandler: ${error.response}`)
     return Promise.reject(error)
 }
 
