@@ -6,6 +6,13 @@
   "description": "博客园图标",
   "glyphs": [
     {
+      "icon_id": "8019596",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "11992249",
       "name": "blog-solid",
       "font_class": "blog",
