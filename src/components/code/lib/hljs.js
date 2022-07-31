@@ -11,7 +11,7 @@ export default function main(_, setCodeLine) {
     let theme = _.__config.code.options.hljs.theme.toLowerCase();
 
     import(/* webpackChunkName: "hljs/[request]" */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
-        let code  = $('code-box pre');
+        let code  = $('code-box pre code');
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
             'idea', 'isbl-editor-light', 'qtcreator_light',
@@ -58,16 +58,8 @@ export default function main(_, setCodeLine) {
             let codeBox = $('code-box');
             $.each(codeBox, function (i, e) {
                 let obj = $(codeBox[i]);
-                let cla = obj.find('pre').attr('class');
-                let len = cla.replace(/hljs/g, '').replace(/code-pre-line/g, '').trim();
-                if (len) {
-                    let tem = len.match(/.*(language-[a-z0-9]+)\s?.*/);
-                    if (!!tem && tem.length > 0) {
-                        obj.find('.code-hljs-len').text(tem[1].replace(/language-/g, '')).css('visibility', 'visible');
-                    } else {
-                        obj.find('.code-hljs-len').text(len).css('visibility', 'visible');
-                    }
-                }
+                let language = $('pre code')[i].result.language
+                if (language) obj.find('.code-hljs-len').text(language).css('visibility', 'visible');
             });
         }
 
@@ -76,11 +68,9 @@ export default function main(_, setCodeLine) {
          */
         (() => {
             _.__timeIds.hljsCodeTId = window.setInterval(() => {
-                let preHljs = $('pre.hljs');
+                let preHljs = $('pre code.hljs');
                 if (preHljs.length > 0) {
-                    $('code-box .code-tools').css('background', $('pre.hljs').css('background'))
-                        .prepend('<hljs-len class="code-hljs-len"></hljs-len>');
-
+                    $('code-box').css('background', $('pre code.hljs').css('background')).prepend('<hljs-len class="code-hljs-len"></hljs-len>');
                     setCodeHljsLen();
                     _.__tools.clearIntervalTimeId(_.__timeIds.hljsCodeTId);
                 }
