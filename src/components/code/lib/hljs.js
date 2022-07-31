@@ -11,7 +11,7 @@ export default function main(_, setCodeLine) {
     let theme = _.__config.code.options.hljs.theme.toLowerCase();
 
     import(/* webpackChunkName: "hljs/[request]" */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
-        let code  = $('code-box pre');
+        let code  = $('code-box pre code');
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
             'idea', 'isbl-editor-light', 'qtcreator_light',
@@ -56,6 +56,7 @@ export default function main(_, setCodeLine) {
          */
         let setCodeHljsLen = () => {
             let codeBox = $('code-box');
+            // $('pre code')[1].className
             $.each(codeBox, function (i, e) {
                 let obj = $(codeBox[i]);
                 let cla = obj.find('pre').attr('class');
