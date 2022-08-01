@@ -2,6 +2,7 @@
 * 修复已知的iconfont缺失
 * 修复`articleContent.link`列表页不显示
 * 优化hljs语言显示
+* 优化code行号显示
 * 优化request方法
 * 优化umami,调整判断条件
 
