@@ -34,8 +34,9 @@ export default function main(_, setCodeLine) {
             $.each(code, function (i, e) {
                 let obj = $(code[i]);
 
-                // 做一次换行兼容处理
+                // 做一次换行兼容处理/padding处理
                 obj.css('white-space', 'pre').html().replace(/\<br\>/g, '\n');
+                obj.css({'padding': 0})
 
                 // 清除代码原有样式
                 obj.text(obj.text());

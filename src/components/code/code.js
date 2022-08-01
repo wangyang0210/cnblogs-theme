@@ -134,7 +134,7 @@ export default function main(_) {
     function setCodeLine() {
         if (!_.__config.code.options.line) return true;
 
-        let preList = $('code-box pre');
+        let preList = $('code-box pre code');
         $.each(preList, function (i) {
             let pre = $(preList[i]);
             let codeLine = pre.html().replace(/\<br\>/g, '\n').split('\n');

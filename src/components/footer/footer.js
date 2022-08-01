@@ -133,7 +133,7 @@ export default function main(_) {
             }, 1000);
         }
 
-        if (_.__config.umami) {
+        if (_.__config.umami?.url && _.__config.umami?.shareId) {
             const baseUrl = _.__config.umami.url
             _.__timeIds.umamiTId = window.setInterval(() => {
                 getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
