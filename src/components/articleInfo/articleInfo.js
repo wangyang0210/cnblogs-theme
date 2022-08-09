@@ -95,4 +95,21 @@ export default function main(_) {
         if (_.__config.articleContent.link) $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
     })()
 
+    /**
+     * 设置文章标题-iconfont
+     */
+    (() => {
+        let titleInfo = $('#cnblogs_post_body').find(':header')
+        if (_.__config.articleContent.emoji && titleInfo.length > 0) {
+            // 默认字体图标库
+            import(/* webpackChunkName: "fonticon" */ '../../fonts/iconfont');
+            // TODO
+            //  1.只处理到五级标题
+            //  2.增加字体图标映射关系
+            //  3.每次加载文章随机填充到标题前
+            //  4. 后续看情况是否做支持可配置
+            //  5. iconfont和emoji需要再次评估
+        }
+    })()
+
 }
