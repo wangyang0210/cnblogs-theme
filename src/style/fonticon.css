@@ -15,6 +15,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 .icon-hebaodan:before {
     content: "\e6a9";
 }
@@ -658,7 +666,6 @@
 .icon-fenlei:before {
     content: "\e613";
 }
-
 
 .icon-blog:before {
     content: "\e633";

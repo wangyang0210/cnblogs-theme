@@ -7,6 +7,7 @@
  */
 import postMeta from "../../components/postMeta/postMeta";
 import consoleText from "../../vendor/consoleText/consoleText";
+import iconfontMap from "./lib/iconfontMap";
 
 export default function main(_) {
 
@@ -93,6 +94,27 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.articleContent.link) $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
+    })()
+
+    /**
+     * 设置文章标题-iconfont
+     */
+    (() => {
+        let titleInfo = $('#cnblogs_post_body h1, h2, h3, h4, h5');
+        if (_.__config.articleContent.emoji && titleInfo.length > 0) {
+            // 默认字体图标库
+            import(/* webpackChunkName: "fonticon" */ '../../fonts/iconfont');
+            titleInfo.html((i, c) => {
+                let arr = []
+                let num=Math.floor((Math.random()*(160-i))+i);
+                if(arr.indexOf(num)==-1){
+                    arr.push(num)
+                    return '<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg> ' + c;
+                }else{
+                    i--;
+                }
+            })
+        }
     })()
 
 }
