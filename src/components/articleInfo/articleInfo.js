@@ -7,6 +7,7 @@
  */
 import postMeta from "../../components/postMeta/postMeta";
 import consoleText from "../../vendor/consoleText/consoleText";
+import iconfontMap from "./lib/iconfontMap";
 
 export default function main(_) {
 
@@ -99,16 +100,20 @@ export default function main(_) {
      * 设置文章标题-iconfont
      */
     (() => {
-        let titleInfo = $('#cnblogs_post_body').find(':header')
+        let titleInfo = $('#cnblogs_post_body h1, h2, h3, h4, h5');
         if (_.__config.articleContent.emoji && titleInfo.length > 0) {
             // 默认字体图标库
             import(/* webpackChunkName: "fonticon" */ '../../fonts/iconfont');
-            // TODO
-            //  1.只处理到五级标题
-            //  2.增加字体图标映射关系
-            //  3.每次加载文章随机填充到标题前
-            //  4. 后续看情况是否做支持可配置
-            //  5. iconfont和emoji需要再次评估
+            titleInfo.html((i, c) => {
+                let arr = []
+                let num=Math.floor((Math.random()*(160-i))+i);
+                if(arr.indexOf(num)==-1){
+                    arr.push(num)
+                    return '<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg> ' + c;
+                }else{
+                    i--;
+                }
+            })
         }
     })()
 
