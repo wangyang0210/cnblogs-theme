@@ -94,7 +94,7 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.articleContent.link) $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
-    })()
+    })();
 
     /**
      * 设置文章标题-iconfont
@@ -115,6 +115,6 @@ export default function main(_) {
                 }
             })
         }
-    })()
+    })();
 
 }

@@ -6,6 +6,7 @@
 * 优化request方法
 * 优化umami,调整判断条件
 * 新增彩色iconfont
+* 新增配置`articleContent.emoji`,控制是否在标题前插入iconfont
 
 ## 2022.07.27 - v2.1.3
 * 修复评论排序导致头像不显示
