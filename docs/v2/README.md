@@ -18,10 +18,6 @@
 [![compatibility](https://camo.githubusercontent.com/31ac3f0ce805dc34a29b615131caa26cbf4dc127/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f62726f777365722d2532306368726f6d6525323025374325323066697265666f782532302537432532306f706572612532302537432532307361666172692532302537432532306965253230253345253344253230392d6c69676874677265792e737667)](https://github.com/wangyang0210/Cnblogs-Theme)
 
 
-# Illustrate
-
-本人一直都很喜欢这个博皮，但是原作者最近一直没有更新，我打算自食其力，每天在视频号上直播更新这个博皮~
-
 # Silence
 
 📖 本主题以阅读为核心，美化博客园的显示效果，提高用户体验。
@@ -43,7 +39,3 @@
 **Cnblogs-Theme** © [wangyang0210](https://github.com/wangyang0210), Released under the [MIT](./LICENSE) License.<br>
 
 > Blog [@Blog](https://www.cnblogs.com/wangyang0210/) · GitHub [@GitHub](https://github.com/wangyang0210) · Email wangyang.0210@foxmail.com
-
-# Original Author
-
-> **Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
