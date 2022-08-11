@@ -1181,6 +1181,22 @@ window.cnblogsConfig = {
 }
 ```
 
+### emoji - 文章标题iconfont
+
+?> 版本 >= v2.1.4
+
+* 类型：```Boolean```
+* 默认值：```false```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        emoji: false,
+    },
+}
+```
+
+
 
 ## articleSuffix - 文章后缀
 
