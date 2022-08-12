@@ -32,7 +32,7 @@ export default function main(_) {
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
             // 不处理 h6 级别标题
-            if (h === 6) return true;
+            // if (h === 6) return true;
 
             // 设置标题标识
             let hid = obj.attr('id');
