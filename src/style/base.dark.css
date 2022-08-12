@@ -35,7 +35,7 @@ body {
 
 .blogpost-body blockquote {
     background: #2a2a2a !important;
-    border-left: 4px solid #222 !important;
+    border-left: 4px solid rgb(84 104 255 / 80%) !important;
     color: #ddd !important;
     box-shadow: 0 4px 11px 0 rgb(0 0 0/20%),0 1px 3px 0 rgb(0 0 0/20%)!important;
 }
