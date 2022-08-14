@@ -244,6 +244,22 @@ window.cnblogsConfig = {
 
 ## banner - banner图
 
+### text - 所有banner文字是否可选
+?> 版本 >= v2.1.5
+
+* 类型：```Boolean```
+* 默认值：```false```
+
+```javascript
+window.cnblogsConfig = {
+    banner: {
+        text: false
+    },
+}
+```
+
+
+
 ### home - 主页banner
 
 #### background - 主页banner图片
@@ -324,6 +340,8 @@ jinrishici：每次刷新随机获取一句古诗词。
 one：每日获取一句话
 */
 ```
+
+
 
 ### article - 文章页头图
 

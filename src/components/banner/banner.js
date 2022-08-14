@@ -64,7 +64,11 @@ export default function main(_) {
                 'background': '#222 url(\'' + encodeURI(bgImg) + '\')  center center no-repeat',
                 'background-size': 'cover'
             });
-        }
+        };
+
+        // Banner文字是否可选
+        if(!_.__config.banner.text) $('.main-header-content.inner').addClass('textUnselect')
+
     })();
 
     // 添加事件监听

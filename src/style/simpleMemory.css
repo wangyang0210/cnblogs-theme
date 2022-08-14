@@ -2556,6 +2556,14 @@ blockquote p {
     text-indent: 0 !important
 }
 
+.textUnselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 .titleIcon {
     position: relative;
     font-size: 34px !important;
