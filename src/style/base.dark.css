@@ -33,12 +33,21 @@ body {
     opacity: .8;
 }
 
-/*#cnblogs_post_body h6, blockquote {*/
-/*    background: #2a2a2a !important;*/
-/*    border-left: 4px solid #222 !important;*/
-/*    color: #ddd !important;*/
-/*    box-shadow: 0 4px 11px 0 rgb(0 0 0/20%),0 1px 3px 0 rgb(0 0 0/20%)!important;*/
-/*}*/
+.blogpost-body blockquote {
+    background: #2a2a2a !important;
+    color: #ddd !important;
+    box-shadow: 0 4px 11px 0 rgb(0 0 0/20%),0 1px 3px 0 rgb(0 0 0/20%)!important;
+}
+
+.blogpost-body p.tip {
+    background-color: rgb(66 185 131 / 10%)!important;
+    color: #ddd !important;
+}
+
+.blogpost-body p.warn {
+    background-color: rgb(255 102 102 / 10%)!important;
+    color: #ddd !important;
+}
 
 #div_digg .diggit {
     float: left;
