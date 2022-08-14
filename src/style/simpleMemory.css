@@ -2525,10 +2525,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: #f7f7f7 !important;
-    background-image: linear-gradient(
-            180deg
-            ,#fff,#f5f5fa) !important;
+    background-color: rgb(66 185 131 / 10%)!important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2543,10 +2540,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: #f7f7f7 !important;
-    background-image: linear-gradient(
-            180deg
-            ,#fff,#f5f5fa) !important;
+    background-color: rgb(255 102 102 / 10%)!important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
