@@ -48,6 +48,7 @@
 
   // -- 头图 --
   banner: {
+    text: false,
     home: {
       background: [],
       title: [],
