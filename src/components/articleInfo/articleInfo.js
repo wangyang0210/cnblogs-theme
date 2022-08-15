@@ -100,7 +100,7 @@ export default function main(_) {
      * 设置文章标题-iconfont
      */
     (() => {
-        let titleInfo = $('#cnblogs_post_body h1, h2, h3, h4, h5, h6');
+        let titleInfo = $('#cnblogs_post_body').find(':header');
         if (_.__config.articleContent.emoji && titleInfo.length > 0) {
             // 默认字体图标库
             import(/* webpackChunkName: "fonticon" */ '../../fonts/iconfont');
