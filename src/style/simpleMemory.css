@@ -473,7 +473,8 @@ details>summary:before {
 }
 
 #cnblogs_post_body h1,
-#cnblogs_post_body h2 {
+#cnblogs_post_body h2,
+#cnblogs_post_body h3 {
     border-bottom: 1px solid #eee;
 }
 
