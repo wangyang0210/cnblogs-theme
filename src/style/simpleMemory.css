@@ -472,44 +472,48 @@ details>summary:before {
     display: none
 }
 
+#cnblogs_post_body h1,
+#cnblogs_post_body h2 {
+    border-bottom: 1px solid #eee;
+}
 
 #cnblogs_post_body h1 {
     font-size: 28px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #cnblogs_post_body h2 {
     font-size: 25px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #cnblogs_post_body h3 {
     font-size: 22px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #cnblogs_post_body h4 {
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #cnblogs_post_body h5 {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #cnblogs_post_body h6 {
     font-size: 16px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 
