@@ -1,7 +1,9 @@
-# 2022.08.12 
-* 表格优化
+# 2022.08.12
 * 警告引用增加iconfont
 * h1~h3标题增加下划线
+* [TODO]表格显示优化
+* [TODO][#56](https://github.com/wangyang0210/Cnblogs-Theme/issues/56) 显示优化
+* [TODO][#54](https://github.com/wangyang0210/Cnblogs-Theme/issues/54) 图箱优化
 
 
 # 2022.08.12 - v2.1.5
