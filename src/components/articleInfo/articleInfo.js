@@ -93,7 +93,11 @@ export default function main(_) {
      * 设置文章信息-链接icon
      */
     (() => {
-        if (_.__config.articleContent.link) $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
+        if (_.__config.articleContent.link) {
+            $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
+            $('.footnote-ref a').removeClass('iconfont icon-fenxiang')
+            $('.footnotes-list a').removeClass('iconfont icon-fenxiang')
+        }
     })();
 
     /**
