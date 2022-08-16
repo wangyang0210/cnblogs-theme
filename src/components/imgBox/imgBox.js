@@ -11,7 +11,7 @@ import "../../vendor/fancybox/jquery.fancybox.min.css";
 export default function main(_) {
     setTimeout(() =>  {
         let cpb         = $('#cnblogs_post_body')
-            ,imgList    = $('#cnblogs_post_body img')
+            ,imgList    = $('#cnblogs_post_body img:not(#articleSuffixAvatar)')
             ,comImgList = $('.feedbackItem img')
             ,data       = [];
 
