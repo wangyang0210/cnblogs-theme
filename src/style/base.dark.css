@@ -260,7 +260,7 @@ span.cnblogs_code, #home code:not([class]) {
 }
 
 .postBody h1, .postBody h2, .postBody h3 {
-    border-bottom: 1px solid #9999;
+    border-bottom: 1px solid #555 !important;
 }
 
 .postBody h1, .postBody h2, .postBody h3, .postBody h4, .postBody h5, .postBody h6{
