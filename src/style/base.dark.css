@@ -11,7 +11,7 @@ body {
 
 
 #cnblogs_post_body table tr:nth-child(2n), .feedbackCon table tr:nth-child(2n) {
-    background-color: rgb(0 0 0 / 20%);
+    background-color: rgb(0 0 0 / 10%);
 }
 
 #cnblogs_post_body table tr:hover, .feedbackCon table tr:hover {
