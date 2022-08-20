@@ -2,9 +2,9 @@
 
 可以将主题托管到自己的云资源或CDN加速节点节点上。
 
-例如我的网站为 `www.dbnuo.com`（IP或其它host），我将编译后的文件夹 `dist` 放到了网站的根目录。
+例如我的网站为 `www.wangyangyang.vip`（IP或其它host），我将编译后的文件夹 `dist` 放到了网站的根目录。
 
-这样我可以通过加载 `https://www.dbnuo.com/dist/simpleMemory.js` 来加载主题：
+这样我可以通过加载 `https://www.wangyangyang.vip/dist/simpleMemory.js` 来加载主题：
 
 ```html
 <script type="text/javascript">
@@ -16,7 +16,7 @@
       },
     }
 </script>
-<script src="https://www.dbnuo.com/dist/simpleMemory.js" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simpleMemory.js" defer></script>
 ```
 
 

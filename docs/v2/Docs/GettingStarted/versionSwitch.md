@@ -15,13 +15,13 @@
 例如：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.0.0/dist/simpleMemory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@v2.0.0/dist/simpleMemory.js" defer></script>
 ```
 
 变为
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.0.1/dist/simpleMemory" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@v2.0.1/dist/simpleMemory" defer></script>
 ```
 
 版本变更： `v2.0.0` >>> `v2.0.1` 
@@ -37,13 +37,13 @@
 例如：
 
 ```html
-<script src="https://dbnuo.com/dist/simpleMemory.js?_12311" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simpleMemory.js" defer></script>
 ```
 
 变为
 
 ```html
-<script src="https://dbnuo.com/dist/simpleMemory.js?_12322" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simpleMemory.js?_12322" defer></script>
 ```
 
 这样浏览器就会加载最新的代码。
@@ -56,7 +56,7 @@
 例如：
 
 ```html
-<script src="https://dbnuo.com/dist/simpleMemory.y7i7sx47.js" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simpleMemory.y7i7sx47.js" defer></script>
 ```
 
 变为

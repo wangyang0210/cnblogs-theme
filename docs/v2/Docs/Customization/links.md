@@ -1,6 +1,6 @@
 # 友链
 
-样式参考：[https://www.cnblogs.com/bndong/p/14708992.html](https://www.cnblogs.com/bndong/p/14708992.html)
+样式参考：[https://www.cnblogs.com/wangyang0210/p/16535757.html](https://www.cnblogs.com/wangyang0210/p/16535757.html)
 
 ## 配置方式
 
@@ -24,7 +24,7 @@
 
 ### 配置友链数据
 
-友链的配置，可以参考其他[配置](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/#/Docs/Customization/config)的方式。例如：
+友链的配置，可以参考其他[配置](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/links)的方式。例如：
 
 ```javascript
 window.cnblogsConfig = {
