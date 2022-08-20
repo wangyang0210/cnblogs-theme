@@ -1,11 +1,30 @@
-#cnblogs_post_body table, .feedbackCon table, #cnblogs_post_body table td, .feedbackCon table td, body {
+#cnblogs_post_body table, .feedbackCon table,
+#cnblogs_post_body table th,.feedbackCon table th ,
+body {
     background-color: #333
 }
 
-#cnblogs_post_body table td, #cnblogs_post_body table th, .feedbackCon table td, .feedbackCon table th {
-    border-bottom: 1px solid #2a2a2a;
-    border-right: 1px solid #2a2a2a
+#cnblogs_post_body table td,#cnblogs_post_body table th,.feedbackCon table td,.feedbackCon table th {
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555
 }
+
+
+#cnblogs_post_body table tr:nth-child(2n), .feedbackCon table tr:nth-child(2n) {
+    background-color: rgb(0 0 0 / 20%);
+}
+
+#cnblogs_post_body table tr:hover, .feedbackCon table tr:hover {
+    background-color: #55555570;
+}
+
+
+#cnblogs_post_body table,.feedbackCon table {
+    border: 1px solid #555;
+    color: #ddd
+}
+
+
 
 body {
     color: #ddd
@@ -83,15 +102,6 @@ body {
 
 .dev__fe i, .dev__ux i {
     color: #ddd
-}
-
-#cnblogs_post_body table, .feedbackCon table {
-    border: 1px solid #2a2a2a;
-    color: #ddd
-}
-
-#cnblogs_post_body table th, .feedbackCon table th {
-    background-color: #3e3e3e
 }
 
 #green_channel {
