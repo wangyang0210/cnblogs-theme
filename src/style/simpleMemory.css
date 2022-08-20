@@ -775,7 +775,7 @@ p.article-info-text > .postMeta br {
     min-height: 200px;
     padding: 0 0 10px;
     margin: 15px auto 4rem;
-    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif
+    /*font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif*/
 }
 
 #topics .postTitle {
