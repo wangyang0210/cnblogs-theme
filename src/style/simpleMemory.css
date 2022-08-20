@@ -2892,47 +2892,63 @@ div#rightMenu .rightMenuItem {
     top: 3px
 }
 
-#cnblogs_post_body table, .feedbackCon table {
+#cnblogs_post_body table,.feedbackCon table {
     position: relative;
-    overflow: hidden !important;
+    overflow: hidden!important;
     box-sizing: border-box;
-    width: 100% !important;
+    width: 100%!important;
     background-color: #fff;
-    border: 1px solid #dfe3ec;
+    border: 1px solid #ebeef5;
     font-size: 14px;
     color: #222;
     margin: 0 0 10px;
     padding: 0;
     border-right: 0;
     border-bottom: 0;
-    display: table !important;
-    border-collapse: initial !important
+    display: table!important;
+    border-collapse: initial!important
 }
 
 .feedbackCon table {
     margin: 10px 0
 }
 
-#cnblogs_post_body table tr, .feedbackCon table tr {
+
+#cnblogs_post_body table thead, .feedbackCon table thead {
+    color: #909399;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#cnblogs_post_body table tr,.feedbackCon table tr {
     border: 0
 }
 
-#cnblogs_post_body table th, .feedbackCon table th {
-    border-bottom: 1px solid #dfe3ec;
-    border-right: 1px solid #dfe3ec;
-    background-color: #eef0f6;
-    text-align: left;
-    overflow: hidden;
-    padding: 0 18px;
-    min-width: 100px
+
+#cnblogs_post_body table tr:nth-child(2n),.feedbackCon table tr:nth-child(2n) {
+    background: #fafafa;
 }
 
-#cnblogs_post_body table td, .feedbackCon table td {
-    border-bottom: 1px solid #dfe6ec;
-    border-right: 1px solid #dfe3ec;
-    min-width: 0;
+
+#cnblogs_post_body table tr:hover,.feedbackCon table tr:hover {
+    background-color: #ecf5ff
+}
+
+#cnblogs_post_body table th,.feedbackCon table th {
+    border-bottom: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
     background-color: #fff;
-    padding: 0 20px
+    text-align: left;
+    overflow: hidden;
+    padding: 12px 10px;
+    min-width: 100px;
+}
+
+#cnblogs_post_body table td,.feedbackCon table td {
+    border-bottom: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
+    min-width: 0;
+    padding: 12px 10px;
 }
 
 #cnblogs_post_body > p {
