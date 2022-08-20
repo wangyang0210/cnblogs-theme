@@ -356,6 +356,10 @@ code-box, .feedbackItem pre, #cnblogs_post_body img, #EntryTag, #div_digg, #gree
     color: #666;
 }
 
+details {
+    border: 1px solid #0877ef66;
+}
+
 @media only screen and (max-width: 720px) {
     .menu-button {
         border: none!important;
