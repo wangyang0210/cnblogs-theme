@@ -12,6 +12,7 @@
 
 设置页面：
 
+!> 侧边栏设置的时候格式要记得选Html
 <img src="./Images/install_01.png" width="750" />
 
 本主题当前页面所涉及的配置有：
@@ -51,7 +52,7 @@
 
 ### 设置代码高亮
 
-不要勾选显示行号！
+!> 主题已集成代码高亮,建议直接禁用
 
 ![install_02](../../Images/install_08.png)
 
@@ -79,7 +80,7 @@ CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定
       },
     }
 </script>
-<script src="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.1.0/dist/simpleMemory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@v2.1.6/dist/simpleMemory.js" defer></script>
 ```
 
 详细配置参考相关[文档](https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/#/Docs/Customization/config)。
