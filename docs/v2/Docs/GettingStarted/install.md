@@ -13,6 +13,7 @@
 设置页面：
 
 !> 侧边栏设置的时候格式要记得选Html
+
 <img src="./Images/install_01.png" width="750" />
 
 本主题当前页面所涉及的配置有：
