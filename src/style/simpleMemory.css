@@ -448,7 +448,8 @@ details>summary:before {
     color: #888;
     position: relative;
     top: 10px;
-    display: inline-block
+    display: inline-block;
+    user-select: none;
 }
 
 .postMeta > i {
