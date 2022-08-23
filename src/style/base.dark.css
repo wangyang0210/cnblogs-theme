@@ -269,9 +269,9 @@ span.cnblogs_code, #home code:not([class]) {
     background: #555;
 }
 
-.postBody h1, .postBody h2, .postBody h3 {
-    border-bottom: 1px solid #555 !important;
-}
+/*.postBody h1, .postBody h2, .postBody h3 {*/
+/*    border-bottom: 1px solid #555 !important;*/
+/*}*/
 
 .postBody h1, .postBody h2, .postBody h3, .postBody h4, .postBody h5, .postBody h6{
     color: #ddd !important;

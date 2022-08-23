@@ -473,11 +473,11 @@ details>summary:before {
     display: none
 }
 
-#cnblogs_post_body h1,
-#cnblogs_post_body h2,
-#cnblogs_post_body h3 {
-    border-bottom: 1px solid #eee;
-}
+/*#cnblogs_post_body h1,*/
+/*#cnblogs_post_body h2,*/
+/*#cnblogs_post_body h3 {*/
+/*    border-bottom: 1px solid #eee;*/
+/*}*/
 
 #cnblogs_post_body h1 {
     font-size: 28px;
