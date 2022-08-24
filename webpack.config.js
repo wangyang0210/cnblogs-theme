@@ -41,8 +41,8 @@ module.exports = {
             }
         }),
         new miniCssExtractPlugin({
-            filename: 'style/[name].[hash:8].css',
-            chunkFilename:'style/[name].[hash:8].css',
+            filename: 'style/[name].[fullhash:8].css',
+            chunkFilename:'style/[name].[fullhash:8].css',
             ignoreOrder: true
 
         }),
@@ -75,14 +75,14 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[hash][ext][query]'
+                    filename: 'images/[fullhash][ext][query]'
                 }
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'iconfont/[hash][ext][query]'
+                    filename: 'iconfont/[fullhash][ext][query]'
                 }
             },
             {
