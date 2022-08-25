@@ -4,7 +4,7 @@
  * @author: WangYang, wangyang.0210@foxmail.com
  * @Date 2022-07-24 02:03
  * ----------------------------------------------
- * @describe: common function
+ * @describe: 公共方法封装
  */
 
 import moment from "moment";

@@ -1,11 +1,11 @@
 /**
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
+ * UPDATES AND DOCS AT: https://github.com/wangyang0210
+ * https://www.cnblogs.com/wangyang0210/
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-08-25 15:19
  * ----------------------------------------------
  * @describe: 网站图标处理
  */
-
 export default function main(_) {
     if (_.__config.info.blogIcon) {
         let shortcutIcon = $('link[rel="shortcut icon"]');
