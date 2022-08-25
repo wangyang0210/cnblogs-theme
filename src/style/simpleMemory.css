@@ -176,9 +176,9 @@ summary {
     cursor: pointer;
 }
 
-details>summary:before {
+details > summary:before {
     font-family: "iconfont" !important;
-    font-style: normal!important;
+    font-style: normal !important;
     left: .6rem;
     color: #448aff;
     font-size: 1.5rem;
@@ -519,15 +519,13 @@ details>summary:before {
 }
 
 
-
 #cnblogs_post_body h1:hover::after,
 #cnblogs_post_body h2:hover::after,
 #cnblogs_post_body h3:hover::after,
 #cnblogs_post_body h4:hover::after,
-#cnblogs_post_body h5:hover::after
-{
+#cnblogs_post_body h5:hover::after {
     content: "#";
-    color: rgba(13,110,253,0.5);
+    color: rgba(13, 110, 253, 0.5);
     margin-left: 5px;
     transition: color 0.15s ease-in-out;
 }
@@ -2216,17 +2214,39 @@ div#tbCommentBodyPreview {
 }
 
 @keyframes pageTitleText {
-    0% {text-shadow: 2px 0 0 tomato;}
-    10%{text-shadow: -2px -2px 0 gold;}
-    20% {text-shadow: 2px 0 0 lime;}
-    30% {text-shadow: 2px 0 0 turquoise;}
-    40% {text-shadow: 2px 2px 0 tomato;}
-    50%{text-shadow:  0 -2px 0 gold;}
-    60% {text-shadow: 0 2px 0 lime;}
-    70% {text-shadow: 2px 0 0 turquoise;}
-    80% {text-shadow: 2px -4px 0 tomato;}
-    90%{text-shadow: 2px 2px 0 gold;}
-    100% {text-shadow: 2px 0 0 lime;}
+    0% {
+        text-shadow: 2px 0 0 tomato;
+    }
+    10% {
+        text-shadow: -2px -2px 0 gold;
+    }
+    20% {
+        text-shadow: 2px 0 0 lime;
+    }
+    30% {
+        text-shadow: 2px 0 0 turquoise;
+    }
+    40% {
+        text-shadow: 2px 2px 0 tomato;
+    }
+    50% {
+        text-shadow: 0 -2px 0 gold;
+    }
+    60% {
+        text-shadow: 0 2px 0 lime;
+    }
+    70% {
+        text-shadow: 2px 0 0 turquoise;
+    }
+    80% {
+        text-shadow: 2px -4px 0 tomato;
+    }
+    90% {
+        text-shadow: 2px 2px 0 gold;
+    }
+    100% {
+        text-shadow: 2px 0 0 lime;
+    }
 }
 
 #footer .footer-text, .page-description {
@@ -2508,15 +2528,14 @@ div#tbCommentBodyPreview {
 
 
 .blogpost-body blockquote {
-    border-left: 3px solid rgba(84,104,255,.8) !important;
+    border-left: 3px solid rgba(84, 104, 255, .8) !important;
     border-right: none !important;
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
     background-color: #f7f7f7 !important;
     background-image: linear-gradient(
-            180deg
-            ,#fff,#f5f5fa) !important;
+            180deg, #fff, #f5f5fa) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2531,7 +2550,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: rgb(66 185 131 / 10%)!important;
+    background-color: rgb(66 185 131 / 10%) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2547,7 +2566,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: rgb(255 102 102 / 10%)!important;
+    background-color: rgb(255 102 102 / 10%) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2561,7 +2580,7 @@ div#tbCommentBodyPreview {
     border-radius: 100%;
     color: #fff;
     content: "!";
-    font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+    font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     font-weight: 700;
     left: -12px;
@@ -2606,11 +2625,11 @@ blockquote p {
     margin-bottom: .5em
 }
 
-#commentform_title, .entrylistTitle, .feedback_area_title {
+#commentform_title, .feedback_area_title {
     border-bottom: none
 }
 
-#commentform_title:after, .entrylistTitle:after, .feedback_area_title:after {
+#commentform_title:after, .feedback_area_title:after {
     content: '';
     display: block;
     width: 100%;
@@ -2670,7 +2689,7 @@ div#rightMenu .rightMenuItem {
     margin-top: 5px;
 }
 
-#div_digg .diggit, #div_digg .buryit  {
+#div_digg .diggit, #div_digg .buryit {
     text-align: center;
     cursor: pointer;
     padding-top: 0;
@@ -2694,7 +2713,7 @@ div#rightMenu .rightMenuItem {
     color: #6b7280;
 }
 
-#div_digg .diggit i,  #div_digg .buryit i {
+#div_digg .diggit i, #div_digg .buryit i {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -2766,8 +2785,7 @@ div#rightMenu .rightMenuItem {
 #rightMenuHome .rightMenuSpan,
 #rightMenuSite .rightMenuSpan,
 #rtaDirectory .rightMenuSpan,
-#toUpDown .rightMenuSpan
-{
+#toUpDown .rightMenuSpan {
     position: absolute;
     left: -95px;
     font-size: 14px;
@@ -2793,8 +2811,7 @@ div#rightMenu .rightMenuItem {
 #rightMenuHome .rightMenuSpan::before,
 #rightMenuSite .rightMenuSpan::before,
 #rtaDirectory .rightMenuSpan::before,
-#toUpDown .rightMenuSpan::before
-{
+#toUpDown .rightMenuSpan::before {
     background-attachment: scroll;
     background-clip: border-box;
     background-color: #1b1c1d;
@@ -2893,11 +2910,11 @@ div#rightMenu .rightMenuItem {
     top: 3px
 }
 
-#cnblogs_post_body table,.feedbackCon table {
+#cnblogs_post_body table, .feedbackCon table {
     position: relative;
-    overflow: hidden!important;
+    overflow: hidden !important;
     box-sizing: border-box;
-    width: 100%!important;
+    width: 100% !important;
     background-color: #fff;
     border: 1px solid #ebeef5;
     font-size: 14px;
@@ -2906,8 +2923,8 @@ div#rightMenu .rightMenuItem {
     padding: 0;
     border-right: 0;
     border-bottom: 0;
-    display: table!important;
-    border-collapse: initial!important
+    display: table !important;
+    border-collapse: initial !important
 }
 
 .feedbackCon table {
@@ -2921,21 +2938,21 @@ div#rightMenu .rightMenuItem {
     font-size: 16px;
 }
 
-#cnblogs_post_body table tr,.feedbackCon table tr {
+#cnblogs_post_body table tr, .feedbackCon table tr {
     border: 0
 }
 
 
-#cnblogs_post_body table tr:nth-child(2n),.feedbackCon table tr:nth-child(2n) {
+#cnblogs_post_body table tr:nth-child(2n), .feedbackCon table tr:nth-child(2n) {
     background: #fafafa;
 }
 
 
-#cnblogs_post_body table tr:hover,.feedbackCon table tr:hover {
+#cnblogs_post_body table tr:hover, .feedbackCon table tr:hover {
     background-color: #ecf5ff
 }
 
-#cnblogs_post_body table th,.feedbackCon table th {
+#cnblogs_post_body table th, .feedbackCon table th {
     border-bottom: 1px solid #ebeef5;
     border-right: 1px solid #ebeef5;
     background-color: #fff;
@@ -2945,7 +2962,7 @@ div#rightMenu .rightMenuItem {
     min-width: 100px;
 }
 
-#cnblogs_post_body table td,.feedbackCon table td {
+#cnblogs_post_body table td, .feedbackCon table td {
     border-bottom: 1px solid #ebeef5;
     border-right: 1px solid #ebeef5;
     min-width: 0;
@@ -3125,7 +3142,7 @@ code-box .code-tools {
     align-items: center;
     overflow: hidden;
     min-height: 1.2rem;
-    color: rgba(238,255,255,0.8);
+    color: rgba(238, 255, 255, 0.8);
     font-size: 14px;
     border-radius: 4px 4px 0 0;
     height: 16px;
@@ -4169,3 +4186,10 @@ table#blogCalendar > tbody > tr > td > a {
         width: 15px
     }
 }
+
+/*文章分类 页面*/
+.entrylist > .entrylistDescription, .entrylist > .entrylistTitle {
+    display: none;
+}
+
+/*文章分类 页面*/
