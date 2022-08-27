@@ -75,6 +75,15 @@ export default function main(_) {
     })();
 
     /**
+     * 鼠标点击动效
+     */
+    (() => {
+        if (_.__config.animate.mouseClick.enable) {
+            import(/* webpackChunkName: "mouseClick" */ `../mouse/click/${_.__config.animate.mouseClick.options.type}`);
+        }
+    })();
+
+    /**
      * 网站图标
      */
     (() => {

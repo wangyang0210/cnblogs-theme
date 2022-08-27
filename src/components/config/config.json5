@@ -203,6 +203,12 @@
         sizeF: 36
       }
     },
+    mouseClick: {
+      enable: false,
+      options: {
+        type: 'default'
+      }
+    },
     infoName: {
       enable: false,
     },
