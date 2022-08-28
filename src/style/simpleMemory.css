@@ -2625,11 +2625,11 @@ blockquote p {
     margin-bottom: .5em
 }
 
-#commentform_title, .feedback_area_title {
+#commentform_title, .entrylistTitle, .feedback_area_title {
     border-bottom: none
 }
 
-#commentform_title:after, .feedback_area_title:after {
+#commentform_title:after, .entrylistTitle:after, .feedback_area_title:after {
     content: '';
     display: block;
     width: 100%;
