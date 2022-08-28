@@ -986,6 +986,35 @@ window.cnblogsConfig = {
 }
 ```
 
+### mouseClick - 鼠标点击动效
+
+?> 版本 >= v2.1.6.1
+
+* 类型：```Object```
+* 默认值：
+
+```json
+{
+  enable: false,
+  options: {
+    type: 'default',
+  }
+}
+```
+
+鼠标点击特效
+
+```javascript
+window.cnblogsConfig = {
+  animate: {
+      mouseClick: {
+          enable: true,
+    },
+  }
+}
+```
+
+
 ### avatar - 头像旋转特效
 
 ?> 版本 >= v2.1.2

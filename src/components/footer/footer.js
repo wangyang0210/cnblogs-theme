@@ -1,9 +1,10 @@
 /**
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
+ * UPDATES AND DOCS AT: https://github.com/wangyang0210
+ * https://www.cnblogs.com/wangyang0210/
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-08-25 15:22
  * ----------------------------------------------
- * @describe: footer
+ * @describe: footer底部信息
  */
 import footerTemp from '../../template/footer.html';
 import footerImg from './../../images/webp/footer.webp';

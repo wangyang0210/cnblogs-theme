@@ -32,7 +32,7 @@
 
 #### 随机参方式更新加载资源
 
-> 推荐这种方式来更新加载资源。
+> 减少浏览器缓存造成的不生效或生效慢问题 | 推荐这种方式来更新加载资源。
 
 例如：
 
@@ -46,7 +46,6 @@
 <script src="https://www.wangyangyang.vip/dist/simpleMemory.js?_12322" defer></script>
 ```
 
-这样浏览器就会加载最新的代码。
 
 #### 更换文件方式更新加载资源
 
@@ -65,4 +64,3 @@
 <script src="https://dbnuo.com/dist/simpleMemory.s8kn7hd6.js" defer></script>
 ```
 
-这样浏览器就会加载最新的代码。

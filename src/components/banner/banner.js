@@ -1,9 +1,10 @@
 /**
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
+ * UPDATES AND DOCS AT: https://github.com/wangyang0210
+ * https://www.cnblogs.com/wangyang0210/
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-08-25 15:19
  * ----------------------------------------------
- * @describe: banner 处理
+ * @describe: banner背景图片处理
  */
 import bannerTemp from '../../template/banner.html';
 import homeTopBg from "../../images/webp/home_top_bg.webp";

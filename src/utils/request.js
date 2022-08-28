@@ -1,3 +1,11 @@
+/**
+ * UPDATES AND DOCS AT: https://github.com/wangyang0210
+ * https://www.cnblogs.com/wangyang0210/
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-08-25 15:28
+ * ----------------------------------------------
+ * @describe: axios封装
+ */
 import axios from "axios";
 
 const request = axios.create({

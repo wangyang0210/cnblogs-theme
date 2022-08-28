@@ -63,7 +63,7 @@
 
 ### 查看/触发事件
 
-当前主题公共事件处理都在 `_.__event` 中，目前只有滚动事件和窗口大小事件的监听处理，源码可参考[此文件](https://github.com/wangyang0210/Cnblogs-Theme/blob/v2/src/components/event/event.js)。
+当前主题公共事件处理都在 `_.__event` 中，目前只有滚动事件和窗口大小事件的监听处理，源码可参考[此文件](https://github.com/wangyang0210/Cnblogs-Theme/blob/v2/src/components/event/event.js) 。
 
 * 触发事件
 
