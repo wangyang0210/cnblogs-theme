@@ -7,7 +7,6 @@
  * @describe: 炸开点击特效
  */
 export default function main(_) {
-    import('https://cdn.bootcdn.net/ajax/libs/jquery/1.12.0/jquery.min.js');
     import('https://cdn.bootcdn.net/ajax/libs/mo-js/0.265.6/mo.min.js');
     function createBurst() {
         const burst = new mojs.Burst({
