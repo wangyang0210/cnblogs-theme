@@ -49,4 +49,37 @@ export default function main(_) {
     let suffixHtml = _.__tools.batchTempReplacement(suffixTemp, re);
 
     $("#cnblogs_post_body").append(suffixHtml);
+
+    // 版权声明 - COPY
+    (() => {
+        if (_.__config.articleSuffix.copyText.enable) {
+            let textLength = _.__config.articleSuffix.copyText.length || 30;
+            let copyrightText = _.__config.articleSuffix.copyText.copyright || copyrightHtml;
+            document.body.addEventListener('copy', function (e) {
+                if (window.getSelection().toString() && window.getSelection().toString().length > textLength) {
+                    setClipboardText(e);
+                }
+            });
+            function setClipboardText(event) {
+                let clipboardData = event.clipboardData || window.clipboardData;
+                if (clipboardData) {
+                    event.preventDefault();
+                    let htmlData = window.getSelection().toString()
+                        + '<br /><br /> ———————————————— <br />'
+                        + `${copyrightText} <br />`
+                        + `作者：${author} <br />`
+                        + `原文链接：${source} <br />`;
+
+                    let textData = window.getSelection().toString()
+                        + '\n\n ———————————————— \n'
+                        + `${copyrightText.replace(/<\/?.+?>/g,"").replace(/ /g,"")} \n`
+                        + `作者：${author} \n`
+                        + `原文链接：${source} \n`;
+
+                    clipboardData.setData('text/html', htmlData);
+                    clipboardData.setData('text/plain',textData);
+                }
+            }
+        }
+    })()
 }

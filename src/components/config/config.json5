@@ -237,6 +237,11 @@
     aboutHtml: '',
     copyrightHtml: '',
     supportHtml: '',
+    copyText: {
+      enable: false,
+      length: 30,
+      copyright: ''
+    },
   },
 
   // -- 文章目录 --

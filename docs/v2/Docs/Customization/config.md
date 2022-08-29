@@ -1294,6 +1294,36 @@ window.cnblogsConfig = {
 }
 ```
 
+### copyText - 复制版权声明
+* 类型：```Object```
+* 默认值：``````
+
+> 文字复制时版权声明，不配置使用默认。
+
+```json
+{
+  enable: false
+  length: 10,
+  copyright: '' // 默认取copyrightHtml
+}
+
+```
+
+> 只要`enable`配置为`true`时才会开启
+
+```javascript
+window.cnblogsConfig = {
+    articleSuffix: {
+        copyText: {
+            enable: false,
+            length: 30,
+            copyright: ''
+        }
+    },
+}
+```
+
+
 ### supportHtml - 声援博主
 
 * 类型：```String```
