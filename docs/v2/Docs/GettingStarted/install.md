@@ -95,3 +95,7 @@ CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定
 ---
 
 CDN jsdelivr 的 URL 详细规则参考[官方网站](https://www.jsdelivr.com/)。
+
+!> 版本 >= 2.1.8 支持npm包CDN加速
+
+> CDN`unpkg`的URL, 详细规则参考[官方网站](https://www.unpkg.com/)
