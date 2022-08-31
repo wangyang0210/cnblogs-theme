@@ -31,7 +31,7 @@ $(document).ready(function(){
         /**
          * 前置公共处理
          */
-        import(/* webpackChunkName: "comBefore" */ './components/common/comBefore').then(module => {
+        import(/* webpackChunkName: "com-before" */ './components/common/comBefore').then(module => {
             const comBefore = module.default;
             comBefore(_);
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
             /**
              * 后置公共处理
              */
-            import(/* webpackChunkName: "comAfter" */ './components/common/comAfter').then(module => {
+            import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(module => {
                 const comAfter = module.default;
                 comAfter(_);
 

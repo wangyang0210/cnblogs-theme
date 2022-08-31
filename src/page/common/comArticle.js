@@ -20,7 +20,7 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.animate.articleBanner.enable)
-            import(/* webpackChunkName: "nhBannerAnimation" */ '../../style/nhBannerAnimation.css');
+            import(/* webpackChunkName: "nh-banner-animation" */ '../../style/nhBannerAnimation.css');
     })();
 
     /**

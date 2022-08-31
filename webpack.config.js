@@ -35,7 +35,7 @@ module.exports = {
             events: {
                 onEnd: {
                     copy: [
-                        { source: './dist/simpleMemory.js', destination: './dist/simpleMemory.' + randomString(8) + '.js' },
+                        { source: './dist/simpleMemory.js', destination: './dist/simple-memory.' + randomString(8) + '.js' },
                     ],
                 }
             }

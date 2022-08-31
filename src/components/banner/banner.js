@@ -42,7 +42,7 @@ export default function main(_) {
         // banner动效
         if (_.__config.animate.bannerImages.enable) {
             // 开启图片自动切换
-            import(/* webpackChunkName: "bannerImages" */ '../bannerImages/bannerImages').then(module => {
+            import(/* webpackChunkName: "banner-images" */ '../bannerImages/bannerImages').then(module => {
                 let bannerImages = module.default;
                 bannerImages(
                     'main-header',
