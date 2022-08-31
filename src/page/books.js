@@ -9,7 +9,7 @@
 import '../style/books.css';
 import booksTemp from '../template/books.html';
 import articleDirectory from "../components/articleDirectory/articleDirectory";
-import comArticle from "./common/comArticle";
+import comArticle from "./common/com-article";
 
 export default function main(_) {
     /**

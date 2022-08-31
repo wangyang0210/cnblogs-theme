@@ -25,7 +25,7 @@ module.exports = {
     mode: 'development',
     entry: './src/main.js',
     output: {
-        filename: 'simpleMemory.js',
+        filename: 'simple-memory.js',
         chunkFilename:'script/[name].[contenthash:8].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
@@ -35,7 +35,7 @@ module.exports = {
             events: {
                 onEnd: {
                     copy: [
-                        { source: './dist/simpleMemory.js', destination: './dist/simple-memory.' + randomString(8) + '.js' },
+                        { source: './dist/simple-memory.js', destination: './dist/simple-memory.' + randomString(8) + '.js' },
                     ],
                 }
             }

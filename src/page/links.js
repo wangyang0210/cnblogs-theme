@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 友链页处理
  */
-import comArticle from "./common/comArticle";
+import comArticle from "./common/com-article";
 import '../style/links.css';
 import linksTemp from '../template/links.html';
 import articleDirectory from "../components/articleDirectory/articleDirectory";
