@@ -112,7 +112,7 @@ window.cnblogsConfig = {
 ### navList - 菜单导航
 
 * 类型：```Array```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.htmln)
+* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
 * 默认值：```[]```
 
 自定义菜单导航，显示在默认导航下方。
