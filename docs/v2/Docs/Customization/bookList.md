@@ -24,7 +24,7 @@
 
 ### 配置书单数据
 
-书单的配置，可以参考其他[配置](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/bookList)的方式。例如：
+书单的配置，可以参考其他[配置](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/bookList)的方式。例如：
 
 ```javascript
 window.cnblogsConfig = {

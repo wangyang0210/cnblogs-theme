@@ -19,7 +19,7 @@ window.cnblogsConfig = {
 <iframe  
 height=850
 width=90%
-src="https://wangyang0210.github.io/Cnblogs-Theme/v2/iconfontDemo/demo_index.html"  
+src="https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html"  
 frameborder=0  
 allowfullscreen>
 </iframe>

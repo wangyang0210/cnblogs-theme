@@ -15,8 +15,8 @@
 * 文章字体调整
 * 表格显示优化
 * 脚注显示优化
-* [#56](https://github.com/wangyang0210/Cnblogs-Theme/issues/56) 显示优化
-* [#54](https://github.com/wangyang0210/Cnblogs-Theme/issues/54) 图箱优化
+* [#56](https://github.com/wangyang0210/cnblogs-theme/issues/56) 显示优化
+* [#54](https://github.com/wangyang0210/cnblogs-theme/issues/54) 图箱优化
 
 
 # 2022.08.12 - v2.1.5

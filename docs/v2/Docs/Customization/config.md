@@ -112,7 +112,7 @@ window.cnblogsConfig = {
 ### navList - 菜单导航
 
 * 类型：```Array```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/Cnblogs-Theme/v2/iconfontDemo/demo_index.htmln)
+* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.htmln)
 * 默认值：```[]```
 
 自定义菜单导航，显示在默认导航下方。
@@ -131,7 +131,7 @@ window.cnblogsConfig = {
 ### customList - 菜单数据
 
 * 类型：```Object```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/Cnblogs-Theme/v2/iconfontDemo/demo_index.html)
+* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
 * 默认值：```{}```
 
 自定义菜单数据，显示在默认数据上方。
@@ -369,7 +369,7 @@ window.cnblogsConfig = {
 ## loading - 加载loading
 
 * 类型：```Object```
-* 相关文档：[Loading](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/loading)
+* 相关文档：[Loading](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/loading)
 * 默认值：
 
 ```json
@@ -415,7 +415,7 @@ window.cnblogsConfig = {
 ## fontIconExtend - 字体图标库
 
 * 类型：```Url```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/Cnblogs-Theme/v2/iconfontDemo/demo_index.html)
+* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
 * 默认值：```""```
 
 字体图标库扩展Css的Url。
@@ -633,7 +633,7 @@ window.cnblogsConfig = {
 ### page - 友链页
 
 * 类型：```Array```
-* 相关文档：[友链](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/links)
+* 相关文档：[友链](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/links)
 * 默认值：```[]```
 
 友链页。需要在页面源码中添加 `<input id="linkListFlg" type="hidden" />`
@@ -1359,7 +1359,7 @@ window.cnblogsConfig = {
 ## cnzz - 网站统计
 
 * 类型：```String```
-* 相关文档：[网站统计](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/statistical)
+* 相关文档：[网站统计](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/statistical)
 * 默认值：```""```
 
 cnzz网站ID。
@@ -1373,7 +1373,7 @@ window.cnblogsConfig = {
 ## umami - 网站统计
 
 * 类型：```Object```
-* 相关文档：[网站统计](https://wangyang0210.github.io/Cnblogs-Theme/v2/#/Docs/Customization/statistical)
+* 相关文档：[网站统计](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/statistical)
 * 默认值：```{}```
 
 
