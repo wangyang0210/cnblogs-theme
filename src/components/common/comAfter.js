@@ -50,7 +50,7 @@ export default function main(_) {
     (() => {
 
         if (_.__config.animate.background.season.enable) {
-            import(/* webpackChunkName: "background-effect" */ '../background/season').then(module => {
+            import(/* webpackChunkName: "background-season" */ '../background/season').then(module => {
                 let season = module.default;
                 season(_);
             });
@@ -58,13 +58,13 @@ export default function main(_) {
 
 
         if (_.__config.animate.background.ribbons.enable) {
-            import(/* webpackChunkName: "ribbons-effect" */ '../background/ribbonsEffect').then(module => {
+            import(/* webpackChunkName: "background-ribbons" */ '../background/ribbonsEffect').then(module => {
                 new Ribbons(_.__config.animate.background.ribbons.options);
             });
         }
 
         if (_.__config.animate.background.backgroundMouse.enable) {
-            import(/* webpackChunkName: "particles" */ '../background/particles').then(module => {
+            import(/* webpackChunkName: "backaground-particles" */ '../background/particles').then(module => {
                 let particles = module.default;
                 particles(_);
             });
