@@ -48,14 +48,23 @@ export default function main(_) {
      * 背景动效
      */
     (() => {
-        if (_.__config.animate.background.enable) {
-            import(/* webpackChunkName: "ribbons-effect" */ '../../vendor/ribbonsEffect/ribbonsEffect').then(module => {
-                new Ribbons(_.__config.animate.background.options);
+
+        if (_.__config.animate.background.season.enable) {
+            import(/* webpackChunkName: "background-effect" */ '../background/season').then(module => {
+                let background = module.default;
+                background(_);
             });
         }
 
-        if (_.__config.animate.backgroundMouse.enable) {
-            import(/* webpackChunkName: "particles" */ '../particles/particles').then(module => {
+
+        if (_.__config.animate.background.ribbons.enable) {
+            import(/* webpackChunkName: "ribbons-effect" */ '../background/ribbonsEffect').then(module => {
+                new Ribbons(_.__config.animate.background.ribbons.options);
+            });
+        }
+
+        if (_.__config.animate.background.backgroundMouse.enable) {
+            import(/* webpackChunkName: "particles" */ '../background/particles').then(module => {
                 let particles = module.default;
                 particles(_);
             });
