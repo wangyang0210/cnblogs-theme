@@ -135,11 +135,11 @@ export default function main(_) {
             sakura.draw(cxt);
             sakuraList.push(sakura);
         }
-        stop = requestAnimationFrame(function () {
+       requestAnimationFrame(function fn () {
             cxt.clearRect(0, 0, canvas.width, canvas.height);
             sakuraList.update();
             sakuraList.draw(cxt);
-            stop = requestAnimationFrame(arguments.callee);
+            requestAnimationFrame(fn);
         })
     }
 
