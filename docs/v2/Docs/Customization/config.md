@@ -988,6 +988,8 @@ window.cnblogsConfig = {
 
 ### mouseClick - 鼠标点击动效
 
+!> 切换效果只需更改`type`字段,目前支持`default`,`bubble`
+
 ?> 版本 >= v2.1.6.1
 
 * 类型：```Object```
@@ -998,11 +1000,22 @@ window.cnblogsConfig = {
   enable: false,
   options: {
     type: 'default',
+    bubble: {
+      live: 30, //存活周期
+      colors: [ //粒子颜色
+        "149, 197, 252",
+        "224, 199, 252"
+      ],
+      quantity: 15, //粒子数量
+      size: 5, // 粒子大小
+    }
   }
 }
 ```
 
-鼠标点击特效
+?> 版本 >= v2.1.9
+
+新增`bubble`效果
 
 ```javascript
 window.cnblogsConfig = {
@@ -1013,6 +1026,9 @@ window.cnblogsConfig = {
   }
 }
 ```
+![umami](../../Images/bubble.gif)
+
+
 
 
 ### avatar - 头像旋转特效

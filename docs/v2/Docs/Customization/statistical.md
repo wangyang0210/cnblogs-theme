@@ -43,7 +43,7 @@ window.cnblogsConfig = {
 }
 ```
 
-![statistical_02](../../Images/umami.gif)
+![umami](../../Images/umami.gif)
 
 
 

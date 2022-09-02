@@ -75,11 +75,14 @@ export default function main(_) {
     })();
 
     /**
-     * 鼠标点击动效
+     * 鼠标移动/点击动效
      */
     (() => {
         if (_.__config.animate.mouseClick.enable) {
-            import(/* webpackChunkName: "mouse-click" */ `../mouse/click/${_.__config.animate.mouseClick.options.type}`);
+            import(/* webpackChunkName: "mouse-click" */ `../mouse/click/${_.__config.animate.mouseClick.options.type}`).then(module => {
+                let mouseAnimation = module.default;
+                mouseAnimation(_)
+            })
         }
     })();
 

@@ -206,7 +206,16 @@
     mouseClick: {
       enable: false,
       options: {
-        type: 'default'
+        type: 'default',
+        bubble: {
+          live: 30,
+          colors: [
+            "149, 197, 252",
+            "224, 199, 252"
+          ],
+          quantity: 15,
+          size: 5,
+        }
       }
     },
     infoName: {
