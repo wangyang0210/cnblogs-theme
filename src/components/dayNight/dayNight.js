@@ -94,7 +94,7 @@ export default function main(_) {
                 for (let i = links.length - 1; i > 0; i--) {
                     let obj  = $(links[i]);
                     let href = obj.attr('href');
-                    if (/^.*\/dayNight\.[a-z0-9]{8}\.css$/.test(href)) {
+                    if (/^.*\/day-night\.[a-z0-9]{8}\.css$/.test(href)) {
                         _.__status.dayNightCssHref = href;
                         obj.attr('id', 'baseDarkCss');
                         break;
