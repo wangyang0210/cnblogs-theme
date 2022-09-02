@@ -4048,7 +4048,7 @@ table#blogCalendar > tbody > tr > td > a {
 
     #home {
         padding-left: 5px;
-        padding-right: 5px;
+        /*padding-right: 5px;*/
         box-shadow: unset
     }
 
