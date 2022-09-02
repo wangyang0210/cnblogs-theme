@@ -114,7 +114,7 @@ export default function main(_) {
                 let num=Math.floor((Math.random()*(160-i))+i);
                 if(arr.indexOf(num)==-1){
                     arr.push(num)
-                    return '<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg> ' + c;
+                    return '<svg class="icon" style="pointer-events: none;"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg> ' + c;
                 }else{
                     i--;
                 }
