@@ -10,8 +10,8 @@
 export default function main(_) {
     let stop, SakuraList;
     let img = new Image();
-    img.src = _.__config.background.season.options.img;
-    let size = _.__config.background.season.options.size;
+    img.src = _.__config.animate.background.season.options.img;
+    let size = _.__config.animate.background.season.options.size;
 
     function Sakura(x, y, s, r, fn) {
         this.x = x;

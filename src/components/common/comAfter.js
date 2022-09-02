@@ -51,8 +51,8 @@ export default function main(_) {
 
         if (_.__config.animate.background.season.enable) {
             import(/* webpackChunkName: "background-effect" */ '../background/season').then(module => {
-                let background = module.default;
-                background(_);
+                let season = module.default;
+                season(_);
             });
         }
 
