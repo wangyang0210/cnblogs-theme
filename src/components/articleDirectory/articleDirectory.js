@@ -32,9 +32,6 @@ export default function main(_) {
             let obj = $(this);
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
-            // 不处理 h6 级别标题
-            // if (h === 6) return true;
-
             // 设置标题标识
             let hid = obj.attr('id');
             let titleId = 'tid-' + _.__tools.randomString(6);
@@ -64,9 +61,7 @@ export default function main(_) {
         body.attr('data-bs-target', '#articleDirectory');
         body.attr('data-bs-offset', '0');
         body.attr('tabindex', '0');
-        body.scrollspy({
-            target: '#articleDirectory'
-        });
+        body.scrollspy({ target: '#articleDirectory' });
 
         // 判断是否显示横向滚动条
         if (!_.__config.articleDirectory.autoWidthScroll) {
@@ -77,18 +72,12 @@ export default function main(_) {
         // 滚动监听
         _.__event.scroll.handle.push(() => {
             let articleDirectory = $('#articleDirectory');
+            if (_.__event.scroll.temScroll < _.__event.scroll.docScroll && _.__event.scroll.homeScroll <= _.__event.scroll.docScroll) {
+                articleDirectory.addClass('articleDirectoryFixed');
+            }
 
-            if (_.__event.scroll.temScroll < _.__event.scroll.docScroll) { // 向下滚动
-
-                if (_.__event.scroll.homeScroll <= _.__event.scroll.docScroll) { // 滚过头图
-                    articleDirectory.addClass('articleDirectoryFixed');
-                }
-
-            } else { // 向上滚动
-
-                if (_.__event.scroll.homeScroll >= _.__event.scroll.docScroll) { // 滚入头图
-                    articleDirectory.removeClass('articleDirectoryFixed');
-                }
+            if (_.__event.scroll.temScroll > _.__event.scroll.docScroll &&_.__event.scroll.homeScroll >= _.__event.scroll.docScroll) {
+                articleDirectory.removeClass('articleDirectoryFixed');
             }
         });
 
@@ -99,7 +88,6 @@ export default function main(_) {
             if (articleDirectory.length > 0) {
                 let mainContentWidth = $('#home').outerWidth(false),
                     listWidth        = articleDirectory.outerWidth(true);
-                // listWidth = listWidth > 220 ? listWidth : 242;
                 let bothWidth        = (bodyWidth - mainContentWidth) / 2,
                     rightPx          = bothWidth - listWidth - 5,
                     sideToolbarTop   = $('.main-header').outerHeight();

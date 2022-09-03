@@ -26,7 +26,6 @@ const food = [
                 'tongluoshao','nuomici','kuangquanshui','roujiamo','cha','zhangyuxiaowanzi','chengzhi','yuancaitou','baicai'
             ]
 
-
 export default {
     food,
 }

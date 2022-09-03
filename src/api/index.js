@@ -22,7 +22,6 @@ export function getConfigInfo (baseUrl, url) {
     })
 }
 
-
 /**
  * 获取网站统计
  * @param {string} baseUrl 请求域名

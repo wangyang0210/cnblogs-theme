@@ -18,7 +18,7 @@ import {getTodayDate} from "../../utils/common";
 export default function main(_) {
 
     // 默认字体图标库
-    import(/* webpackChunkName: "fonticon" */ '../../style/fonticon.css');
+    import(/* webpackChunkName: "iconfont" */ '../../style/fonticon.css');
 
     // 谷歌字体
     import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');

@@ -258,8 +258,6 @@ window.cnblogsConfig = {
 }
 ```
 
-
-
 ### home - 主页banner
 
 #### background - 主页banner图片
