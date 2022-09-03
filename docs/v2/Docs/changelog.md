@@ -1,5 +1,5 @@
 # 2022.09.03 - v2.1.9
-* [todo]修复文章内容下不展示菜单
+* [#67](https://github.com/wangyang0210/cnblogs-theme/issues/67) 修复文章内容下不展示菜单
 * 修复移动端展示问题
 * 修复日夜模式切换问题
 * 新增`bubble`鼠标移动效果
