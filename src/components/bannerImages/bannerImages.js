@@ -11,7 +11,7 @@ import {gsap, Power4} from "gsap/all";
 export default function main(id, images, cols, time, sort, current) {
     const main = document.getElementById(id);
 
-    let parts   = []; // 列容器对象
+    let parts = []; // 列容器对象
     let playing = false; // 是否执行动画
 
     // 生成图片对象
@@ -43,12 +43,12 @@ export default function main(id, images, cols, time, sort, current) {
         ease: Power4.easeInOut
     };
 
-
     function go(dir) {
         if (!playing) {
             playing = true;
-            if (current + dir < 0) current = images.length - 1; else if (current + dir >= images.length) current = 0; else
-                current += dir;
+            if (current + dir < 0) current = images.length - 1;
+            else if (current + dir >= images.length) current = 0;
+            else current += dir;
 
             function up(part, next) {
                 part.appendChild(next);

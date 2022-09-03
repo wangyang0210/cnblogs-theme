@@ -99,13 +99,14 @@ export default function main(_) {
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
         if (_.__config.articleContent.emoji && titleInfo.length > 0) {
-            // 默认字体图标库
+            // TODO iconfont JS拆分
             import(/* webpackChunkName: "iconfont" */ '../../fonts/iconfont');
             titleInfo.html((i, c) => {
                 let arr = []
                 let num=Math.floor((Math.random()*(160-i))+i);
                 if(arr.indexOf(num)==-1){
                     arr.push(num)
+                    // TODO 配置多个map
                     $('<svg class="icon"> <use xlink:href="#icon-'+ iconfontMap.food[num] +'"></use></svg>').prependTo(titleInfo[i])
                 }else{
                     i--;

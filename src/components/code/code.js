@@ -28,16 +28,8 @@ export default function main(_) {
             pre.attr('boxid', boxId);
 
             // 增加语言标签
-            let preCode = pre.find('code');
-            if (preCode.length > 0) {
-                let codeClass = preCode.attr('class');
-                if (codeClass) {
-                    let lan = codeClass.match(/.*(language-[a-z0-9]+)\s+.*/);
-                    if (!!lan && lan.length > 0) {
-                        pre.addClass(lan[1]);
-                    }
-                }
-            }
+            let lan = pre.find('code').attr('class').match(/.*(language-[a-z0-9]+)\s+.*/);
+            if (!!lan && lan.length > 0) pre.addClass(lan[1]);
         });
     })();
 
@@ -63,7 +55,6 @@ export default function main(_) {
         $.each(codeBox, function (i) {
             let code  = $(codeBox[i]);
             let boxId = code.attr('id');
-
             let copyHtml = '<button boxid="' + boxId + '" type="button" class="clipboard code-copay-btn" data-clipboard-action="copy" data-clipboard-target="#' + boxId + ' pre" aria-label="复制代码" ><i class="iconfont icon-fuzhi"></i></button>';
             code.prepend(copyHtml);
         });
@@ -71,7 +62,7 @@ export default function main(_) {
         // 点击效果
         $('code-box .code-copay-btn').click(function () {
             $(this).find('i').removeClass('icon-fuzhi').addClass('icon-right');
-            setTimeout("$('code-box button[boxid="+$(this).attr('boxid')+"] i').removeClass('icon-right').addClass('icon-fuzhi')", 1500);
+            setTimeout("$('code-box button[boxid='" + $(this).attr('boxid') + "'] i').removeClass('icon-right').addClass('icon-fuzhi')", 1500);
         });
 
         // 显示/隐藏
@@ -98,8 +89,7 @@ export default function main(_) {
      * 限制代码框高度
      */
     (() => {
-        if (_.__config.code.options.maxHeight)
-            $('code-box pre').css('max-height', _.__config.code.options.maxHeight);
+        if (_.__config.code.options.maxHeight) $('code-box pre').css('max-height', _.__config.code.options.maxHeight);
     })();
 
     /**

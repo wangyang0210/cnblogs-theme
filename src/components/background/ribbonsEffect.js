@@ -2,22 +2,17 @@
  * Ribbons Class File.
  * Creates low-poly ribbons background effect inside a target container.
  */
-(function (name, factory)
-{
-    if (typeof window === "object")
-    {
+(function (name, factory) {
+    if (typeof window === "object") {
         window[name] = factory();
     }
-
-})("Ribbons", function ()
-{
+})("Ribbons", function () {
     var _w = window,
         _b = document.body,
         _d = document.documentElement;
 
     // random helper
-    var random = function ()
-    {
+    var random = function () {
         if (arguments.length === 1) // only 1 argument
         {
             if (Array.isArray(arguments[0])) // extract index from array
@@ -26,8 +21,7 @@
                 return arguments[0][index];
             }
             return random(0, arguments[0]); // assume numeric
-        } else
-        if (arguments.length === 2) // two arguments range
+        } else if (arguments.length === 2) // two arguments range
         {
             return Math.random() * (arguments[1] - arguments[0]) + arguments[0];
         }
@@ -35,8 +29,7 @@
     };
 
     // screen helper
-    var screenInfo = function (e)
-    {
+    var screenInfo = function (e) {
         var width = Math.max(0, _w.innerWidth || _d.clientWidth || _b.clientWidth || 0),
             height = Math.max(0, _w.innerHeight || _d.clientHeight || _b.clientHeight || 0),
             scrollx = Math.max(0, _w.pageXOffset || _d.scrollLeft || _b.scrollLeft || 0) - (_d.clientLeft || 0),
@@ -49,13 +42,13 @@
             centerx: width / 2,
             centery: height / 2,
             scrollx: scrollx,
-            scrolly: scrolly };
+            scrolly: scrolly
+        };
 
     };
 
     // mouse/input helper
-    var mouseInfo = function (e)
-    {
+    var mouseInfo = function (e) {
         var screen = screenInfo(e),
             mousex = e ? Math.max(0, e.pageX || e.clientX || 0) : 0,
             mousey = e ? Math.max(0, e.pageY || e.clientY || 0) : 0;
@@ -64,13 +57,13 @@
             mousex: mousex,
             mousey: mousey,
             centerx: mousex - screen.width / 2,
-            centery: mousey - screen.height / 2 };
+            centery: mousey - screen.height / 2
+        };
 
     };
 
     // point object
-    var Point = function (x, y)
-    {
+    var Point = function (x, y) {
         this.x = 0;
         this.y = 0;
         this.set(x, y);
@@ -78,66 +71,55 @@
     Point.prototype = {
         constructor: Point,
 
-        set: function (x, y)
-        {
+        set: function (x, y) {
             this.x = x || 0;
             this.y = y || 0;
         },
-        copy: function (point)
-        {
+        copy: function (point) {
             this.x = point.x || 0;
             this.y = point.y || 0;
             return this;
         },
-        multiply: function (x, y)
-        {
+        multiply: function (x, y) {
             this.x *= x || 1;
             this.y *= y || 1;
             return this;
         },
-        divide: function (x, y)
-        {
+        divide: function (x, y) {
             this.x /= x || 1;
             this.y /= y || 1;
             return this;
         },
-        add: function (x, y)
-        {
+        add: function (x, y) {
             this.x += x || 0;
             this.y += y || 0;
             return this;
         },
-        subtract: function (x, y)
-        {
+        subtract: function (x, y) {
             this.x -= x || 0;
             this.y -= y || 0;
             return this;
         },
-        clampX: function (min, max)
-        {
+        clampX: function (min, max) {
             this.x = Math.max(min, Math.min(this.x, max));
             return this;
         },
-        clampY: function (min, max)
-        {
+        clampY: function (min, max) {
             this.y = Math.max(min, Math.min(this.y, max));
             return this;
         },
-        flipX: function ()
-        {
+        flipX: function () {
             this.x *= -1;
             return this;
         },
-        flipY: function ()
-        {
+        flipY: function () {
             this.y *= -1;
             return this;
-        } };
-
+        }
+    };
 
     // class constructor
-    var Factory = function (options)
-    {
+    var Factory = function (options) {
         this._canvas = null;
         this._context = null;
         this._sto = null;
@@ -165,7 +147,8 @@
             // move ribbons vertically by a factor on page scroll
             parallaxAmount: -0.5,
             // add animation effect to each ribbon section over time
-            animateSections: true };
+            animateSections: true
+        };
 
         this._onDraw = this._onDraw.bind(this);
         this._onResize = this._onResize.bind(this);
@@ -179,14 +162,10 @@
         constructor: Factory,
 
         // Set and merge local options
-        setOptions: function (options)
-        {
-            if (typeof options === "object")
-            {
-                for (var key in options)
-                {
-                    if (options.hasOwnProperty(key))
-                    {
+        setOptions: function (options) {
+            if (typeof options === "object") {
+                for (var key in options) {
+                    if (options.hasOwnProperty(key)) {
                         this._options[key] = options[key];
                     }
                 }
@@ -194,10 +173,8 @@
         },
 
         // Initialize the ribbons effect
-        init: function ()
-        {
-            try
-            {
+        init: function () {
+            try {
                 this._canvas = document.createElement("canvas");
                 this._canvas.style["display"] = "block";
                 this._canvas.style["position"] = "fixed";
@@ -220,8 +197,7 @@
                 window.addEventListener("resize", this._onResize);
                 window.addEventListener("scroll", this._onScroll);
                 document.body.appendChild(this._canvas);
-            }
-            catch (e) {
+            } catch (e) {
                 console.warn("Canvas Context Error: " + e.toString());
                 return;
             }
@@ -229,8 +205,7 @@
         },
 
         // Create a new random ribbon and to the list
-        addRibbon: function ()
-        {
+        addRibbon: function () {
             // movement data
             var dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
                 stop = 1000,
@@ -243,16 +218,11 @@
                 starty = Math.round(random(0, this._height));
 
             // asjust starty based on options
-            if (/^(top|min)$/i.test(this._options.verticalPosition))
-            {
+            if (/^(top|min)$/i.test(this._options.verticalPosition)) {
                 starty = 0 + hide;
-            } else
-            if (/^(middle|center)$/i.test(this._options.verticalPosition))
-            {
+            } else if (/^(middle|center)$/i.test(this._options.verticalPosition)) {
                 starty = this._height / 2;
-            } else
-            if (/^(bottom|max)$/i.test(this._options.verticalPosition))
-            {
+            } else if (/^(bottom|max)$/i.test(this._options.verticalPosition)) {
                 starty = this._height - hide;
             }
 
@@ -265,9 +235,9 @@
                 delay = 0;
 
             // buils ribbon sections
-            while (true)
-            {
-                if (stop <= 0) break;stop--;
+            while (true) {
+                if (stop <= 0) break;
+                stop--;
 
                 movex = Math.round((Math.random() * 1 - 0.2) * this._options.horizontalSpeed);
                 movey = Math.round((Math.random() * 1 - 0.5) * (this._height * 0.25));
@@ -275,13 +245,10 @@
                 point3 = new Point();
                 point3.copy(point2);
 
-                if (dir === "right")
-                {
+                if (dir === "right") {
                     point3.add(movex, movey);
                     if (point2.x >= max) break;
-                } else
-                if (dir === "left")
-                {
+                } else if (dir === "left") {
                     point3.subtract(movex, movey);
                     if (point2.x <= min) break;
                 }
@@ -295,7 +262,8 @@
                     delay: delay,
                     dir: dir,
                     alpha: 0,
-                    phase: 0 });
+                    phase: 0
+                });
 
 
                 point1.copy(point2);
@@ -308,27 +276,21 @@
         },
 
         // Draw single section
-        _drawRibbonSection: function (section)
-        {
-            if (section)
-            {
-                if (section.phase >= 1 && section.alpha <= 0)
-                {
+        _drawRibbonSection: function (section) {
+            if (section) {
+                if (section.phase >= 1 && section.alpha <= 0) {
                     return true; // done
                 }
-                if (section.delay <= 0)
-                {
+                if (section.delay <= 0) {
                     section.phase += 0.02;
                     section.alpha = Math.sin(section.phase) * 1;
                     section.alpha = section.alpha <= 0 ? 0 : section.alpha;
                     section.alpha = section.alpha >= 1 ? 1 : section.alpha;
 
-                    if (this._options.animateSections)
-                    {
+                    if (this._options.animateSections) {
                         var mod = Math.sin(1 + section.phase * Math.PI / 2) * 0.1;
 
-                        if (section.dir === "right")
-                        {
+                        if (section.dir === "right") {
                             section.point1.add(mod, 0);
                             section.point2.add(mod, 0);
                             section.point3.add(mod, 0);
@@ -341,8 +303,9 @@
                         section.point2.add(0, mod);
                         section.point3.add(0, mod);
                     }
-                } else
-                {section.delay -= 0.5;}
+                } else {
+                    section.delay -= 0.5;
+                }
 
                 var s = this._options.colorSaturation,
                     l = this._options.colorBrightness,
@@ -350,8 +313,7 @@
 
                 this._context.save();
 
-                if (this._options.parallaxAmount !== 0)
-                {
+                if (this._options.parallaxAmount !== 0) {
                     this._context.translate(0, this._scroll * this._options.parallaxAmount);
                 }
                 this._context.beginPath();
@@ -361,8 +323,7 @@
                 this._context.fillStyle = c;
                 this._context.fill();
 
-                if (this._options.strokeSize > 0)
-                {
+                if (this._options.strokeSize > 0) {
                     this._context.lineWidth = this._options.strokeSize;
                     this._context.strokeStyle = c;
                     this._context.lineCap = "round";
@@ -374,13 +335,10 @@
         },
 
         // Draw ribbons
-        _onDraw: function ()
-        {
+        _onDraw: function () {
             // cleanup on ribbons list to rtemoved finished ribbons
-            for (var i = 0, t = this._ribbons.length; i < t; ++i)
-            {
-                if (!this._ribbons[i])
-                {
+            for (var i = 0, t = this._ribbons.length; i < t; ++i) {
+                if (!this._ribbons[i]) {
                     this._ribbons.splice(i, 1);
                 }
             }
@@ -396,8 +354,7 @@
 
                 for (var b = 0; b < numSections; ++b) // ribbon section
                 {
-                    if (this._drawRibbonSection(ribbon[b]))
-                    {
+                    if (this._drawRibbonSection(ribbon[b])) {
                         numDone++; // section done
                     }
                 }
@@ -407,39 +364,34 @@
                 }
             }
             // maintain optional number of ribbons on canvas
-            if (this._ribbons.length < this._options.ribbonCount)
-            {
+            if (this._ribbons.length < this._options.ribbonCount) {
                 this.addRibbon();
             }
             requestAnimationFrame(this._onDraw);
         },
 
         // Update container size info
-        _onResize: function (e)
-        {
+        _onResize: function (e) {
             var screen = screenInfo(e);
             this._width = screen.width;
             this._height = screen.height;
 
-            if (this._canvas)
-            {
+            if (this._canvas) {
                 this._canvas.width = this._width;
                 this._canvas.height = this._height;
 
-                if (this._context)
-                {
+                if (this._context) {
                     this._context.globalAlpha = this._options.colorAlpha;
                 }
             }
         },
 
         // Update container size info
-        _onScroll: function (e)
-        {
+        _onScroll: function (e) {
             var screen = screenInfo(e);
             this._scroll = screen.scrolly;
-        } };
-
+        }
+    };
 
 
     // export

@@ -24,11 +24,9 @@ export default function main(_) {
 
         // 设置图片
         if (_.__status.pageType === 'home') {
-            topImg = _.__config.banner.home.background.length > 0
-                ? _.__config.banner.home.background : [homeTopBg];
+            topImg = _.__config.banner.home.background.length > 0 ? _.__config.banner.home.background : [homeTopBg];
         }  else {
-            topImg = _.__config.banner.article.background.length > 0
-                ? _.__config.banner.article.background : [netHomeTopBg];
+            topImg = _.__config.banner.article.background.length > 0 ? _.__config.banner.article.background : [netHomeTopBg];
             height = '40vh';
             $('#homeTopTitle').hide();
             $('.scroll-down').hide();
@@ -76,27 +74,14 @@ export default function main(_) {
     _.__event.scroll.handle.push(() => {
         let openButton = $('#open-button');
 
-        if (_.__event.scroll.temScroll < _.__event.scroll.docScroll) { // 向下滚动
+        if (_.__event.scroll.temScroll < _.__event.scroll.docScroll && _.__event.scroll.homeScroll <= _.__event.scroll.docScroll && !openButton.hasClass('menu-button-scroll')) { // 向下滚动
+            openButton.addClass('menu-button-scroll');
+            openButton.text('');
+        }
 
-            if (_.__event.scroll.homeScroll <= _.__event.scroll.docScroll) { // 滚过头图
-
-                // 设置菜单按钮
-                if (!openButton.hasClass('menu-button-scroll')) {
-                    openButton.addClass('menu-button-scroll');
-                    openButton.text('');
-                }
-            }
-
-        } else { // 向上滚动
-
-            if (_.__event.scroll.homeScroll >= _.__event.scroll.docScroll) { // 滚入头图
-
-                // 设置菜单按钮
-                if (openButton.hasClass('menu-button-scroll')) {
-                    openButton.removeClass('menu-button-scroll');
-                    openButton.text('MENU');
-                }
-            }
+        if (_.__event.scroll.temScroll > _.__event.scroll.docScroll && _.__event.scroll.homeScroll >= _.__event.scroll.docScroll && openButton.hasClass('menu-button-scroll')) { // 滚入头图
+            openButton.removeClass('menu-button-scroll');
+            openButton.text('MENU');
         }
     });
 }
