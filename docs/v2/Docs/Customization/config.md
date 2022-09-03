@@ -238,10 +238,6 @@ window.cnblogsConfig = {
 }
 ```
 
-
-
-
-
 ## banner - banner图
 
 ### text - 所有banner文字是否可选
