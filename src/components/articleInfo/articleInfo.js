@@ -114,7 +114,8 @@ export default function main(_) {
                 let num=Math.floor((Math.random()*(160-i))+i);
                 if(arr.indexOf(num)==-1){
                     arr.push(num)
-                    return '<span><svg class="icon" style="pointer-events: none;"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg></span>' + c;
+                    $('<svg class="icon"> <use xlink:href="#icon-hebaodan"></use></svg>').prependTo(titleInfo[i])
+                    // return '<span><svg class="icon" style="pointer-events: none;"> <use xlink:href="#icon-' + iconfontMap.food[num]+ '"></use></svg></span>' + c;
                 }else{
                     i--;
                 }
