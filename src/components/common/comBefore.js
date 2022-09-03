@@ -13,7 +13,6 @@ import event from "../event/event";
 import "../../images/webp/rss.webp";
 import "../../style/asset.css";
 import "../../vendor/rotate/jquery.rotate.min"
-import _ from "lodash";
 import {getTodayDate} from "../../utils/common";
 
 export default function main(_) {
