@@ -18,27 +18,22 @@ export default function main(_) {
     if (header.length > 0) {
         let tagList = [];
 
-        // 获取标题处理
         $.each(header, function () {
             tagList.push(parseInt($(this)[0].tagName.replace(/H/g, '')));
         });
 
-        // 标题级别
         let uniqTagList = uniq(tagList).sort();
 
-        // 处理标题
         let html = '';
         $.each(header, function () {
             let obj = $(this);
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
-            // 设置标题标识
             let hid = obj.attr('id');
             let titleId = 'tid-' + _.__tools.randomString(6);
             obj.attr('tid', titleId);
             if (!hid || /^[0-9]+.*/.test(hid)) {
                 if (hid) {
-                    // 兼容修改toc生成的目录
                     let tocObj = $('.toc a[href="#'+hid+'"]');
                     tocObj.length && tocObj.attr('href', '#' + titleId);
                 }
@@ -46,7 +41,6 @@ export default function main(_) {
                 obj.attr('id', hid);
             }
 
-            // 添加标题
             let num = uniqTagList.indexOf(h);
             let str = num === 0 || num === -1 ? '' : '&nbsp;&nbsp;&nbsp;&nbsp;'.repeat(num);
             html += '<li class="nav-item"><a class="nav-link" href="#' + hid + '" goto="' + titleId + '" onclick="return false;">' + str + obj.text() + '</a></li>';
@@ -56,20 +50,17 @@ export default function main(_) {
 
         postBody.append(dirHtml);
 
-        // 锚点监听
         body.attr('data-bs-spy', 'scroll');
         body.attr('data-bs-target', '#articleDirectory');
         body.attr('data-bs-offset', '0');
         body.attr('tabindex', '0');
         body.scrollspy({ target: '#articleDirectory' });
 
-        // 判断是否显示横向滚动条
         if (!_.__config.articleDirectory.autoWidthScroll) {
             $('#articleDirectory ul li').addClass('articleDirectory-overflow');
             $('#articleDirectory ul li a').addClass('articleDirectory-overflow');
         }
 
-        // 滚动监听
         _.__event.scroll.handle.push(() => {
             let articleDirectory = $('#articleDirectory');
             if (_.__event.scroll.temScroll < _.__event.scroll.docScroll && _.__event.scroll.homeScroll <= _.__event.scroll.docScroll) {
@@ -81,7 +72,6 @@ export default function main(_) {
             }
         });
 
-        // 窗口大小变化监听
         _.__event.resize.handle.push(() => {
             const bodyWidth = parseFloat(document.body.clientWidth),
                 articleDirectory = $('#articleDirectory');
@@ -118,7 +108,6 @@ export default function main(_) {
             }
         });
 
-        // 点击事件
         $('#articleDirectory .nav-link').click(function () {
             let titleH = $(':header[tid="' + $(this).attr('goto') + '"]');
             titleH.length && _.__tools.actScroll(titleH.offset().top + 3, 500);
@@ -131,12 +120,6 @@ export default function main(_) {
      * @returns {[]}
      */
     function uniq(array){
-        let temp = [];
-        for(let i = 0; i < array.length; i++){
-            if(temp.indexOf(array[i]) === -1){
-                temp.push(array[i]);
-            }
-        }
-        return temp;
+        return [...new Set(array)];
     }
 }
