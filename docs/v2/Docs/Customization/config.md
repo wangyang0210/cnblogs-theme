@@ -1070,6 +1070,9 @@ window.cnblogsConfig = {
   animate: {
       mouseClick: {
           enable: true,
+          options: {
+              type: 'bubble',
+          }
     },
   }
 }
