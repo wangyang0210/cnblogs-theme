@@ -7,6 +7,7 @@
  * @describe: 炸开点击特效
  */
 export default function main(_) {
+    // todo 本人只是提交了文件，需要生产使用还需要更改更改
     import('https://cdn.bootcdn.net/ajax/libs/mo-js/0.265.6/mo.min.js');
     function createBurst() {
         const burst = new mojs.Burst({
