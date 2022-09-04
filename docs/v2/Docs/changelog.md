@@ -1,5 +1,6 @@
 # 2022.09.04
 * 优化svgIcon展示,与标题增加5px间隔
+* 鼠标`bubble`特效BUG [#72](https://github.com/wangyang0210/cnblogs-theme/issues/72)
 * 代码优化
 * 谷歌字体CDN更新
 

@@ -10,7 +10,7 @@
 export default function main(_) {
     let canvasElement = document.createElement('canvas');
     canvasElement.id = 'bubble';
-    $('#page_end_html').after(canvasElement);
+    $('#home').after(canvasElement);
     let canvas = document.getElementById("bubble")
     let ctx = canvas.getContext("2d")
     canvas.width = window.innerWidth
