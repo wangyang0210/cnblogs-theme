@@ -149,7 +149,6 @@ export default function main(_) {
             listHdl(
                 $('#sidebar_postarchive ul li'),
                 $('#sb-record'),
-                'icon-task-fill',
                 _.__timeIds.recordTId
             );
         }, timeout);
@@ -159,7 +158,6 @@ export default function main(_) {
             listHdl(
                 $('#sidebar_articlearchive ul li'),
                 $('#sb-articlearchive'),
-                'icon-document-fill',
                 _.__timeIds.articleTId
             );
         }, timeout);
@@ -189,7 +187,7 @@ export default function main(_) {
 
             let getMenuCommentsData = (obj) => {
                 let html = '<ul>',
-                    ret  = /^[1-9]+[0-9]*$/,
+                    ret  = /^[1-9]+\d*$/,
                     title, body, author;
 
                 if (obj.find('li').length > 2) {
@@ -280,7 +278,7 @@ export default function main(_) {
 
         function getMenuData(obj) {
             let html = '<ul>',
-                ret  = /^[1-9]+[0-9]*$/;
+                ret  = /^[1-9]+\d*$/;
             obj.each((i) => {
                 let p = $(obj[i]),
                     o = p.text() === p.html() ? {} : $(p.html()),

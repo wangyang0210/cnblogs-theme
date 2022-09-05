@@ -1,7 +1,9 @@
 # 2022.09.04
 * 优化svgIcon展示,与标题增加5px间隔
 * 鼠标`bubble`特效BUG [#72](https://github.com/wangyang0210/cnblogs-theme/issues/72)
+* cnzz网站统计调整
 * 谷歌字体本地化
+* 首页字体加载拆分[TODO]
 * 引入`mo.js`,自定义鼠标点击和移动特效
 * iconfont拆分
 * 代码优化

@@ -56,7 +56,6 @@ export default function main(_) {
             });
         }
 
-
         if (_.__config.animate.background.ribbons.enable) {
             import(/* webpackChunkName: "background-ribbons" */ '../background/ribbonsEffect').then(module => {
                 new Ribbons(_.__config.animate.background.ribbons.options);
@@ -72,26 +71,22 @@ export default function main(_) {
     })();
 
     /**
-     * 鼠标动效
+     * 鼠标动效 || TODO mouse 特效集中处理
      */
     (() => {
-        if (_.__config.animate.mouse.enable) {
-            import(/* webpackChunkName: "mouse" */ '../mouse/mouse').then(module => {
-                let mouse = module.default;
-                mouse(_);
-            });
-        }
-    })();
 
-    /**
-     * 鼠标移动/点击动效
-     */
-    (() => {
         if (_.__config.animate.mouseClick.enable) {
             import(/* webpackChunkName: "mouse-click" */ `../mouse/click/${_.__config.animate.mouseClick.options.type}`).then(module => {
                 let mouseAnimation = module.default;
                 mouseAnimation(_)
             })
+        }
+
+        if (_.__config.animate.mouse.enable) {
+            import(/* webpackChunkName: "mouse" */ '../mouse/mouse').then(module => {
+                let mouse = module.default;
+                mouse(_);
+            });
         }
     })();
 

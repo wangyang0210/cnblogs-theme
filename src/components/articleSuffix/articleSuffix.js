@@ -13,7 +13,7 @@ import defaultAvatarImg from './../../images/webp/default_avatar.webp';
 export default function main(_) {
 
     // 图片
-    let imgUrl  = _.__config.articleSuffix.imgUrl ? _.__config.articleSuffix.imgUrl : (_.__config.info.avatar ? _.__config.info.avatar : defaultAvatarImg);
+    let imgUrl  = _.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, _.__config.info.avatar, defaultAvatarImg )
 
     // 本文作者 & 本文链接
     let articleAuthor = $('#articleAuthor');

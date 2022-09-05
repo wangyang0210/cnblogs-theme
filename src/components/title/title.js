@@ -21,32 +21,37 @@ export default function main(_) {
     if (typeof document.hidden !== "undefined") {
         hidden = "hidden";
         visibilityChange = "visibilitychange";
-    } else if (typeof document.mozHidden !== "undefined") { // Firefox up to v17
+    }
+    if (typeof document.mozHidden !== "undefined") { // Firefox up to v17
         hidden = "mozHidden";
         visibilityChange = "mozvisibilitychange";
-    } else if (typeof document.webkitHidden !== "undefined") { // Chrome up to v32, Android up to v4.4, Blackberry up to v10
+    }
+
+    if (typeof document.webkitHidden !== "undefined") { // Chrome up to v32, Android up to v4.4, Blackberry up to v10
         hidden = "webkitHidden";
         visibilityChange = "webkitvisibilitychange";
     }
 
     let handleVisibilityChange = () => {
         if (timer) clearTimeout(timer);
-        if (document[hidden]) {
-            if (onblurTime >= 0) {
-                timer = setTimeout(() => {
-                    document.title = onblur + ' - ' + RelTitle.split(' - ')[0];
-                }, onblurTime);
-            }
-        } else {
-            if (focusTime >= 0) {
-                document.title = focus;
-                timer = setTimeout(() => {
-                    document.title = RelTitle;
-                }, focusTime);
-            } else {
-                document.title = RelTitle;
-            }
+
+        if (document[hidden] && onblurTime >= 0) {
+            timer = setTimeout(() => {
+                document.title = onblur + ' - ' + RelTitle.split(' - ')[0];
+            }, onblurTime);
         }
+
+        if (!document[hidden] && focusTime >= 0) {
+            document.title = focus;
+            timer = setTimeout(() => {
+                document.title = RelTitle;
+            }, focusTime);
+        }
+
+        if (!document[hidden] && focusTime < 0) {
+            document.title = RelTitle;
+        }
+
     }
     if (typeof document.addEventListener !== "undefined" || typeof document[hidden] !== "undefined") {
         document.addEventListener(visibilityChange, handleVisibilityChange, false);

@@ -9,7 +9,7 @@
 import {gsap, Power4} from "gsap/all";
 
 export default function main(id, images, cols, time, sort, current) {
-    const main = document.getElementById(id);
+    const bgMain = document.getElementById(id);
 
     let parts = []; // 列容器对象
     let playing = false; // 是否执行动画
@@ -23,17 +23,14 @@ export default function main(id, images, cols, time, sort, current) {
     for (let col = 0; col < cols; col++) {
         let part = document.createElement('div');
         part.className = 'part';
-
         let el = document.createElement('div');
         el.className = "section";
-
         let img = document.createElement('img');
         img.src = images[current];
-
         el.appendChild(img);
         part.style.setProperty('--x', -100 / cols * col + 'vw');
         part.appendChild(el);
-        main.appendChild(part);
+        bgMain.appendChild(part);
         parts.push(part);
     }
 

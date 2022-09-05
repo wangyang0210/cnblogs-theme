@@ -22,7 +22,7 @@ export default function main(_) {
 
                 if (idInfo && idInfo.length > 0) {
                     let id = idInfo[idInfo.length - 1],
-                        idTmp = id.toString().match(/[0-9]/g);
+                        idTmp = id.toString().match(/\d/g);
 
                     if ($.isArray(idTmp)) id = idTmp.join('');
 

@@ -55,15 +55,15 @@ export default function main(_) {
             });
         } else {
             // 随机指定一个图片
-            topImg.length > 0 ?
-                (topImg.length > 1 ? bgImg = topImg[_.__tools.randomNum(0, topImg.length - 1)] : bgImg = topImg[0])
-                : bgImg = "";
+
+            if (topImg.length > 1) bgImg = topImg[_.__tools.randomNum(0, topImg.length - 1)]
+            else bgImg = topImg[0] || ""
 
             mainHeader.css({
                 'background': '#222 url(\'' + encodeURI(bgImg) + '\')  center center no-repeat',
                 'background-size': 'cover'
             });
-        };
+        }
 
         // Banner文字是否可选
         if(!_.__config.banner.text) $('.main-header-content.inner').addClass('textUnselect')

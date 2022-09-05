@@ -85,7 +85,6 @@ export default function main(_) {
 
         endY = e.clientY || endY;
         if (clicked && startY && Math.abs(startY - endY) >= 40) {
-            // go(!Math.min(0, startY - endY) ? 1 : -1);
             clicked = false;
             startY = null;
             endY = null;

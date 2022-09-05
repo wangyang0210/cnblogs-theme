@@ -17,10 +17,12 @@ import {getTodayDate} from "../../utils/common";
 
 export default function main(_) {
 
-    // 默认字体图标库
+    // TODO CSS拆分
+    // 默认字体图标库 || 基础图标
     import(/* webpackChunkName: "iconfont" */ '../../style/fonticon.css');
 
-    // 谷歌字体
+    // 谷歌字体 || 首页 Noto Sans SC || Ubuntu Mono || Long Cang || Playball
+    // ZCOOL XiaoWei || link and book
     import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     let loadingObj = loading(_);
@@ -29,9 +31,7 @@ export default function main(_) {
      * 国家公祭日和自定义重要的缅怀的日子
      */
     (() => {
-        if (getTodayDate() == '12-13' || _.__config.memorialDays.includes(getTodayDate()) ) {
-            $('html').addClass('htmlGray')
-        }
+        if (getTodayDate() == '12-13' || _.__config.memorialDays.includes(getTodayDate()) ) $('html').addClass('htmlGray')
     })();
 
     /**

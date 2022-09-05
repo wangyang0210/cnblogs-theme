@@ -11,9 +11,7 @@ import dayNightControl from "../../hooks/dayNightControl";
 
 export default function main(_) {
 
-    if (!_.__config.switchDayNight.enable) {
-        return true;
-    }
+    if (!_.__config.switchDayNight.enable) return true;
 
     let h         = parseInt(new Date().getHours()),
         cookieKey = 'cnblogs_config_isNight',
@@ -31,10 +29,7 @@ export default function main(_) {
             case 'night':
                 daySwitch = ''; break;
             default:
-                daySwitch = _.__config.switchDayNight.auto.enable ?
-                    (h >= _.__config.switchDayNight.auto.nightHour ? '' :
-                            (h >= _.__config.switchDayNight.auto.dayHour ? 'daySwitch' : '')
-                    ) : 'daySwitch'; break;
+                daySwitch = _.__config.switchDayNight.auto.enable ? (h >= _.__config.switchDayNight.auto.nightHour ? '' : (h >= _.__config.switchDayNight.auto.dayHour ? 'daySwitch' : '')) : 'daySwitch'; break;
         }
     })();
 

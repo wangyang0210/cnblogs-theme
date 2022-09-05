@@ -13,110 +13,73 @@ import 'optiscroll/dist/optiscroll.css'
 
 export default function main() {
 
-	let bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
-		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
-		isOpen = false,
-		classie = cla(),
+    let bodyEl = document.body,
+        content = document.querySelector('.content-wrap'),
+        openbtn = document.getElementById('open-button'),
+        closebtn = document.getElementById('close-button'),
+        isOpen = false,
+        classie = cla(),
 
-		morphEl = document.getElementById( 'morph-shape' ),
-		s = Snap( morphEl.querySelector( 'svg' ) ),
-		path = s.select( 'path' ),
-		initialPath = path.attr('d'),
-		steps = morphEl.getAttribute( 'data-morph-open' ).split(';'),
-		stepsTotal = steps.length,
-		isAnimating = false;
+        morphEl = document.getElementById('morph-shape'),
+        s = Snap(morphEl.querySelector('svg')),
+        path = s.select('path'),
+        initialPath = path.attr('d'),
+        isAnimating = false;
 
-	let myOptiscrollInstance;
+    let myOptiscrollInstance;
 
-	function init() {
-		// 防止移动端滚动
-		// $("#mainContent").on("touchmove",function(event){
-		// 	event.preventDefault;
-		// }, false)
-		// $("#content-wrap").on("touchmove",function(event){
-		// 	event.preventDefault;
-		// }, false)
+    function init() {
 
-		initEvents();
+        initEvents();
 
-		// 初始化滚动条
-		myOptiscrollInstance = new optiscroll(document.querySelector('#menuWrap'), {
-			preventParentScroll: true,
-			forceScrollbars: true
-		});
-	}
+        // 初始化滚动条
+        myOptiscrollInstance = new optiscroll(document.querySelector('#menuWrap'), {
+            preventParentScroll: true,
+            forceScrollbars: true
+        });
+    }
 
-	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
-		if( closebtn ) {
-			closebtn.addEventListener( 'click', toggleMenu );
-		}
+    function initEvents() {
+        openbtn.addEventListener('click', toggleMenu);
+        if (closebtn) {
+            closebtn.addEventListener('click', toggleMenu);
+        }
 
-		// close the menu element if the target it麓s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
-			let target = ev.target;
-			if( isOpen && target !== openbtn ) {
-				toggleMenu();
-			}
-		} );
-	}
+        // close the menu element if the target it麓s not the menu element or one of its descendants..
+        content.addEventListener('click', function (ev) {
+            let target = ev.target;
+            if (isOpen && target !== openbtn) toggleMenu();
+        });
+    }
 
-	function toggleMenu() {
-		// if( isAnimating ) return false;
-		// isAnimating = true;
-		$('.menu-wrap').show();
+    function toggleMenu() {
+        $('.menu-wrap').show();
 
-		let homeMarginLeft = $('#home').css('margin-left');
-		homeMarginLeft = parseFloat(homeMarginLeft.replace(/px/g,''));
+        if (isOpen) {
 
-		if( isOpen ) {
+            $(bodyEl).removeClass('show-menu');
 
-			$(bodyEl).removeClass('show-menu');
+            $('#content-wrap').fadeOut(300);
+            $(bodyEl).css('overflow', 'auto');
+            $("#mainContent").off("touchmove");
 
-			//setTimeout( "$('body').removeClass('show-menu');", 25);
+            path.attr('d', initialPath);
+            isAnimating = false;
+        } else {
+            classie.add(bodyEl, 'show-menu');
 
-			$('#content-wrap').fadeOut(300);
-			$(bodyEl).css('overflow', 'auto');
-			$("#mainContent").off("touchmove");
+            $('#content-wrap').show();
+            $('body').css('overflow', 'hidden');
 
-			// animate path
-			// setTimeout( function() {
-				// reset path
-				path.attr( 'd', initialPath );
-				isAnimating = false;
-			// }, 300 );
-		}
-		else {
-			classie.add( bodyEl, 'show-menu' );
+            // 初始化滚动条到顶部位置
+            myOptiscrollInstance.scrollTo(false, 'top');
+        }
+        isOpen = !isOpen;
+    }
 
-			// animate path
-			// let pos = 0,
-			// 	nextStep = function( pos ) {
-			// 		if( pos > stepsTotal - 1 ) {
-			// 			isAnimating = false;
-			// 			return;
-			// 		}
-			// 		path.animate( { 'path' : steps[pos] }, pos === 0 ? 400 : 500, pos === 0 ? mina.easein : mina.elastic, function() { nextStep(pos); } );
-			// 		pos++;
-			// 	};
+    init();
 
-			// $('#content-wrap').fadeIn(300);
-			$('#content-wrap').show();
-			$('body').css('overflow', 'hidden');
-
-			// 初始化滚动条到顶部位置
-			myOptiscrollInstance.scrollTo(false, 'top');
-
-			// nextStep(pos);
-		}
-		isOpen = !isOpen;
-	}
-
-	init();
-
-	return {
-		myOptiscrollInstance: myOptiscrollInstance
-	}
+    return {
+        myOptiscrollInstance: myOptiscrollInstance
+    }
 }

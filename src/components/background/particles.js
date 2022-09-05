@@ -59,10 +59,7 @@ export default function main(_) {
             , r = {
             x: e.x - n.x,
             y: e.y - n.y
-        }
-            , o = !0
-            , s = !1
-            , a = void 0;
+        };
 
         for (let i = 0; i < particlesList.length; i++) {
             let l = particlesList[i];

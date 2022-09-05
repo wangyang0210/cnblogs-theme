@@ -63,10 +63,10 @@ export default function main(_) {
     })();
 
     /**
-     * 设置网站统计ID
+     * 设置网站统计地址
      */
     (() => {
-        if (_.__config.cnzz) footerHtml = _.__tools.tempReplacement(footerHtml, 'cnzzId', _.__config.cnzz);
+        if (_.__config.cnzz) footerHtml = _.__tools.tempReplacement(footerHtml, 'cnzzUrl', _.__config.cnzz);
     })();
 
     /**

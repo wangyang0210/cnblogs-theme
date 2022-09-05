@@ -11,6 +11,14 @@ export default function main() {
     return {
 
         /**
+         * 三元运算嵌套拆解
+         */
+        ternaryOperation: (var1, var2, var3) => {
+            if (var1) return var1;
+            return var2 ? var2 : var3;
+        },
+
+        /**
          * 处理文章信息分类(type=1)和标签(type = 2)
          */
         articleInfo: (obj, type) => {
@@ -119,8 +127,6 @@ export default function main() {
             let birthDay = date;
             let today = new Date();
             let timeold = today.getTime() - birthDay.getTime();
-            let sectimeold = timeold / 1000;
-            let secondsold = Math.floor(sectimeold);
             let msPerDay = 24 * 60 * 60 * 1000;
             let e_daysold = timeold / msPerDay;
             let daysold = Math.floor(e_daysold);

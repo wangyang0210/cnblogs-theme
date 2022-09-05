@@ -147,7 +147,8 @@ export default function main(_) {
         run() {
             this.running = true
             if (this.booms.length == 0) {
-                return this.running = false
+                 this.running = false
+                 return
             }
 
             requestAnimationFrame(this.run.bind(this))

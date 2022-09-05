@@ -32,7 +32,7 @@ export default function main(_) {
             let hid = obj.attr('id');
             let titleId = 'tid-' + _.__tools.randomString(6);
             obj.attr('tid', titleId);
-            if (!hid || /^[0-9]+.*/.test(hid)) {
+            if (!hid || /^[\d]+.*/.test(hid)) {
                 if (hid) {
                     let tocObj = $('.toc a[href="#'+hid+'"]');
                     tocObj.length && tocObj.attr('href', '#' + titleId);

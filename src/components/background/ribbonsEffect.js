@@ -7,30 +7,28 @@
         window[name] = factory();
     }
 })("Ribbons", function () {
-    var _w = window,
+    let _w = window,
         _b = document.body,
         _d = document.documentElement;
 
-    // random helper
-    var random = function () {
-        if (arguments.length === 1) // only 1 argument
-        {
-            if (Array.isArray(arguments[0])) // extract index from array
-            {
-                var index = Math.round(random(0, arguments[0].length - 1));
+    let random = function () {
+        if (arguments.length === 1) {
+            if (Array.isArray(arguments[0])) {
+                let index = Math.round(random(0, arguments[0].length - 1));
                 return arguments[0][index];
             }
             return random(0, arguments[0]); // assume numeric
-        } else if (arguments.length === 2) // two arguments range
-        {
+        }
+        if (arguments.length === 2) {
             return Math.random() * (arguments[1] - arguments[0]) + arguments[0];
         }
-        return 0; // default
+
+        return 0;
     };
 
     // screen helper
-    var screenInfo = function (e) {
-        var width = Math.max(0, _w.innerWidth || _d.clientWidth || _b.clientWidth || 0),
+    let screenInfo = function (e) {
+        let width = Math.max(0, _w.innerWidth || _d.clientWidth || _b.clientWidth || 0),
             height = Math.max(0, _w.innerHeight || _d.clientHeight || _b.clientHeight || 0),
             scrollx = Math.max(0, _w.pageXOffset || _d.scrollLeft || _b.scrollLeft || 0) - (_d.clientLeft || 0),
             scrolly = Math.max(0, _w.pageYOffset || _d.scrollTop || _b.scrollTop || 0) - (_d.clientTop || 0);
@@ -43,21 +41,6 @@
             centery: height / 2,
             scrollx: scrollx,
             scrolly: scrolly
-        };
-
-    };
-
-    // mouse/input helper
-    var mouseInfo = function (e) {
-        var screen = screenInfo(e),
-            mousex = e ? Math.max(0, e.pageX || e.clientX || 0) : 0,
-            mousey = e ? Math.max(0, e.pageY || e.clientY || 0) : 0;
-
-        return {
-            mousex: mousex,
-            mousey: mousey,
-            centerx: mousex - screen.width / 2,
-            centery: mousey - screen.height / 2
         };
 
     };
@@ -118,8 +101,7 @@
         }
     };
 
-    // class constructor
-    var Factory = function (options) {
+    let Factory = function (options) {
         this._canvas = null;
         this._context = null;
         this._sto = null;
@@ -157,22 +139,17 @@
         this.init();
     };
 
-    // class prototype
     Factory.prototype = {
         constructor: Factory,
 
-        // Set and merge local options
         setOptions: function (options) {
             if (typeof options === "object") {
-                for (var key in options) {
-                    if (options.hasOwnProperty(key)) {
-                        this._options[key] = options[key];
-                    }
+                for (let key in options) {
+                    if (options.hasOwnProperty(key))  this._options[key] = options[key];
                 }
             }
         },
 
-        // Initialize the ribbons effect
         init: function () {
             try {
                 this._canvas = document.createElement("canvas");
@@ -198,16 +175,14 @@
                 window.addEventListener("scroll", this._onScroll);
                 document.body.appendChild(this._canvas);
             } catch (e) {
-                console.warn("Canvas Context Error: " + e.toString());
                 return;
             }
             this._onDraw();
         },
 
-        // Create a new random ribbon and to the list
         addRibbon: function () {
-            // movement data
-            var dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
+
+            let dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
                 stop = 1000,
                 hide = 200,
                 min = 0 - hide,
@@ -217,16 +192,10 @@
                 startx = dir === "right" ? min : max,
                 starty = Math.round(random(0, this._height));
 
-            // asjust starty based on options
-            if (/^(top|min)$/i.test(this._options.verticalPosition)) {
-                starty = 0 + hide;
-            } else if (/^(middle|center)$/i.test(this._options.verticalPosition)) {
-                starty = this._height / 2;
-            } else if (/^(bottom|max)$/i.test(this._options.verticalPosition)) {
-                starty = this._height - hide;
-            }
+            if (/^(top|min)$/i.test(this._options.verticalPosition)) starty = 0 + hide;
+            if (/^(middle|center)$/i.test(this._options.verticalPosition)) starty = this._height / 2;
+            if (/^(bottom|max)$/i.test(this._options.verticalPosition)) starty = this._height - hide;
 
-            // ribbon sections data
             var ribbon = [],
                 point1 = new Point(startx, starty),
                 point2 = new Point(startx, starty),
@@ -234,8 +203,8 @@
                 color = Math.round(random(0, 360)),
                 delay = 0;
 
-            // buils ribbon sections
             while (true) {
+
                 if (stop <= 0) break;
                 stop--;
 
@@ -248,13 +217,14 @@
                 if (dir === "right") {
                     point3.add(movex, movey);
                     if (point2.x >= max) break;
-                } else if (dir === "left") {
+                }
+
+                if (dir === "left") {
                     point3.subtract(movex, movey);
                     if (point2.x <= min) break;
                 }
-                // point3.clampY( 0, this._height );
 
-                ribbon.push({ // single ribbon section
+                ribbon.push({
                     point1: new Point(point1.x, point1.y),
                     point2: new Point(point2.x, point2.y),
                     point3: point3,
@@ -265,22 +235,20 @@
                     phase: 0
                 });
 
-
                 point1.copy(point2);
                 point2.copy(point3);
 
                 delay += 4;
                 color += this._options.colorCycleSpeed;
             }
+
             this._ribbons.push(ribbon);
         },
 
-        // Draw single section
         _drawRibbonSection: function (section) {
             if (section) {
-                if (section.phase >= 1 && section.alpha <= 0) {
-                    return true; // done
-                }
+                if (section.phase >= 1 && section.alpha <= 0) return true;
+
                 if (section.delay <= 0) {
                     section.phase += 0.02;
                     section.alpha = Math.sin(section.phase) * 1;
@@ -288,7 +256,7 @@
                     section.alpha = section.alpha >= 1 ? 1 : section.alpha;
 
                     if (this._options.animateSections) {
-                        var mod = Math.sin(1 + section.phase * Math.PI / 2) * 0.1;
+                        let mod = Math.sin(1 + section.phase * Math.PI / 2) * 0.1;
 
                         if (section.dir === "right") {
                             section.point1.add(mod, 0);
@@ -299,6 +267,7 @@
                             section.point2.subtract(mod, 0);
                             section.point3.subtract(mod, 0);
                         }
+
                         section.point1.add(0, mod);
                         section.point2.add(0, mod);
                         section.point3.add(0, mod);
@@ -307,15 +276,13 @@
                     section.delay -= 0.5;
                 }
 
-                var s = this._options.colorSaturation,
+                let s = this._options.colorSaturation,
                     l = this._options.colorBrightness,
                     c = "hsla(" + section.color + ", " + s + ", " + l + ", " + section.alpha + " )";
 
                 this._context.save();
 
-                if (this._options.parallaxAmount !== 0) {
-                    this._context.translate(0, this._scroll * this._options.parallaxAmount);
-                }
+                if (this._options.parallaxAmount !== 0) this._context.translate(0, this._scroll * this._options.parallaxAmount);
                 this._context.beginPath();
                 this._context.moveTo(section.point1.x, section.point1.y);
                 this._context.lineTo(section.point2.x, section.point2.y);
@@ -329,71 +296,57 @@
                     this._context.lineCap = "round";
                     this._context.stroke();
                 }
+
                 this._context.restore();
             }
-            return false; // not done yet
+            return false;
         },
 
-        // Draw ribbons
         _onDraw: function () {
-            // cleanup on ribbons list to rtemoved finished ribbons
-            for (var i = 0, t = this._ribbons.length; i < t; ++i) {
-                if (!this._ribbons[i]) {
-                    this._ribbons.splice(i, 1);
-                }
+
+            for (let i = 0, t = this._ribbons.length; i < t; ++i) {
+                if (!this._ribbons[i]) this._ribbons.splice(i, 1);
             }
 
-            // draw new ribbons
             this._context.clearRect(0, 0, this._width, this._height);
 
-            for (var a = 0; a < this._ribbons.length; ++a) // single ribbon
-            {
-                var ribbon = this._ribbons[a],
+            for (let a = 0; a < this._ribbons.length; ++a) {
+                let ribbon = this._ribbons[a],
                     numSections = ribbon.length,
                     numDone = 0;
 
-                for (var b = 0; b < numSections; ++b) // ribbon section
-                {
-                    if (this._drawRibbonSection(ribbon[b])) {
-                        numDone++; // section done
-                    }
+                for (let b = 0; b < numSections; ++b) {
+                    if (this._drawRibbonSection(ribbon[b])) numDone++; // section done
                 }
-                if (numDone >= numSections) // ribbon done
-                {
-                    this._ribbons[a] = null;
-                }
+
+                if (numDone >= numSections) this._ribbons[a] = null;
             }
-            // maintain optional number of ribbons on canvas
-            if (this._ribbons.length < this._options.ribbonCount) {
-                this.addRibbon();
-            }
+
+            if (this._ribbons.length < this._options.ribbonCount) this.addRibbon();
+
             requestAnimationFrame(this._onDraw);
         },
 
-        // Update container size info
         _onResize: function (e) {
-            var screen = screenInfo(e);
+            let screen = screenInfo(e);
             this._width = screen.width;
             this._height = screen.height;
 
             if (this._canvas) {
                 this._canvas.width = this._width;
                 this._canvas.height = this._height;
+            }
 
-                if (this._context) {
-                    this._context.globalAlpha = this._options.colorAlpha;
-                }
+            if (this._canvas && this._context) {
+                this._context.globalAlpha = this._options.colorAlpha;
             }
         },
 
-        // Update container size info
         _onScroll: function (e) {
-            var screen = screenInfo(e);
+            let screen = screenInfo(e);
             this._scroll = screen.scrolly;
         }
     };
 
-
-    // export
     return Factory;
 });

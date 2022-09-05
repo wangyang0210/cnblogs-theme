@@ -8,7 +8,7 @@
  */
 
 export default function main(_) {
-    let stop, SakuraList;
+    let SakuraList;
     let img = new Image();
     img.src = _.__config.animate.background.season.options.img;
     let size = _.__config.animate.background.season.options.size;

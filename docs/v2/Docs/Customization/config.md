@@ -1429,11 +1429,11 @@ window.cnblogsConfig = {
 * 相关文档：[网站统计](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/statistical)
 * 默认值：```""```
 
-cnzz网站ID。
+cnzz统计地址。
 
 ```javascript
 window.cnblogsConfig = {
-    cnzz: "123456",
+    cnzz: "https://v1.cnzz.com/z_stat.php?id=7816543&online=1&show=line",
 }
 ```
 

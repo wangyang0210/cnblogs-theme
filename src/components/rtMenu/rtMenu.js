@@ -17,24 +17,32 @@ export default function main(_) {
      */
     (() => {
         rightMenu.find('i').on({
-            mouseover : function () {
-                typeof $(this).attr('banmv') === 'undefined' && $(this).rotate({animateTo:-60, duration: 250, callback: function () {
-                        $(this).rotate({animateTo:60, duration: 250, callback: function () {
-                                $(this).rotate({animateTo:-30, duration: 150, callback: function () {
-                                        $(this).rotate({animateTo:30, duration: 150, callback: function () {
-                                                $(this).rotate({animateTo:0, duration: 100});
-                                            }});
-                                    }});
-                            }});
-                    }});
+            mouseover: function () {
+                typeof $(this).attr('banmv') === 'undefined' && $(this).rotate({
+                    animateTo: -60, duration: 250, callback: function () {
+                        $(this).rotate({
+                            animateTo: 60, duration: 250, callback: function () {
+                                $(this).rotate({
+                                    animateTo: -30, duration: 150, callback: function () {
+                                        $(this).rotate({
+                                            animateTo: 30, duration: 150, callback: function () {
+                                                $(this).rotate({animateTo: 0, duration: 100});
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
             }
         });
 
         rightMenu.find('.rightMenuItem').on({
-            mouseover : function () {
+            mouseover: function () {
                 $(this).find('.rightMenuSpan').stop().fadeIn(300);
             },
-            mouseout : function () {
+            mouseout: function () {
                 $(this).find('.rightMenuSpan').stop().fadeOut(300);
             }
         });
@@ -53,7 +61,7 @@ export default function main(_) {
                 if (_.__config.rtMenu.downScrollDom && $(_.__config.rtMenu.downScrollDom).length > 0) {
                     downScroll = $(_.__config.rtMenu.downScrollDom).offset().top + 10;
                 } else {
-                    let docHeight    = $(document).height();
+                    let docHeight = $(document).height();
                     let windowHeight = $(window).height();
                     downScroll = docHeight - windowHeight;
                 }
@@ -66,19 +74,19 @@ export default function main(_) {
 
         // 滚动事件
         _.__event.scroll.handle.push(() => {
-            let toUpDown     = $("#toUpDown"),
-                toUpDownI    = $("#toUpDownI"),
+            let toUpDown = $("#toUpDown"),
+                toUpDownI = $("#toUpDownI"),
                 toUpDownSpan = $('.toUpDownSpan');
 
-            _.__event.scroll.docScroll  = $(document).scrollTop(); // 当前滚动位置
+            _.__event.scroll.docScroll = $(document).scrollTop(); // 当前滚动位置
             _.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
 
             if (_.__event.scroll.homeScroll <= _.__event.scroll.docScroll) {
-                toUpDownI.rotate({animateTo:0});
+                toUpDownI.rotate({animateTo: 0});
                 toUpDown.attr('data', 'up');
                 toUpDownSpan.text('返回顶部');
             } else {
-                toUpDownI.rotate({animateTo:-180});
+                toUpDownI.rotate({animateTo: -180});
                 toUpDown.attr('data', 'down');
                 toUpDownSpan.text('跳至底部');
             }
@@ -91,7 +99,7 @@ export default function main(_) {
     (() => {
         // 旋转
         let angle = 0;
-        setInterval(function(){
+        setInterval(function () {
             angle += 7;
             $('#rightMenuSite i').rotate(angle);
         }, 30);
@@ -148,10 +156,10 @@ export default function main(_) {
             $('#rightDashang').show();
 
             _.__config.rtMenu.reward.alipay
-                && $('#rightDashang .ds-alipay').show().find('img').attr('src', _.__config.rtMenu.reward.alipay);
+            && $('#rightDashang .ds-alipay').show().find('img').attr('src', _.__config.rtMenu.reward.alipay);
 
             _.__config.rtMenu.reward.wechatpay
-                && $('#rightDashang .ds-wecat').show().find('img').attr('src', _.__config.rtMenu.reward.wechatpay);
+            && $('#rightDashang .ds-wecat').show().find('img').attr('src', _.__config.rtMenu.reward.wechatpay);
         }
     })();
 
@@ -166,7 +174,7 @@ export default function main(_) {
             if (diggit.length > 0) {
                 diggit.prepend('<i class="iconfont icon-dianzan"></i>');
 
-                let rightDiggit   = $('#rightDiggit');
+                let rightDiggit = $('#rightDiggit');
                 let rightMenuSpan = rightDiggit.find('.rightMenuSpan');
 
                 rightDiggit.attr('onclick', diggit.attr("onclick"));
@@ -186,7 +194,7 @@ export default function main(_) {
             if (buryit.length > 0) {
                 buryit.prepend('<i class="iconfont icon-buzan"></i>');
 
-                let rightBuryit   = $('#rightBuryit');
+                let rightBuryit = $('#rightBuryit');
                 let rightMenuSpan = rightBuryit.find('.rightMenuSpan');
 
                 rightBuryit.attr('onclick', buryit.attr("onclick"));
@@ -206,12 +214,25 @@ export default function main(_) {
                 obj.attr('clickflg', 'true');
                 subObj.text('提交中.');
 
-                setTimeout(() => { subObj.text('提交中..') }, 300);
-                setTimeout(() => { subObj.text('提交中...') }, 600);
-                setTimeout(() => { subObj.text('更新中.') }, 900);
-                setTimeout(() => { subObj.text('更新中..') }, 1200);
-                setTimeout(() => { subObj.text('更新中...') }, 1500);
-                setTimeout(() => { subObj.text(cun); obj.attr('clickflg', 'false');}, 1800);
+                setTimeout(() => {
+                    subObj.text('提交中..')
+                }, 300);
+                setTimeout(() => {
+                    subObj.text('提交中...')
+                }, 600);
+                setTimeout(() => {
+                    subObj.text('更新中.')
+                }, 900);
+                setTimeout(() => {
+                    subObj.text('更新中..')
+                }, 1200);
+                setTimeout(() => {
+                    subObj.text('更新中...')
+                }, 1500);
+                setTimeout(() => {
+                    subObj.text(cun);
+                    obj.attr('clickflg', 'false');
+                }, 1800);
             }
         }
     })();
