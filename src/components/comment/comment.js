@@ -35,9 +35,7 @@ export default function main(_) {
                     obj.prepend(avatarHtml);
                 }
 
-                if (feedbackListSubtitle.length && feedbackListSubtitle.find('.louzhu').length) {
-                    feedbackListSubtitle.addClass('feedbackListSubtitle-louzhu');
-                }
+                if (feedbackListSubtitle.length && feedbackListSubtitle.find('.louzhu').length) feedbackListSubtitle.addClass('feedbackListSubtitle-louzhu');
             });
             $(feedbackItem[0]).css('padding-top', '0');
             $(feedbackItem[feedbackItem.length - 1]).css('padding-bottom', '0');
@@ -50,6 +48,7 @@ export default function main(_) {
             _.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
         }
     },1000);
+
     $(document).ajaxSuccess(function (event, xhr, settings) {
         if (settings.url.includes("GetComments.aspx")) {
             setComment();
