@@ -26,8 +26,7 @@ export default function main(_) {
 
                     if ($.isArray(idTmp)) id = idTmp.join('');
 
-                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim()
-                        : defaultAvatarImg;
+                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim() : defaultAvatarImg;
 
                     let ac = $('#a_comment_author_' + id), ah = ac.length ? ac.attr('href') : 'javascropt:void(0);';
 
@@ -50,8 +49,6 @@ export default function main(_) {
     },1000);
 
     $(document).ajaxSuccess(function (event, xhr, settings) {
-        if (settings.url.includes("GetComments.aspx")) {
-            setComment();
-        }
+        if (settings.url.includes("GetComments.aspx")) setComment();
     });
 }
