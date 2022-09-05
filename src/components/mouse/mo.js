@@ -1,11 +1,13 @@
 /**
  * UPDATES AND DOCS AT: https://github.com/wangyang0210
  * https://www.cnblogs.com/wangyang0210/
- * @author: BNTang, BNTang.303158131@qq.com
- * @Date 2022-08-27 20:29
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-09-04 19:36
  * ----------------------------------------------
- * @describe: 炸开点击特效
+ * @describe: 使用mo.js实现各种效果
  */
 export default function main(_) {
-
+    const burst = new mojs.Burst({
+        radius: { 0: 100 }
+    });
 }
