@@ -138,8 +138,8 @@ export default function main(_) {
             _.__timeIds.umamiTId = window.setInterval(() => {
                 getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
                     Promise.all([
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getTodayStart(),'end_at': _.__tools.getToadyEnd()}),
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getYesterdayState(),'end_at': _.__tools.getYesterdayEnd()}),
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getTodayStart(),'end_at': _.__tools.getTodayEnd()}),
+                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getYesterdayStart(),'end_at': _.__tools.getYesterdayEnd()}),
                         getOnline(baseUrl, `api/website/${r.websiteId}/active`)])
                         .then(function (results) {
                             const todayState = results[0]

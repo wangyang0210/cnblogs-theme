@@ -24,7 +24,7 @@ export default function main() {
          * 获取当天23:59:59的13位时间戳
          * @return {string}
          */
-        getToadyEnd: () => {
+        getTodayEnd: () => {
             return moment().endOf('day').format('x')
         },
 
@@ -32,7 +32,7 @@ export default function main() {
          * 获取前一天00:00:00的13位时间戳
          * @return {string}
          */
-       getYesterdayState: () => {
+       getYesterdayStart: () => {
             return moment().subtract(1, 'days').startOf('day').format('x')
         },
 
@@ -42,13 +42,6 @@ export default function main() {
          */
         getYesterdayEnd: () => {
             return moment().subtract(1, 'days').endOf('day').format('x')
-        },
-
-        /**
-         * 获取当天年月日时间
-         */
-        getToday: () => {
-            return moment().format('YYYY-MM-DD')
         },
 
         /**
@@ -64,7 +57,7 @@ export default function main() {
          * @param {string} url 请求地址
          * @return {Promise<unknown>}
          */
-        getJsonp: (url = `https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=2022-07-25lback&c=dailysentence&m=getdetail&title=${this.getToday()}`) => {
+        getJsonp: (url = `https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=2022-07-25lback&c=dailysentence&m=getdetail&title=${moment().format('YYYY-MM-DD')}`) => {
             return new Promise(resolve => {
                 window.jsonCallBack = (result) => {
                     resolve(result)
