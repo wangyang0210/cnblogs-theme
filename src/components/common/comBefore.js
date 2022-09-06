@@ -16,26 +16,26 @@ import "../../vendor/rotate/jquery.rotate.min"
 
 export default function main(_) {
 
-    // 默认字体图标库 || 基础图标
-    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
-
-    // 谷歌字体
-    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
-
     let loadingObj = loading(_);
-
-    /**
-     * 国家公祭日和自定义重要的缅怀的日子
-     */
-    (() => {
-        if (_.__tools.getTodayDate() == '12-13' || _.__config.memorialDays.includes(_.__tools.getTodayDate()) ) $('html').addClass('htmlGray')
-    })();
 
     /**
      * 开启 loading
      */
     (() => {
         loadingObj.start();
+    })();
+
+    // 默认字体图标库 || 基础图标
+    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
+
+    // 谷歌字体
+    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
+
+    /**
+     * 国家公祭日和自定义重要的缅怀的日子
+     */
+    (() => {
+        if (_.__tools.getTodayDate() == '12-13' || _.__config.memorialDays.includes(_.__tools.getTodayDate()) ) $('html').addClass('htmlGray')
     })();
 
     /**
