@@ -24,7 +24,7 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.bookList.length) {
-            import(/* webpackChunkName: "fonts-blink" */ '../style/fonts-blink.css');
+            import(/* webpackChunkName: "gf-blink" */ '../style/gf-blink.css');
 
             let postBody = $('#cnblogs_post_body'),
                 html = '';

@@ -13,12 +13,11 @@ import event from "../event/event";
 import "../../images/webp/rss.webp";
 import "../../style/asset.css";
 import "../../vendor/rotate/jquery.rotate.min"
-import {getTodayDate} from "../../utils/common";
 
 export default function main(_) {
 
     // 默认字体图标库 || 基础图标
-    import(/* webpackChunkName: "iconfont" */ '../../style/fonticon.css');
+    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
 
     // 谷歌字体
     import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
@@ -29,7 +28,7 @@ export default function main(_) {
      * 国家公祭日和自定义重要的缅怀的日子
      */
     (() => {
-        if (getTodayDate() == '12-13' || _.__config.memorialDays.includes(getTodayDate()) ) $('html').addClass('htmlGray')
+        if (_.__tools.getTodayDate() == '12-13' || _.__config.memorialDays.includes(_.__tools.getTodayDate()) ) $('html').addClass('htmlGray')
     })();
 
     /**

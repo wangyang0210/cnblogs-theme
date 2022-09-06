@@ -7,8 +7,77 @@
  * @describe: 工具处理类
  */
 
+import moment from "moment";
+
 export default function main() {
     return {
+
+        /**
+         * 获取当天00:00:00的13位时间戳
+         * @return {string}
+         */
+        getTodayStart: () => {
+            return moment().startOf('day').format('x')
+        },
+
+        /**
+         * 获取当天23:59:59的13位时间戳
+         * @return {string}
+         */
+        getToadyEnd: () => {
+            return moment().endOf('day').format('x')
+        },
+
+        /**
+         * 获取前一天00:00:00的13位时间戳
+         * @return {string}
+         */
+       getYesterdayState: () => {
+            return moment().subtract(1, 'days').startOf('day').format('x')
+        },
+
+        /**
+         * 获取前一天23:59:59的13位时间戳
+         * @return {string}
+         */
+        getYesterdayEnd: () => {
+            return moment().subtract(1, 'days').endOf('day').format('x')
+        },
+
+        /**
+         * 获取当天年月日时间
+         */
+        getToday: () => {
+            return moment().format('YYYY-MM-DD')
+        },
+
+        /**
+         * 获取当天的日期
+         * @return {string}
+         */
+        getTodayDate: () => {
+            return moment().format('MM-DD')
+        },
+
+        /**
+         * jsonp跨域请求
+         * @param {string} url 请求地址
+         * @return {Promise<unknown>}
+         */
+        getJsonp: (url = `https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=2022-07-25lback&c=dailysentence&m=getdetail&title=${this.getToday()}`) => {
+            return new Promise(resolve => {
+                window.jsonCallBack = (result) => {
+                    resolve(result)
+                }
+                let JSONP = document.createElement("script");
+                JSONP.type = "text/javascript";
+                JSONP.src = `${url}&callback=jsonCallBack`;
+                document.getElementsByTagName("head")[0].appendChild(JSONP);
+                setTimeout(() => {
+                    document.getElementsByTagName("head")[0].removeChild(JSONP)
+                }, 500)
+            })
+        },
 
         /**
          * 三元运算嵌套拆解
