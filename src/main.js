@@ -31,8 +31,8 @@ $(document).ready(function(){
         /**
          * 前置公共处理
          */
-        import(/* webpackChunkName: "com-before" */ './components/common/comBefore').then(module => {
-            const comBefore = module.default;
+        import(/* webpackChunkName: "com-before" */ './components/common/comBefore').then(beforeModule => {
+            const comBefore = beforeModule.default;
             comBefore(_);
 
             /**
@@ -43,8 +43,8 @@ $(document).ready(function(){
             /**
              * 后置公共处理
              */
-            import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(module => {
-                const comAfter = module.default;
+            import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(afterModule => {
+                const comAfter = afterModule.default;
                 comAfter(_);
 
                 /**

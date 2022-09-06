@@ -24,6 +24,8 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.bookList.length) {
+            import(/* webpackChunkName: "fonts-blink" */ '../style/fonts-blink.css');
+
             let postBody = $('#cnblogs_post_body'),
                 html = '';
             $.each(_.__config.bookList, (i) => {

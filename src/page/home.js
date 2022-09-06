@@ -44,7 +44,9 @@ export default function main(_) {
             _.__tools.setDomHomePosition();
             return true;
 
-        } else if (typeof configTitle === "string" && configTitle !== "") {
+        }
+
+        if (typeof configTitle === "string" && configTitle !== "") {
 
             hitokoto.html(configTitle).css('display', '-webkit-box');
             _.__tools.setDomHomePosition();

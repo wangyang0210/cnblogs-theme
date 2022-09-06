@@ -29,9 +29,9 @@ export default function main(_) {
     (() => {
         for (let i = 0; i <= 10; i++) {
             setTimeout(function timer(){
-                let main = $('#main');
-                main.find('.cnblogs-markdown').removeClass('cnblogs-markdown');
-                main.find('.cnblogs-post-body').removeClass('cnblogs-post-body');
+                let postMain = $('#main');
+                postMain.find('.cnblogs-markdown').removeClass('cnblogs-markdown');
+                postMain.find('.cnblogs-post-body').removeClass('cnblogs-post-body');
             }, i * 500);
         }
     })();

@@ -24,8 +24,8 @@ export default function main(_) {
     (() => {
         // 异步处理防止影响loading结束
         import(/* webpackChunkName: "article-code" */ '../components/code/code').then(module => {
-            const main = module.default;
-            main(_);
+            const code = module.default;
+            code(_);
         });
     })();
 

@@ -24,6 +24,9 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.links.page.length) {
+
+            import(/* webpackChunkName: "fonts-blink" */ '../style/fonts-blink.css');
+
             let postBody = $('#cnblogs_post_body'),
                 html = '';
 
