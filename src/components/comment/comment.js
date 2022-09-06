@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 评论处理
  */
-import defaultAvatarImg from './../../images/webp/default_avatar.webp';
+import defaultAvatarImg from './../../images/default_avatar.webp';
 
 export default function main(_) {
     let setComment = () => {

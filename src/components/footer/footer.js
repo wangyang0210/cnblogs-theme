@@ -7,10 +7,10 @@
  * @describe: footer底部信息
  */
 import footerTemp from '../../template/footer.html';
-import footerImg from './../../images/webp/footer.webp';
-import backgroundImg from './../../images/webp/background.webp';
-import cloudsImg from './../../images/webp/clouds.webp';
-import foregroundImg from './../../images/webp/foreground.webp';
+import footerImg from './../../images/footer.webp';
+import backgroundImg from './../../images/background.webp';
+import cloudsImg from './../../images/clouds.webp';
+import foregroundImg from './../../images/foreground.webp';
 import {getConfigInfo, getOnline, getWebSiteState} from "../../api";
 
 export default function main(_) {

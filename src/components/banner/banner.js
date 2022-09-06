@@ -7,8 +7,8 @@
  * @describe: banner背景图片处理
  */
 import bannerTemp from '../../template/banner.html';
-import homeTopBg from "../../images/webp/home_top_bg.webp";
-import netHomeTopBg from "../../images/webp/nothome_top_bg.webp";
+import homeTopBg from "../../images/home_top_bg.webp";
+import netHomeTopBg from "../../images/nothome_top_bg.webp";
 
 export default function main(_) {
 

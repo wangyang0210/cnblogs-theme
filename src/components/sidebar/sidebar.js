@@ -10,7 +10,7 @@ import sidebarTemp from '../../template/sidebar.html';
 import navTemp from '../../template/sidebarNav.html';
 import '../../style/menu_bubble.css';
 import main4 from './lib/main4';
-import defaultAvatarImg from './../../images/webp/default_avatar.webp';
+import defaultAvatarImg from './../../images/default_avatar.webp';
 import defaultSidebarBgImg from './../../images/sidebar_bg_4.webp';
 
 export default function main(_) {
