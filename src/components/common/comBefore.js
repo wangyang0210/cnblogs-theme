@@ -21,8 +21,7 @@ export default function main(_) {
     // 默认字体图标库 || 基础图标
     import(/* webpackChunkName: "iconfont" */ '../../style/fonticon.css');
 
-    // 谷歌字体 || 首页 Noto Sans SC || Ubuntu Mono || Long Cang || Playball
-    // ZCOOL XiaoWei || link and book
+    // 谷歌字体
     import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     let loadingObj = loading(_);

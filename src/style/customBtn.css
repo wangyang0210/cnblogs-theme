@@ -1,24 +1,3 @@
-/*
-    <button class="custom-btn btn-1">Read More1</button>
-    <button class="custom-btn btn-2">Read More2</button>
-    <button class="custom-btn btn-3"><span>Read More3</span></button>
-    <button class="custom-btn btn-4"><span>Read More4</span></button>
-    <button class="custom-btn btn-5"><span>Read More5</span></button>
-    <button class="custom-btn btn-6"><span>Read More6</span></button>
-    <button class="custom-btn btn-7"><span>Read More7</span></button>
-    <button class="custom-btn btn-8"><span>Read More8</span></button>
-    <button class="custom-btn btn-9">Read More9</button>
-    <button class="custom-btn btn-10">Read More10</button>
-    <button class="custom-btn btn-11">Read More11
-        <div class="dot"></div>
-    </button>
-    <button class="custom-btn btn-12"><span>Click!</span><span>Read More12</span></button>
-    <button class="custom-btn btn-13">Read More13</button>
-    <button class="custom-btn btn-14">Read More14</button>
-    <button class="custom-btn btn-15">Read More15</button>
-    <button class="custom-btn btn-16">Read More16</button>
-*/
-
 .custom-btn {
     width: 110px;
     height: 40px;
@@ -521,10 +500,6 @@
     left: 0;
     top: 0;
     background: #c797eb;
-    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2),
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
     transition: all 0.3s ease;
 }
 

@@ -1,0 +1,639 @@
+.icon-hebaodan:before {
+    content: "\e6a9";
+}
+
+.icon-bingtanghulu:before {
+    content: "\e6aa";
+}
+
+.icon-kesong:before {
+    content: "\e6ab";
+}
+
+.icon-qianceng:before {
+    content: "\e6ac";
+}
+
+.icon-fengmi:before {
+    content: "\e6ad";
+}
+
+.icon-feiyuguantou:before {
+    content: "\e6af";
+}
+
+.icon-shengjian:before {
+    content: "\e6b3";
+}
+
+.icon-youtiao:before {
+    content: "\e6b4";
+}
+
+.icon-yuzijiang:before {
+    content: "\e6b5";
+}
+
+.icon-zhutongfan:before {
+    content: "\e6b8";
+}
+
+.icon-doujiang:before {
+    content: "\e6b9";
+}
+
+.icon-sanmingzhi:before {
+    content: "\e6ba";
+}
+
+.icon-paofu:before {
+    content: "\e6bb";
+}
+
+.icon-shanbei:before {
+    content: "\e6bc";
+}
+
+.icon-dangaojuan:before {
+    content: "\e6bd";
+}
+
+.icon-futejia:before {
+    content: "\e6be";
+}
+
+.icon-huangyou:before {
+    content: "\e6bf";
+}
+
+.icon-xiangchang:before {
+    content: "\e6c0";
+}
+
+.icon-banji:before {
+    content: "\e6c1";
+}
+
+.icon-danta:before {
+    content: "\e6c2";
+}
+
+.icon-qingning:before {
+    content: "\e6c3";
+}
+
+.icon-lajiao:before {
+    content: "\e6c4";
+}
+
+.icon-shizi:before {
+    content: "\e6c5";
+}
+
+.icon-mojituo:before {
+    content: "\e6c6";
+}
+
+.icon-pijiu:before {
+    content: "\e6c7";
+}
+
+.icon-putaojiu:before {
+    content: "\e6c8";
+}
+
+.icon-kouxiangtang:before {
+    content: "\e6c9";
+}
+
+.icon-xiangcaobingqilin:before {
+    content: "\e6ca";
+}
+
+.icon-jiaozi:before {
+    content: "\e6cb";
+}
+
+.icon-tilamisu:before {
+    content: "\e6cc";
+}
+
+.icon-huoguo:before {
+    content: "\e6cd";
+}
+
+.icon-hongshu:before {
+    content: "\e6ce";
+}
+
+.icon-bingkuai:before {
+    content: "\e6cf";
+}
+
+.icon-mianhuatang:before {
+    content: "\e6d0";
+}
+
+.icon-paobing:before {
+    content: "\e6d1";
+}
+
+.icon-meishikafei:before {
+    content: "\e6d2";
+}
+
+.icon-mantou:before {
+    content: "\e6d3";
+}
+
+.icon-qishui:before {
+    content: "\e6d4";
+}
+
+.icon-ganlan:before {
+    content: "\e6d5";
+}
+
+.icon-jiroujuan:before {
+    content: "\e6d6";
+}
+
+.icon-guodong:before {
+    content: "\e6d7";
+}
+
+.icon-baozi:before {
+    content: "\e615";
+}
+
+.icon-pingguo:before {
+    content: "\e619";
+}
+
+.icon-chengzi:before {
+    content: "\e61b";
+}
+
+.icon-qingjiao:before {
+    content: "\e61c";
+}
+
+.icon-jidan:before {
+    content: "\e61d";
+}
+
+.icon-xihongshi:before {
+    content: "\e61e";
+}
+
+.icon-mangguo:before {
+    content: "\e61f";
+}
+
+.icon-baocai:before {
+    content: "\e620";
+}
+
+.icon-niunai:before {
+    content: "\e621";
+}
+
+.icon-mianbao:before {
+    content: "\e622";
+}
+
+.icon-huluobu:before {
+    content: "\e623";
+}
+
+.icon-zhangyu:before {
+    content: "\e624";
+}
+
+.icon-pangxie:before {
+    content: "\e625";
+}
+
+.icon-longxia:before {
+    content: "\e626";
+}
+
+.icon-yangcong:before {
+    content: "\e627";
+}
+
+.icon-rou:before {
+    content: "\e628";
+}
+
+.icon-jitui:before {
+    content: "\e62e";
+}
+
+.icon-huage:before {
+    content: "\e630";
+}
+
+.icon-xianyu:before {
+    content: "\e634";
+}
+
+.icon-mogu:before {
+    content: "\e635";
+}
+
+.icon-qiezi:before {
+    content: "\e636";
+}
+
+.icon-xilanhua:before {
+    content: "\e637";
+}
+
+.icon-ningmeng:before {
+    content: "\e638";
+}
+
+.icon-liulian:before {
+    content: "\e639";
+}
+
+.icon-banli:before {
+    content: "\e63a";
+}
+
+.icon-sanwenyu:before {
+    content: "\e63c";
+}
+
+.icon-tudou:before {
+    content: "\e63d";
+}
+
+.icon-xigua:before {
+    content: "\e63e";
+}
+
+.icon-nangua:before {
+    content: "\e63f";
+}
+
+.icon-huolongguo:before {
+    content: "\e640";
+}
+
+.icon-fantuan:before {
+    content: "\e641";
+}
+
+.icon-zhusun:before {
+    content: "\e642";
+}
+
+.icon-shuiluobu:before {
+    content: "\e643";
+}
+
+.icon-shanzhu:before {
+    content: "\e644";
+}
+
+.icon-lanmei:before {
+    content: "\e645";
+}
+
+.icon-shiliu:before {
+    content: "\e646";
+}
+
+.icon-yezi:before {
+    content: "\e647";
+}
+
+.icon-tiangua:before {
+    content: "\e648";
+}
+
+.icon-mihoutao:before {
+    content: "\e649";
+}
+
+.icon-boluo:before {
+    content: "\e64a";
+}
+
+.icon-kaixinguo:before {
+    content: "\e64b";
+}
+
+.icon-hetao:before {
+    content: "\e64c";
+}
+
+.icon-xiaweiyiguo:before {
+    content: "\e64d";
+}
+
+.icon-huasheng:before {
+    content: "\e64e";
+}
+
+.icon-bigenguo:before {
+    content: "\e650";
+}
+
+.icon-kuihuazi:before {
+    content: "\e651";
+}
+
+.icon-songzi:before {
+    content: "\e652";
+}
+
+.icon-xiguazi:before {
+    content: "\e653";
+}
+
+.icon-badanmu:before {
+    content: "\e654";
+}
+
+.icon-yaoguo:before {
+    content: "\e655";
+}
+
+.icon-danhuangsu:before {
+    content: "\e656";
+}
+
+.icon-dangao:before {
+    content: "\e659";
+}
+
+.icon-binggan:before {
+    content: "\e65b";
+}
+
+.icon-buding:before {
+    content: "\e65e";
+}
+
+.icon-tangguo:before {
+    content: "\e65f";
+}
+
+.icon-qiaokeli:before {
+    content: "\e660";
+}
+
+.icon-hongzao:before {
+    content: "\e661";
+}
+
+.icon-candou:before {
+    content: "\e662";
+}
+
+.icon-putaogan:before {
+    content: "\e663";
+}
+
+.icon-manyuemei:before {
+    content: "\e664";
+}
+
+.icon-taozi:before {
+    content: "\e665";
+}
+
+.icon-xiangjiao:before {
+    content: "\e666";
+}
+
+.icon-caomei:before {
+    content: "\e667";
+}
+
+.icon-niuyouguo:before {
+    content: "\e669";
+}
+
+.icon-hamigua:before {
+    content: "\e66a";
+}
+
+.icon-chelizi:before {
+    content: "\e66b";
+}
+
+.icon-li:before {
+    content: "\e66c";
+}
+
+.icon-bale:before {
+    content: "\e66d";
+}
+
+.icon-kafei1:before {
+    content: "\e66e";
+}
+
+.icon-shutiao:before {
+    content: "\e66f";
+}
+
+.icon-zhenzhunaicha:before {
+    content: "\e670";
+}
+
+.icon-xuegao:before {
+    content: "\e671";
+}
+
+.icon-nailao:before {
+    content: "\e672";
+}
+
+.icon-kele:before {
+    content: "\e673";
+}
+
+.icon-tiantong:before {
+    content: "\e675";
+}
+
+.icon-hanbao:before {
+    content: "\e677";
+}
+
+.icon-xiezishousi:before {
+    content: "\e678";
+}
+
+.icon-baomihua:before {
+    content: "\e679";
+}
+
+.icon-regou:before {
+    content: "\e67a";
+}
+
+.icon-makalong:before {
+    content: "\e67b";
+}
+
+.icon-tianfuluo:before {
+    content: "\e67d";
+}
+
+.icon-juzi:before {
+    content: "\e67e";
+}
+
+.icon-baixiangguo:before {
+    content: "\e67f";
+}
+
+.icon-putao:before {
+    content: "\e680";
+}
+
+.icon-shaomai:before {
+    content: "\e682";
+}
+
+.icon-yumi:before {
+    content: "\e683";
+}
+
+.icon-pipa:before {
+    content: "\e684";
+}
+
+.icon-yangtao:before {
+    content: "\e685";
+}
+
+.icon-youzi:before {
+    content: "\e687";
+}
+
+.icon-lianwu:before {
+    content: "\e688";
+}
+
+.icon-wuhuaguo:before {
+    content: "\e689";
+}
+
+.icon-paomian:before {
+    content: "\e68a";
+}
+
+.icon-wandou:before {
+    content: "\e68b";
+}
+
+.icon-huanggua:before {
+    content: "\e68d";
+}
+
+.icon-suantou:before {
+    content: "\e68e";
+}
+
+.icon-tiantianquan:before {
+    content: "\e68f";
+}
+
+.icon-shupian:before {
+    content: "\e690";
+}
+
+.icon-huafubing:before {
+    content: "\e692";
+}
+
+.icon-bangbangtang:before {
+    content: "\e693";
+}
+
+.icon-shousi:before {
+    content: "\e694";
+}
+
+.icon-lizhi:before {
+    content: "\e695";
+}
+
+.icon-doufu:before {
+    content: "\e696";
+}
+
+.icon-mocha:before {
+    content: "\e697";
+}
+
+.icon-boluomi:before {
+    content: "\e698";
+}
+
+.icon-zhouzi:before {
+    content: "\e699";
+}
+
+.icon-bingsha:before {
+    content: "\e69a";
+}
+
+.icon-suannai:before {
+    content: "\e69b";
+}
+
+.icon-pisa:before {
+    content: "\e69c";
+}
+
+.icon-haixing:before {
+    content: "\e69d";
+}
+
+.icon-haizhe:before {
+    content: "\e69e";
+}
+
+.icon-tongluoshao:before {
+    content: "\e69f";
+}
+
+.icon-nuomici:before {
+    content: "\e6a1";
+}
+
+.icon-kuangquanshui:before {
+    content: "\e6a2";
+}
+
+.icon-roujiamo:before {
+    content: "\e6a3";
+}
+
+.icon-cha:before {
+    content: "\e6a4";
+}
+
+.icon-zhangyuxiaowanzi:before {
+    content: "\e6a5";
+}
+
+.icon-chengzhi:before {
+    content: "\e6a6";
+}
+
+.icon-yuancaitou:before {
+    content: "\e6a7";
+}
+
+.icon-baicai:before {
+    content: "\e6a8";
+}
