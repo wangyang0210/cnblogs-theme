@@ -17,7 +17,6 @@ import {getTodayDate} from "../../utils/common";
 
 export default function main(_) {
 
-    // TODO CSS拆分
     // 默认字体图标库 || 基础图标
     import(/* webpackChunkName: "iconfont" */ '../../style/fonticon.css');
 

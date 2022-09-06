@@ -47,7 +47,7 @@ export default function main(_) {
     /**
      * 背景动效
      */
-    (() => {
+    (() =>  {
 
         if (_.__config.animate.background.season.enable) {
             import(/* webpackChunkName: "background-season" */ '../background/season').then(module => {
