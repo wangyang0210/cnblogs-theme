@@ -32,10 +32,8 @@ export default function main(_) {
 
             let settings = that.config.rebound;
 
-            // Create a SpringSystem.
             let springSystem = new rebound.SpringSystem();
 
-            // Add a spring to the system.
             that.spring = springSystem.createSpring(settings.tension, settings.friction);
         }
 
@@ -46,7 +44,6 @@ export default function main(_) {
 
             let settings = that.config.spinner;
 
-            // Instantiate Spinner.
             that.spinner = new Spinner(settings);
         }
 
