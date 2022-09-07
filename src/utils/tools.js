@@ -8,6 +8,8 @@
  */
 
 import moment from 'dayjs'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+moment.extend(advancedFormat)
 
 export default function main() {
     return {
