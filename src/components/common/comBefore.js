@@ -18,18 +18,18 @@ export default function main(_) {
 
     let loadingObj = loading(_);
 
+    // 默认字体图标库
+    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
+
+    // 谷歌字体
+    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
+
     /**
      * 开启 loading
      */
     (() => {
         loadingObj.start();
     })();
-
-    // 默认字体图标库 || 基础图标
-    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
-
-    // 谷歌字体
-    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     /**
      * 国家公祭日和自定义重要的缅怀的日子

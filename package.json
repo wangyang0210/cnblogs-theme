@@ -49,10 +49,10 @@
   "dependencies": {
     "@mojs/core": "^1.3.0",
     "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
     "gsap": "^3.10.4",
     "jinrishici": "^1.0.6",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.4"
+    "lodash": "^4.17.21"
   },
   "browserslist": {
     "development": [

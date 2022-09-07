@@ -7,7 +7,7 @@
  * @describe: 工具处理类
  */
 
-import moment from "moment";
+import moment from 'dayjs'
 
 export default function main() {
     return {
