@@ -100,7 +100,7 @@ export default function main(_) {
         let titleInfo = $('#cnblogs_post_body').find(':header');
         if (_.__config.articleContent.emoji && titleInfo.length > 0) {
             // TODO iconfont JS拆分
-            import(/* webpackChunkName: "iconfont" */ '../../fonts/iconfont');
+            import(/* webpackChunkName: "iconfont" */ '../../fonts/iconfont/iconfont');
             titleInfo.html((i, c) => {
                 let arr = []
                 let num=Math.floor((Math.random()*(160-i))+i);

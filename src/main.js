@@ -12,14 +12,14 @@ import status from "./components/status/status";
 import tools from './utils/tools';
 import event from "./components/event/event";
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     // 初始化
-    _.__config  = config(); // 配置信息
-    _.__status  = status(); // 页面状态信息
-    _.__tools   = tools();  // 公共处理工具
+    _.__config = config(); // 配置信息
+    _.__status = status(); // 页面状态信息
+    _.__tools = tools();  // 公共处理工具
     _.__timeIds = {};       // 定时器
-    _.__event   = {};       // 事件
+    _.__event = {};       // 事件
 
 
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
@@ -46,10 +46,6 @@ $(document).ready(function(){
             import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(afterModule => {
                 const comAfter = afterModule.default;
                 comAfter(_);
-
-                /**
-                 * 辅助处理
-                 */
                 (() => {
                     _.__tools.setDomHomePosition(); // 文章主体位置修正
                     event(_).handle.scroll(); // 触发滚动处理
