@@ -53,8 +53,8 @@ export default function main(_) {
 
         function topTitleContent(r) {
             if (r?.status === "success" || r.errno === 0) {
-                let note = r.data.content || r.note;
-                let content = r.content || `《${r.data.origin.title}》 - ${r.data.origin.dynasty} - ${r.data.origin.author}`;
+                let note = r?.note || r.data.content;
+                let content = r?.content || `《${r.data.origin.title}》 - ${r.data.origin.dynasty} - ${r.data.origin.author}`;
                 hitokoto.html(note).css('display', '-webkit-box');
                 $('#hitokotoAuthor').text(content).show();
             } else {
