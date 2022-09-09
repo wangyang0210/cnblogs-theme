@@ -51,5 +51,27 @@ export function getOnline (baseUrl, url) {
     })
 }
 
+/**
+ * 获取今日诗词的TOKEN
+ * @return {*}
+ */
+export function getJinrishiciToken () {
+    return request({
+        requestBaseUrl: 'https://v2.jinrishici.com/one.json?client=npm-sdk/1.0'
+    })
+}
+
+/**
+ * 获取今日诗词
+ * @param {string} token 今日诗词token
+ */
+export function getJinrishici (token) {
+    return request({
+        requestBaseUrl: `https://v2.jinrishici.com/one.json?client=npm-sdk/1.0&X-User-Token=${token}`
+    })
+}
+
+
+
 
 

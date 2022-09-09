@@ -7,6 +7,7 @@
  * @describe: 主页处理
  */
 import postMeta from "../components/postMeta/postMeta";
+import {getJinrishici, getJinrishiciToken, getToken} from "../api";
 const jinrishici = require('jinrishici');
 
 export default function main(_) {
@@ -37,57 +38,51 @@ export default function main(_) {
             hitokoto = $('#hitokoto');
 
         if ($.isArray(configTitle) && configTitle.length > 0) {
-
             let listIndex = _.__tools.randomNum(0, configTitle.length - 1);
             hitokoto.html(configTitle[listIndex]).css('display', '-webkit-box');
             _.__tools.setDomHomePosition();
             return true;
-
         }
 
         if (typeof configTitle === "string" && configTitle !== "") {
-
             hitokoto.html(configTitle).css('display', '-webkit-box');
             _.__tools.setDomHomePosition();
             return true;
         }
 
-        let topTitleList = [
-            '每一个不曾起舞的日子，都是对生命的辜负。', '公主死去了，屠龙的少年还在燃烧', '我们听过无数的道理，却仍旧过不好这一生。',
-            '生如夏花之绚烂，死如秋叶之静美。', '但凡不能杀死你的，最终都会使你更强大。','好看的皮囊千篇一律，有趣的灵魂万里挑一。',
-            '青春是一本太仓促的书，我们含着泪，一读再读。', '教育就是当一个人把在学校所学全部忘光之后剩下的东西。','孤独不是一种脾性，而是一种无奈。',
-            '有时候你以为天要塌下来了，其实是自己站歪了。', '温柔正确的人总是难以生存，因为这世界既不温柔，也不正确。', '死并非生的对立面，而作为生的一部分永存。',
-            '不要努力成为一个成功者，要努力成为一个有价值的人。', '不要因为走得太远，忘了我们为什么出发。', '你的问题主要在于读书不多而想得太多。',
-            '岁月不饶人，我亦未曾饶过岁月。', '当你凝视深渊时，深渊也在凝视着你。', '有的人25岁就死了，只是到75岁才埋葬'
-        ];
+        let topTitleList = [ '当你凝视深渊时，深渊也在凝视着你。', '有的人25岁就死了，只是到75岁才埋葬'];
+
+        function topTitleContent(r) {
+            if (r?.status === "success" || r.errno === 0) {
+                hitokoto.html(r.data.content || r.note).css('display', '-webkit-box');
+                let content = r.content || `《${r.data.origin.title}》 - ${r.data.origin.dynasty} - ${r.data.origin.author}`
+                $('#hitokotoAuthor').text(content).show();
+            } else {
+                let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
+                hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
+            }
+            _.__tools.setDomHomePosition();
+        }
 
         if (_.__config.banner.home.titleSource === 'one') {
             _.__tools.getJsonp().then(r => {
-                if (r.errno === 0) {
-                    hitokoto.html(r.note).css('display', '-webkit-box');
-                    $('#hitokotoAuthor').text(r.content).show();
-                } else {
-                    let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
-                    hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
-                }
-                _.__tools.setDomHomePosition();
+                topTitleContent(r)
                 return false;
             })
         }
 
         if (_.__config.banner.home.titleSource === 'jinrishici') {
-            jinrishici.load(r => {
-                if (r && r.status === "success") {
-                    hitokoto.html(r.data.content).css('display', '-webkit-box');
-                    $('#hitokotoAuthor').text('《'+r.data.origin.title+'》 - '+r.data.origin.dynasty+' - '+r.data.origin.author).show();
-                } else {
-                    let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
-                    hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
-                }
-                _.__tools.setDomHomePosition();
-            });
+            const keyName = "jinrishici-token";
+            let token = window.localStorage.getItem(keyName) || '';
+            if (token) {
+                getJinrishici(encodeURIComponent(token)).then(r => topTitleContent(r))
+            } else {
+                getJinrishiciToken().then(r => {
+                    window.localStorage.setItem(keyName, r.token)
+                    topTitleContent(r)
+                })
+            }
         }
-
     })();
 
     /**
