@@ -7,8 +7,7 @@
  * @describe: 主页处理
  */
 import postMeta from "../components/postMeta/postMeta";
-import {getJinrishici, getJinrishiciToken, getToken} from "../api";
-const jinrishici = require('jinrishici');
+import {getJinrishici, getJinrishiciToken} from "../api";
 
 export default function main(_) {
 
