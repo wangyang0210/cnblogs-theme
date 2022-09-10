@@ -2,9 +2,9 @@
 * 代码优化
 * 谷歌字体本地化
 * JS/CSS按需引入
-* 文章标题ICON优化
+* 文章标题字体图标展示优化
+* 文章标题字体图片配置调整
 * 引入`mo.js`,自定义鼠标点击和移动特效
-* 字体图标拆分[TODO]
 * 修复鼠标`bubble`特效BUG [#72](https://github.com/wangyang0210/cnblogs-theme/issues/72)
 
 # 2022.09.03 - v2.1.9

@@ -98,16 +98,15 @@ export default function main(_) {
      */
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
-        if (_.__config.articleContent.emoji && titleInfo.length > 0) {
-            // TODO iconfont JS拆分
-            import(/* webpackChunkName: "iconfont" */ '../../fonts/iconfont/iconfont');
+        if (_.__config.articleContent.iconfont.enable && titleInfo.length > 0) {
+            let type = _.__config.articleContent.iconfont.options.type;
+            import(/* webpackChunkName: "iconfont" */ `../../fonts/iconfont/iconfont-${type}`);
             titleInfo.html((i, c) => {
                 let arr = []
-                let num=Math.floor((Math.random()*(160-i))+i);
+                let num=Math.floor((Math.random()*(iconfontMap[type].length-i))+i);
                 if(arr.indexOf(num)==-1){
                     arr.push(num)
-                    // TODO 配置多个map
-                    $('<svg class="icon"> <use xlink:href="#icon-'+ iconfontMap.food[num] +'"></use></svg>').prependTo(titleInfo[i])
+                    $('<svg class="icon"> <use xlink:href="#icon-'+ iconfontMap[type][num] +'"></use></svg>').prependTo(titleInfo[i])
                 }else{
                     i--;
                 }
