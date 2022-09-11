@@ -48,25 +48,14 @@ export default function main(_) {
      * 背景动效
      */
     (() =>  {
-
-        if (_.__config.animate.background.season.enable) {
-            import(/* webpackChunkName: "background-season" */ '../background/season').then(module => {
-                let season = module.default;
-                season(_);
-            });
-        }
-
-        if (_.__config.animate.background.ribbons.enable) {
-            import(/* webpackChunkName: "background-ribbons" */ '../background/ribbonsEffect').then(module => {
-                new Ribbons(_.__config.animate.background.ribbons.options);
-            });
-        }
-
-        if (_.__config.animate.background.backgroundMouse.enable) {
-            import(/* webpackChunkName: "backaground-particles" */ '../background/particles').then(module => {
-                let particles = module.default;
-                particles(_);
-            });
+        let obj = _.__config.animate.background;
+        for (let key in obj) {
+            if (obj[key].enable) {
+                import(/* webpackChunkName: "background-[request]" */ `../background/${key}`).then(module => {
+                    let background = module.default;
+                    background(obj[key]?.options);
+                });
+            }
         }
     })();
 
@@ -75,18 +64,18 @@ export default function main(_) {
      */
     (() => {
 
-        if (_.__config.animate.mouseClick.enable) {
-            import(/* webpackChunkName: "mouse-click" */ `../mouse/click/${_.__config.animate.mouseClick.options.type}`).then(module => {
-                let mouseAnimation = module.default;
-                mouseAnimation(_)
+        if (_.__config.animate.mouse.enable) {
+            import(/* webpackChunkName: "mouse" */ `../mouse/${_.__config.animate.mouse.options.type}`).then(module => {
+                let mouse = module.default;
+                mouse(_)
             })
         }
 
         if (_.__config.animate.mouse.enable) {
-            import(/* webpackChunkName: "mouse" */ '../mouse/mouse').then(module => {
-                let mouse = module.default;
-                mouse(_);
-            });
+            // import(/* webpackChunkName: "mouse" */ '../mouse/mouse').then(module => {
+            //     let mouse = module.default;
+            //     mouse(_);
+            // });
         }
     })();
 

@@ -10,7 +10,7 @@ import particlesTemp from '../../template/particles.html';
 import TweenMax from '../../vendor/TweenMax/TweenMax.min';
 import '../../style/particles.css';
 
-export default function main(_) {
+export default function main(options) {
 
     // 添加模版
     $('#footer').after(particlesTemp);

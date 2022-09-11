@@ -20,11 +20,11 @@ export default function main(_) {
     canvas.style.bottom = '0';
     canvas.style.pointerEvents = 'none';
     let points = []
-    let live = _.__config.animate.mouseClick.options.bubble.live
-    let colors = _.__config.animate.mouseClick.options.bubble.colors
+    let live = _.__config.animate.mouse.options.bubble.live
+    let colors = _.__config.animate.mouse.options.bubble.colors
 
     window.addEventListener("mousemove", function (evt) {
-        for (let i = 0; i < _.__config.animate.mouseClick.options.bubble.quantity; i++) {
+        for (let i = 0; i < _.__config.animate.mouse.options.bubble.quantity; i++) {
             points.push({
                 sx: evt.x,
                 sy: evt.y,
@@ -32,7 +32,7 @@ export default function main(_) {
                 vy: 0.5 - Math.random(),
                 life: live, //存活周期
                 color: colors[parseInt(Math.random() * colors.length)],
-                size: Math.random() * _.__config.animate.mouseClick.options.bubble.size
+                size: Math.random() * _.__config.animate.mouse.options.bubble.size
             })
         }
     })

@@ -81,9 +81,7 @@ export default function main(_) {
                 }
                 circle.move()
             })
-            if (this.circles.length == 0) {
-                this.stop = true
-            }
+            if (this.circles.length == 0) this.stop = true
         }
 
         draw() {

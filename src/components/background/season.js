@@ -7,11 +7,11 @@
  * @describe: 可以自定义下落物品的背景特效
  */
 
-export default function main(_) {
+export default function main(options) {
     let SakuraList;
     let img = new Image();
-    img.src = _.__config.animate.background.season.options.img;
-    let size = _.__config.animate.background.season.options.size;
+    img.src = options.img;
+    let size = options.size;
 
     function Sakura(x, y, s, r, fn) {
         this.x = x;

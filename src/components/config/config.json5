@@ -194,8 +194,11 @@
           animateSections: true
         }
       },
-      backgroundMouse: {
-        enable: false
+      particles: {
+        enable: false,
+        options: {
+
+        }
       },
       season: {
         enable: false,

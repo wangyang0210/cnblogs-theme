@@ -94,9 +94,7 @@ export default function main(_) {
     window.addEventListener('mousedown', mousedown, false);
     window.addEventListener('touchstart', mousedown, false);
     window.addEventListener('touchmove', function (e) {
-        if (clicked) {
-            endY = e.touches[0].clientY || e.targetTouches[0].clientY;
-        }
+        if (clicked) endY = e.touches[0].clientY || e.targetTouches[0].clientY;
     }, false);
     window.addEventListener('touchend', mouseup, false);
     window.addEventListener('mouseup', mouseup, false);
