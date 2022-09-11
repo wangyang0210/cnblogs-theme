@@ -97,10 +97,10 @@ class Ribbons {
     random() {
         if (arguments.length === 1) {
             if (Array.isArray(arguments[0])) {
-                let index = Math.round(random(0, arguments[0].length - 1));
+                let index = Math.round(this.random(0, arguments[0].length - 1));
                 return arguments[0][index];
             }
-            return random(0, arguments[0]); // assume numeric
+            return this.random(0, arguments[0]); // assume numeric
         }
         if (arguments.length === 2) {
             return Math.random() * (arguments[1] - arguments[0]) + arguments[0];
@@ -160,7 +160,7 @@ class Ribbons {
 
     addRibbon() {
 
-        let dir = Math.round(random(1, 9)) > 5 ? "right" : "left",
+        let dir = Math.round(this.random(1, 9)) > 5 ? "right" : "left",
             stop = 1000,
             hide = 200,
             min = 0 - hide,
@@ -168,7 +168,7 @@ class Ribbons {
             movex = 0,
             movey = 0,
             startx = dir === "right" ? min : max,
-            starty = Math.round(random(0, this._height));
+            starty = Math.round(this.random(0, this._height));
 
         if (/^(top|min)$/i.test(this._options.verticalPosition)) starty = 0 + hide;
         if (/^(middle|center)$/i.test(this._options.verticalPosition)) starty = this._height / 2;
@@ -178,7 +178,7 @@ class Ribbons {
             point1 = new Point(startx, starty),
             point2 = new Point(startx, starty),
             point3 = null,
-            color = Math.round(random(0, 360)),
+            color = Math.round(this.random(0, 360)),
             delay = 0;
 
         while (true) {
@@ -292,11 +292,9 @@ class Ribbons {
             let ribbon = this._ribbons[a],
                 numSections = ribbon.length,
                 numDone = 0;
-
             for (let b = 0; b < numSections; ++b) {
                 if (this._drawRibbonSection(ribbon[b])) numDone++; // section done
             }
-
             if (numDone >= numSections) this._ribbons[a] = null;
         }
 
