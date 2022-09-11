@@ -71,7 +71,7 @@ export default function main(_) {
     })();
 
     /**
-     * 鼠标动效 || TODO mouse 特效集中处理
+     * 鼠标动效
      */
     (() => {
 
