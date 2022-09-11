@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcnblogs_theme=self.webpackChunkcnblogs_theme||[]).push([[5840],{50925:function(e,n,u){function s(e){new mojs.Burst({radius:{0:100}})}u.r(n),u.d(n,{default:function(){return s}})}}]);

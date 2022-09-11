@@ -65,10 +65,10 @@ export default function main(_) {
     (() => {
 
         if (_.__config.animate.mouse.enable) {
-            import(/* webpackChunkName: "mouse" */ `../mouse/${_.__config.animate.mouse.options.type}`).then(module => {
-                let mouse = module.default;
-                mouse(_)
-            })
+            // import(/* webpackChunkName: "mouse" */ `../mouse/${_.__config.animate.mouse.options.type}`).then(module => {
+            //     let mouse = module.default;
+            //     mouse(_)
+            // })
         }
 
         if (_.__config.animate.mouse.enable) {
