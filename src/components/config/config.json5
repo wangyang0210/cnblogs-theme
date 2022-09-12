@@ -227,6 +227,14 @@
           size: 8,
           sizeF: 36
         }
+      },
+      mo: {
+        enable: false,
+        options: {}
+      },
+      click: {
+        enable: false,
+        options: {}
       }
     },
     infoName: {
