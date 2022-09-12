@@ -907,7 +907,7 @@ window.cnblogsConfig = {
 }
 ```
 
-#### backgroundMouse - 背景动效
+#### particles - 背景动效
 
 ?> 版本 >= v2.0.8
 
@@ -926,7 +926,7 @@ window.cnblogsConfig = {
 window.cnblogsConfig = {
   animate: {
       background: {
-          backgroundMouse: {
+          particles: {
               enable: true,
           },
       }

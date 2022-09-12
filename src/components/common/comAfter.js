@@ -63,19 +63,14 @@ export default function main(_) {
      * 鼠标动效
      */
     (() => {
-
-        if (_.__config.animate.mouse.enable) {
-            // import(/* webpackChunkName: "mouse" */ `../mouse/${_.__config.animate.mouse.options.type}`).then(module => {
-            //     let mouse = module.default;
-            //     mouse(_)
-            // })
-        }
-
-        if (_.__config.animate.mouse.enable) {
-            // import(/* webpackChunkName: "mouse" */ '../mouse/mouse').then(module => {
-            //     let mouse = module.default;
-            //     mouse(_);
-            // });
+        let obj = _.__config.animate.mouse;
+        for (let key in obj) {
+            if (obj[key].enable) {
+                import(/* webpackChunkName: "mouse-[request]" */ `../mouse/${key}`).then(module => {
+                    let mouse = module.default;
+                    mouse(obj[key]?.options);
+                });
+            }
         }
     })();
 

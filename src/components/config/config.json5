@@ -209,24 +209,23 @@
       }
     },
     mouse: {
-      enable: false,
-      options: {
-        size: 8,
-        sizeF: 36
-      }
-    },
-    mouseClick: {
-      enable: false,
-      options: {
-        type: 'default',
-        bubble: {
+      bubble: {
+        enable: false,
+        options: {
           live: 30,
           colors: [
             "149, 197, 252",
             "224, 199, 252"
           ],
           quantity: 15,
-          size: 5,
+          size: 5
+        }
+      },
+      mouse: {
+        enable: false,
+        options: {
+          size: 8,
+          sizeF: 36
         }
       }
     },

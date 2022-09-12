@@ -6,7 +6,8 @@
  * ----------------------------------------------
  * @describe: 使用mo.js实现各种效果
  */
-export default function main(_) {
+import mojs from '@mojs/core'
+export default function main(options) {
     const burst = new mojs.Burst({
         radius: { 0: 100 }
     });

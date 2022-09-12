@@ -4,10 +4,10 @@
  * @author: WangYang, wangyang.0210@foxmail.com
  * @Date 2022-09-02 23:05
  * ----------------------------------------------
- * @describe: 鼠标移动汽包粒子
+ * @describe: 鼠标移动汽包粒子效果
  */
 
-export default function main(_) {
+export default function main(options) {
     let canvasElement = document.createElement('canvas');
     canvasElement.id = 'bubble';
     $('#home').after(canvasElement);
@@ -20,11 +20,11 @@ export default function main(_) {
     canvas.style.bottom = '0';
     canvas.style.pointerEvents = 'none';
     let points = []
-    let live = _.__config.animate.mouse.options.bubble.live
-    let colors = _.__config.animate.mouse.options.bubble.colors
+    let live = options.live
+    let colors = options.colors
 
     window.addEventListener("mousemove", function (evt) {
-        for (let i = 0; i < _.__config.animate.mouse.options.bubble.quantity; i++) {
+        for (let i = 0; i < options.quantity; i++) {
             points.push({
                 sx: evt.x,
                 sy: evt.y,
@@ -32,7 +32,7 @@ export default function main(_) {
                 vy: 0.5 - Math.random(),
                 life: live, //存活周期
                 color: colors[parseInt(Math.random() * colors.length)],
-                size: Math.random() * _.__config.animate.mouse.options.bubble.size
+                size: Math.random() * options.size
             })
         }
     })

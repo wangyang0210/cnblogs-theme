@@ -4,7 +4,7 @@
  * @author: WangYang, wangyang.0210@foxmail.com
  * @Date 2022-08-27 20:29
  * ----------------------------------------------
- * @describe: 默认鼠标点击特效
+ * @describe: 鼠标粒子点击特效
  */
 
 export default function main(_) {
