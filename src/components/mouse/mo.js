@@ -9,6 +9,14 @@
 import mojs from '@mojs/core'
 export default function main(options) {
     const burst = new mojs.Burst({
-        radius: { 0: 100 }
+        radius: { 0: 100 },
+        count: 5,
+        children: {
+            shape: 'polygon',
+            fill: { 'cyan' : 'yellow' },
+            radius: 20,
+            rotate: { 360: 0 },
+            duration: 2000
+        }
     });
 }
