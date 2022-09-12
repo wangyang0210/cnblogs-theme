@@ -19,4 +19,7 @@ export default function main(options) {
             duration: 2000
         }
     });
+    document.addEventListener( 'click', function (e) {
+        burst.replay();
+    });
 }
