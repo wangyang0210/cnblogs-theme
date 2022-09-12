@@ -20,6 +20,6 @@ export default function main(options) {
         }
     });
     document.addEventListener( 'click', function (e) {
-        burst.replay();
+        burst.tune({ x: e.pageX, y: e.pageY }).setSpeed(3).replay();
     });
 }
