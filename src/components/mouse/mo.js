@@ -7,6 +7,7 @@
  * @describe: 使用mo.js实现各种效果
  */
 import mojs from '@mojs/core'
+
 export default function main(options) {
     const burst = new mojs.Burst({
         radius: { 0: 100 },
@@ -20,6 +21,6 @@ export default function main(options) {
         }
     });
     document.addEventListener( 'click', function (e) {
-        burst.tune({ x: e.pageX, y: e.pageY }).setSpeed(3).replay();
+        burst.tune({ x: e.pageX, y: e.pageY }).replay();
     });
 }
