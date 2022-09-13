@@ -37,7 +37,7 @@ body {
 
 #links-box .links-item {
     background: #2a2a2a;
-    box-shadow: 0 4px 11px 0 rgb(0 0 0/20%),0 1px 3px 0 rgb(0 0 0/20%);
+    box-shadow: 0 1px 7px 2px #2a2a2a;
 }
 
 #links-box .links-item:hover {
