@@ -5,6 +5,7 @@
 * 文章标题字体图标展示优化
 * 文章标题字体图片配置调整
 * 鼠标特效配置聚合
+* gulp配置gzip压缩js
 * 背景特效`backgroundMouse`改为`particles`
 * 引入`mo.js`,自定义鼠标点击和移动特效
 * 修复鼠标`bubble`特效BUG [#72](https://github.com/wangyang0210/cnblogs-theme/issues/72)
