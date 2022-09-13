@@ -6,9 +6,11 @@
  * ----------------------------------------------
  * @describe: 使用mo.js实现各种效果
  */
-import mojs from '@mojs/core'
 
 export default function main(options) {
+
+    import(/* webpackChunkName: "mo" */ './lib/mo.umd');
+
     const burst = new mojs.Burst({
         left: 0, top: 0,
         radius:   { 0: 100 },
