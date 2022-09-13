@@ -12,15 +12,7 @@ export default function main(options) {
 
     const burst = new mojs.Burst({
         left: 0, top: 0,
-        radius:   { 0: 100 },
-        count:    5,
-        children: {
-            shape:      'polygon',
-            fill:       { 'cyan' : 'yellow' },
-            radius:     20,
-            rotate:      { 360: 0 },
-            duration:   2000
-        }
+       ...options
     });
 
     document.addEventListener( 'click', function (e) {

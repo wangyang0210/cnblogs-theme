@@ -230,7 +230,17 @@
       },
       mo: {
         enable: false,
-        options: {}
+        options: {
+          radius:   { 0: 100 },
+          count:    5,
+          children: {
+            shape:      'polygon',
+            fill:       { 'cyan' : 'yellow' },
+            radius:     20,
+            rotate:      { 360: 0 },
+            duration:   2000
+          }
+        }
       },
       click: {
         enable: false,
