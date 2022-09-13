@@ -33,6 +33,7 @@
     color: rgba(107,114,128,1);
     cursor:pointer;
     justify-self: center;
+    box-shadow: 0 1px 7px 2px #c7c9d3;
 }
 
 #links-box .links-item:hover {
