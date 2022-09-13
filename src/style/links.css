@@ -37,7 +37,7 @@
 }
 
 #links-box .links-item:hover {
-    box-shadow: 0 4px 11px 0 rgb(37 44 97 / 17%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+    transform: scale(1.04);
 }
 
 #links-box .links-item > img {
@@ -75,11 +75,6 @@
     display: block;
 }
 
-@-webkit-keyframes rotation {
-    from {-webkit-transform: rotate(0deg);}
-    to {-webkit-transform: rotate(360deg);}
-}
-
 #links-box .links-item .links-icon {
     width: 22px;
     height: 22px;
@@ -96,10 +91,8 @@
     -moz-animation: rotation 3s linear infinite;
     -webkit-animation: rotation 3s linear infinite;
     -o-animation: rotation 3s linear infinite;
-    /*--transform-rotate: 45deg;*/
-    /*transform: rotate(45deg);*/
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 #0000,0 0 #0000,var(--tw-shadow);
+    box-shadow: 0 1px 7px 2px #c7c9d3;
+    transition: .3s ease;
 }
 
 #links-box .links-item:nth-child(3n+0) .links-icon {
@@ -133,4 +126,9 @@
     top: 4px;
     left: 3px;
     font-size: 14px;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
 }
