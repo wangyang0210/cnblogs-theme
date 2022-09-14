@@ -1003,8 +1003,10 @@ window.cnblogsConfig = {
 ```
 
 
-### mouse - 背景动效
+### mouse - 鼠标动效
 
+
+#### mouse - mouse效果
 ?> 版本 >= v2.0.8
 
 * 类型：```Object```
@@ -1027,57 +1029,123 @@ window.cnblogsConfig = {
 ```javascript
 window.cnblogsConfig = {
   animate: {
-    mouse: {
-      enable: true,
-    },
+      mouse: {
+          mouse: {
+              enable: false,
+              options: {
+                  size: 8,
+                  sizeF: 36
+              }
+          },
+      },
   }
 }
 ```
 
-### mouseClick - 鼠标点击动效
+#### bubble - 鼠标移动粒子效果
 
-!> 切换效果只需更改`type`字段,目前支持`default`,`bubble`
+?> 版本 >= v2.1.9
 
-?> 版本 >= v2.1.6.1
+![bubble](../../Images/bubble.gif)
 
 * 类型：```Object```
 * 默认值：
 
-```json
-{
-  enable: false,
-  options: {
-    type: 'default',
-    bubble: {
-      live: 30, //存活周期
-      colors: [ //粒子颜色
-        "149, 197, 252",
-        "224, 199, 252"
-      ],
-      quantity: 15, //粒子数量
-      size: 5, // 粒子大小
-    }
-  }
-}
-```
-
-?> 版本 >= v2.1.9
-
-新增`bubble`效果
 
 ```javascript
 window.cnblogsConfig = {
   animate: {
-      mouseClick: {
-          enable: true,
-          options: {
-              type: 'bubble',
+      mouse: {
+          bubble: {
+              enable: false,
+              options: {
+                  live: 30,
+                  colors: [
+                      "149, 197, 252",
+                      "224, 199, 252"
+                  ],
+                  quantity: 15,
+                  size: 5
+              }
+          },
+          mo: {
+              enable: false,
+              options: {
+                  radius:   { "0": 100 },
+                  count:    5,
+                  children: {
+                      shape:      'polygon',
+                      fill:       { 'cyan' : 'yellow' },
+                      radius:     20,
+                      rotate:      { "360": 0 },
+                      duration:   2000
+                  }
+              }
+          },
+          click: {
+              enable: false,
+              options: {}
           }
-    },
+      },
   }
 }
 ```
-![umami](../../Images/bubble.gif)
+
+#### mo - 依赖于mo.js实现的鼠标点击效果
+
+具体的教程大家可以去官网查看[mo.js](https://mojs.github.io/)
+
+?> 版本 >= v2.2.0
+
+* 类型：```Object```
+* 默认值：
+
+```javascript
+window.cnblogsConfig = {
+  animate: {
+      mouse: {
+          mo: {
+              enable: false,
+              options: {
+                  radius:   { "0": 100 },
+                  count:    5,
+                  children: {
+                      shape:      'polygon',
+                      fill:       { 'cyan' : 'yellow' },
+                      radius:     20,
+                      rotate:      { "360": 0 },
+                      duration:   2000
+                  }
+              }
+          },
+      },
+  }
+}
+```
+
+
+#### click - 粒子炸开效果
+
+?> 版本 >= v2.2.0
+
+* 类型：```Object```
+* 默认值：
+
+* 类型：```Object```
+* 默认值：
+
+```javascript
+window.cnblogsConfig = {
+  animate: {
+      mouse: {
+          click: {
+              enable: false,
+              options: {}
+          }
+      },
+  }
+}
+```
 
 
 
