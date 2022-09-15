@@ -9,7 +9,7 @@
 * 背景特效`backgroundMouse`改为`particles`
 * 引入`mo.js`,自定义鼠标点击特效
 * 修复鼠标`bubble`特效BUG [#72](https://github.com/wangyang0210/cnblogs-theme/issues/72)
-* [TODO]文档更新
+* 文档更新
 
 # 2022.09.03 - v2.1.9
 * [#67](https://github.com/wangyang0210/cnblogs-theme/issues/67) 修复文章内容下不展示菜单
