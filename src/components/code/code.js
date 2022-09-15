@@ -28,8 +28,11 @@ export default function main(_) {
             pre.attr('boxid', boxId);
 
             // 增加语言标签
-            let lan = pre.find('code').attr('class').match(/.*(language-[a-zA-Z0-9]+)\s+.*/);
-            if (!!lan && lan.length > 0) pre.addClass(lan[1]);
+            // let codeClass = pre.find('code').attr('class');
+            // if (codeClass) {
+            //     let lan = codeClass.match(/.*(language-[a-zA-Z0-9]+)\s+.*/);
+            //     if (!!lan && lan.length > 0) pre.addClass(lan[1]);
+            // }
         });
     })();
 
