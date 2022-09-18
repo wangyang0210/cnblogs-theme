@@ -1202,26 +1202,7 @@ hljs: 使用 Highlighting 插件渲染代码高亮样式。
 
 只有 `code.type` 为 `hljs` 时，此配置才生效。
 
-* theme：代码高亮主题。
-
-```
-/** 所有可配置项
-default、a11y-dark、a11y-light、agate、an-old-hope、androidstudio、arduino-light、arta、ascetic
-、atelier-cave-dark、atelier-cave-light、atelier-dune-dark、atelier-dune-light、atelier-estuary-dark
-、atelier-estuary-light、atelier-forest-dark、atelier-forest-light、atelier-heath-dark
-、atelier-heath-light、atelier-lakeside-dark、atelier-lakeside-light、atelier-plateau-dark、atelier-plateau-light
-、atelier-savanna-dark、atelier-savanna-light、atelier-seaside-dark、atelier-seaside-light
-、atelier-sulphurpool-dark、atelier-sulphurpool-light、atom-one-dark-reasonable、atom-one-dark、atom-one-light
-、brown-paper、codepen-embed、color-brewer、darcula、dark、darkula、docco、dracula、far
-、foundation、github-gist、github、gml、googlecode、grayscale、gruvbox-dark、gruvbox-light、hopscotch
-、hybrid、idea、ir-black、isbl-editor-dark、isbl-editor-light、kimbie.dark、kimbie.light、lightfair
-、magula、mono-blue、monokai-sublime、monokai、nord、obsidian、ocean、paraiso-dark、paraiso-light、pojoaque
-、purebasic、qtcreator_dark、qtcreator_light、railscasts、rainbow、routeros、school-book、shades-of-purple
-、solarized-dark、solarized-light、sunburst、tomorrow-night-blue、tomorrow-night-bright
-、tomorrow-night-eighties、tomorrow-night、tomorrow、vs、vs2015、xcode、xt256、zenburn
-*/
-```
-
+* theme：代码高亮主题请访问 [官网](https://highlightjs.org/static/demo/#default) 查看主题名称及示例。
 * languages：语言识别范围，不配置默认不限制，[支持语言](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md)。
 
 ```javascript
@@ -1496,9 +1477,9 @@ window.cnblogsConfig = {
 ```javascript
 window.cnblogsConfig = {
     consoleList: [
-         ['BNDong CNBlogs', 'https://www.cnblogs.com/wangyang0210'],
-         ['BNDong GitHub', 'https://github.com/wangyang0210'],
-         ['BNDong Email', 'wangyang.0210@foxmail.com'],
+         ['wangyang CNBlogs', 'https://www.cnblogs.com/wangyang0210'],
+         ['wangyang GitHub', 'https://github.com/wangyang0210'],
+         ['wangyang Email', 'wangyang.0210@foxmail.com'],
     ],
 }
 ```

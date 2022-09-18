@@ -18,6 +18,7 @@ export default function main(options) {
     canvas.style.position = 'fixed';
     canvas.style.left = '0';
     canvas.style.bottom = '0';
+    canvas.style.zIndex = '999999999999999999999999999999999999999999'
     canvas.style.pointerEvents = 'none';
     let points = []
     let live = options.live
