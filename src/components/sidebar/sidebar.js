@@ -44,8 +44,6 @@ export default function main(_) {
         } else {
             $('.sidebar-title-msg').text($('.blogStats').text().trim().replace(/\n/g,''))
         }
-
-
     })();
 
     /**
@@ -61,7 +59,6 @@ export default function main(_) {
      */
     (() => {
         let timeout = 1000;
-
         // ------- 用户个人信息 -------
         _.__timeIds.introduceTId = window.setInterval(() => {
             let introduceHtml = $('#profile_block').html(),

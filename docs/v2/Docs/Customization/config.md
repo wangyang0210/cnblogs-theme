@@ -1131,9 +1131,6 @@ window.cnblogsConfig = {
 * 类型：```Object```
 * 默认值：
 
-* 类型：```Object```
-* 默认值：
-
 ```javascript
 window.cnblogsConfig = {
   animate: {
