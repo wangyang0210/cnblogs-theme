@@ -15,6 +15,8 @@ export default function main(options) {
        ...options
     });
 
+    burst.el.style.zIndex = 999999;
+
     document.addEventListener( 'click', function (e) {
         burst
             .tune({ x: e.pageX, y: e.pageY })
