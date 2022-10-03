@@ -115,6 +115,7 @@ export default function main(options) {
         canvas.width = window.innerWidth;
         canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
         canvas.setAttribute('id', 'canvas_sakura');
+        canvas.style.zIndex = '999999999999999999999999999999999999999999'
         document.getElementsByTagName('body')[0].appendChild(canvas);
         cxt = canvas.getContext('2d');
         let sakuraList = new SakuraList();

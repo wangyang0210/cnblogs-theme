@@ -1,5 +1,6 @@
 # 2022.09.17 - todo
 - bubble优先级调整
+- season优先级调整
 - mo.js优先级调整
 - 文章内容Id适配
 - mo.js移动端样式适配[TODO]
