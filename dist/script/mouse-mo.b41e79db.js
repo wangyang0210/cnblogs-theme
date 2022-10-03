@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcnblogs_theme=self.webpackChunkcnblogs_theme||[]).push([[4170],{50925:function(e,n,t){t.r(n),t.d(n,{default:function(){return s}});var c=t(22707),u=t.n(c);function s(e){const n=new(u().Burst)({left:0,top:0,...e});document.addEventListener("click",(function(e){n.tune({x:e.pageX,y:e.pageY}).setSpeed(3).replay()}))}}}]);
