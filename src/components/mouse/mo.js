@@ -14,13 +14,11 @@ export default function main(options) {
         left: 0, top: 0,
        ...options
     });
-
     burst.el.style.zIndex = 999999;
-
     document.addEventListener( 'click', function (e) {
         burst
             .tune({ x: e.pageX, y: e.pageY })
             .setSpeed(3)
-            .replay();
+            .replay()
     });
 }

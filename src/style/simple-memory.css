@@ -96,7 +96,8 @@
 html {
     height: 100%;
     font-size: 62.5%;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -107,7 +108,6 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     overflow-x: hidden !important;
-    overflow-y: auto !important;
 }
 
 table {
