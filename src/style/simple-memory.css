@@ -97,7 +97,7 @@ html {
     height: 100%;
     font-size: 62.5%;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 body {
@@ -108,6 +108,7 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     overflow-x: hidden !important;
+    /*position: relative;*/
 }
 
 table {
@@ -4034,6 +4035,9 @@ table#blogCalendar > tbody > tr > td > a {
 }
 
 @media only screen and (max-width: 720px) {
+    body {
+        position: relative;
+    }
     #cnblogs_post_body > p {
         padding: 0 10px;
         font-size: 1em;
