@@ -39,12 +39,6 @@ export default function main(_) {
 
         // ------- 设置侧边栏信息 -------
         $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
-        // if (_.__config.sidebar?.titleMsg) {
-        //     $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
-        //     $('.sidebar-header i').show()
-        // } else {
-        //     $('.sidebar-title-msg').text($('.blogStats').text().trim().replace(/\n/g,''))
-        // }
     })();
 
     /**
@@ -73,9 +67,10 @@ export default function main(_) {
         // ------- 博客统计 -------
         if(_.__config.sidebar.blogStatus) {
             _.__timeIds.blogStatsTId = window.setInterval(() => {
-                let blogStats = $('.blogStats'), menuBlogStats = $('.sidebar-stats');
+                let blogStats   = $('.blogStats'), menuBlogStats  = $('.sidebar-stats');
                 if (blogStats.length > 0) {
-                    menuBlogStats.text(_.__tools.htmlFiltrationScript(blogStats.text().trim().replace(/\n/g,''))).show();
+                    menuBlogStats.html(_.__tools.htmlFiltrationScript(blogStats.html())).show();
+                    blogStats.html('')
                     _.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
                 }
             }, timeout);
