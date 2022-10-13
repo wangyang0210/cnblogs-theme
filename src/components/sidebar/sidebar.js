@@ -73,10 +73,9 @@ export default function main(_) {
         // ------- 博客统计 -------
         if(_.__config.sidebar.blogStatus) {
             _.__timeIds.blogStatsTId = window.setInterval(() => {
-                let blogStats   = $('.blogStats'), menuBlogStats  = $('.sidebar-stats');
+                let blogStats = $('.blogStats'), menuBlogStats = $('.sidebar-stats');
                 if (blogStats.length > 0) {
-                    menuBlogStats.html(_.__tools.htmlFiltrationScript(blogStats.html())).show();
-                    blogStats.html('')
+                    menuBlogStats.text(_.__tools.htmlFiltrationScript(blogStats.text().trim().replace(/\n/g,''))).show();
                     _.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
                 }
             }, timeout);
