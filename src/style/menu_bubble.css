@@ -402,6 +402,16 @@ body{
 .container .menu-wrap .sidebar-userinfo>a {
     display: contents;
 }
+.container .menu-wrap .sidebar-stats {
+    display: none;
+    text-align: center;
+    color: #999;
+    padding: 5px 0;
+}
+
+.container .menu-wrap .sidebar-search, .container .menu-wrap .sidebar-stats {
+    border-top: 1px solid rgba(255,255,255,.1);
+}
 .container .menu-wrap .sidebar-search {
     border-top: 1px solid rgba(255,255,255,.1);
 }

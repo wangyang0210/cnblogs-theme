@@ -186,14 +186,27 @@ window.cnblogsConfig = {
 ?> 版本 >= v2.1.0
 
 * 类型：```String```
-* 默认值：```"随笔 - 475  文章 - 3  评论 - 226  阅读 - 85万"```
-
-配置侧边栏title信息,默认值为博客状态
+* 默认值：```"欢迎访问本博客"```
 
 ```javascript
 window.cnblogsConfig = {
   sidebar: {
       titleMsg: '欢迎访问本博客~',
+  },
+}
+```
+
+### blogStatus - 博客状态信息
+
+?> 版本 >= v2.2.4
+
+* 类型：```Boolean```
+* 默认值： true
+
+```javascript
+window.cnblogsConfig = {
+  sidebar: {
+      titleMsg: true,
   },
 }
 ```

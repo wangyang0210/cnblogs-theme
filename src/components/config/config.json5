@@ -21,6 +21,7 @@
     customList: {},
     infoBackground: '',
     titleMsg: '欢迎访问本博客~',
+    blogStatus: true,
     submenu: {
       // 积分排行
       pointsRank: false,

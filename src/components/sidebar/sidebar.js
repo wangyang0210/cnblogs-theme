@@ -38,12 +38,13 @@ export default function main(_) {
         $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
-        if (_.__config.sidebar?.titleMsg) {
-            $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
-            $('.sidebar-header i').show()
-        } else {
-            $('.sidebar-title-msg').text($('.blogStats').text().trim().replace(/\n/g,''))
-        }
+        $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
+        // if (_.__config.sidebar?.titleMsg) {
+        //     $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
+        //     $('.sidebar-header i').show()
+        // } else {
+        //     $('.sidebar-title-msg').text($('.blogStats').text().trim().replace(/\n/g,''))
+        // }
     })();
 
     /**
@@ -68,6 +69,18 @@ export default function main(_) {
                 _.__tools.clearIntervalTimeId(_.__timeIds.introduceTId);
             }
         }, timeout);
+
+        // ------- 博客统计 -------
+        if(_.__config.sidebar.blogStatus) {
+            _.__timeIds.blogStatsTId = window.setInterval(() => {
+                let blogStats   = $('.blogStats'), menuBlogStats  = $('.sidebar-stats');
+                if (blogStats.length > 0) {
+                    menuBlogStats.html(_.__tools.htmlFiltrationScript(blogStats.html())).show();
+                    blogStats.html('')
+                    _.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
+                }
+            }, timeout);
+        }
 
         // ------- 日历 -------
         _.__timeIds.calendarTId = window.setInterval(() => {
