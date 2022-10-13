@@ -43,7 +43,7 @@ window.cnblogsConfig = {
 }
 ```
 
-![umami](../../Images/umami.gif)
+![umami](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/Cnblogs-Theme/docs/v2/Images/umami.gif)
 
 
 
