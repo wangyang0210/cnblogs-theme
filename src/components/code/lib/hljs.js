@@ -13,6 +13,7 @@ export default function main(_, setCodeLine) {
 
     import(/* webpackChunkName: "hljs/[request]" */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
         let code  = $('code-box pre code');
+
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
             'idea', 'isbl-editor-light', 'qtcreator_light',
