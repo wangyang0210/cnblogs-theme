@@ -62,13 +62,6 @@ export default function main(_) {
     })();
 
     /**
-     * 设置网站统计地址
-     */
-    (() => {
-        if (_.__config.cnzz) footerHtml = _.__tools.tempReplacement(footerHtml, 'cnzzId', _.__config.cnzz);
-    })();
-
-    /**
      * 添加页脚
      */
     (() => {
@@ -113,25 +106,6 @@ export default function main(_) {
      * 定时网站统计
      */
     (() => {
-        if (_.__config.cnzz) {
-            _.__timeIds.cnzzTId = window.setInterval(() => {
-                let cnzzStat = $('.id_cnzz_stat_icon a');
-                if (cnzzStat.length > 0) {
-                    let cnzzInfo = [];
-                    let cnzzArr = $(cnzzStat[1]).text().split('|');
-                    $.each(cnzzArr, (i) => {
-                        let str = cnzzArr[i].trim();
-                        if (str !== '') {
-                            str = str.replace('今日', 'Today').replace('昨日', 'Yesterday').replace('[', ':').replace(']', '');
-                            cnzzInfo.push(str)
-                        }
-                    });
-                    cnzzInfo.push($(cnzzStat[2]).text().replace('当前在线', 'Online').replace('[', ':').replace(']', ''));
-                    $('#cnzzInfo').text(cnzzInfo.join(' | ')).show();
-                    _.__tools.clearIntervalTimeId(_.__timeIds.cnzzTId);
-                }
-            }, 1000);
-        }
 
         if (_.__config.umami?.url && _.__config.umami?.shareId) {
             const baseUrl = _.__config.umami.url

@@ -123,9 +123,6 @@
     page: []
   },
 
-  // -- cnzz --
-  cnzz: '',
-
   // -- umami --
   umami: {
     url: '',
