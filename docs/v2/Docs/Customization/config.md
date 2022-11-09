@@ -1497,20 +1497,6 @@ window.cnblogsConfig = {
 }
 ```
 
-## cnzz - 网站统计
-
-* 类型：```String```
-* 相关文档：[网站统计](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/statistical)
-* 默认值：```""```
-
-cnzzId
-
-```javascript
-window.cnblogsConfig = {
-    cnzz: "123456",
-}
-```
-
 ## umami - 网站统计
 
 * 类型：```Object```
