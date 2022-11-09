@@ -1,9 +1,10 @@
-const path = require('path');
-const json5 = require('json5');
-const terserPlugin = require("terser-webpack-plugin");
-const fileManagerPlugin = require('filemanager-webpack-plugin');
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const cssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const path = require('path')
+const json5 = require('json5')
+const terserPlugin = require("terser-webpack-plugin")
+const fileManagerPlugin = require('filemanager-webpack-plugin')
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 /**
  * 随机字符串
@@ -31,6 +32,10 @@ module.exports = {
         clean: true,
     },
     plugins: [
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'disabled',
+            generateStatsFile: true,
+        }),
         new fileManagerPlugin({
             events: {
                 onEnd: {

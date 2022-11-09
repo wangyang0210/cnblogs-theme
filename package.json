@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "analyz": "webpack --profile --json > stats.json && webpack-bundle-analyzer --port 9090 ./dist/stats.json"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "style-loader": "^2.0.0",
     "toml": "^3.0.0",
     "webpack": "^5.24.4",
+    "webpack-bundle-analyzer": "^4.7.0",
     "webpack-cli": "^4.5.0",
     "yamljs": "^0.3.0"
   },
