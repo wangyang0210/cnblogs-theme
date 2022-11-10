@@ -1366,22 +1366,15 @@ window.cnblogsConfig = {
 }
 ```
 
-!> 版本 >= v2.2.0 配置进行了调整
+!> 版本 >= v2.2.3 配置进行了调整
 
 * 类型：```Boolean```
 * 默认值：```Object```
 
-> type共有 `foods`, `dessert`, `fruit`, `vegetable`,`defaults`五种
-
 ```javascript
 window.cnblogsConfig = {
     articleContent: {
-        iconfont: {
-            enable: false,
-            options: {
-                type: 'defaults'
-            }
-        }
+        iconfont: false
     },
 }
 ```
