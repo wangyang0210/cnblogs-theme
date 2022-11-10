@@ -74,7 +74,7 @@ export default function main(_) {
      * 添加扩展字体图标库
      */
     (() => {
-        if (_.__config.fontIconExtend !== '') _.__tools.dynamicLoadingCss(_.__config.fontIconExtend);
+        if (_.__config.fontIconExtend !== '') _.__tools.dynamicLoadingCss(_.__config.fontIconExtend, 1);
     })();
 
     /**

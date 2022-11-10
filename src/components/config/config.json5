@@ -299,12 +299,7 @@
   // -- 文章内容效果
   articleContent: {
     link: false,
-    iconfont: {
-      enable: false,
-      options: {
-        type: 'defaults'
-      }
-    }
+    iconfont: false
   },
 
   // -- 钩子 --

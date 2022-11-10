@@ -6,9 +6,8 @@
  * ----------------------------------------------
  * @describe: 文章信息处理
  */
-import postMeta from "../../components/postMeta/postMeta";
-import consoleText from "../../vendor/consoleText/consoleText";
-import iconfontMap from "./lib/iconfontMap";
+import postMeta from "../../components/postMeta/postMeta"
+import consoleText from "../../vendor/consoleText/consoleText"
 
 export default function main(_) {
 
@@ -98,15 +97,31 @@ export default function main(_) {
      */
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
-        if (_.__config.articleContent.iconfont.enable && titleInfo.length > 0) {
-            let type = _.__config.articleContent.iconfont.options.type;
-            import(/* webpackChunkName: "iconfont" */ `../../fonts/iconfont/iconfont-${type}`);
+        if (_.__config.articleContent.iconfont && titleInfo.length > 0) {
+            import(/* webpackChunkName: "iconfont-symbol" */ '//at.alicdn.com/t/c/font_3628204_br29bzmhrps.js');
+            let iconfonts = [
+                'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
+                'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
+                'banji','danta','qingning','lajiao','shizi','mojituo','pijiu','putaojiu','kouxiangtang','xiangcaobingqilin',
+                'jiaozi','tilamisu','huoguo','hongshu','bingkuai','mianhuatang','paobing','meishikafei','mantou','qishui',
+                'ganlan','jiroujuan','guodong','baozi','pingguo','chengzi','qingjiao','jidan','xihongshi','mangguo','baocai',
+                'niunai','mianbao','huluobu','zhangyu','pangxie','longxia','yangcong','rou','jitui','huage','xianyu','mogu',
+                'qiezi','xilanhua','ningmeng','liulian','banli','sanwenyu','tudou','xigua','nangua','huolongguo','fantuan',
+                'zhusun','shuiluobu','shanzhu','lanmei','shiliu','yezi','tiangua','mihoutao','boluo','kaixinguo','hetao',
+                'xiaweiyiguo','huasheng','bigenguo','kuihuazi','songzi','xiguazi','badanmu','yaoguo','danhuangsu','dangao',
+                'binggan','buding','tangguo','qiaokeli','hongzao','candou','putaogan','manyuemei','taozi','xiangjiao','caomei',
+                'niuyouguo','hamigua','chelizi','li','bale','kafei1','shutiao','zhenzhunaicha','xuegao','nailao','kele','tiantong',
+                'hanbao','xiezishousi','baomihua','regou','makalong','tianfuluo','juzi','baixiangguo','putao','shaomai','yumi','pipa',
+                'yangtao','youzi','lianwu','wuhuaguo','paomian','wandou','huanggua','suantou','tiantianquan','shupian','huafubing',
+                'bangbangtang','shousi','lizhi','doufu','mocha','boluomi','zhouzi','bingsha','suannai','pisa','haixing','haizhe',
+                'tongluoshao','nuomici','kuangquanshui','roujiamo','cha','zhangyuxiaowanzi','chengzhi','yuancaitou','baicai'
+            ]
             titleInfo.html((i, c) => {
                 let arr = []
-                let num=Math.floor((Math.random()*(iconfontMap[type].length-i))+i);
+                let num=Math.floor((Math.random()*(iconfonts.length-i))+i);
                 if(arr.indexOf(num)==-1){
                     arr.push(num)
-                    $('<svg class="icon"> <use xlink:href="#icon-'+ iconfontMap[type][num] +'"></use></svg>').prependTo(titleInfo[i])
+                    $('<svg class="icon"> <use xlink:href="#icon-'+ iconfonts[num] +'"></use></svg>').prependTo(titleInfo[i])
                 }else{
                     i--;
                 }
@@ -115,7 +130,7 @@ export default function main(_) {
     })();
 
     /**
-     * 设置文章引用
+     * 设置文章引用 | 扩展markdown语法
      */
     (() => {
         $(".blogpost-body p").html((i,c) => {
