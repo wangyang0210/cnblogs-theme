@@ -98,7 +98,6 @@ export default function main(_) {
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
         if (_.__config.articleContent.iconfont && titleInfo.length > 0) {
-            import(/* webpackChunkName: "iconfont-symbol" */ '//at.alicdn.com/t/c/font_3628204_br29bzmhrps.js');
             let iconfonts = [
                 'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
                 'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
