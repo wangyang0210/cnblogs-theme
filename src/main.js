@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 主程序文件
  */
-import _ from 'lodash';
+import _ from 'lodash/core';
 import config from './components/config/config';
 import status from "./components/status/status";
 import tools from './utils/tools';

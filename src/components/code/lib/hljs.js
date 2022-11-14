@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: hljs渲染代码
  */
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/common';
 
 export default function main(_, setCodeLine) {
     let theme = _.__config.code.options.hljs.theme.toLowerCase();
