@@ -10,8 +10,6 @@ import sidebarTemp from '../../template/sidebar.html';
 import navTemp from '../../template/sidebarNav.html';
 import '../../style/menu_bubble.css';
 import main4 from './lib/main4';
-import defaultAvatarImg from './../../images/default_avatar.webp';
-import defaultSidebarBgImg from './../../images/sidebar_bg_4.webp';
 
 export default function main(_) {
 
@@ -34,7 +32,7 @@ export default function main(_) {
         $('.sidebar-footer').html(navHtml);
 
         // ------- 设置头像 -------
-        let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : defaultAvatarImg;
+        let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp';
         $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
@@ -45,7 +43,7 @@ export default function main(_) {
      * 设置菜单个人信息背景图片
      */
     (() => {
-        let mbg = _.__config.sidebar.infoBackground ? _.__config.sidebar.infoBackground : defaultSidebarBgImg;
+        let mbg = _.__config.sidebar.infoBackground ? _.__config.sidebar.infoBackground : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114135508_sidebar_bg_2.webp';
         $('.container .menu-wrap').css('background-image', 'url(\''+mbg+'\')');
     })();
 

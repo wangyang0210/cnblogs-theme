@@ -6,7 +6,6 @@
  * ----------------------------------------------
  * @describe: 评论处理
  */
-import defaultAvatarImg from './../../images/default_avatar.webp';
 
 export default function main(_) {
     let setComment = () => {
@@ -26,7 +25,7 @@ export default function main(_) {
 
                     if ($.isArray(idTmp)) id = idTmp.join('');
 
-                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim() : defaultAvatarImg;
+                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim() : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp';
 
                     let ac = $('#a_comment_author_' + id), ah = ac.length ? ac.attr('href') : 'javascropt:void(0);';
 

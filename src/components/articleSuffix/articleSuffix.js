@@ -8,12 +8,11 @@
  */
 import "../../style/articleSuffix.css";
 import suffixTemp from '../../template/articleSuffix.html';
-import defaultAvatarImg from './../../images/default_avatar.webp';
 
 export default function main(_) {
 
     // 图片
-    let imgUrl  = _.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, _.__config.info.avatar, defaultAvatarImg )
+    let imgUrl  = _.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, _.__config.info.avatar, 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp' )
 
     // 本文作者 & 本文链接
     let articleAuthor = $('#articleAuthor');

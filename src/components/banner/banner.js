@@ -7,8 +7,6 @@
  * @describe: banner背景图片处理
  */
 import bannerTemp from '../../template/banner.html';
-import homeTopBg from "../../images/home_top_bg.webp";
-import netHomeTopBg from "../../images/nothome_top_bg.webp";
 
 export default function main(_) {
 
@@ -24,9 +22,9 @@ export default function main(_) {
 
         // 设置图片
         if (_.__status.pageType === 'home') {
-            topImg = _.__config.banner.home.background.length > 0 ? _.__config.banner.home.background : [homeTopBg];
+            topImg = _.__config.banner.home.background.length > 0 ? _.__config.banner.home.background : ['https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053600_wallhaven-6k3oox.webp'];
         }  else {
-            topImg = _.__config.banner.article.background.length > 0 ? _.__config.banner.article.background : [netHomeTopBg];
+            topImg = _.__config.banner.article.background.length > 0 ? _.__config.banner.article.background : [	'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053937_wallhaven-j5mz95.webp'];
             height = '40vh';
             $('#homeTopTitle').hide();
             $('.scroll-down').hide();
