@@ -27,11 +27,11 @@
 }
 
 #particles .particles-layer--2 {
-    background-image: url('../images/bg-pattern-2.svg')
+    background-image: url('https://files.cnblogs.com/files/wangyang0210/bg-pattern-2.svg?t=1668434807')
 }
 
 #particles .particles-layer--3 {
-    background-image: url('../images/bg-pattern-3.svg')
+    background-image: url('https://files.cnblogs.com/files/wangyang0210/bg-pattern-3.svg?t=1668477698')
 }
 
 @media (max-width: 767px) {
