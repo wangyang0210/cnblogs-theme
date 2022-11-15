@@ -10,8 +10,6 @@ import loading from "../loading/loading";
 import sidebar from "../sidebar/sidebar";
 import banner from "../banner/banner";
 import event from "../event/event";
-// import "../../images/rss.webp";
-// import "../../style/asset.css";
 import "../../vendor/rotate/jquery.rotate.min"
 
 export default function main(_) {
