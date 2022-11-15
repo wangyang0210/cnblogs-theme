@@ -14,11 +14,10 @@ import request from '../utils/request';
  * @param {string} url 请求地址
  * @return {*}
  */
-export function getConfigInfo (baseUrl, url) {
+export function getConfigInfo (url) {
     return request({
         url: url,
         method: 'GET',
-        requestBaseUrl: baseUrl
     })
 }
 
@@ -29,12 +28,11 @@ export function getConfigInfo (baseUrl, url) {
  * @param {object} params 请求参数
  * @return {*}
  */
-export function getWebSiteState (baseUrl, url, params) {
+export function getWebSiteState (url, params) {
     return request({
         url: url,
         method: 'GET',
         params: params,
-        requestBaseUrl: baseUrl
     })
 }
 
@@ -44,10 +42,10 @@ export function getWebSiteState (baseUrl, url, params) {
  * @param {string} url 请求地址
  * @return {*}
  */
-export function getOnline (baseUrl, url) {
+export function getOnline (url) {
     return request({
         url: url,
-        requestBaseUrl: baseUrl
+        method: 'GET',
     })
 }
 
@@ -57,7 +55,8 @@ export function getOnline (baseUrl, url) {
  */
 export function getJinrishiciToken () {
     return request({
-        requestBaseUrl: 'https://v2.jinrishici.com/one.json?client=npm-sdk/1.0'
+        url: 'https://v2.jinrishici.com/one.json?client=npm-sdk/1.0',
+        method: 'GET',
     })
 }
 
@@ -67,7 +66,8 @@ export function getJinrishiciToken () {
  */
 export function getJinrishici (token) {
     return request({
-        requestBaseUrl: `https://v2.jinrishici.com/one.json?client=npm-sdk/1.0&X-User-Token=${token}`
+        url: `https://v2.jinrishici.com/one.json?client=npm-sdk/1.0&X-User-Token=${token}`,
+        method: 'GET',
     })
 }
 

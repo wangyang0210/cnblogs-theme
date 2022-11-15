@@ -106,11 +106,11 @@ export default function main(_) {
         if (_.__config.umami?.url && _.__config.umami?.shareId) {
             const baseUrl = _.__config.umami.url
             _.__timeIds.umamiTId = window.setInterval(() => {
-                getConfigInfo(baseUrl, `api/share/${_.__config.umami.shareId}`).then( r => {
+                getConfigInfo(`${baseUrl}api/share/${_.__config.umami.shareId}`).then( r => {
                     Promise.all([
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getTodayStart(),'end_at': _.__tools.getTodayEnd()}),
-                        getWebSiteState(baseUrl, `api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getYesterdayStart(),'end_at': _.__tools.getYesterdayEnd()}),
-                        getOnline(baseUrl, `api/website/${r.websiteId}/active`)])
+                        getWebSiteState(`${baseUrl}api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getTodayStart(),'end_at': _.__tools.getTodayEnd()}),
+                        getWebSiteState(`${baseUrl}api/website/${r.websiteId}/stats`, {'start_at': _.__tools.getYesterdayStart(),'end_at': _.__tools.getYesterdayEnd()}),
+                        getOnline(`${baseUrl}api/website/${r.websiteId}/active`)])
                         .then(function (results) {
                             const todayState = results[0]
                             const yesterdayState = results[1]
