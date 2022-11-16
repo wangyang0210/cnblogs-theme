@@ -12,6 +12,7 @@ gulp.task('minify-css', function () {
 gulp.task('minify-style', function () {
     return gulp.src('dist/style/*.css')
         .pipe(cleanCSS())
+        .pipe(gzip())
         .pipe(gulp.dest('./dist/style/'));
 });
 
