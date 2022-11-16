@@ -7,7 +7,7 @@
  * @describe: 主页处理
  */
 import postMeta from "../components/postMeta/postMeta";
-import {getJinrishici, getJinrishiciToken} from "../api";
+import {request} from "../utils/request";
 
 export default function main(_) {
 
@@ -52,7 +52,7 @@ export default function main(_) {
         let topTitleList = [ '当你凝视深渊时，深渊也在凝视着你。', '有的人25岁就死了，只是到75岁才埋葬'];
 
         function topTitleContent(r) {
-            if (r?.status === "success" || r.errno === 0) {
+            if (r?.status === "success") {
                 let note = r?.note || r.data.content;
                 let content = r?.content || `《${r.data.origin.title}》 - ${r.data.origin.dynasty} - ${r.data.origin.author}`;
                 hitokoto.html(note).css('display', '-webkit-box');
@@ -64,25 +64,8 @@ export default function main(_) {
             _.__tools.setDomHomePosition();
         }
 
-        if (_.__config.banner.home.titleSource === 'one') {
-            _.__tools.getJsonp().then(r => {
-                topTitleContent(r)
-                return false;
-            })
-        }
-
-        if (_.__config.banner.home.titleSource === 'jinrishici') {
-            const keyName = "jinrishici-token";
-            let token = window.localStorage.getItem(keyName) || '';
-            if (token) {
-                getJinrishici(encodeURIComponent(token)).then(r => topTitleContent(r))
-            } else {
-                getJinrishiciToken().then(r => {
-                    window.localStorage.setItem(keyName, r.token)
-                    topTitleContent(r)
-                })
-            }
-        }
+        if (_.__config.banner.home.titleSource === 'one') request('https://api.wangyangyang.vip/').then(r =>  topTitleContent(r))
+        if (_.__config.banner.home.titleSource === 'jinrishici')  request('https://v2.jinrishici.com/one.json').then(r =>  topTitleContent(r))
     })();
 
     /**

@@ -8,14 +8,15 @@
  */
 
 export async function request(url = '', method = 'GET', data = {}) {
-    const response = await fetch(url, {
+    let options = {
         method: method,
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        mode: 'cors',
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data),
-    })
+    }
+    if(Object.keys(data).length) {
+        options.body=JSON.stringify(data)
+    }
+    const response = await fetch(url, options)
     return response.json()
 }

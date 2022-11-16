@@ -55,26 +55,6 @@ export default function main() {
         },
 
         /**
-         * jsonp跨域请求
-         * @param {string} url 请求地址
-         * @return {Promise<unknown>}
-         */
-        getJsonp: (url = `https://sentence.iciba.com/index.php?callback=onecallback&c=dailysentence&m=getdetail&title=2022-07-25lback&c=dailysentence&m=getdetail&title=${moment().format('YYYY-MM-DD')}`) => {
-            return new Promise(resolve => {
-                window.jsonCallBack = (result) => {
-                    resolve(result)
-                }
-                let JSONP = document.createElement("script");
-                JSONP.type = "text/javascript";
-                JSONP.src = `${url}&callback=jsonCallBack`;
-                document.getElementsByTagName("head")[0].appendChild(JSONP);
-                setTimeout(() => {
-                    document.getElementsByTagName("head")[0].removeChild(JSONP)
-                }, 500)
-            })
-        },
-
-        /**
          * 三元运算嵌套拆解
          */
         ternaryOperation: (var1, var2, var3) => {
