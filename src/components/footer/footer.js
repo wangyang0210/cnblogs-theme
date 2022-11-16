@@ -8,7 +8,6 @@
  */
 import footerTemp from '../../template/footer.html';
 import {request} from "../../utils/request";
-import {getConfigInfo, getOnline, getWebSiteState} from "../../api";
 
 export default function main(_) {
 

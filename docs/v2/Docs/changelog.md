@@ -4,6 +4,7 @@
 - iconfont使用CDN资源
 - 更新文档备用地址
 - 谷歌字体适用CDN资源
+- 使用fetch代替request
 
 # 2022.09.17 - v2.2.3
 - bubble优先级调整
