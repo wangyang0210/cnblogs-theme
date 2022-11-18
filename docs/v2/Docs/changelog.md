@@ -5,7 +5,7 @@
 - 更新文档备用地址
 - 谷歌字体适用CDN资源
 - 使用fetch代替request
-- 编译统一使用webpack | TODO 
+- 编译统一使用webpack
 
 # 2022.09.17 - v2.2.3
 - bubble优先级调整

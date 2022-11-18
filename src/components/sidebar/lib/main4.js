@@ -8,7 +8,7 @@
  */
 import cla from './classie';
 import Snap from 'snapsvg-cjs';
-import optiscroll from 'optiscroll';
+import optiscroll from 'optiscroll/dist/optiscroll.min';
 import 'optiscroll/dist/optiscroll.css'
 
 export default function main() {
