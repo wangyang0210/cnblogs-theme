@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 代码高亮处理
  */
-import ClipboardJS from "clipboard";
+import ClipboardJS from "clipboard/dist/clipboard.min";
 import beforeCode from "../../hooks/beforeCode";
 import afterCode from "../../hooks/afterCode";
 

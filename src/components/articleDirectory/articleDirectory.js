@@ -8,7 +8,7 @@
  */
 import "../../style/articleDirectory.css";
 import articleDirectoryTemp from '../../template/articleDirectory.html';
-import "bootstrap";
+import "bootstrap/dist/js/bootstrap.min";
 
 export default function main(_) {
     let body     = $('body');
