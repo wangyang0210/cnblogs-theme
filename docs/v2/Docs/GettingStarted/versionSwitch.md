@@ -21,7 +21,7 @@
 变为
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.1/dist/simpleMemory" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.1/dist/simpleMemory.js" defer></script>
 ```
 
 版本变更： `v2.0.0` >>> `v2.0.1` 

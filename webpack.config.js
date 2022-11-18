@@ -1,26 +1,11 @@
 const path = require('path')
 const json5 = require('json5')
 const terserPlugin = require("terser-webpack-plugin")
-const fileManagerPlugin = require('filemanager-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const CompressionPlugin = require("compression-webpack-plugin")
 
-/**
- * 随机字符串
- * @param len
- * @returns {string}
- */
-function randomString(len) {
-    len = len || 32;
-    let $chars = 'abcdefhijkmnprstwxyz23456789';
-    let maxPos = $chars.length;
-    let pwd = '';
-    for (let i = 0; i < len; i++) {
-        pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
-    }
-    return pwd;
-}
 
 module.exports = {
     mode: 'development',
@@ -36,20 +21,10 @@ module.exports = {
             analyzerMode: 'disabled',
             generateStatsFile: true,
         }),
-        new fileManagerPlugin({
-            events: {
-                onEnd: {
-                    copy: [
-                        { source: './dist/simple-memory.js', destination: './dist/simple-memory.' + randomString(8) + '.js' },
-                    ],
-                }
-            }
-        }),
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
             chunkFilename:'style/[name].[contenthash:8].css',
             ignoreOrder: true
-
         }),
     ],
     // devtool: 'inline-source-map',
@@ -57,9 +32,17 @@ module.exports = {
         minimize: true,
         minimizer: [
             new terserPlugin({
+                parallel: true,
                 extractComments: false,
             }),
             new cssMinimizerPlugin(),
+            new CompressionPlugin({
+                algorithm: 'gzip',
+                test: /\.js$|\.html$|\.css$/,
+                minRatio: 1,
+                threshold: 10240,
+                deleteOriginalAssets: false,
+            })
         ],
     },
     module: {
