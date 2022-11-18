@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./Images/simple1.webp" />
+<img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/simple.webp" />
 
 <br>
 
