@@ -3,7 +3,7 @@ const json5 = require('json5')
 const terserPlugin = require("terser-webpack-plugin")
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionPlugin = require("compression-webpack-plugin")
 
 
@@ -17,10 +17,10 @@ module.exports = {
         clean: true,
     },
     plugins: [
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'disabled',
-            generateStatsFile: true,
-        }),
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode: 'disabled',
+        //     generateStatsFile: true,
+        // }),
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
             chunkFilename:'style/[name].[contenthash:8].css',
