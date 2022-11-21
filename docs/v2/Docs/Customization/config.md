@@ -534,11 +534,11 @@ window.cnblogsConfig = {
 
 style: 1
 
-![footer_01](../../Images/footer_01.png)
+![footer_01](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/footer_01.png)
 
 style: 2
 
-![footer_02](../../Images/footer_02.png)
+![footer_02](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/footer_02.png)
 
 ```javascript
 window.cnblogsConfig = {
@@ -1059,7 +1059,7 @@ window.cnblogsConfig = {
 
 ?> 版本 >= v2.1.9
 
-![bubble](../../Images/bubble.gif)
+![bubble](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/bubble.gif)
 
 * 类型：```Object```
 * 默认值：

@@ -14,7 +14,7 @@
 
 !> 侧边栏设置的时候格式要记得选Html
 
-<img src="./Images/install_01.png" width="750" />
+<img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_01.png width="750" />
 
 本主题当前页面所涉及的配置有：
 
@@ -29,7 +29,7 @@
 
 选项页面：
 
-<img src="./Images/install_07.png" width="750" />
+<img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_07.png" width="750" />
 
 本主题当前页面所涉及的配置有：
 
@@ -41,7 +41,7 @@
 
 切换版本：
 
-![install_05](../../Images/install_06.png)
+![install_05](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_05.png)
 
 ## 博客设置
 
@@ -49,19 +49,19 @@
 
 博客皮肤：```SimpleMemory```
 
-![install_02](../../Images/install_02.png)
+![install_02](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_02.png)
 
 ### 设置代码高亮
 
 !> 主题已集成代码高亮,建议直接禁用
 
-![install_02](../../Images/install_08.png)
+![install_02](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_08.png)
 
 ### 设置页面定制CSS代码
 
 CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定制CSS代码文本框处。
 
-![install_03](../../Images/install_03.png)
+![install_03](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_03.png)
 
 ### 禁用模板默认CSS
 
