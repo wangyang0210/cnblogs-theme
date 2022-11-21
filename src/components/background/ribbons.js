@@ -27,12 +27,6 @@ class Point {
         return this;
     }
 
-    divide(x, y) {
-        this.x /= x || 1;
-        this.y /= y || 1;
-        return this;
-    }
-
     add (x, y) {
         this.x += x || 0;
         this.y += y || 0;

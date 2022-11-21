@@ -61,13 +61,13 @@ export default function main(_) {
                 if (clipboardData) {
                     event.preventDefault();
                     let htmlData = window.getSelection().toString()
-                        + '<br /><br /> ———————————————— <br />'
+                        + '<br /><br /> ———————————————————————————————————————————————— <br />'
                         + `${copyrightText} <br />`
                         + `作者：${author} <br />`
                         + `原文链接：${source} <br />`;
 
                     let textData = window.getSelection().toString()
-                        + '\n\n ———————————————— \n'
+                        + '\n\n ———————————————————————————————————————————————— \n'
                         + `${copyrightText.replace(/<\/?.+?>/g,"").replace(/ /g,"")} \n`
                         + `作者：${author} \n`
                         + `原文链接：${source} \n`;

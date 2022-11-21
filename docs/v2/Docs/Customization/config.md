@@ -1,8 +1,8 @@
 # 配置项
 
-你可以配置在```window.cnblogsConfig```里。
+所有的配置项,都存放在`window.cnblogsConfig`对象中。
 
-!> Url 类型的配置，请尽量配置支持 Https 的地址！
+!> Url 类型的配置，请尽量配置`https`协议的地址！
 
 ## 示例配置
 
@@ -14,7 +14,7 @@
         info: {
             name: 'userName', // 用户名
             startDate: '2021-01-01', // 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
-            avatar: 'http://xxxx.png', // 用户头像
+            avatar: 'https://xxxx.png', // 用户头像
         },
     }
 </script>
@@ -33,9 +33,8 @@
         banner: {
             home: {
                 background: [
-                    "https://x1.jpg",
-                    "https://x2.jpg",
-                    "https://x3.jpg",
+                    "https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053600_wallhaven-6k3oox.webp",
+                    "https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917054021_wallhaven-737jo3.webp",
                 ],
             },
         }

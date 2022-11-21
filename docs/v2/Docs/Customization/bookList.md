@@ -16,15 +16,17 @@
 
 #### 富文本编辑器
 
-![reprinted_01](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/reprinted_01.png)
+![edit_book](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/reprinted_01.png)
 
 #### Markdown
 
-直接拷贝到文本即可。
+> 直接拷贝上面的内容到文本框即可。
+
+![markdown_book](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/markdown-book.png)
 
 ### 配置书单数据
 
-书单的配置，可以参考其他[配置](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/bookList)的方式。例如：
+书单的配置，可以参考其他[配置](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/bookList) 的方式。例如：
 
 ```javascript
 window.cnblogsConfig = {
@@ -44,7 +46,7 @@ window.cnblogsConfig = {
     // 书单配置
     window.cnblogsConfig.bookList = [
         {
-            title: '标题1',
+            title: '在读',
             books: [
                 {
                     cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s29934992.jpg',
@@ -61,7 +63,7 @@ window.cnblogsConfig = {
             ]
         },
         {
-            title: '标题2',
+            title: '已读',
             books: [
                 {
                     cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s29934992.jpg',
