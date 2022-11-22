@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/c/font_3634484_n5wgdpvmlr.woff2?t=1665650837396') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3634484_n5wgdpvmlr.woff?t=1665650837396') format('woff'),
-    url('//at.alicdn.com/t/c/font_3634484_n5wgdpvmlr.ttf?t=1665650837396') format('truetype');
+    font-family: 'iconfont';  /* Project id 3634484 */
+    src: url('//at.alicdn.com/t/c/font_3634484_5y3wcsi7l6w.woff2?t=1669107466029') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3634484_5y3wcsi7l6w.woff?t=1669107466029') format('woff'),
+    url('//at.alicdn.com/t/c/font_3634484_5y3wcsi7l6w.ttf?t=1669107466029') format('truetype');
 }
 
 .iconfont {
@@ -20,6 +20,10 @@
     fill: currentColor;
     overflow: hidden;
     margin-right: 5px;
+}
+
+.icon-update:before {
+    content: "\e7d2";
 }
 
 .icon-fuzhi:before {
