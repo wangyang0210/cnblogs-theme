@@ -2,26 +2,22 @@
 
 > 注意：任何版本的切换，最好都更新一下对应版本的css样式，不然可能会发生兼容性问题！
 
-## v1.0.0 、 v1.\*.* 、 v2.\*.* 之间切换版本
-
-由于 v1.0.0 、 v1.\*.* 、 v2.\*.* 版本的配置方式不同，所以建议依据各版本的配置方式重新配置主题。
-
 ## v2.\*.* 之间切换版本
 
 ### 使用 jsdelivr 加载资源
 
-只需要更改 simpleMemory.js 文件引入的版本。
+只需要更改 simple-memory.js 文件引入的版本。
 
 例如：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.0/dist/simpleMemory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.0/dist/simple-memory.js" defer></script>
 ```
 
 变为
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.1/dist/simpleMemory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.1/dist/simple-memory.js" defer></script>
 ```
 
 版本变更： `v2.0.0` >>> `v2.0.1` 
