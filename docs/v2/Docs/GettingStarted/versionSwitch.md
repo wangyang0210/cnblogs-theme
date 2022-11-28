@@ -33,30 +33,11 @@
 例如：
 
 ```html
-<script src="https://www.wangyangyang.vip/dist/simpleMemory.js" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simple-memory.js" defer></script>
 ```
 
 变为
 
 ```html
-<script src="https://www.wangyangyang.vip/dist/simpleMemory.js?_12322" defer></script>
+<script src="https://www.wangyangyang.vip/dist/simple-memory.js?_12322" defer></script>
 ```
-
-
-#### 更换文件方式更新加载资源
-
-`/dist` 目录除了 `simpleMemory.js` 文件，还有一个带随机后缀名的文件：`simpleMemory.[8位随机串].js`
-也可以每次更新代码后引入此文件，来达到更新加载资源的目的。
-
-例如：
-
-```html
-<script src="https://www.wangyangyang.vip/dist/simpleMemory.y7i7sx47.js" defer></script>
-```
-
-变为
-
-```html
-<script src="https://dbnuo.com/dist/simpleMemory.s8kn7hd6.js" defer></script>
-```
-
