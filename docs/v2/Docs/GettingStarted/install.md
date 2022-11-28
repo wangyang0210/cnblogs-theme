@@ -27,6 +27,8 @@
 
 ### 选项
 
+?> 可控制博客园现有的一些控件展示 | 若不想展示去除选中即可
+
 选项页面：
 
 <img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_07.png" width="750" />
@@ -59,7 +61,7 @@
 
 ### 设置页面定制CSS代码
 
-CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定制CSS代码文本框处。
+CSS代码位置：```/dist/simple-memory.css``` 拷贝此文件代码至页面定制CSS代码文本框处。
 
 ![install_03](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_03.png)
 
@@ -81,7 +83,7 @@ CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定
       },
     }
 </script>
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.1.6/dist/simpleMemory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.2.4/dist/simple-memory.js" defer></script>
 ```
 
 详细配置参考相关[文档](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/config) 。
@@ -93,9 +95,7 @@ CSS代码位置：```/dist/simpleMemory.css``` 拷贝此文件代码至页面定
 配置完成保存即可成功应用博皮！
 
 ---
-
-CDN jsdelivr 的 URL 详细规则参考[官方网站](https://www.jsdelivr.com/)。
-
 !> 版本 >= 2.1.8 支持npm包CDN加速
 
-> CDN`unpkg`的URL, 详细规则参考[官方网站](https://www.unpkg.com/)
+CDN`jsdelivr`的URL,详细规则参考[官方网站](https://www.jsdelivr.com/) 
+CDN`unpkg`的URL, 详细规则参考[官方网站](https://www.unpkg.com/)
