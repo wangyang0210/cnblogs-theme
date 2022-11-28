@@ -32,7 +32,7 @@ export default function main(_) {
         $('.sidebar-footer').html(navHtml);
 
         // ------- 设置头像 -------
-        let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp';
+        let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : _.__config.default.avatar;
         $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------

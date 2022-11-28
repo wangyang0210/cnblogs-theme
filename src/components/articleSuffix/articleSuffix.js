@@ -12,7 +12,7 @@ import suffixTemp from '../../template/articleSuffix.html';
 export default function main(_) {
 
     // 图片
-    let imgUrl  = _.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, _.__config.info.avatar, 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp' )
+    let imgUrl  = _.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, _.__config.info.avatar, _.__config.default.avatar )
 
     // 本文作者 & 本文链接
     let articleAuthor = $('#articleAuthor');
