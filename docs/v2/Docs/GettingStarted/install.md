@@ -74,6 +74,7 @@ CSS代码位置：```/dist/simple-memory.css``` 拷贝此文件代码至页面�
 在侧边栏HTML代码中设置以下代码：
 
 ```html
+// TODO 这里干掉 只需要引入js文件
 <script type="text/javascript">
     window.cnblogsConfig = {
       info: {
@@ -83,7 +84,7 @@ CSS代码位置：```/dist/simple-memory.css``` 拷贝此文件代码至页面�
       },
     }
 </script>
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.2.4/dist/simple-memory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/cnblogs-theme@v2.2.4/dist/simple-memory.js" defer></script>
 ```
 
 详细配置参考相关[文档](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/config) 。

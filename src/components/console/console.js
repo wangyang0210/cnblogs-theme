@@ -10,7 +10,7 @@
 export default function main(_) {
 
     // 输出默认版权信息
-    let github = ["\n %c %c %c CnblogsTheme-GitHub %c  %c github.com/cnblogs-theme %c \n\n", "background: #fadfa3; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "background: #FCEDC9; color:#030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"];
+    let github = ["\n %c %c %c CnblogsTheme-GitHub %c  %c https://github.com/wangyang0210/cnblogs-theme %c \n\n", "background: #fadfa3; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "background: #FCEDC9; color:#030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"];
     window.console.log.apply(console, github);
 
     // 输出用户配置信息
