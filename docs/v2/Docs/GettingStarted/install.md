@@ -78,7 +78,7 @@ CSS代码位置：```/dist/simple-memory.css``` 拷贝此文件代码至页面�
 <script type="text/javascript">
     window.cnblogsConfig = {
       info: {
-        name: 'userName', // 用户名
+        name: 'userName', // 用户名 || 不配置默认取博客园名称
         startDate: '2021-01-01', // 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
         avatar: 'http://xxxx.png', // 用户头像
       },

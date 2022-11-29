@@ -1,6 +1,6 @@
 # 版本切换
 
-> 注意：任何版本的切换，最好都更新一下对应版本的css样式，不然可能会发生兼容性问题！
+!> 注意：任何版本的切换，最好都更新一下对应版本的css样式，不然可能会发生兼容性问题！
 
 ## v2.\*.* 之间切换版本
 
@@ -11,20 +11,20 @@
 例如：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.0/dist/simple-memory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/cnblogs-theme@v2.2.3/dist/simple-memory.js" defer></script>
 ```
 
 变为
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cnblogs-theme@v2.0.1/dist/simple-memory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/wangyang0210/cnblogs-theme@v2.2.4/dist/simple-memory.js" defer></script>
 ```
 
-版本变更： `v2.0.0` >>> `v2.0.1` 
+版本变更： `v2.2.3` >>> `v2.2.4` 
 
 ### 使用自己的云资源
 
-如果你的资源是托管到自己的云资源上。
+如果你的资源是托管到自己的云资源上或CDN加速节点节点上。
 
 #### 随机参方式更新加载资源
 
