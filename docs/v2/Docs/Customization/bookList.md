@@ -37,13 +37,6 @@ window.cnblogsConfig = {
 但是一般书单的数据比较多，所以建议将此配置单独出来。例如：
 
 ```javascript
-
-    //  正常配置
-    window.cnblogsConfig = {
-        ...
-    };
-
-    // 书单配置
     window.cnblogsConfig.bookList = [
         {
             title: '在读',
@@ -90,7 +83,7 @@ window.cnblogsConfig = {
     ];
 ```
 
-?> 请按照此格式配置，无内容可以不配置。
+!> 请按照此格式配置，无内容可以不配置。
 
 |**Key**|**Description**|
 |:-----:|:-----:|

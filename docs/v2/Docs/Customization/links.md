@@ -24,7 +24,7 @@
 
 ### 配置友链数据
 
-友链的配置，可以参考其他[配置](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/links) 的方式。例如：
+友链的配置，可以参考其他[配置](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/config?id=links-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5) 的方式。例如：
 
 ```javascript
 window.cnblogsConfig = {

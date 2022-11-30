@@ -29,10 +29,10 @@ export default function main(_) {
             let obj = $(this);
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
-            let hid = '_' + obj.attr('id');
+            let hid = obj.attr('id');
             let titleId = 'tid-' + _.__tools.randomString(6);
             obj.attr('tid', titleId);
-            if (!hid || /^[\d]+.*/.test(hid)) {
+            if (!hid || /^-?[\d]+.*/.test(hid)) {
                 if (hid) {
                     let tocObj = $('.toc a[href="#'+hid+'"]');
                     tocObj.length && tocObj.attr('href', '#' + titleId);

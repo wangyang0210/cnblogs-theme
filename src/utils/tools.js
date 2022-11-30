@@ -9,6 +9,8 @@
 
 import moment from 'dayjs'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
+import {request} from './request'
+import package from '../../package.json'
 moment.extend(advancedFormat)
 
 export default function main() {
@@ -232,6 +234,33 @@ export default function main() {
             second = ('' + second).length === 1 ? '0' + second : second;
             return `${minTime}:${second}`;
         },
+
+        compareVersion: (v1, v2) => {
+            const nums1 = v1.split('.')
+            const nums2 = v2.split('.')
+            let i = 0
+            while(i < nums1.length || i < nums2.length){
+                let x = 0 , y = 0
+                if(i < nums1.length) x = parseInt(nums1[i])
+                if(i < nums2.length) y = parseInt(nums2[i])
+                if(x > y) return 1
+                if(x < y) return -1
+                i++
+            }
+            return 0
+        },
+
+        getVersion: () => {
+            let version = localStorage.getItem('version')
+            if (!version) {
+                request('https://api.github.com/repos/wangyang0210/cnblogs-theme/releases/latest').then(r => {
+                    localStorage.setItem('version', r.tag_name)
+                    localStorage.setItem('repo_url', r.html_url)
+                })
+            } else {
+                return this.compareVersion(version, package.version)
+            }
+        }
 
     };
 }
