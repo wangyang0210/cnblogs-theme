@@ -11,9 +11,11 @@ import config from './components/config/config';
 import status from "./components/status/status";
 import tools from './utils/tools';
 import event from "./components/event/event";
-import loading from "./components/loading/loading";
 
 $(document).ready(function () {
+
+    // 默认css
+    import(/* webpackChunkName: "base-common" */ '../../style/simple-memory.css')
 
     // 初始化
     _.__config = config(); // 配置信息
@@ -24,12 +26,6 @@ $(document).ready(function () {
 
 
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
-    let loadingObj = loading(_);
-
-    /**
-     * 开启 loading
-     */
-    (() => {loadingObj.start();})();
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ `./page/${_.__status.pageType}`).then(module => {
@@ -61,9 +57,4 @@ $(document).ready(function () {
             })();
         });
     });
-
-    /**
-     * 关闭 loading
-     */
-    (() => {loadingObj.stop();})();
 })
