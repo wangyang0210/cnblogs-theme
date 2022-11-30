@@ -15,7 +15,7 @@ import event from "./components/event/event";
 $(document).ready(function () {
 
     // 默认css
-    import(/* webpackChunkName: "base-common" */ '../../style/simple-memory.css')
+    import(/* webpackChunkName: "base-common" */ './style/simple-memory.css')
 
     // 初始化
     _.__config = config(); // 配置信息
