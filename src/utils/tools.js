@@ -10,7 +10,7 @@
 import moment from 'dayjs'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import {request} from './request'
-import package from '../../package.json'
+import packageInfo from '../../package.json'
 moment.extend(advancedFormat)
 
 export default function main() {
@@ -258,7 +258,7 @@ export default function main() {
                     localStorage.setItem('repo_url', r.html_url)
                 })
             } else {
-                return this.compareVersion(version, package.version)
+                return this.compareVersion(version, packageInfo.version)
             }
         }
 
