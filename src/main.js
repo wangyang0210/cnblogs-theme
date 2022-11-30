@@ -11,6 +11,7 @@ import config from './components/config/config';
 import status from "./components/status/status";
 import tools from './utils/tools';
 import event from "./components/event/event";
+import loading from "./components/loading/loading";
 
 $(document).ready(function () {
 
@@ -23,6 +24,12 @@ $(document).ready(function () {
 
 
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
+    let loadingObj = loading(_);
+
+    /**
+     * 开启 loading
+     */
+    (() => {loadingObj.start();})();
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ `./page/${_.__status.pageType}`).then(module => {
@@ -34,24 +41,29 @@ $(document).ready(function () {
         import(/* webpackChunkName: "com-before" */ './components/common/comBefore').then(beforeModule => {
             const comBefore = beforeModule.default;
             comBefore(_);
+        });
 
-            /**
-             * 页面逻辑处理
-             */
-            page(_);
+        /**
+         * 页面逻辑处理
+         */
+        page(_);
 
-            /**
-             * 后置公共处理
-             */
-            import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(afterModule => {
-                const comAfter = afterModule.default;
-                comAfter(_);
-                (() => {
-                    _.__tools.setDomHomePosition(); // 文章主体位置修正
-                    event(_).handle.scroll(); // 触发滚动处理
-                    event(_).handle.resize(); // 触发窗口大小变化处理
-                })();
-            });
+        /**
+         * 后置公共处理
+         */
+        import(/* webpackChunkName: "com-after" */ './components/common/comAfter').then(afterModule => {
+            const comAfter = afterModule.default;
+            comAfter(_);
+            (() => {
+                _.__tools.setDomHomePosition(); // 文章主体位置修正
+                event(_).handle.scroll(); // 触发滚动处理
+                event(_).handle.resize(); // 触发窗口大小变化处理
+            })();
         });
     });
+
+    /**
+     * 关闭 loading
+     */
+    (() => {loadingObj.stop();})();
 })
