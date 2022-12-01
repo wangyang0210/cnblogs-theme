@@ -51,7 +51,7 @@ export default function main(_) {
         let obj = _.__config.animate.background;
         for (let key in obj) {
             if (obj[key].enable) {
-                import(/* webpackChunkName: "background-[request]" */ `../background/${key}`).then(module => {
+                import(/* webpackChunkName: "background-[request]" */ /* webpackPrefetch: true */ `../background/${key}`).then(module => {
                     let background = module.default;
                     background(obj[key]?.options);
                 });
@@ -66,7 +66,7 @@ export default function main(_) {
         let obj = _.__config.animate.mouse;
         for (let key in obj) {
             if (obj[key].enable) {
-                import(/* webpackChunkName: "mouse-[request]" */ `../mouse/${key}`).then(module => {
+                import(/* webpackChunkName: "mouse-[request]" */ /* webpackPrefetch: true */ `../mouse/${key}`).then(module => {
                     let mouse = module.default;
                     mouse(obj[key]?.options);
                 });
