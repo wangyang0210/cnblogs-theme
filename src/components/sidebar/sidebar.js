@@ -11,7 +11,7 @@ import navTemp from '../../template/sidebarNav.html';
 import '../../style/menu_bubble.css';
 import main4 from './lib/main4';
 
-export default function main(_) {
+export default function main() {
 
     let mainObj;
 

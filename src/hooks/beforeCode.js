@@ -7,7 +7,7 @@
  * @describe: code 渲染开始前
  */
 
-export default function main(_) {
+export default function main() {
     if (typeof $.__config.hooks.beforeCode === "function")
-        $.__config.hooks.beforeCode(_);
+        $.__config.hooks.beforeCode();
 }

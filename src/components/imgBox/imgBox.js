@@ -9,7 +9,7 @@
 import "../../vendor/fancybox/jquery.fancybox";
 import "../../vendor/fancybox/jquery.fancybox.min.css";
 
-export default function main(_) {
+export default function main() {
     setTimeout(() =>  {
         let imgLength   = $('#cnblogs_post_body img').length -1;
         if (!imgLength) return;

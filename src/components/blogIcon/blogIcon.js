@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 网站图标处理
  */
-export default function main(_) {
+export default function main() {
     let shortcutIcon = $('link[rel="shortcut icon"]');
     if ( $.__config.info.blogIcon && shortcutIcon.length) shortcutIcon.attr('href', $.__config.info.blogIcon);
     if ( $.__config.info.blogIcon && !shortcutIcon.length) {

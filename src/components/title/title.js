@@ -7,7 +7,7 @@
  * @describe: 页面title处理
  */
 
-export default function main(_) {
+export default function main() {
 
     let RelTitle = document.title,
         hidden,

@@ -30,19 +30,19 @@ $(document).ready(function () {
         // 前置公共处理
         import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
             const comBefore = beforeModule.default;
-            comBefore(_);
+            comBefore();
 
             // 页面逻辑处理
-            page(_);
+            page();
 
             // 后置公共处理
             import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
                 const comAfter = afterModule.default;
-                comAfter(_);
+                comAfter();
                 (() => {
                     $.__tools.setDomHomePosition(); // 文章主体位置修正
-                    event(_).handle.scroll(); // 触发滚动处理
-                    event(_).handle.resize(); // 触发窗口大小变化处理
+                    event().handle.scroll(); // 触发滚动处理
+                    event().handle.resize(); // 触发窗口大小变化处理
                 })();
             });
         });

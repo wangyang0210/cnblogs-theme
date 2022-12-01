@@ -7,7 +7,7 @@
  * @describe: 鼠标粒子点击特效
  */
 
-export default function main(_) {
+export default function main() {
     class Circle {
         constructor({origin, speed, color, angle, context}) {
             this.origin = origin

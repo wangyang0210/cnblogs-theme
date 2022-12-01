@@ -9,7 +9,7 @@
 import postMeta from "../../components/postMeta/postMeta"
 import consoleText from "../../vendor/consoleText/consoleText"
 
-export default function main(_) {
+export default function main() {
 
     /**
      * 设置文章标题

@@ -7,7 +7,7 @@
  * @describe: code 渲染结束后
  */
 
-export default function main(_) {
+export default function main() {
     if (typeof $.__config.hooks.afterCode === "function")
-        $.__config.hooks.afterCode(_);
+        $.__config.hooks.afterCode();
 }

@@ -8,7 +8,7 @@
  */
 import ToProgress from "../../vendor/ToProgress/ToProgress";
 
-export default function main(_) {
+export default function main() {
     $('#blog-news').prepend('<div id="progressBar"></div>');
     let progressBar = ToProgress && new window.ToProgress( $.__config.progressBar, '#progressBar');
 

@@ -7,7 +7,7 @@
  * @describe: 事件监听
  */
 
-export default function main(_) {
+export default function main() {
 
     let eventFun = {
         init: () => {

@@ -8,7 +8,7 @@
  */
 import '../../style/customBtn.css';
 
-export default function main(_) {
+export default function main() {
 
     /**
      * 好文要顶

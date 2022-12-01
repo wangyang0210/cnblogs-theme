@@ -7,7 +7,7 @@
  * @describe: loading 开始前
  */
 
-export default function main(_) {
+export default function main() {
     if (typeof $.__config.hooks.beforeLoading === "function")
-        $.__config.hooks.beforeLoading(_);
+        $.__config.hooks.beforeLoading();
 }

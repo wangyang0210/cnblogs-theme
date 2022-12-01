@@ -9,7 +9,7 @@
 import footerTemp from '../../template/footer.html';
 import {request} from "../../utils/request";
 
-export default function main(_) {
+export default function main() {
 
     const footer = $('#footer');
     const footerText = footer.text();

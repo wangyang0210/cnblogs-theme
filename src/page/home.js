@@ -9,7 +9,7 @@
 import postMeta from "../components/postMeta/postMeta";
 import {request} from "../utils/request";
 
-export default function main(_) {
+export default function main() {
 
     /**
      * 设置主页标语

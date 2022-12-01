@@ -7,7 +7,7 @@
  * @describe: loading 结束后
  */
 
-export default function main(_) {
+export default function main() {
     if (typeof $.__config.hooks.afterLoading === "function")
-        $.__config.hooks.afterLoading(_);
+        $.__config.hooks.afterLoading();
 }

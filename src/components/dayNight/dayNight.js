@@ -9,7 +9,7 @@
 import dayNightTemp from '../../template/dayNight.html';
 import dayNightControl from "../../hooks/dayNightControl";
 
-export default function main(_) {
+export default function main() {
 
     if (! $.__config.switchDayNight.enable) return true;
 

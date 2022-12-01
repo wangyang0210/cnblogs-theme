@@ -10,7 +10,7 @@ import "../../style/articleDirectory.css";
 import articleDirectoryTemp from '../../template/articleDirectory.html';
 import "bootstrap/dist/js/bootstrap.min";
 
-export default function main(_) {
+export default function main() {
     let body     = $('body');
     let postBody = $('#cnblogs_post_body');
     let header   = postBody.find(':header');

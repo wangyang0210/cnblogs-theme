@@ -9,7 +9,7 @@
 import "../../style/articleSuffix.css";
 import suffixTemp from '../../template/articleSuffix.html';
 
-export default function main(_) {
+export default function main() {
 
     // 图片
     let imgUrl  = $.__tools.ternaryOperation( $.__config.articleSuffix.imgUrl, $.__config.info.avatar, $.__config.default.avatar )

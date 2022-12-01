@@ -13,7 +13,7 @@ import {
 import beforeLoading from "../../hooks/beforeLoading";
 import afterLoading from "../../hooks/afterLoading";
 
-export default function main(_) {
+export default function main() {
 
     let loading = function() {
         let that = this;
@@ -51,7 +51,7 @@ export default function main(_) {
          * 开启 loading
          */
         this.start = () => {
-            beforeLoading(_);
+            beforeLoading();
             $('#blog-news').prepend('<div id="loading"></div>');
             that.initRebound();
             that.initSpinner();
@@ -66,7 +66,7 @@ export default function main(_) {
             that.spinner.setComplete();
             $('div#loading').hide();
             $('a[name="top"]').hide();
-            afterLoading(_);
+            afterLoading();
         }
     }
 

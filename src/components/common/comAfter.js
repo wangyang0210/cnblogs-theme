@@ -14,34 +14,34 @@ import blogIcon from "../blogIcon/blogIcon";
 import dayNight from "../dayNight/dayNight";
 import console from "../console/console";
 
-export default function main(_) {
+export default function main() {
 
     /**
      * 页脚
      */
     (() => {
-        footer(_);
+        footer();
     })();
 
     /**
      * 右下角菜单
      */
     (() => {
-        rtMenu(_);
+        rtMenu();
     })();
 
     /**
      * 日/夜模式
      */
     (() => {
-        dayNight(_);
+        dayNight();
     })();
 
     /**
      * 进度条
      */
     (() => {
-        progress(_);
+        progress();
     })();
 
     /**
@@ -78,20 +78,20 @@ export default function main(_) {
      * 网站图标
      */
     (() => {
-        blogIcon(_);
+        blogIcon();
     })();
 
     /**
      * 页面title
      */
     (() => {
-        title(_);
+        title();
     })();
 
     /**
      * 控制台输出
      */
     (() => {
-        console(_);
+        console();
     })();
 }

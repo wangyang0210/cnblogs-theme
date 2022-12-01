@@ -10,10 +10,10 @@ import ClipboardJS from "clipboard/dist/clipboard.min";
 import beforeCode from "../../hooks/beforeCode";
 import afterCode from "../../hooks/afterCode";
 
-export default function main(_) {
+export default function main() {
     let preList = $('#main pre');
 
-    beforeCode(_);
+    beforeCode();
 
     /**
      * 初始化代码结构
@@ -107,7 +107,7 @@ export default function main(_) {
             });
             setCodeLine();
         }
-        afterCode(_);
+        afterCode();
     })();
 
     /**

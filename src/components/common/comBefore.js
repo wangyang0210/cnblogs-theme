@@ -12,9 +12,9 @@ import banner from "../banner/banner";
 import event from "../event/event";
 import "../../vendor/rotate/jquery.rotate.min"
 
-export default function main(_) {
+export default function main() {
 
-    let loadingObj = loading(_);
+    let loadingObj = loading();
 
     // 默认字体图标库
     import(/* webpackChunkName: "iconfont" */ /* webpackPreload: true */ '../../style/iconfont.css');
@@ -51,21 +51,21 @@ export default function main(_) {
      * 事件绑定
      */
     (() => {
-        event(_).init();
+        event().init();
     })();
 
     /**
      * 侧边栏
      */
     (() => {
-        sidebar(_);
+        sidebar();
     })();
 
     /**
      * 头图
      */
     (() => {
-        banner(_);
+        banner();
     })();
 
     /**

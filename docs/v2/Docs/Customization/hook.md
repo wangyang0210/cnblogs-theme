@@ -15,16 +15,16 @@
     // 钩子配置
     window.cnblogsConfig.hooks = {
 
-          beforeCode: (_) => {
+          beforeCode: () => {
             // console.log('code 渲染开始前');
           },
-          afterCode: (_) => {
+          afterCode: () => {
             // console.log('code 渲染结束后');
           },
-          beforeLoading: (_) => {
+          beforeLoading: () => {
             // console.log('loading 开始前');
           },
-          afterLoading: (_) => {
+          afterLoading: () => {
             // console.log('loading 结束后');
           },
           dayNightControl: (_, type) => {
@@ -39,10 +39,10 @@
 
 |**方法**|**参数**|**描述**|
 |:-----:|:-----:|:-----:|
-|**beforeCode**|(_)|code 渲染开始前调用此方法|
-|**afterCode**|(_)|code 渲染结束后调用此方法|
-|**beforeLoading**|(_)|loading 开始前调用此方法|
-|**afterLoading**|(_)|loading 结束后调用此方法|
+|**beforeCode**|()|code 渲染开始前调用此方法|
+|**afterCode**|()|code 渲染结束后调用此方法|
+|**beforeLoading**|()|loading 开始前调用此方法|
+|**afterLoading**|()|loading 结束后调用此方法|
 |**dayNightControl**|(_, type)|日/夜间模式切换调用此方法|
 
 ## 关于参数"_"

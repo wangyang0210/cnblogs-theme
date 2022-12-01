@@ -11,12 +11,12 @@ import '../style/links.css';
 import linksTemp from '../template/links.html';
 import articleDirectory from "../components/articleDirectory/articleDirectory";
 
-export default function main(_) {
+export default function main() {
     /**
      * 文章页公共处理
      */
     (() => {
-        comArticle(_);
+        comArticle();
     })();
 
     /**
@@ -63,6 +63,6 @@ export default function main(_) {
      * 设置文章目录
      */
     (() => {
-        articleDirectory(_);
+        articleDirectory();
     })();
 }

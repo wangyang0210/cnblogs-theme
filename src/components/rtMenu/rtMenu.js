@@ -8,7 +8,7 @@
  */
 import rtMenuTemp from '../../template/rtMenu.html';
 
-export default function main(_) {
+export default function main() {
     $('#blog-news').prepend(rtMenuTemp);
     const rightMenu = $('#rightMenu');
 

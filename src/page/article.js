@@ -9,13 +9,13 @@
 import comArticle from "./common/com-article";
 import imgBox from "../components/imgBox/imgBox";
 
-export default function main(_) {
+export default function main() {
 
     /**
      * 文章页公共处理
      */
     (() => {
-        comArticle(_);
+        comArticle();
     })();
 
     /**
@@ -25,7 +25,7 @@ export default function main(_) {
         // 异步处理防止影响loading结束
         import(/* webpackChunkName: "article-code" */  /* webpackPrefetch: true */ '../components/code/code').then(module => {
             const code = module.default;
-            code(_);
+            code();
         });
     })();
 
@@ -33,6 +33,6 @@ export default function main(_) {
      * 图片灯箱处理
      */
     (() => {
-        imgBox(_);
+        imgBox();
     })();
 }

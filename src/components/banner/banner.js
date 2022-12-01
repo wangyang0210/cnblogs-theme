@@ -8,7 +8,7 @@
  */
 import bannerTemp from '../../template/banner.html';
 
-export default function main(_) {
+export default function main() {
 
     $('#sidebar_news').prepend(bannerTemp);
 

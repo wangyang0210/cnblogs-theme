@@ -7,7 +7,7 @@
  * @describe: 评论处理
  */
 
-export default function main(_) {
+export default function main() {
     let setComment = () => {
         let feedbackItem = $('.feedbackItem');
         if (feedbackItem.length > 0) {
