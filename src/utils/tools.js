@@ -11,7 +11,6 @@ import moment from 'dayjs'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import {request} from './request'
 import packageInfo from '../../package.json'
-
 moment.extend(advancedFormat)
 
 export default {

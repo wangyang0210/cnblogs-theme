@@ -16,7 +16,7 @@ $(document).ready(function () {
     // 初始化
     $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
     $.__status = status; // 页面状态信息
-    $.__tools = tools();  // 公共处理工具
+    $.__tools = tools;  // 公共处理工具
     $.__timeIds = {};       // 定时器
     $.__event = {};       // 事件
 
