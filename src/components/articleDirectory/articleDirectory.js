@@ -8,8 +8,8 @@
  */
 import "../../style/articleDirectory.css";
 import articleDirectoryTemp from '../../template/articleDirectory.html';
-import {ScrollSpy} from 'bootstrap'
-// import "bootstrap/dist/js/bootstrap.min";
+// import {ScrollSpy} from 'bootstrap'
+import "bootstrap/dist/js/bootstrap.min";
 
 export default function main() {
     let body     = $('body');
@@ -55,7 +55,7 @@ export default function main() {
         body.attr('data-bs-target', '#articleDirectory');
         body.attr('data-bs-offset', '0');
         body.attr('tabindex', '0');
-        ScrollSpy(body,{ target: '#articleDirectory' });
+        body.scrollspy({ target: '#articleDirectory' });
 
         if (! $.__config.articleDirectory.autoWidthScroll) {
             $('#articleDirectory ul li').addClass('articleDirectory-overflow');
