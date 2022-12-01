@@ -11,7 +11,7 @@ import hljs from 'highlight.js/lib/common';
 export default function main(_, setCodeLine) {
     let theme = _.__config.code.options.hljs.theme.toLowerCase();
 
-    import(/* webpackChunkName: "hljs/[request]" */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
+    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
         let code  = $('code-box pre code');
 
         let bgFlg = $.inArray(theme, [

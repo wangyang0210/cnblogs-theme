@@ -23,7 +23,7 @@ export default function main(_) {
      */
     (() => {
         // 异步处理防止影响loading结束
-        import(/* webpackChunkName: "article-code" */  '../components/code/code').then(module => {
+        import(/* webpackChunkName: "article-code" */  /* webpackPrefetch: true */ '../components/code/code').then(module => {
             const code = module.default;
             code(_);
         });

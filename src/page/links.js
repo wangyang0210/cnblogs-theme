@@ -25,7 +25,7 @@ export default function main(_) {
     (() => {
         if (_.__config.links.page.length) {
 
-            import(/* webpackChunkName: "gf-blink" */ '../style/gf-blink.css');
+            import(/* webpackChunkName: "gf-blink" */ /* webpackPrefetch: true */ '../style/gf-blink.css');
 
             let postBody = $('#cnblogs_post_body'),
                 html = '';
