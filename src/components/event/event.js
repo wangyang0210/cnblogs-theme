@@ -11,7 +11,6 @@ export default function main(_) {
 
     let eventFun = {
         init: () => {
-
             /**
              * 滚动监听
              */
@@ -26,31 +25,22 @@ export default function main(_) {
                 eventFun.handle.scroll();
                 _.__event.scroll.temScroll = _.__event.scroll.docScroll;
             });
-
             /**
              * 窗口大小监听
              */
             _.__event.resize = {};
             _.__event.resize.handle = [];
-            $(window).resize( () => {
-                eventFun.handle.resize();
-            });
+            $(window).resize( () => { eventFun.handle.resize() });
         },
-
         handle: {
             scroll: () => {
-                for (let i = 0; i < _.__event.scroll.handle.length; i++) {
-                    (_.__event.scroll.handle[i])();
-                }
+                for (let i = 0; i < _.__event.scroll.handle.length; i++) { (_.__event.scroll.handle[i])() }
             },
             resize: () => {
-                for (let i = 0; i < _.__event.resize.handle.length; i++) {
-                    (_.__event.resize.handle[i])();
-                }
+                for (let i = 0; i < _.__event.resize.handle.length; i++) { (_.__event.resize.handle[i])() }
                 _.__tools.setDomHomePosition();
             },
         }
     };
-
     return eventFun;
 }

@@ -230,42 +230,46 @@ export default function main(_) {
 
         // ------- 自定义导航 -------
         (() => {
-            let navList = _.__config.sidebar.navList;
-            let navHtml = '';
-            if (navList.length > 0) {
-                navHtml = '<ul>';
-                $.each(navList, function (i) {
-                    let iconClass = navList[i].length > 2 ? navList[i][2] : "icon-qianzishenhe";
-                    navHtml += '<li><a href="'+(navList[i][1])+'" class="sidebar-dropdown-box" target="_blank"><i class="iconfont '+iconClass+'"></i>'+(navList[i][0])+'</a></li>';
-                });
-                navHtml += '</ul>';
-                $('.customize-nav').append(navHtml).show();
+            if (_.__config.sidebar?.navList) {
+                let navList = _.__config.sidebar.navList;
+                let navHtml = '';
+                if (navList.length > 0) {
+                    navHtml = '<ul>';
+                    $.each(navList, function (i) {
+                        let iconClass = navList[i].length > 2 ? navList[i][2] : "icon-qianzishenhe";
+                        navHtml += '<li><a href="'+(navList[i][1])+'" class="sidebar-dropdown-box" target="_blank"><i class="iconfont '+iconClass+'"></i>'+(navList[i][0])+'</a></li>';
+                    });
+                    navHtml += '</ul>';
+                    $('.customize-nav').append(navHtml).show();
+                }
             }
         })();
 
         // ------- 自定义列表 -------
         (() => {
-            let customData = _.__config.sidebar.customList;
-            if (Object.keys(customData).length > 0) {
-                let res = '';
-                $.each(customData, (title, list) => {
-                    let html = '<li class="ng-star-inserted sidebar-dropdown">';
-                    html += '<a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">';
-                    html += '   <i class="iconfont '+ list.icon +'"></i>';
-                    html += '   <span class="sidebar-dropdown-title">'+ title +'</span>';
-                    html += '</a>';
-                    html += '<div class="sidebar-submenu"><ul>';
-                    $.each(list.data, (key, val) => {
-                        html += '<li><a href="' + val[1] + '" target="_blank">' + val[0] + '</a></li>';
-                    });
+            if (_.__config.sidebar?.customList) {
+                let customData = _.__config.sidebar.customList;
+                if (Object.keys(customData).length > 0) {
+                    let res = '';
+                    $.each(customData, (title, list) => {
+                        let html = '<li class="ng-star-inserted sidebar-dropdown">';
+                        html += '<a href="javascript:void(0)" class="ng-star-inserted sidebar-dropdown-box">';
+                        html += '   <i class="iconfont '+ list.icon +'"></i>';
+                        html += '   <span class="sidebar-dropdown-title">'+ title +'</span>';
+                        html += '</a>';
+                        html += '<div class="sidebar-submenu"><ul>';
+                        $.each(list.data, (key, val) => {
+                            html += '<li><a href="' + val[1] + '" target="_blank">' + val[0] + '</a></li>';
+                        });
 
-                    html += '</ul></div>';
-                    html += '</li>';
-                    res += html;
-                });
-                $('#customize-sidebar-menu ul').append(res);
-                $('#customize-sidebar-menu').show();
-                $('#customize-sidebar-menu .sidebar-dropdown').show();
+                        html += '</ul></div>';
+                        html += '</li>';
+                        res += html;
+                    });
+                    $('#customize-sidebar-menu ul').append(res);
+                    $('#customize-sidebar-menu').show();
+                    $('#customize-sidebar-menu .sidebar-dropdown').show();
+                }
             }
         })();
 

@@ -4,7 +4,7 @@ const terserPlugin = require("terser-webpack-plugin")
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const fileManagerPlugin = require('filemanager-webpack-plugin')
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionPlugin = require("compression-webpack-plugin")
 
 
@@ -15,7 +15,7 @@ module.exports = {
         filename: 'simple-memory.js',
         chunkFilename:'script/[name].[contenthash:8].js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true,
+        clean: true
     },
     plugins: [
         // new fileManagerPlugin({
@@ -29,7 +29,7 @@ module.exports = {
         // }),
         // new BundleAnalyzerPlugin({
         //     analyzerMode: 'disabled',
-        //     generateStatsFile: true,
+        //     generateStatsFile: true
         // }),
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
@@ -37,7 +37,7 @@ module.exports = {
             ignoreOrder: true
         }),
     ],
-    // devtool: 'inline-source-map',
+    devtool: false,
     optimization: {
         minimize: true,
         minimizer: [

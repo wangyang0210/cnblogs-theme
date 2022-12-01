@@ -52,9 +52,7 @@ export default function main() {
          * 获取当天的日期
          * @return {string}
          */
-        getTodayDate: () => {
-            return moment().format('MM-DD')
-        },
+        getTodayDate: () => { return moment().format('MM-DD') },
 
         /**
          * 三元运算嵌套拆解
@@ -118,16 +116,12 @@ export default function main() {
         /**
          * 清除单个定时器
          */
-        clearIntervalTimeId: (timeId) => {
-            null != timeId && window.clearInterval(timeId);
-        },
+        clearIntervalTimeId: (timeId) => { null != timeId && window.clearInterval(timeId) },
 
         /**
          * 滚动主体滚动条到指定位置
          */
-        actScroll: (endScroll, time) => {
-            $('html,body').stop().animate({scrollTop: endScroll}, time);
-        },
+        actScroll: (endScroll, time) => { $('html,body').stop().animate({scrollTop: endScroll}, time) },
 
         /**
          * 获取页面滚动百分比
@@ -157,9 +151,7 @@ export default function main() {
         /**
          * 初始化主体内容位置
          */
-        setDomHomePosition: () => {
-            $('#home').css('margin-top', $('.main-header').outerHeight() + 'px');
-        },
+        setDomHomePosition: () => { $('#home').css('margin-top', $('.main-header').outerHeight() + 'px') },
 
         /**
          * 运行时间
@@ -219,9 +211,7 @@ export default function main() {
         randomString: (len) => {
             len = len || 32;
             let $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678', maxPos = $chars.length, pwd = '';
-            for (let i = 0; i < len; i++) {
-                pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
-            }
+            for (let i = 0; i < len; i++) { pwd += $chars.charAt(Math.floor(Math.random() * maxPos)) }
             return pwd;
         },
 
@@ -251,14 +241,14 @@ export default function main() {
         },
 
         getVersion: () => {
-            let version = localStorage.getItem('version')
-            if (!version) {
+            let localVersion = localStorage.getItem('version')
+            if (!localVersion) {
                 request('https://api.github.com/repos/wangyang0210/cnblogs-theme/releases/latest').then(r => {
-                    localStorage.setItem('version', r.tag_name)
-                    localStorage.setItem('repo_url', r.html_url)
+                    localStorage.setItem('localVersion', r.tag_name)
+                    localStorage.setItem('repoUrl', r.html_url)
                 })
             } else {
-                return this.compareVersion(version, packageInfo.version)
+                return this.compareVersion(localVersion, packageInfo.version)
             }
         }
 
