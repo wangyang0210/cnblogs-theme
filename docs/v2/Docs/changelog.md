@@ -5,11 +5,12 @@
 - status代码优化
 - config代码去除
 - tools代码优化
+- event代码优化
+- 标题和导航对应滚动 v2.2.2之后出现问题 // TODO
 - 友联内容展示优化 // TODO
 - 文档内容更新调整 | 以当前最新的为基础进行大更新
 - config.md尚未补充完善 // TODO
 - 版本更新提示 //TODO
-- 标题和导航对应滚动 v2.2.2之后出现问题 // TODO
 - base-css未打包 // TODO
 
 
