@@ -34,10 +34,10 @@ export default function main(_) {
         },
         handle: {
             scroll: () => {
-                for (let i = 0; i < $.__event.scroll.handle.length; i++) { (_.__event.scroll.handle[i])() }
+                for (let i = 0; i < $.__event.scroll.handle.length; i++) { ( $.__event.scroll.handle[i])() }
             },
             resize: () => {
-                for (let i = 0; i < $.__event.resize.handle.length; i++) { (_.__event.resize.handle[i])() }
+                for (let i = 0; i < $.__event.resize.handle.length; i++) { ( $.__event.resize.handle[i])() }
                 $.__tools.setDomHomePosition();
             },
         }

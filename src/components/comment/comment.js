@@ -43,7 +43,7 @@ export default function main(_) {
     $.__timeIds.commentTId = window.setInterval(() =>{
         if ($('.feedbackItem').length > 0) {
             setComment();
-            $.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
+            $.__tools.clearIntervalTimeId( $.__timeIds.commentTId);
         }
     },1000);
 

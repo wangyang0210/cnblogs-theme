@@ -51,19 +51,19 @@
 
 ### 查看/修改配置
 
-当前主题渲染使用的配置都在 `_.__config` 中，可以查看当前配置，也可以直接修改使用的配置。
+当前主题渲染使用的配置都在 ` $.__config` 中，可以查看当前配置，也可以直接修改使用的配置。
 
 ### 调用主题公共方法
 
-当前主题公共方法都在 `_.__tools` 中，关于所有的公共方法可查看[此文件](https://github.com/wangyang0210/cnblogs-theme/blob/v2/src/utils/tools.js)
+当前主题公共方法都在 ` $.__tools` 中，关于所有的公共方法可查看[此文件](https://github.com/wangyang0210/cnblogs-theme/blob/v2/src/utils/tools.js)
 
 ### 查看页面状态信息
 
-当前主题渲染使用的配置都在 `_.__status` 中。
+当前主题渲染使用的配置都在 ` $.__status` 中。
 
 ### 查看/触发事件
 
-当前主题公共事件处理都在 `_.__event` 中，目前只有滚动事件和窗口大小事件的监听处理，源码可参考[此文件](https://github.com/wangyang0210/cnblogs-theme/blob/v2/src/components/event/event.js) 。
+当前主题公共事件处理都在 ` $.__event` 中，目前只有滚动事件和窗口大小事件的监听处理，源码可参考[此文件](https://github.com/wangyang0210/cnblogs-theme/blob/v2/src/components/event/event.js) 。
 
 * 触发事件
 
@@ -72,8 +72,8 @@
 示例：
 
 ```javascript
-_.__event.handle.scroll(); // 触发滚动处理
-_.__event.handle.resize(); // 触发窗口大小变化处理
+ $.__event.handle.scroll(); // 触发滚动处理
+ $.__event.handle.resize(); // 触发窗口大小变化处理
 ```
 
 * 添加新的事件处理
@@ -81,7 +81,7 @@ _.__event.handle.resize(); // 触发窗口大小变化处理
 示例：
 
 ```javascript
-_.__event.scroll.handle.push(() => {
+ $.__event.scroll.handle.push(() => {
     console.log('当页面滚动时，我被执行！');
 });
 ```

@@ -11,7 +11,7 @@ import dayNightControl from "../../hooks/dayNightControl";
 
 export default function main(_) {
 
-    if (!_.__config.switchDayNight.enable) return true;
+    if (! $.__config.switchDayNight.enable) return true;
 
     let h         = parseInt(new Date().getHours()),
         cookieKey = 'cnblogs_config_isNight',
@@ -23,7 +23,7 @@ export default function main(_) {
      * 判断当前日/夜模式
      */
     (() => {
-        switch (_.__tools.getCookie(cookieKey)) {
+        switch ( $.__tools.getCookie(cookieKey)) {
             case 'day':
                 daySwitch = 'daySwitch'; break;
             case 'night':
@@ -37,14 +37,14 @@ export default function main(_) {
      * 判断是否强制夜间
      */
     (() => {
-        if (_.__config.switchDayNight.nightMode) daySwitch = '';
+        if ( $.__config.switchDayNight.nightMode) daySwitch = '';
     })();
 
     /**
      * 设置基础模版
      */
     (() => {
-        $('body').prepend(_.__tools.tempReplacement(dayNightTemp, 'daySwitch', daySwitch));
+        $('body').prepend( $.__tools.tempReplacement(dayNightTemp, 'daySwitch', daySwitch));
     })();
 
     /**
@@ -79,8 +79,8 @@ export default function main(_) {
      * 第二次及以后使用标签构建文件加载
      */
     function loadDarkCss() {
-        if (_.__status.dayNightCssHref) {
-            $('head').append('<link type="text/css" id="baseDarkCss" rel="stylesheet" href="'+_.__status.dayNightCssHref+'">');
+        if ( $.__status.dayNightCssHref) {
+            $('head').append('<link type="text/css" id="baseDarkCss" rel="stylesheet" href="'+ $.__status.dayNightCssHref+'">');
         } else {
             import(/* webpackChunkName: "day-night" */ /* webpackPrefetch: true */ '../../style/base.dark.css');
 

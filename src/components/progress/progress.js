@@ -10,10 +10,10 @@ import ToProgress from "../../vendor/ToProgress/ToProgress";
 
 export default function main(_) {
     $('#blog-news').prepend('<div id="progressBar"></div>');
-    let progressBar = ToProgress && new window.ToProgress(_.__config.progressBar, '#progressBar');
+    let progressBar = ToProgress && new window.ToProgress( $.__config.progressBar, '#progressBar');
 
     // 添加事件监听
     $.__event.scroll.handle.push(() => {
-        progressBar.setProgress(_.__tools.getScrollPercent());
+        progressBar.setProgress( $.__tools.getScrollPercent());
     });
 }

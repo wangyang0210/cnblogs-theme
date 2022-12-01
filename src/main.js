@@ -13,7 +13,7 @@ import tools from './utils/tools';
 import event from "./components/event/event";
 
 $(document).ready(function () {
-    
+
     // 初始化
     $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
     $.__status = status(); // 页面状态信息
@@ -21,10 +21,10 @@ $(document).ready(function () {
     $.__timeIds = {};       // 定时器
     $.__event = {};       // 事件
 
-    if (_.__config.info.name === '') $.__config.info.name = $.__status.user;
+    if ( $.__config.info.name === '') $.__config.info.name = $.__status.user;
 
     // 开启渲染
-    import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${_.__status.pageType}`).then(module => {
+    import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {
         const page = module.default;
 
         // 前置公共处理

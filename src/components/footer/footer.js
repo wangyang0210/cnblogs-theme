@@ -42,10 +42,10 @@ export default function main(_) {
      * 设置友情链接
      */
     (() => {
-        if (_.__config.links.footer.length > 0) {
+        if ( $.__config.links.footer.length > 0) {
             let linksHtml = '友情链接：';
             for (let i = 0; i < $.__config.links.footer.length; i++) {
-                linksHtml += '<a href="' + (_.__config.links.footer[i][1]) + '" target="_blank">' + (_.__config.links.footer[i][0]) + '</a>';
+                linksHtml += '<a href="' + ( $.__config.links.footer[i][1]) + '" target="_blank">' + ( $.__config.links.footer[i][0]) + '</a>';
                 if (i < $.__config.links.footer.length - 1) linksHtml += '<span style="margin: 0 3px;">/</span>';
             }
             footerHtml = $.__tools.batchTempReplacement(footerHtml, [
@@ -93,7 +93,7 @@ export default function main(_) {
      */
     (() => {
         window.setInterval(() => {
-            let runDate = $.__tools.getRunDate(_.__config.info.startDate ? $.__config.info.startDate : '2021-01-01');
+            let runDate = $.__tools.getRunDate( $.__config.info.startDate ? $.__config.info.startDate : '2021-01-01');
             $('#blogRunTimeSpan').text('This blog has running : ' + runDate.daysold + ' d ' + runDate.hrsold + ' h ' + runDate.minsold + ' m ' + runDate.seconds + ' s');
         }, 500);
     })();
@@ -102,13 +102,13 @@ export default function main(_) {
      * 定时网站统计
      */
     (() => {
-        if (_.__config.umami?.url && $.__config.umami?.shareId) {
+        if ( $.__config.umami?.url && $.__config.umami?.shareId) {
             const baseUrl = $.__config.umami.url
             $.__timeIds.umamiTId = window.setInterval(() => {
-                request(`${baseUrl}api/share/${_.__config.umami.shareId}`).then( r => {
+                request(`${baseUrl}api/share/${ $.__config.umami.shareId}`).then( r => {
                     Promise.all([
-                        request(`${baseUrl}api/website/${r.websiteId}/stats?start_at=${_.__tools.getTodayStart()}&end_at=${_.__tools.getTodayEnd()}`),
-                        request(`${baseUrl}api/website/${r.websiteId}/stats?start_at=${_.__tools.getYesterdayStart()}&end_at=${_.__tools.getYesterdayEnd()}`),
+                        request(`${baseUrl}api/website/${r.websiteId}/stats?start_at=${ $.__tools.getTodayStart()}&end_at=${ $.__tools.getTodayEnd()}`),
+                        request(`${baseUrl}api/website/${r.websiteId}/stats?start_at=${ $.__tools.getYesterdayStart()}&end_at=${ $.__tools.getYesterdayEnd()}`),
                         request(`${baseUrl}api/website/${r.websiteId}/active`)])
                         .then(function (results) {
                             const todayState = results[0]
@@ -117,7 +117,7 @@ export default function main(_) {
                             $('#cnzzInfo').text(`Online: ${online[0].x} | Today: ${todayState.pageviews.value} / ${todayState.uniques.value} / ${todayState.totaltime.value} | Yesterday: ${yesterdayState.pageviews.value} / ${yesterdayState.uniques.value} / ${yesterdayState.totaltime.value}`).show();
                         });
                 })
-                $.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.umamiTId);
             },1000);
         }
     })();

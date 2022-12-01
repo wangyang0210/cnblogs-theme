@@ -16,7 +16,7 @@ export default function main(_) {
      */
     (() => {
         const sbTitle = $('#cb_post_title_url').text();
-        if (_.__config.animate.articleTitle.enable) {
+        if ( $.__config.animate.articleTitle.enable) {
             consoleText([sbTitle], 'sbTitleText', 'sbTitleConsole', ['#fff'], false, $.__tools.setDomHomePosition);
         } else {
             $('#sbTitleText').text(sbTitle).css('color', '#fff');
@@ -35,7 +35,7 @@ export default function main(_) {
                 let postDescText = $('.postDesc').show().text();
                 $('#articleInfo p.article-info-text').html(postMetaHtml(postDescText));
                 $.__tools.setDomHomePosition();
-                $.__tools.clearIntervalTimeId(_.__timeIds.postDescTid);
+                $.__tools.clearIntervalTimeId( $.__timeIds.postDescTid);
             }
         }, 1000 );
 
@@ -62,7 +62,7 @@ export default function main(_) {
             if (obj.length > 0) {
                 $.__tools.articleInfo(obj, 1)
                 $.__tools.setDomHomePosition();
-                $.__tools.clearIntervalTimeId(_.__timeIds.articleInfoClassTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.articleInfoClassTId);
             }
         }, 1000);
     })();
@@ -76,7 +76,7 @@ export default function main(_) {
             if (obj.length > 0) {
                 $.__tools.articleInfo(obj, 2)
                 $.__tools.setDomHomePosition();
-                $.__tools.clearIntervalTimeId(_.__timeIds.articleInfoTagTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.articleInfoTagTId);
             }
         }, 1000);
     })();
@@ -85,7 +85,7 @@ export default function main(_) {
      * 设置文章信息-链接icon
      */
     (() => {
-        if (_.__config.articleContent.link) {
+        if ( $.__config.articleContent.link) {
             $('#cnblogs_post_body a').addClass('iconfont icon-fenxiang')
             $('.footnote-ref a').removeClass('iconfont icon-fenxiang')
             $('.footnotes-list a').removeClass('iconfont icon-fenxiang')
@@ -97,7 +97,7 @@ export default function main(_) {
      */
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
-        if (_.__config.articleContent.iconfont && titleInfo.length > 0) {
+        if ( $.__config.articleContent.iconfont && titleInfo.length > 0) {
             let iconfonts = [
                 'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
                 'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',

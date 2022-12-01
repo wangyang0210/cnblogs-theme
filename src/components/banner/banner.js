@@ -21,7 +21,7 @@ export default function main(_) {
         let topImg, bgImg, height;
 
         // 设置图片
-        if (_.__status.pageType === 'home') {
+        if ( $.__status.pageType === 'home') {
             topImg = $.__config.banner.home.background.length > 0 ? $.__config.banner.home.background : ['https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053600_wallhaven-6k3oox.webp'];
         }  else {
             topImg = $.__config.banner.article.background.length > 0 ? $.__config.banner.article.background : [	'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053937_wallhaven-j5mz95.webp'];
@@ -36,7 +36,7 @@ export default function main(_) {
         if (height) mainHeader.css('height', height);
 
         // banner动效
-        if (_.__config.animate.bannerImages?.enable) {
+        if ( $.__config.animate.bannerImages?.enable) {
             // 开启图片自动切换
             import(/* webpackChunkName: "banner-images" */ /* webpackPrefetch: true */ '../bannerImages/bannerImages').then(module => {
                 let bannerImages = module.default;
@@ -54,7 +54,7 @@ export default function main(_) {
         } else {
             // 随机指定一个图片
 
-            if (topImg.length > 1) bgImg = topImg[_.__tools.randomNum(0, topImg.length - 1)]
+            if (topImg.length > 1) bgImg = topImg[ $.__tools.randomNum(0, topImg.length - 1)]
             else bgImg = topImg[0] || ""
 
             mainHeader.css({
@@ -64,7 +64,7 @@ export default function main(_) {
         }
 
         // Banner文字是否可选
-        if(!_.__config.banner.text) $('.main-header-content.inner').addClass('textUnselect')
+        if(! $.__config.banner.text) $('.main-header-content.inner').addClass('textUnselect')
 
     })();
 
@@ -72,12 +72,12 @@ export default function main(_) {
     $.__event.scroll.handle.push(() => {
         let openButton = $('#open-button');
 
-        if (_.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll && !openButton.hasClass('menu-button-scroll')) { // 向下滚动
+        if ( $.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll && !openButton.hasClass('menu-button-scroll')) { // 向下滚动
             openButton.addClass('menu-button-scroll');
             openButton.text('');
         }
 
-        if (_.__event.scroll.temScroll > $.__event.scroll.docScroll && $.__event.scroll.homeScroll >= $.__event.scroll.docScroll && openButton.hasClass('menu-button-scroll')) { // 滚入头图
+        if ( $.__event.scroll.temScroll > $.__event.scroll.docScroll && $.__event.scroll.homeScroll >= $.__event.scroll.docScroll && openButton.hasClass('menu-button-scroll')) { // 滚入头图
             openButton.removeClass('menu-button-scroll');
             openButton.text('MENU');
         }

@@ -8,8 +8,8 @@
  */
 export default function main(_) {
     let shortcutIcon = $('link[rel="shortcut icon"]');
-    if (_.__config.info.blogIcon && shortcutIcon.length) shortcutIcon.attr('href', $.__config.info.blogIcon);
-    if (_.__config.info.blogIcon && !shortcutIcon.length) {
+    if ( $.__config.info.blogIcon && shortcutIcon.length) shortcutIcon.attr('href', $.__config.info.blogIcon);
+    if ( $.__config.info.blogIcon && !shortcutIcon.length) {
         let linkObject  = document.createElement('link');
         linkObject.rel  = "shortcut icon";
         linkObject.href = $.__config.info.blogIcon;

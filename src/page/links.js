@@ -23,14 +23,14 @@ export default function main(_) {
      * 添加友链
      */
     (() => {
-        if (_.__config.links.page.length) {
+        if ( $.__config.links.page.length) {
 
             import(/* webpackChunkName: "gf-blink" */ /* webpackPrefetch: true */ '../style/gf-blink.css');
 
             let postBody = $('#cnblogs_post_body'),
                 html = '';
 
-            $.each(_.__config.links.page, (i) => {
+            $.each( $.__config.links.page, (i) => {
                 let list = $.__config.links.page[i];
                 if (list.title) html += '<h1 class="iconfont ' + list.icon + '" style="'+ list.style +'"> ' + list.title + '</h1>';
 

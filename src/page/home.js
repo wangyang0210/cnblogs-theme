@@ -16,12 +16,12 @@ export default function main(_) {
      */
     (() => {
 
-        $('#homeTopTitle span').text(_.__config.info.name);
+        $('#homeTopTitle span').text( $.__config.info.name);
 
         /**
          * 博客名字动效
          */
-        if (_.__config.animate.infoName.enable) {
+        if ( $.__config.animate.infoName.enable) {
             $('#homeTopTitle span').hover(function () {
                     $('#homeTopTitle span').css("animation", "pageTitleText 2s infinite")
                     $('#homeTopTitle span').css("-webkit-animation", "pageTitleText 1s infinite")
@@ -64,8 +64,8 @@ export default function main(_) {
             $.__tools.setDomHomePosition();
         }
 
-        if (_.__config.banner.home.titleSource === 'one') request('https://api.wangyangyang.vip/').then(r =>  topTitleContent(r))
-        if (_.__config.banner.home.titleSource === 'jinrishici')  request('https://v2.jinrishici.com/one.json').then(r =>  topTitleContent(r))
+        if ( $.__config.banner.home.titleSource === 'one') request('https://api.wangyangyang.vip/').then(r =>  topTitleContent(r))
+        if ( $.__config.banner.home.titleSource === 'jinrishici')  request('https://v2.jinrishici.com/one.json').then(r =>  topTitleContent(r))
     })();
 
     /**
@@ -131,9 +131,9 @@ export default function main(_) {
      * 主页banner动效
      */
     (() => {
-        if (_.__config.animate.homeBanner.enable) {
+        if ( $.__config.animate.homeBanner.enable) {
             import(/* webpackChunkName: "circle-magic" */ /* webpackPrefetch: true */  '../vendor/circleMagic/circleMagic').then(module => {
-                $('.main-header').circleMagic(_.__config.animate.homeBanner.options);
+                $('.main-header').circleMagic( $.__config.animate.homeBanner.options);
             });
         }
     })();

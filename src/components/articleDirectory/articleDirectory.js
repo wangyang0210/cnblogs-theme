@@ -56,18 +56,18 @@ export default function main(_) {
         body.attr('tabindex', '0');
         body.scrollspy({ target: '#articleDirectory' });
 
-        if (!_.__config.articleDirectory.autoWidthScroll) {
+        if (! $.__config.articleDirectory.autoWidthScroll) {
             $('#articleDirectory ul li').addClass('articleDirectory-overflow');
             $('#articleDirectory ul li a').addClass('articleDirectory-overflow');
         }
 
         $.__event.scroll.handle.push(() => {
             let articleDirectory = $('#articleDirectory');
-            if (_.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
+            if ( $.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
                 articleDirectory.addClass('articleDirectoryFixed');
             }
 
-            if (_.__event.scroll.temScroll > $.__event.scroll.docScroll &&_.__event.scroll.homeScroll >= $.__event.scroll.docScroll) {
+            if ( $.__event.scroll.temScroll > $.__event.scroll.docScroll && $.__event.scroll.homeScroll >= $.__event.scroll.docScroll) {
                 articleDirectory.removeClass('articleDirectoryFixed');
             }
         });
@@ -82,7 +82,7 @@ export default function main(_) {
                     rightPx          = bothWidth - listWidth - 5,
                     sideToolbarTop   = $('.main-header').outerHeight();
 
-                switch (_.__config.articleDirectory.position) {
+                switch ( $.__config.articleDirectory.position) {
                     case 'left':
                         articleDirectory.css({
                             'top': (sideToolbarTop + 5) + 'px',

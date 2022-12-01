@@ -23,12 +23,12 @@ export default function main(_) {
      * 书单页处理
      */
     (() => {
-        if (_.__config.bookList.length) {
+        if ( $.__config.bookList.length) {
             import(/* webpackChunkName: "gf-blink" */ /* webpackPrefetch: true */ '../style/gf-blink.css');
 
             let postBody = $('#cnblogs_post_body'),
                 html = '';
-            $.each(_.__config.bookList, (i) => {
+            $.each( $.__config.bookList, (i) => {
                 let list = $.__config.bookList[i];
                 if (list.title) html += '<h1 class=`iconfont ${list.icon}`>' + list.title + '</h1>';
 

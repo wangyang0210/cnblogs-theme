@@ -36,7 +36,7 @@ export default function main(_) {
         $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
-        $('.sidebar-title-msg').text(_.__config.sidebar.titleMsg);
+        $('.sidebar-title-msg').text( $.__config.sidebar.titleMsg);
     })();
 
     /**
@@ -57,19 +57,19 @@ export default function main(_) {
             let introduceHtml = $('#profile_block').html(),
                 menuIntroduce = $('#introduce');
             if ((typeof introduceHtml == 'string') && menuIntroduce.html() === '') {
-                menuIntroduce.html(_.__tools.htmlFiltrationScript(introduceHtml));
-                $.__tools.clearIntervalTimeId(_.__timeIds.introduceTId);
+                menuIntroduce.html( $.__tools.htmlFiltrationScript(introduceHtml));
+                $.__tools.clearIntervalTimeId( $.__timeIds.introduceTId);
             }
         }, timeout);
 
         // ------- 博客统计 -------
-        if(_.__config.sidebar.blogStatus) {
+        if( $.__config.sidebar.blogStatus) {
             $.__timeIds.blogStatsTId = window.setInterval(() => {
                 let blogStats   = $('.blogStats'), menuBlogStats  = $('.sidebar-stats');
                 if (blogStats.length > 0) {
-                    menuBlogStats.html(_.__tools.htmlFiltrationScript(blogStats.html())).show();
+                    menuBlogStats.html( $.__tools.htmlFiltrationScript(blogStats.html())).show();
                     blogStats.html('')
-                    $.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
+                    $.__tools.clearIntervalTimeId( $.__timeIds.blogStatsTId);
                 }
             }, timeout);
         }
@@ -85,7 +85,7 @@ export default function main(_) {
                 calendar.remove();
                 menuCalendar.html(calendarHtml).show();
                 $('#blog-calendar').css('visibility', 'visible');
-                $.__tools.clearIntervalTimeId(_.__timeIds.calendarTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.calendarTId);
             }
         }, timeout);
 
@@ -97,7 +97,7 @@ export default function main(_) {
             if (sidebarSearch.length > 0 && menuSearchBox.html() === ''){
                 menuSearchBox.prepend('<div id="sb_widget_my_zzk" class="div_my_zzk"><input id="q" type="text"  autocomplete="off" placeholder="找找看..." onkeydown="return zzk_go_enter(event);" class="input_my_zzk form-control search-menu"></div>');
                 $('.sidebar-search').show();
-                $.__tools.clearIntervalTimeId(_.__timeIds.searchTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.searchTId);
             }
         }, timeout);
 
@@ -224,13 +224,13 @@ export default function main(_) {
             if (recentComments.length > 0 && menuRecentComments.html() === '') {
                 menuRecentComments.html(getMenuCommentsData(recentComments));
                 menuRecentComments.parent('.sidebar-dropdown').show();
-                $.__tools.clearIntervalTimeId(_.__timeIds.commentsTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.commentsTId);
             }
         }, timeout);
 
         // ------- 自定义导航 -------
         (() => {
-            if (_.__config.sidebar?.navList) {
+            if ( $.__config.sidebar?.navList) {
                 let navList = $.__config.sidebar.navList;
                 let navHtml = '';
                 if (navList.length > 0) {
@@ -247,7 +247,7 @@ export default function main(_) {
 
         // ------- 自定义列表 -------
         (() => {
-            if (_.__config.sidebar?.customList) {
+            if ( $.__config.sidebar?.customList) {
                 let customData = $.__config.sidebar.customList;
                 if (Object.keys(customData).length > 0) {
                     let res = '';

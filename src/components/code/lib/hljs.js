@@ -26,7 +26,7 @@ export default function main(_, setCodeLine) {
          */
         (() => {
             // 语言范围设置
-            if (_.__config.code.options.hljs.languages.length) {
+            if ( $.__config.code.options.hljs.languages.length) {
                 hljs.configure({
                     languages: $.__config.code.options.hljs.languages
                 });
@@ -75,7 +75,7 @@ export default function main(_, setCodeLine) {
                 if (preHljs.length > 0) {
                     $('code-box').css('background', $('pre code.hljs').css('background')).prepend('<hljs-len class="code-hljs-len"></hljs-len>');
                     setCodeHljsLen();
-                    $.__tools.clearIntervalTimeId(_.__timeIds.hljsCodeTId);
+                    $.__tools.clearIntervalTimeId( $.__timeIds.hljsCodeTId);
                 }
             }, 1000);
         })();

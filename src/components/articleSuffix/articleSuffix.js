@@ -12,7 +12,7 @@ import suffixTemp from '../../template/articleSuffix.html';
 export default function main(_) {
 
     // 图片
-    let imgUrl  = $.__tools.ternaryOperation(_.__config.articleSuffix.imgUrl, $.__config.info.avatar, $.__config.default.avatar )
+    let imgUrl  = $.__tools.ternaryOperation( $.__config.articleSuffix.imgUrl, $.__config.info.avatar, $.__config.default.avatar )
 
     // 本文作者 & 本文链接
     let articleAuthor = $('#articleAuthor');
@@ -50,7 +50,7 @@ export default function main(_) {
 
     // 版权声明 - COPY
     (() => {
-        if (_.__config.articleSuffix.copyText.enable) {
+        if ( $.__config.articleSuffix.copyText.enable) {
             let textLength = $.__config.articleSuffix.copyText.length || 30;
             let copyrightText = $.__config.articleSuffix.copyText.copyright || copyrightHtml;
             document.body.addEventListener('copy', function (e) {

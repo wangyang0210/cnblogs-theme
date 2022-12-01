@@ -58,8 +58,8 @@ export default function main(_) {
             let ac = $(this).attr('data');
             if (ac === 'down') {
                 let downScroll;
-                if (_.__config.rtMenu.downScrollDom && $(_.__config.rtMenu.downScrollDom).length > 0) {
-                    downScroll = $(_.__config.rtMenu.downScrollDom).offset().top + 10;
+                if ( $.__config.rtMenu.downScrollDom && $( $.__config.rtMenu.downScrollDom).length > 0) {
+                    downScroll = $( $.__config.rtMenu.downScrollDom).offset().top + 10;
                 } else {
                     let docHeight = $(document).height();
                     let windowHeight = $(window).height();
@@ -81,7 +81,7 @@ export default function main(_) {
             $.__event.scroll.docScroll = $(document).scrollTop(); // 当前滚动位置
             $.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
 
-            if (_.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
+            if ( $.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
                 toUpDownI.rotate({animateTo: 0});
                 toUpDown.attr('data', 'up');
                 toUpDownSpan.text('返回顶部');
@@ -133,7 +133,7 @@ export default function main(_) {
                     attention.find('.rightMenuSpan').text('关注');
                     attention.find('i').removeClass('icon-follower').addClass('icon-unfollower');
                 }
-                $.__tools.clearIntervalTimeId(_.__timeIds.followTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.followTId);
             }
         }, 1000);
     })();
@@ -142,7 +142,7 @@ export default function main(_) {
      * 二维码
      */
     (() => {
-        if (_.__config.rtMenu.qrCode) {
+        if ( $.__config.rtMenu.qrCode) {
             $('#rightGzh').show().find('.ds-gzh img').attr('src', $.__config.rtMenu.qrCode);
         }
     })();
@@ -152,7 +152,7 @@ export default function main(_) {
      * 打赏
      */
     (() => {
-        if (_.__config.rtMenu.reward.alipay || $.__config.rtMenu.reward.wechatpay) {
+        if ( $.__config.rtMenu.reward.alipay || $.__config.rtMenu.reward.wechatpay) {
             $('#rightDashang').show();
 
             $.__config.rtMenu.reward.alipay
@@ -184,7 +184,7 @@ export default function main(_) {
                     clickHdl($(this), rightMenuSpan, $('#digg_count').text());
                 });
 
-                $.__tools.clearIntervalTimeId(_.__timeIds.diggitTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.diggitTId);
             }
         }, 1000);
 
@@ -204,7 +204,7 @@ export default function main(_) {
                     clickHdl($(this), rightMenuSpan, $('#bury_count').text());
                 });
 
-                $.__tools.clearIntervalTimeId(_.__timeIds.buryitTId);
+                $.__tools.clearIntervalTimeId( $.__timeIds.buryitTId);
             }
         }, 1000);
 
@@ -241,7 +241,7 @@ export default function main(_) {
      * 文章目录
      */
     (() => {
-        if (_.__status.pageType !== 'home') {
+        if ( $.__status.pageType !== 'home') {
             let rtaDirectory = $('#rtaDirectory');
             rtaDirectory.show();
 
@@ -259,7 +259,7 @@ export default function main(_) {
      * 主页
      */
     (() => {
-        if (_.__status.pageType !== 'home') {
+        if ( $.__status.pageType !== 'home') {
             let rightMenuHome = $('#rightMenuHome');
             rightMenuHome.show();
 
