@@ -7,7 +7,7 @@
  * @describe: 日夜间模式切换时
  */
 
-export default function main(_, type) {
+export default function main(type) {
     if (typeof $.__config.hooks.dayNightControl === "function")
-        $.__config.hooks.dayNightControl(_, type);
+        $.__config.hooks.dayNightControl(type);
 }

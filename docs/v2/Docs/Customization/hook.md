@@ -27,7 +27,7 @@
           afterLoading: () => {
             // console.log('loading 结束后');
           },
-          dayNightControl: (_, type) => {
+          dayNightControl: (type) => {
             // console.log(type);
             // console.log('日/夜间模式');
           },
@@ -43,9 +43,9 @@
 |**afterCode**|()|code 渲染结束后调用此方法|
 |**beforeLoading**|()|loading 开始前调用此方法|
 |**afterLoading**|()|loading 结束后调用此方法|
-|**dayNightControl**|(_, type)|日/夜间模式切换调用此方法|
+|**dayNightControl**|(type)|日/夜间模式切换调用此方法|
 
-## 关于参数"_"
+## 关于参数"$."
 
 里面包含了主题渲染使用的配置、工具方法、页面状态、事件监听等。
 

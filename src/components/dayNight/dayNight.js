@@ -63,12 +63,12 @@ export default function main() {
                 $.__tools.setCookie(cookieKey, 'night', exp);
                 $(this).removeClass('daySwitch');
                 loadDarkCss();
-                dayNightControl(_, 'night');
+                dayNightControl('night');
             } else { // 日间
                 $.__tools.setCookie(cookieKey, 'day', exp);
                 $(this).addClass('daySwitch');
                 $('head link#baseDarkCss').remove();
-                dayNightControl(_, 'day');
+                dayNightControl( 'day');
             }
         });
     })();

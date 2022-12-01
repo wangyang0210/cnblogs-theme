@@ -8,7 +8,7 @@
  */
 import hljs from 'highlight.js/lib/common';
 
-export default function main(_, setCodeLine) {
+export default function main(setCodeLine) {
     let theme = $.__config.code.options.hljs.theme.toLowerCase();
 
     import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {

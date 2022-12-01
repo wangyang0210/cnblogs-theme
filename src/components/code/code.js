@@ -94,7 +94,7 @@ export default function main() {
         if (codeType === 'hljs') {
             import(/* webpackChunkName: "code-hljs" */ /* webpackPrefetch: true */ './lib/hljs').then(module => {
                 const codeMain = module.default;
-                codeMain(_, setCodeLine);
+                codeMain(setCodeLine);
             });
         } else {
             preList.css('background', '#f5f5fa');
@@ -114,7 +114,7 @@ export default function main() {
      * 设置代码行号
      */
     function setCodeLine() {
-        if (! $.__config.code.options.line) return true;
+        if (!$.__config.code.options.line) return true;
 
         let preListLine = $('code-box pre code');
         $.each(preListLine, function (i) {
