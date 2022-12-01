@@ -40,8 +40,8 @@ $(document).ready(function () {
                 comAfter();
                 (() => {
                     $.__tools.setDomHomePosition(); // 文章主体位置修正
-                    event().handle.scroll(); // 触发滚动处理
-                    event().handle.resize(); // 触发窗口大小变化处理
+                    event.handle.scroll(); // 触发滚动处理
+                    event.handle.resize(); // 触发窗口大小变化处理
                 })();
             });
         });
