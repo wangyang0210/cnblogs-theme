@@ -7,7 +7,8 @@
  * @describe: 主程序文件
  */
 import _ from 'lodash/core.min';
-import config from './components/config/config';
+// import config from './components/config/config';
+import defaultConfig from './components/config/config.json5'
 import status from "./components/status/status";
 import tools from './utils/tools';
 import event from "./components/event/event";
@@ -15,34 +16,27 @@ import event from "./components/event/event";
 $(document).ready(function () {
 
     // 初始化
-    _.__config = config(); // 配置信息
+    _.__config = _.extend(defaultConfig, window?.cnblogsConfig || {}); // 配置信息
     _.__status = status(); // 页面状态信息
     _.__tools = tools();  // 公共处理工具
     _.__timeIds = {};       // 定时器
     _.__event = {};       // 事件
 
-
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
 
     // 开启渲染
-    import(/* webpackChunkName: "page-[request]" */ /* webpackPreload: true */ `./page/${_.__status.pageType}`).then(module => {
+    import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${_.__status.pageType}`).then(module => {
         const page = module.default;
 
-        /**
-         * 前置公共处理
-         */
-        import(/* webpackChunkName: "com-before" */ /* webpackPreload: true */ './components/common/comBefore').then(beforeModule => {
+        // 前置公共处理
+        import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
             const comBefore = beforeModule.default;
             comBefore(_);
 
-            /**
-             * 页面逻辑处理
-             */
+            // 页面逻辑处理
             page(_);
 
-            /**
-             * 后置公共处理
-             */
+            // 后置公共处理
             import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
                 const comAfter = afterModule.default;
                 comAfter(_);
