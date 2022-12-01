@@ -4092,9 +4092,9 @@ table#blogCalendar > tbody > tr > td > a {
         /*padding: 15% 0*/
     }
 
-    #version-rocket {
-        display: block;
-    }
+    /*#version-rocket {*/
+    /*    display: block;*/
+    /*}*/
 
     #home {
         width: 85%;
