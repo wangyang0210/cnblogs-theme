@@ -16,7 +16,7 @@ import event from "./components/event/event";
 $(document).ready(function () {
 
     // 初始化
-    _.__config = _.extend(defaultConfig, window?.cnblogsConfig || {}); // 配置信息
+    _.__config = _.extend(window?.cnblogsConfig || {}, defaultConfig); // 配置信息
     _.__status = status(); // 页面状态信息
     _.__tools = tools();  // 公共处理工具
     _.__timeIds = {};       // 定时器
