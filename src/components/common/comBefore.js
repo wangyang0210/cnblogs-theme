@@ -17,10 +17,10 @@ export default function main(_) {
     let loadingObj = loading(_);
 
     // 默认字体图标库
-    import(/* webpackChunkName: "iconfont" */ /* webpackPrefetch: true */ '../../style/iconfont.css');
+    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
 
     // 谷歌字体
-    import(/* webpackChunkName: "google-fonts" */ /* webpackPrefetch: true */ '../../style/google-fonts.css');
+    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
 
     /**
      * 开启 loading
