@@ -82,7 +82,7 @@ export default function main(_) {
         if (_.__status.dayNightCssHref) {
             $('head').append('<link type="text/css" id="baseDarkCss" rel="stylesheet" href="'+_.__status.dayNightCssHref+'">');
         } else {
-            import(/* webpackChunkName: "day-night" */ /* webpackPrefetch: true */ '../../style/base.dark.css');
+            import(/* webpackChunkName: "day-night" */ '../../style/base.dark.css');
 
             setTimeout(function () {
                 let links = $('head link');
