@@ -5,7 +5,6 @@
 - status代码优化
 - config代码去除
 - tools代码优化
-- bootstrap通过cdn引入
 - 友联内容展示优化 // TODO
 - 文档内容更新调整 | 以当前最新的为基础进行大更新
 - config.md尚未补充完善 // TODO
