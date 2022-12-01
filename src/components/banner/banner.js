@@ -36,7 +36,7 @@ export default function main(_) {
         if (height) mainHeader.css('height', height);
 
         // banner动效
-        if (_.__config.animate.bannerImages.enable) {
+        if (_.__config.animate.bannerImages?.enable) {
             // 开启图片自动切换
             import(/* webpackChunkName: "banner-images" */ /* webpackPrefetch: true */ '../bannerImages/bannerImages').then(module => {
                 let bannerImages = module.default;
