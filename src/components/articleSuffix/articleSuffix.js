@@ -12,7 +12,7 @@ import suffixTemp from '../../template/articleSuffix.html';
 export default function main() {
 
     // 图片
-    let imgUrl  = $.__tools.ternaryOperation( $.__config.articleSuffix.imgUrl, $.__config.info.avatar, $.__config.default.avatar )
+    let imgUrl = $.__config.articleSuffix.imgUrl ? $.__config.articleSuffix.imgUrl : $.__config.info.avatar ? $.__config.info.avatar : $.__config.default.avatar;
 
     // 本文作者 & 本文链接
     let articleAuthor = $('#articleAuthor');

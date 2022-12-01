@@ -28,8 +28,8 @@ module.exports = {
         //     }
         // }),
         // new BundleAnalyzerPlugin({
-        //     analyzerMode: 'disabled',
-        //     generateStatsFile: true
+            // analyzerMode: 'disabled',
+            // generateStatsFile: true
         // }),
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
