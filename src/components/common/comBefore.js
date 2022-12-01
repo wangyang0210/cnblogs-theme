@@ -51,7 +51,7 @@ export default function main() {
      * 事件绑定
      */
     (() => {
-        event().init();
+        event.init();
     })();
 
     /**
