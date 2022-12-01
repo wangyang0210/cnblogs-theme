@@ -17,7 +17,7 @@ export default function main(_) {
     let loadingObj = loading(_);
 
     // 默认css
-    import(/* webpackChunkName: "base-common" */  /* webpackPreload: true */ './style/simple-memory.css')
+    import(/* webpackChunkName: "base-common" */  /* webpackPreload: true */ '../../style/simple-memory.css')
 
     // 默认字体图标库
     import(/* webpackChunkName: "iconfont" */ /* webpackPreload: true */ '../../style/iconfont.css');
