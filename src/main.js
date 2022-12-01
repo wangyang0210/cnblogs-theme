@@ -6,7 +6,7 @@
  * ----------------------------------------------
  * @describe: 主程序文件
  */
-import _ from 'lodash/core.min';
+import _ from 'lodash/lodash.min';
 // import config from './components/config/config';
 import defaultConfig from './components/config/config.json5'
 import status from "./components/status/status";
