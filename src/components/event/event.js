@@ -18,14 +18,14 @@ export default {
         $(window).scroll(() => {
             $.__event.scroll.docScroll = $(document).scrollTop();
             $.__event.scroll.homeScroll = $('#home').offset().top - 40;
-            eventFun.handle.scroll();
+            this.handle.scroll();
             $.__event.scroll.temScroll = $.__event.scroll.docScroll;
         });
         // 窗口大小监听
         $.__event.resize = {};
         $.__event.resize.handle = [];
         $(window).resize(() => {
-            eventFun.handle.resize()
+            this.handle.resize()
         });
     },
     handle: {
