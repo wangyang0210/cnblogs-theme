@@ -16,11 +16,14 @@ export default function main(_) {
 
     let loadingObj = loading(_);
 
+    // 默认css
+    import(/* webpackChunkName: "base-common" */  /* webpackPreload: true */ './style/simple-memory.css')
+
     // 默认字体图标库
-    import(/* webpackChunkName: "iconfont" */ '../../style/iconfont.css');
+    import(/* webpackChunkName: "iconfont" */ /* webpackPreload: true */ '../../style/iconfont.css');
 
     // 谷歌字体
-    import(/* webpackChunkName: "google-fonts" */ '../../style/google-fonts.css');
+    import(/* webpackChunkName: "google-fonts" */ /* webpackPreload: true */ '../../style/google-fonts.css');
 
     /**
      * 开启 loading
