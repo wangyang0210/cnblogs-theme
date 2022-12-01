@@ -33,7 +33,7 @@ export default function main(_) {
      * 工具条
      */
     (() => {
-        if (_.__config.code.options.macStyle) {
+        if ( $.__config.code.options.macStyle) {
             let codeBox = $('code-box');
             $.each(codeBox, function (i) {
                 $(codeBox[i]).prepend('<div class="code-tools"></div>');
@@ -83,7 +83,7 @@ export default function main(_) {
      * 限制代码框高度
      */
     (() => {
-        if (_.__config.code.options.maxHeight) $('code-box pre').css('max-height', $.__config.code.options.maxHeight);
+        if ( $.__config.code.options.maxHeight) $('code-box pre').css('max-height', $.__config.code.options.maxHeight);
     })();
 
     /**
@@ -114,7 +114,7 @@ export default function main(_) {
      * 设置代码行号
      */
     function setCodeLine() {
-        if (!_.__config.code.options.line) return true;
+        if (! $.__config.code.options.line) return true;
 
         let preListLine = $('code-box pre code');
         $.each(preListLine, function (i) {

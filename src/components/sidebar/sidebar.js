@@ -303,7 +303,7 @@ export default function main(_) {
      * 头像旋转动效
      */
     (() => {
-        if (_.__config.animate.avatar.enable) {
+        if ( $.__config.animate.avatar.enable) {
             $('#menuBlogAvatar').addClass('img-rounded')
             $('.author_avatar').addClass('img-rounded')
         }
@@ -321,52 +321,52 @@ export default function main(_) {
             $('#sb-sidebarScorerank').show();
         }
 
-        if (_.__config.sidebar.submenu.latestPosts) {
+        if ( $.__config.sidebar.submenu.latestPosts) {
             $('#sb-sidebarRecentposts').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-sidebarRecentposts').show();
         }
 
-        if (_.__config.sidebar.submenu.myTags) {
+        if ( $.__config.sidebar.submenu.myTags) {
             $('#sb-toptags').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-toptags').show();
         }
 
-        if (_.__config.sidebar.submenu.postsClassify) {
+        if ( $.__config.sidebar.submenu.postsClassify) {
             $('#sb-classify').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-classify').show();
         }
 
-        if (_.__config.sidebar.submenu.articleClassify) {
+        if ( $.__config.sidebar.submenu.articleClassify) {
             $('#sb-ArticleCategory').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-ArticleCategory').show();
         }
 
-        if (_.__config.sidebar.submenu.readRank) {
+        if ( $.__config.sidebar.submenu.readRank) {
             $('#sb-topview').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-topview').show();
         }
 
-        if (_.__config.sidebar.submenu.recommendRank) {
+        if ( $.__config.sidebar.submenu.recommendRank) {
             $('#sb-topDiggPosts').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-topDiggPosts').show();
         }
 
-        if (_.__config.sidebar.submenu.postsArchive) {
+        if ( $.__config.sidebar.submenu.postsArchive) {
             $('#sb-record').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-record').show();
         }
 
-        if (_.__config.sidebar.submenu.articleArchive) {
+        if ( $.__config.sidebar.submenu.articleArchive) {
             $('#sb-articlearchive').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-articlearchive').show();
         }
 
-        if (_.__config.sidebar.submenu.latestComment) {
+        if ( $.__config.sidebar.submenu.latestComment) {
             $('#sb-recentComments').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-recentComments').show();
         }
 
-        if (_.__config.sidebar.submenu.customList) {
+        if ( $.__config.sidebar.submenu.customList) {
             $("#customize-sidebar-menu .sidebar-submenu").parent('li.sidebar-dropdown').addClass('active');
             $("#customize-sidebar-menu .sidebar-submenu").show();
         }
