@@ -8,6 +8,6 @@
  */
 
 export default function main(_) {
-    if (typeof _.__config.hooks.afterCode === "function")
-        _.__config.hooks.afterCode(_);
+    if (typeof $.__config.hooks.afterCode === "function")
+        $.__config.hooks.afterCode(_);
 }

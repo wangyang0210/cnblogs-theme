@@ -33,19 +33,19 @@ export default function main(_) {
         }
 
             // 判断用户是否自定义了设置
-        let configTitle = _.__config.banner.home.title,
+        let configTitle = $.__config.banner.home.title,
             hitokoto = $('#hitokoto');
 
         if ($.isArray(configTitle) && configTitle.length > 0) {
-            let listIndex = _.__tools.randomNum(0, configTitle.length - 1);
+            let listIndex = $.__tools.randomNum(0, configTitle.length - 1);
             hitokoto.html(configTitle[listIndex]).css('display', '-webkit-box');
-            _.__tools.setDomHomePosition();
+            $.__tools.setDomHomePosition();
             return true;
         }
 
         if (typeof configTitle === "string" && configTitle !== "") {
             hitokoto.html(configTitle).css('display', '-webkit-box');
-            _.__tools.setDomHomePosition();
+            $.__tools.setDomHomePosition();
             return true;
         }
 
@@ -58,10 +58,10 @@ export default function main(_) {
                 hitokoto.html(note).css('display', '-webkit-box');
                 $('#hitokotoAuthor').text(content).show();
             } else {
-                let listIndex = _.__tools.randomNum(0, topTitleList.length - 1);
+                let listIndex = $.__tools.randomNum(0, topTitleList.length - 1);
                 hitokoto.html(topTitleList[listIndex]).css('display', '-webkit-box');
             }
-            _.__tools.setDomHomePosition();
+            $.__tools.setDomHomePosition();
         }
 
         if (_.__config.banner.home.titleSource === 'one') request('https://api.wangyangyang.vip/').then(r =>  topTitleContent(r))
@@ -74,7 +74,7 @@ export default function main(_) {
     (() => {
         $('.scroll-down').click(function () {
             let endScroll;
-            endScroll = $('#home').offset().top + 10; _.__tools.actScroll(endScroll, 500);})
+            endScroll = $('#home').offset().top + 10; $.__tools.actScroll(endScroll, 500);})
     })();
 
     /**

@@ -28,11 +28,11 @@ export default function main(_) {
      */
     (() => {
         // ------- 设置导航 -------
-        let navHtml = _.__tools.tempReplacement(navTemp, 'user', _.__status.user);
+        let navHtml = $.__tools.tempReplacement(navTemp, 'user', $.__status.user);
         $('.sidebar-footer').html(navHtml);
 
         // ------- 设置头像 -------
-        let blogAvatar = _.__config.info.avatar ? _.__config.info.avatar : _.__config.default.avatar;
+        let blogAvatar = $.__config.info.avatar ? $.__config.info.avatar : $.__config.default.avatar;
         $('#menuBlogAvatar').append("<img class='img-responsive' alt='用户头像' src='"+blogAvatar+"'>");
 
         // ------- 设置侧边栏信息 -------
@@ -43,7 +43,7 @@ export default function main(_) {
      * 设置菜单个人信息背景图片
      */
     (() => {
-        let mbg = _.__config.sidebar.infoBackground ? _.__config.sidebar.infoBackground : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114135508_sidebar_bg_2.webp';
+        let mbg = $.__config.sidebar.infoBackground ? $.__config.sidebar.infoBackground : 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114135508_sidebar_bg_2.webp';
         $('.container .menu-wrap').css('background-image', 'url(\''+mbg+'\')');
     })();
 
@@ -53,29 +53,29 @@ export default function main(_) {
     (() => {
         let timeout = 1000;
         // ------- 用户个人信息 -------
-        _.__timeIds.introduceTId = window.setInterval(() => {
+        $.__timeIds.introduceTId = window.setInterval(() => {
             let introduceHtml = $('#profile_block').html(),
                 menuIntroduce = $('#introduce');
             if ((typeof introduceHtml == 'string') && menuIntroduce.html() === '') {
                 menuIntroduce.html(_.__tools.htmlFiltrationScript(introduceHtml));
-                _.__tools.clearIntervalTimeId(_.__timeIds.introduceTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.introduceTId);
             }
         }, timeout);
 
         // ------- 博客统计 -------
         if(_.__config.sidebar.blogStatus) {
-            _.__timeIds.blogStatsTId = window.setInterval(() => {
+            $.__timeIds.blogStatsTId = window.setInterval(() => {
                 let blogStats   = $('.blogStats'), menuBlogStats  = $('.sidebar-stats');
                 if (blogStats.length > 0) {
                     menuBlogStats.html(_.__tools.htmlFiltrationScript(blogStats.html())).show();
                     blogStats.html('')
-                    _.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
+                    $.__tools.clearIntervalTimeId(_.__timeIds.blogStatsTId);
                 }
             }, timeout);
         }
 
         // ------- 日历 -------
-        _.__timeIds.calendarTId = window.setInterval(() => {
+        $.__timeIds.calendarTId = window.setInterval(() => {
             let calendarTable = $('#blogCalendar'),
                 calendar      = $('#blog-calendar'),
                 menuCalendar  = $('#calendar-box');
@@ -85,105 +85,105 @@ export default function main(_) {
                 calendar.remove();
                 menuCalendar.html(calendarHtml).show();
                 $('#blog-calendar').css('visibility', 'visible');
-                _.__tools.clearIntervalTimeId(_.__timeIds.calendarTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.calendarTId);
             }
         }, timeout);
 
         // ------- 找找看 -------
-        _.__timeIds.searchTId = window.setInterval(() => {
+        $.__timeIds.searchTId = window.setInterval(() => {
             let sidebarSearch = $('#sidebar_search_box'),
                 menuSearchBox = $('#sb-sidebarSearchBox');
 
             if (sidebarSearch.length > 0 && menuSearchBox.html() === ''){
                 menuSearchBox.prepend('<div id="sb_widget_my_zzk" class="div_my_zzk"><input id="q" type="text"  autocomplete="off" placeholder="找找看..." onkeydown="return zzk_go_enter(event);" class="input_my_zzk form-control search-menu"></div>');
                 $('.sidebar-search').show();
-                _.__tools.clearIntervalTimeId(_.__timeIds.searchTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.searchTId);
             }
         }, timeout);
 
         // ------- 积分与排名 -------
-        _.__timeIds.scorerankTId = window.setInterval(() => {
+        $.__timeIds.scorerankTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_scorerank ul li'),
                 $('#sb-sidebarScorerank'),
-                _.__timeIds.scorerankTId
+                $.__timeIds.scorerankTId
             );
         }, timeout);
 
         // ------- 最新随笔 -------
-        _.__timeIds.newEssayTId = window.setInterval(() => {
+        $.__timeIds.newEssayTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_recentposts ul li'),
                 $('#sb-sidebarRecentposts'),
-                _.__timeIds.newEssayTId
+                $.__timeIds.newEssayTId
             );
         }, timeout);
 
         // ------- 我的标签 -------
-        _.__timeIds.topTagsTId = window.setInterval(() => {
+        $.__timeIds.topTagsTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_toptags ul li'),
                 $('#sb-toptags'),
-                _.__timeIds.topTagsTId
+                $.__timeIds.topTagsTId
             );
         }, timeout);
 
         // ------- 随笔分类 -------
-        _.__timeIds.classifyTId = window.setInterval(() => {
+        $.__timeIds.classifyTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_postcategory ul li'),
                 $('#sb-classify'),
-                _.__timeIds.classifyTId
+                $.__timeIds.classifyTId
             );
         }, timeout);
 
         // ------- 文章分类 -------
-        _.__timeIds.articleCategoryTId = window.setInterval(() => {
+        $.__timeIds.articleCategoryTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_articlecategory ul li'),
                 $('#sb-ArticleCategory'),
-                _.__timeIds.articleCategoryTId
+                $.__timeIds.articleCategoryTId
             );
         }, timeout);
 
         // ------- 随笔档案 -------
-        _.__timeIds.recordTId = window.setInterval(() => {
+        $.__timeIds.recordTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_postarchive ul li'),
                 $('#sb-record'),
-                _.__timeIds.recordTId
+                $.__timeIds.recordTId
             );
         }, timeout);
 
         // ------- 文章档案 -------
-        _.__timeIds.articleTId = window.setInterval(() => {
+        $.__timeIds.articleTId = window.setInterval(() => {
             listHdl(
                 $('#sidebar_articlearchive ul li'),
                 $('#sb-articlearchive'),
-                _.__timeIds.articleTId
+                $.__timeIds.articleTId
             );
         }, timeout);
 
         // ------- 阅读排行 -------
-        _.__timeIds.topViewTId = window.setInterval(() => {
+        $.__timeIds.topViewTId = window.setInterval(() => {
             listHdl(
                 $('#TopViewPostsBlock ul li'),
                 $('#sb-topview'),
-                _.__timeIds.topViewTId
+                $.__timeIds.topViewTId
             );
         }, timeout);
 
         // ------- 推荐排行 -------
-        _.__timeIds.topDiggPostsTId = window.setInterval(() => {
+        $.__timeIds.topDiggPostsTId = window.setInterval(() => {
             listHdl(
                 $('#TopDiggPostsBlock ul li'),
                 $('#sb-topDiggPosts'),
-                _.__timeIds.topDiggPostsTId
+                $.__timeIds.topDiggPostsTId
             );
         }, timeout);
 
         // ------- 最新评论 -------
-        _.__timeIds.commentsTId = window.setInterval(() => {
+        $.__timeIds.commentsTId = window.setInterval(() => {
             let recentComments     = $('#sidebar_recentcomments ul'),
                 menuRecentComments = $('#sb-recentComments');
 
@@ -224,14 +224,14 @@ export default function main(_) {
             if (recentComments.length > 0 && menuRecentComments.html() === '') {
                 menuRecentComments.html(getMenuCommentsData(recentComments));
                 menuRecentComments.parent('.sidebar-dropdown').show();
-                _.__tools.clearIntervalTimeId(_.__timeIds.commentsTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.commentsTId);
             }
         }, timeout);
 
         // ------- 自定义导航 -------
         (() => {
             if (_.__config.sidebar?.navList) {
-                let navList = _.__config.sidebar.navList;
+                let navList = $.__config.sidebar.navList;
                 let navHtml = '';
                 if (navList.length > 0) {
                     navHtml = '<ul>';
@@ -248,7 +248,7 @@ export default function main(_) {
         // ------- 自定义列表 -------
         (() => {
             if (_.__config.sidebar?.customList) {
-                let customData = _.__config.sidebar.customList;
+                let customData = $.__config.sidebar.customList;
                 if (Object.keys(customData).length > 0) {
                     let res = '';
                     $.each(customData, (title, list) => {
@@ -278,7 +278,7 @@ export default function main(_) {
             if (old.length > 0 && nld.html() === '') {
                 nld.html(getMenuData(old));
                 nld.parent('.sidebar-dropdown').show();
-                _.__tools.clearIntervalTimeId(tid);
+                $.__tools.clearIntervalTimeId(tid);
             }
         }
 
@@ -316,7 +316,7 @@ export default function main(_) {
      */
     (() => {
 
-        if ( _.__config.sidebar.submenu.pointsRank) {
+        if ( $.__config.sidebar.submenu.pointsRank) {
             $('#sb-sidebarScorerank').parent('li.sidebar-dropdown').addClass('active');
             $('#sb-sidebarScorerank').show();
         }
@@ -407,7 +407,7 @@ export default function main(_) {
      * 窗口大小变化处理
      */
     (() => {
-        _.__event.resize.handle.push(() => {
+        $.__event.resize.handle.push(() => {
             setTimeout(function () {
                 if ($('body').hasClass('show-menu') && mainObj && typeof mainObj.myOptiscrollInstance !== 'undefined') {
                     mainObj.myOptiscrollInstance.update();

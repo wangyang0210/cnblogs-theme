@@ -17,7 +17,7 @@ export default function main(_) {
         cookieKey = 'cnblogs_config_isNight',
         exp       =  4 * 3600,
         daySwitch;
-    _.__status.dayNightCssHref = ''; // 夜间模式css样式文件路径，用于记录webpack打包后路径
+    $.__status.dayNightCssHref = ''; // 夜间模式css样式文件路径，用于记录webpack打包后路径
 
     /**
      * 判断当前日/夜模式
@@ -29,7 +29,7 @@ export default function main(_) {
             case 'night':
                 daySwitch = ''; break;
             default:
-                daySwitch = _.__config.switchDayNight.auto.enable ? (h >= _.__config.switchDayNight.auto.nightHour ? '' : (h >= _.__config.switchDayNight.auto.dayHour ? 'daySwitch' : '')) : 'daySwitch'; break;
+                daySwitch = $.__config.switchDayNight.auto.enable ? (h >= $.__config.switchDayNight.auto.nightHour ? '' : (h >= $.__config.switchDayNight.auto.dayHour ? 'daySwitch' : '')) : 'daySwitch'; break;
         }
     })();
 
@@ -60,12 +60,12 @@ export default function main(_) {
     (() => {
         $('#dayNightSwitch .onOff').click(function () {
             if ($(this).hasClass('daySwitch')) { // 夜间
-                _.__tools.setCookie(cookieKey, 'night', exp);
+                $.__tools.setCookie(cookieKey, 'night', exp);
                 $(this).removeClass('daySwitch');
                 loadDarkCss();
                 dayNightControl(_, 'night');
             } else { // 日间
-                _.__tools.setCookie(cookieKey, 'day', exp);
+                $.__tools.setCookie(cookieKey, 'day', exp);
                 $(this).addClass('daySwitch');
                 $('head link#baseDarkCss').remove();
                 dayNightControl(_, 'day');
@@ -90,7 +90,7 @@ export default function main(_) {
                     let obj  = $(links[i]);
                     let href = obj.attr('href');
                     if (/^.*\/day-night\.[a-z0-9]{8}\.css$/.test(href)) {
-                        _.__status.dayNightCssHref = href;
+                        $.__status.dayNightCssHref = href;
                         obj.attr('id', 'baseDarkCss');
                         break;
                     }

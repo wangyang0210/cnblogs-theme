@@ -6,23 +6,22 @@
  * ----------------------------------------------
  * @describe: 主程序文件
  */
-import _ from 'lodash/lodash.min';
-// import config from './components/config/config';
+// import _ from 'lodash/core.min';
 import defaultConfig from './components/config/config.json5'
 import status from "./components/status/status";
 import tools from './utils/tools';
 import event from "./components/event/event";
 
 $(document).ready(function () {
-
+    
     // 初始化
-    _.__config = _.merge(defaultConfig, window?.cnblogsConfig || {}); // 配置信息
-    _.__status = status(); // 页面状态信息
-    _.__tools = tools();  // 公共处理工具
-    _.__timeIds = {};       // 定时器
-    _.__event = {};       // 事件
+    $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
+    $.__status = status(); // 页面状态信息
+    $.__tools = tools();  // 公共处理工具
+    $.__timeIds = {};       // 定时器
+    $.__event = {};       // 事件
 
-    if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
+    if (_.__config.info.name === '') $.__config.info.name = $.__status.user;
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${_.__status.pageType}`).then(module => {
@@ -41,7 +40,7 @@ $(document).ready(function () {
                 const comAfter = afterModule.default;
                 comAfter(_);
                 (() => {
-                    _.__tools.setDomHomePosition(); // 文章主体位置修正
+                    $.__tools.setDomHomePosition(); // 文章主体位置修正
                     event(_).handle.scroll(); // 触发滚动处理
                     event(_).handle.resize(); // 触发窗口大小变化处理
                 })();

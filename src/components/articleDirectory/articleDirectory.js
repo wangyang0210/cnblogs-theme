@@ -30,7 +30,7 @@ export default function main(_) {
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
             let hid = obj.attr('id');
-            let titleId = 'tid-' + _.__tools.randomString(6);
+            let titleId = 'tid-' + $.__tools.randomString(6);
             obj.attr('tid', titleId);
             if (!hid || /^-?[\d]+.*/.test(hid)) {
                 if (hid) {
@@ -46,7 +46,7 @@ export default function main(_) {
             html += '<li class="nav-item"><a class="nav-link" href="#' + hid + '" goto="' + titleId + '" onclick="return false;">' + str + obj.text() + '</a></li>';
         });
 
-        let dirHtml = _.__tools.tempReplacement(articleDirectoryTemp, 'dirHtml', html);
+        let dirHtml = $.__tools.tempReplacement(articleDirectoryTemp, 'dirHtml', html);
 
         postBody.append(dirHtml);
 
@@ -61,18 +61,18 @@ export default function main(_) {
             $('#articleDirectory ul li a').addClass('articleDirectory-overflow');
         }
 
-        _.__event.scroll.handle.push(() => {
+        $.__event.scroll.handle.push(() => {
             let articleDirectory = $('#articleDirectory');
-            if (_.__event.scroll.temScroll < _.__event.scroll.docScroll && _.__event.scroll.homeScroll <= _.__event.scroll.docScroll) {
+            if (_.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
                 articleDirectory.addClass('articleDirectoryFixed');
             }
 
-            if (_.__event.scroll.temScroll > _.__event.scroll.docScroll &&_.__event.scroll.homeScroll >= _.__event.scroll.docScroll) {
+            if (_.__event.scroll.temScroll > $.__event.scroll.docScroll &&_.__event.scroll.homeScroll >= $.__event.scroll.docScroll) {
                 articleDirectory.removeClass('articleDirectoryFixed');
             }
         });
 
-        _.__event.resize.handle.push(() => {
+        $.__event.resize.handle.push(() => {
             const bodyWidth = parseFloat(document.body.clientWidth),
                 articleDirectory = $('#articleDirectory');
             if (articleDirectory.length > 0) {
@@ -100,7 +100,7 @@ export default function main(_) {
                         break;
                 }
 
-                if (bodyWidth <= _.__config.articleDirectory.minBodyWeight || bothWidth <= 190) {
+                if (bodyWidth <= $.__config.articleDirectory.minBodyWeight || bothWidth <= 190) {
                     articleDirectory.hide();
                 } else {
                     articleDirectory.show();
@@ -110,7 +110,7 @@ export default function main(_) {
 
         $('#articleDirectory .nav-link').click(function () {
             let titleH = $(':header[tid="' + $(this).attr('goto') + '"]');
-            titleH.length && _.__tools.actScroll(titleH.offset().top + 3, 500);
+            titleH.length && $.__tools.actScroll(titleH.offset().top + 3, 500);
         });
     }
 

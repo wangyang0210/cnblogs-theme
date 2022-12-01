@@ -31,7 +31,7 @@ export default function main(_) {
                 html = '';
 
             $.each(_.__config.links.page, (i) => {
-                let list = _.__config.links.page[i];
+                let list = $.__config.links.page[i];
                 if (list.title) html += '<h1 class="iconfont ' + list.icon + '" style="'+ list.style +'"> ' + list.title + '</h1>';
 
                 html += '<div id="links-box">';
@@ -40,7 +40,7 @@ export default function main(_) {
                     let linksHtml = linksTemp,  data = list.links[j];
 
                     // 处理模版
-                    linksHtml =  _.__tools.batchTempReplacement(linksHtml, [
+                    linksHtml =  $.__tools.batchTempReplacement(linksHtml, [
                         ['avatar', typeof data.avatar !== 'undefined' ? data.avatar : ''],
                         ['name', typeof data.name !== 'undefined' ? data.name : ''],
                         ['introduction', typeof data.introduction !== 'undefined' ? data.introduction : ''],

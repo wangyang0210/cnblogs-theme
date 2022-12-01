@@ -22,9 +22,9 @@ export default function main(_) {
 
         // 设置图片
         if (_.__status.pageType === 'home') {
-            topImg = _.__config.banner.home.background.length > 0 ? _.__config.banner.home.background : ['https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053600_wallhaven-6k3oox.webp'];
+            topImg = $.__config.banner.home.background.length > 0 ? $.__config.banner.home.background : ['https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053600_wallhaven-6k3oox.webp'];
         }  else {
-            topImg = _.__config.banner.article.background.length > 0 ? _.__config.banner.article.background : [	'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053937_wallhaven-j5mz95.webp'];
+            topImg = $.__config.banner.article.background.length > 0 ? $.__config.banner.article.background : [	'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_220917053937_wallhaven-j5mz95.webp'];
             height = '40vh';
             $('#homeTopTitle').hide();
             $('.scroll-down').hide();
@@ -43,12 +43,12 @@ export default function main(_) {
                 bannerImages(
                     'main-header',
                     topImg,
-                    _.__config.animate.bannerImages.options.itemNum,
-                    _.__config.animate.bannerImages.options.time,
-                    _.__config.animate.bannerImages.options.sort,
-                    _.__config.animate.bannerImages.options.current < 0
-                        ? _.__tools.randomNum(0, topImg.length - 1)
-                        : _.__config.animate.bannerImages.options.current
+                    $.__config.animate.bannerImages.options.itemNum,
+                    $.__config.animate.bannerImages.options.time,
+                    $.__config.animate.bannerImages.options.sort,
+                    $.__config.animate.bannerImages.options.current < 0
+                        ? $.__tools.randomNum(0, topImg.length - 1)
+                        : $.__config.animate.bannerImages.options.current
                 );
             });
         } else {
@@ -69,15 +69,15 @@ export default function main(_) {
     })();
 
     // 添加事件监听
-    _.__event.scroll.handle.push(() => {
+    $.__event.scroll.handle.push(() => {
         let openButton = $('#open-button');
 
-        if (_.__event.scroll.temScroll < _.__event.scroll.docScroll && _.__event.scroll.homeScroll <= _.__event.scroll.docScroll && !openButton.hasClass('menu-button-scroll')) { // 向下滚动
+        if (_.__event.scroll.temScroll < $.__event.scroll.docScroll && $.__event.scroll.homeScroll <= $.__event.scroll.docScroll && !openButton.hasClass('menu-button-scroll')) { // 向下滚动
             openButton.addClass('menu-button-scroll');
             openButton.text('');
         }
 
-        if (_.__event.scroll.temScroll > _.__event.scroll.docScroll && _.__event.scroll.homeScroll >= _.__event.scroll.docScroll && openButton.hasClass('menu-button-scroll')) { // 滚入头图
+        if (_.__event.scroll.temScroll > $.__event.scroll.docScroll && $.__event.scroll.homeScroll >= $.__event.scroll.docScroll && openButton.hasClass('menu-button-scroll')) { // 滚入头图
             openButton.removeClass('menu-button-scroll');
             openButton.text('MENU');
         }

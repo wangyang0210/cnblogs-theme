@@ -13,10 +13,10 @@ export default function main(_) {
         hidden,
         visibilityChange,
         timer,
-        onblur = _.__config.title.onblur,
-        onblurTime = _.__config.title.onblurTime,
-        focus = _.__config.title.focus,
-        focusTime = _.__config.title.focusTime;
+        onblur = $.__config.title.onblur,
+        onblurTime = $.__config.title.onblurTime,
+        focus = $.__config.title.focus,
+        focusTime = $.__config.title.focusTime;
 
     if (typeof document.hidden !== "undefined") {
         hidden = "hidden";

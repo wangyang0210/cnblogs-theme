@@ -21,7 +21,7 @@ export default function main(_) {
     (() => {
         $.each(preList, function (i) {
             let pre = $(preList[i]);
-            let boxId = 'code-' + _.__tools.randomString(6);
+            let boxId = 'code-' + $.__tools.randomString(6);
 
             // 设置外部标签
             pre.wrap('<code-box id="' + boxId + '"></code-box>');
@@ -83,14 +83,14 @@ export default function main(_) {
      * 限制代码框高度
      */
     (() => {
-        if (_.__config.code.options.maxHeight) $('code-box pre').css('max-height', _.__config.code.options.maxHeight);
+        if (_.__config.code.options.maxHeight) $('code-box pre').css('max-height', $.__config.code.options.maxHeight);
     })();
 
     /**
      * 渲染代码
      */
     (() => {
-        let codeType = _.__config.code.type.toLowerCase()
+        let codeType = $.__config.code.type.toLowerCase()
         if (codeType === 'hljs') {
             import(/* webpackChunkName: "code-hljs" */ /* webpackPrefetch: true */ './lib/hljs').then(module => {
                 const codeMain = module.default;

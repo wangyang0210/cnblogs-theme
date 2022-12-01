@@ -25,7 +25,7 @@ export default function main(_) {
 
                     if ($.isArray(idTmp)) id = idTmp.join('');
 
-                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim() : _.__config.default.avatar;
+                    let op = $('#comment_' + id + '_avatar'), patch  = op.length > 0 ? op.text().trim() : $.__config.default.avatar;
 
                     let ac = $('#a_comment_author_' + id), ah = ac.length ? ac.attr('href') : 'javascropt:void(0);';
 
@@ -37,13 +37,13 @@ export default function main(_) {
             });
             $(feedbackItem[0]).css('padding-top', '0');
             $(feedbackItem[feedbackItem.length - 1]).css('padding-bottom', '0');
-            _.__config.animate.avatar.enable && $('.feedbackAvatar').addClass('img-rounded')
+            $.__config.animate.avatar.enable && $('.feedbackAvatar').addClass('img-rounded')
         }
     }
-    _.__timeIds.commentTId = window.setInterval(() =>{
+    $.__timeIds.commentTId = window.setInterval(() =>{
         if ($('.feedbackItem').length > 0) {
             setComment();
-            _.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
+            $.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
         }
     },1000);
 

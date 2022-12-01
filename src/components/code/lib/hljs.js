@@ -9,7 +9,7 @@
 import hljs from 'highlight.js/lib/common';
 
 export default function main(_, setCodeLine) {
-    let theme = _.__config.code.options.hljs.theme.toLowerCase();
+    let theme = $.__config.code.options.hljs.theme.toLowerCase();
 
     import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
         let code  = $('code-box pre code');
@@ -28,7 +28,7 @@ export default function main(_, setCodeLine) {
             // 语言范围设置
             if (_.__config.code.options.hljs.languages.length) {
                 hljs.configure({
-                    languages: _.__config.code.options.hljs.languages
+                    languages: $.__config.code.options.hljs.languages
                 });
             }
 
@@ -70,12 +70,12 @@ export default function main(_, setCodeLine) {
          * 设置工具条背景色 & 添加语言标签
          */
         (() => {
-            _.__timeIds.hljsCodeTId = window.setInterval(() => {
+            $.__timeIds.hljsCodeTId = window.setInterval(() => {
                 let preHljs = $('pre code.hljs');
                 if (preHljs.length > 0) {
                     $('code-box').css('background', $('pre code.hljs').css('background')).prepend('<hljs-len class="code-hljs-len"></hljs-len>');
                     setCodeHljsLen();
-                    _.__tools.clearIntervalTimeId(_.__timeIds.hljsCodeTId);
+                    $.__tools.clearIntervalTimeId(_.__timeIds.hljsCodeTId);
                 }
             }, 1000);
         })();

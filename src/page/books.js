@@ -29,7 +29,7 @@ export default function main(_) {
             let postBody = $('#cnblogs_post_body'),
                 html = '';
             $.each(_.__config.bookList, (i) => {
-                let list = _.__config.bookList[i];
+                let list = $.__config.bookList[i];
                 if (list.title) html += '<h1 class=`iconfont ${list.icon}`>' + list.title + '</h1>';
 
                 html += '<div class="book-cards">';
@@ -73,7 +73,7 @@ export default function main(_) {
                     let readPercentageStyle = readPercentage ? 'initial;' : 'none';
 
                     // 处理模版
-                    cardHtml = _.__tools.batchTempReplacement(cardHtml, [
+                    cardHtml = $.__tools.batchTempReplacement(cardHtml, [
                         ['cover', typeof books.cover !== 'undefined' ? books.cover : ''],
                         ['name', typeof books.name !== 'undefined' ? books.name : ''],
                         ['readDate', readDate],

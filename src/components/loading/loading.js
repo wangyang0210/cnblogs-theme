@@ -18,7 +18,7 @@ export default function main(_) {
     let loading = function() {
         let that = this;
 
-        this.config  = _.__config.loading;
+        this.config  = $.__config.loading;
         this.spring  = null;
         this.spinner = null;
 

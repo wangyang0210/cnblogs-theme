@@ -16,7 +16,7 @@ export default function main(_) {
     // 输出用户配置信息
     if (_.__config.consoleList.length) {
         $.each(_.__config.consoleList, function (i) {
-            let fl = _.__config.consoleList[i];
+            let fl = $.__config.consoleList[i];
             console.log('\n' + ' %c '+(fl[0])+' %c '+(fl[1])+' ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; color:#000;padding:5px 0;');
         });
     }

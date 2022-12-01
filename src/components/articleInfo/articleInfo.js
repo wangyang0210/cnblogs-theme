@@ -17,12 +17,12 @@ export default function main(_) {
     (() => {
         const sbTitle = $('#cb_post_title_url').text();
         if (_.__config.animate.articleTitle.enable) {
-            consoleText([sbTitle], 'sbTitleText', 'sbTitleConsole', ['#fff'], false, _.__tools.setDomHomePosition);
+            consoleText([sbTitle], 'sbTitleText', 'sbTitleConsole', ['#fff'], false, $.__tools.setDomHomePosition);
         } else {
             $('#sbTitleText').text(sbTitle).css('color', '#fff');
         }
         $('.inner').css('max-width', '100vw');
-        _.__tools.setDomHomePosition();
+        $.__tools.setDomHomePosition();
     })();
 
     /**
@@ -30,12 +30,12 @@ export default function main(_) {
      */
     (() => {
         $('#articleInfo').append('<p class="article-info-text"></p>');
-        _.__timeIds.postDescTid = window.setInterval( () => {
+        $.__timeIds.postDescTid = window.setInterval( () => {
             if ($('#post_view_count').text() !== '...' && $('#post_comment_count').text() !== '...') {
                 let postDescText = $('.postDesc').show().text();
                 $('#articleInfo p.article-info-text').html(postMetaHtml(postDescText));
-                _.__tools.setDomHomePosition();
-                _.__tools.clearIntervalTimeId(_.__timeIds.postDescTid);
+                $.__tools.setDomHomePosition();
+                $.__tools.clearIntervalTimeId(_.__timeIds.postDescTid);
             }
         }, 1000 );
 
@@ -48,7 +48,7 @@ export default function main(_) {
                 '<i class="iconfont icon-interactive"></i>' + info.cnum + '' +
                 '<i class="iconfont icon-hot"></i>' + info.tnum + '' +
                 '<br><i class="iconfont icon-article"></i>' + textNum + '' +
-                '<i class="iconfont icon-kafei"></i>' + _.__tools.minToTime(textNum / 500) + ' ~ ' + _.__tools.minToTime(textNum / 300) +
+                '<i class="iconfont icon-kafei"></i>' + $.__tools.minToTime(textNum / 500) + ' ~ ' + $.__tools.minToTime(textNum / 300) +
                 '</span>';
         }
     })();
@@ -57,12 +57,12 @@ export default function main(_) {
      * 设置文章信息-分类
      */
     (() => {
-        _.__timeIds.articleInfoClassTId = window.setInterval(() => {
+        $.__timeIds.articleInfoClassTId = window.setInterval(() => {
             let obj = $('#BlogPostCategory').find('a');
             if (obj.length > 0) {
-                _.__tools.articleInfo(obj, 1)
-                _.__tools.setDomHomePosition();
-                _.__tools.clearIntervalTimeId(_.__timeIds.articleInfoClassTId);
+                $.__tools.articleInfo(obj, 1)
+                $.__tools.setDomHomePosition();
+                $.__tools.clearIntervalTimeId(_.__timeIds.articleInfoClassTId);
             }
         }, 1000);
     })();
@@ -71,12 +71,12 @@ export default function main(_) {
      * 设置文章信息-标签
      */
     (() => {
-        _.__timeIds.articleInfoTagTId = window.setInterval(() => {
+        $.__timeIds.articleInfoTagTId = window.setInterval(() => {
             let obj = $('#EntryTag').find('a');
             if (obj.length > 0) {
-                _.__tools.articleInfo(obj, 2)
-                _.__tools.setDomHomePosition();
-                _.__tools.clearIntervalTimeId(_.__timeIds.articleInfoTagTId);
+                $.__tools.articleInfo(obj, 2)
+                $.__tools.setDomHomePosition();
+                $.__tools.clearIntervalTimeId(_.__timeIds.articleInfoTagTId);
             }
         }, 1000);
     })();

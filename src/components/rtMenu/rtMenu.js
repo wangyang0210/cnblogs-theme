@@ -66,22 +66,22 @@ export default function main(_) {
                     downScroll = docHeight - windowHeight;
                 }
 
-                _.__tools.actScroll(downScroll, 900)
+                $.__tools.actScroll(downScroll, 900)
             } else {
-                _.__tools.actScroll(0, 900)
+                $.__tools.actScroll(0, 900)
             }
         });
 
         // 滚动事件
-        _.__event.scroll.handle.push(() => {
+        $.__event.scroll.handle.push(() => {
             let toUpDown = $("#toUpDown"),
                 toUpDownI = $("#toUpDownI"),
                 toUpDownSpan = $('.toUpDownSpan');
 
-            _.__event.scroll.docScroll = $(document).scrollTop(); // 当前滚动位置
-            _.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
+            $.__event.scroll.docScroll = $(document).scrollTop(); // 当前滚动位置
+            $.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
 
-            if (_.__event.scroll.homeScroll <= _.__event.scroll.docScroll) {
+            if (_.__event.scroll.homeScroll <= $.__event.scroll.docScroll) {
                 toUpDownI.rotate({animateTo: 0});
                 toUpDown.attr('data', 'up');
                 toUpDownSpan.text('返回顶部');
@@ -122,7 +122,7 @@ export default function main(_) {
      * 关注
      */
     (() => {
-        _.__timeIds.followTId = window.setInterval(() => {
+        $.__timeIds.followTId = window.setInterval(() => {
             let followObj = $('#p_b_follow');
             if (followObj.length > 0) {
                 let clickStr = followObj.text() !== '' ? $('#p_b_follow a').attr('onclick') : '';
@@ -133,7 +133,7 @@ export default function main(_) {
                     attention.find('.rightMenuSpan').text('关注');
                     attention.find('i').removeClass('icon-follower').addClass('icon-unfollower');
                 }
-                _.__tools.clearIntervalTimeId(_.__timeIds.followTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.followTId);
             }
         }, 1000);
     })();
@@ -143,7 +143,7 @@ export default function main(_) {
      */
     (() => {
         if (_.__config.rtMenu.qrCode) {
-            $('#rightGzh').show().find('.ds-gzh img').attr('src', _.__config.rtMenu.qrCode);
+            $('#rightGzh').show().find('.ds-gzh img').attr('src', $.__config.rtMenu.qrCode);
         }
     })();
 
@@ -152,14 +152,14 @@ export default function main(_) {
      * 打赏
      */
     (() => {
-        if (_.__config.rtMenu.reward.alipay || _.__config.rtMenu.reward.wechatpay) {
+        if (_.__config.rtMenu.reward.alipay || $.__config.rtMenu.reward.wechatpay) {
             $('#rightDashang').show();
 
-            _.__config.rtMenu.reward.alipay
-            && $('#rightDashang .ds-alipay').show().find('img').attr('src', _.__config.rtMenu.reward.alipay);
+            $.__config.rtMenu.reward.alipay
+            && $('#rightDashang .ds-alipay').show().find('img').attr('src', $.__config.rtMenu.reward.alipay);
 
-            _.__config.rtMenu.reward.wechatpay
-            && $('#rightDashang .ds-wecat').show().find('img').attr('src', _.__config.rtMenu.reward.wechatpay);
+            $.__config.rtMenu.reward.wechatpay
+            && $('#rightDashang .ds-wecat').show().find('img').attr('src', $.__config.rtMenu.reward.wechatpay);
         }
     })();
 
@@ -169,7 +169,7 @@ export default function main(_) {
     (() => {
 
         // 顶
-        _.__timeIds.diggitTId = window.setInterval(() => {
+        $.__timeIds.diggitTId = window.setInterval(() => {
             let diggit = $(".diggit");
             if (diggit.length > 0) {
                 diggit.prepend('<i class="iconfont icon-dianzan"></i>');
@@ -184,12 +184,12 @@ export default function main(_) {
                     clickHdl($(this), rightMenuSpan, $('#digg_count').text());
                 });
 
-                _.__tools.clearIntervalTimeId(_.__timeIds.diggitTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.diggitTId);
             }
         }, 1000);
 
         // 踩
-        _.__timeIds.buryitTId = window.setInterval(() => {
+        $.__timeIds.buryitTId = window.setInterval(() => {
             let buryit = $(".buryit");
             if (buryit.length > 0) {
                 buryit.prepend('<i class="iconfont icon-buzan"></i>');
@@ -204,7 +204,7 @@ export default function main(_) {
                     clickHdl($(this), rightMenuSpan, $('#bury_count').text());
                 });
 
-                _.__tools.clearIntervalTimeId(_.__timeIds.buryitTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.buryitTId);
             }
         }, 1000);
 
@@ -265,7 +265,7 @@ export default function main(_) {
 
             // 点击事件
             rightMenuHome.click(function () {
-                window.location.href = _.__status.homeUrl;
+                window.location.href = $.__status.homeUrl;
             });
         }
     })();

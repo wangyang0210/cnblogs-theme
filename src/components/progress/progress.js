@@ -13,7 +13,7 @@ export default function main(_) {
     let progressBar = ToProgress && new window.ToProgress(_.__config.progressBar, '#progressBar');
 
     // 添加事件监听
-    _.__event.scroll.handle.push(() => {
+    $.__event.scroll.handle.push(() => {
         progressBar.setProgress(_.__tools.getScrollPercent());
     });
 }

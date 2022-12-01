@@ -48,7 +48,7 @@ export default function main(_) {
      * 背景动效
      */
     (() =>  {
-        let obj = _.__config.animate.background;
+        let obj = $.__config.animate.background;
         for (let key in obj) {
             if (obj[key].enable) {
                 import(/* webpackChunkName: "background-[request]" */ /* webpackPrefetch: true */ `../background/${key}`).then(module => {
@@ -63,7 +63,7 @@ export default function main(_) {
      * 鼠标动效
      */
     (() => {
-        let obj = _.__config.animate.mouse;
+        let obj = $.__config.animate.mouse;
         for (let key in obj) {
             if (obj[key].enable) {
                 import(/* webpackChunkName: "mouse-[request]" */ /* webpackPrefetch: true */ `../mouse/${key}`).then(module => {

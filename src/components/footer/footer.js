@@ -15,9 +15,9 @@ export default function main(_) {
     const footerText = footer.text();
 
     let footerHtml = footerTemp;
-    let config = _.__config.footer;
+    let config = $.__config.footer;
 
-    footerHtml = _.__tools.tempReplacement(footerHtml, 'footerText', footerText);
+    footerHtml = $.__tools.tempReplacement(footerHtml, 'footerText', footerText);
 
     /**
      * 设置标语
@@ -32,9 +32,9 @@ export default function main(_) {
                 ['textRight', config.text.right],
                 ['textShow', 'block'],
             ];
-            footerHtml = _.__tools.batchTempReplacement(footerHtml, re);
+            footerHtml = $.__tools.batchTempReplacement(footerHtml, re);
         } else {
-            footerHtml = _.__tools.tempReplacement(footerHtml, 'textShow', 'none');
+            footerHtml = $.__tools.tempReplacement(footerHtml, 'textShow', 'none');
         }
     })();
 
@@ -44,16 +44,16 @@ export default function main(_) {
     (() => {
         if (_.__config.links.footer.length > 0) {
             let linksHtml = '友情链接：';
-            for (let i = 0; i < _.__config.links.footer.length; i++) {
+            for (let i = 0; i < $.__config.links.footer.length; i++) {
                 linksHtml += '<a href="' + (_.__config.links.footer[i][1]) + '" target="_blank">' + (_.__config.links.footer[i][0]) + '</a>';
-                if (i < _.__config.links.footer.length - 1) linksHtml += '<span style="margin: 0 3px;">/</span>';
+                if (i < $.__config.links.footer.length - 1) linksHtml += '<span style="margin: 0 3px;">/</span>';
             }
-            footerHtml = _.__tools.batchTempReplacement(footerHtml, [
+            footerHtml = $.__tools.batchTempReplacement(footerHtml, [
                 ['linksHtml', linksHtml],
                 ['linkShow', 'block']
             ]);
         } else {
-            footerHtml = _.__tools.tempReplacement(footerHtml, 'linkShow', 'none');
+            footerHtml = $.__tools.tempReplacement(footerHtml, 'linkShow', 'none');
         }
     })();
 
@@ -93,7 +93,7 @@ export default function main(_) {
      */
     (() => {
         window.setInterval(() => {
-            let runDate = _.__tools.getRunDate(_.__config.info.startDate ? _.__config.info.startDate : '2021-01-01');
+            let runDate = $.__tools.getRunDate(_.__config.info.startDate ? $.__config.info.startDate : '2021-01-01');
             $('#blogRunTimeSpan').text('This blog has running : ' + runDate.daysold + ' d ' + runDate.hrsold + ' h ' + runDate.minsold + ' m ' + runDate.seconds + ' s');
         }, 500);
     })();
@@ -102,9 +102,9 @@ export default function main(_) {
      * 定时网站统计
      */
     (() => {
-        if (_.__config.umami?.url && _.__config.umami?.shareId) {
-            const baseUrl = _.__config.umami.url
-            _.__timeIds.umamiTId = window.setInterval(() => {
+        if (_.__config.umami?.url && $.__config.umami?.shareId) {
+            const baseUrl = $.__config.umami.url
+            $.__timeIds.umamiTId = window.setInterval(() => {
                 request(`${baseUrl}api/share/${_.__config.umami.shareId}`).then( r => {
                     Promise.all([
                         request(`${baseUrl}api/website/${r.websiteId}/stats?start_at=${_.__tools.getTodayStart()}&end_at=${_.__tools.getTodayEnd()}`),
@@ -117,7 +117,7 @@ export default function main(_) {
                             $('#cnzzInfo').text(`Online: ${online[0].x} | Today: ${todayState.pageviews.value} / ${todayState.uniques.value} / ${todayState.totaltime.value} | Yesterday: ${yesterdayState.pageviews.value} / ${yesterdayState.uniques.value} / ${yesterdayState.totaltime.value}`).show();
                         });
                 })
-                _.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
+                $.__tools.clearIntervalTimeId(_.__timeIds.umamiTId);
             },1000);
         }
     })();

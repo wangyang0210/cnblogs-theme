@@ -14,31 +14,31 @@ export default function main(_) {
             /**
              * 滚动监听
              */
-            _.__event.scroll = {};
-            _.__event.scroll.handle = [];
-            _.__event.scroll.temScroll  = 0; // 上一次页面滚动位置
-            _.__event.scroll.docScroll  = $(document).scrollTop(); // 当前滚动位置
-            _.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
+            $.__event.scroll = {};
+            $.__event.scroll.handle = [];
+            $.__event.scroll.temScroll  = 0; // 上一次页面滚动位置
+            $.__event.scroll.docScroll  = $(document).scrollTop(); // 当前滚动位置
+            $.__event.scroll.homeScroll = $('#home').offset().top - 40; // 主体滚动
             $(window).scroll(() => {
-                _.__event.scroll.docScroll  = $(document).scrollTop();
-                _.__event.scroll.homeScroll = $('#home').offset().top - 40;
+                $.__event.scroll.docScroll  = $(document).scrollTop();
+                $.__event.scroll.homeScroll = $('#home').offset().top - 40;
                 eventFun.handle.scroll();
-                _.__event.scroll.temScroll = _.__event.scroll.docScroll;
+                $.__event.scroll.temScroll = $.__event.scroll.docScroll;
             });
             /**
              * 窗口大小监听
              */
-            _.__event.resize = {};
-            _.__event.resize.handle = [];
+            $.__event.resize = {};
+            $.__event.resize.handle = [];
             $(window).resize( () => { eventFun.handle.resize() });
         },
         handle: {
             scroll: () => {
-                for (let i = 0; i < _.__event.scroll.handle.length; i++) { (_.__event.scroll.handle[i])() }
+                for (let i = 0; i < $.__event.scroll.handle.length; i++) { (_.__event.scroll.handle[i])() }
             },
             resize: () => {
-                for (let i = 0; i < _.__event.resize.handle.length; i++) { (_.__event.resize.handle[i])() }
-                _.__tools.setDomHomePosition();
+                for (let i = 0; i < $.__event.resize.handle.length; i++) { (_.__event.resize.handle[i])() }
+                $.__tools.setDomHomePosition();
             },
         }
     };
