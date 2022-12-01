@@ -55,7 +55,7 @@ export default function main() {
         body.attr('data-bs-target', '#articleDirectory');
         body.attr('data-bs-offset', '0');
         body.attr('tabindex', '0');
-        body.ScrollSpy({ target: '#articleDirectory' });
+        ScrollSpy(body,{ target: '#articleDirectory' });
 
         if (! $.__config.articleDirectory.autoWidthScroll) {
             $('#articleDirectory ul li').addClass('articleDirectory-overflow');
