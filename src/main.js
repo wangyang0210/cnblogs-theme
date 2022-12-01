@@ -25,13 +25,13 @@ $(document).ready(function () {
     if (_.__config.info.name === '') _.__config.info.name = _.__status.user;
 
     // 开启渲染
-    import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${_.__status.pageType}`).then(module => {
+    import(/* webpackChunkName: "page-[request]" */ /* webpackPreload: true */ `./page/${_.__status.pageType}`).then(module => {
         const page = module.default;
 
         /**
          * 前置公共处理
          */
-        import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
+        import(/* webpackChunkName: "com-before" */ /* webpackPreload: true */ './components/common/comBefore').then(beforeModule => {
             const comBefore = beforeModule.default;
             comBefore(_);
         });
