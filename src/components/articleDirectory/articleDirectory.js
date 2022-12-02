@@ -30,7 +30,7 @@ export default function main() {
             let obj = $(this);
             let h = parseInt(obj[0].tagName.replace(/H/g, ''));
 
-            let hid = `_${obj.attr('id')}`;
+            let hid = obj.attr('id');
             let titleId = 'tid-' + $.__tools.randomString(6);
             obj.attr('tid', titleId);
             if (!hid || /^-?[\d]+.*/.test(hid)) {
