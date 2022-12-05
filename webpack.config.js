@@ -45,7 +45,15 @@ module.exports = {
                 parallel: true,
                 extractComments: false,
             }),
-            new cssMinimizerPlugin(),
+            new cssMinimizerPlugin({
+                minimizerOptions: {
+                    preset: ["default", {
+                            discardComments: { removeAll: true },
+                        },
+                    ],
+                },
+                parallel: true,
+            }),
             new CompressionPlugin({
                 algorithm: 'gzip',
                 test: /\.js$|\.html$|\.css$/,
