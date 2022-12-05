@@ -54,9 +54,12 @@
 }
 
 #links-box .links-item .links-info .links-info-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: bold;
     color: #777aaf;
-    font-size: 18px;
+    font-size: 1.5rem;
     position: relative;
     top: -2px;
 }
