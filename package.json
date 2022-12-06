@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production && postcss src/style/simple-memory.css > dist/sime-memory.css",
+    "build": "webpack --mode production && postcss src/style/simple-memory.css > dist/simple-memory.css",
     "analyz": "webpack --profile --json > stats.json && webpack-bundle-analyzer --port 9090 ./dist/stats.json"
   },
   "repository": {

@@ -9,11 +9,9 @@
 !> 目前发现受影响的有：1) Markdown 文章中 ```[toc]``` 生成的目录链接跳转。2) 博客园原有的返回顶部链接跳转。
 
 ```html
-<!-- require APlayer -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" rel="prefetch"></script>
+<script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js" rel="prefetch"></script>
 <meting-js
         id="594243151"
         lrc-type="0"
