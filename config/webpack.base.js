@@ -3,34 +3,18 @@ const json5 = require('json5')
 const terserPlugin = require("terser-webpack-plugin")
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const fileManagerPlugin = require('filemanager-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionPlugin = require("compression-webpack-plugin")
 
 
 module.exports = {
-    mode: 'development',
-    entry: './src/main.js',
+    mode: 'production',
+    entry: '../src/main.js',
     output: {
         filename: 'simple-memory.js',
         chunkFilename:'script/[name].[contenthash:8].js',
-        path: path.resolve(__dirname, 'dist'),
         clean: true
     },
     plugins: [
-        // new fileManagerPlugin({
-        //     events: {
-        //         onEnd: {
-        //             copy: [
-        //                 { source: './src/style/simple-memory.css', destination: './dist/simple-memory.css' },
-        //             ],
-        //         }
-        //     }
-        // }),
-        // new BundleAnalyzerPlugin({
-            // analyzerMode: 'disabled',
-            // generateStatsFile: true
-        // }),
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
             chunkFilename:'style/[name].[contenthash:8].css',
