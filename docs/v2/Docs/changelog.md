@@ -11,9 +11,9 @@
 - simple-memory.css压缩输出
 - 播放器使用国内CDN资源
 - 文档内容更新调整
+- config.md尚未补充完善
 - 本地开发环境搭建 //TODO
 - MOJS通过CDN引入 // TODO
-- config.md尚未补充完善 // TODO
 - 版本更新提示 //TODO
 - 首页文章增加图片显示配置 | 左边简介右边图片 | 右边图片左边简介 |或者左右随机 // TODO
 
