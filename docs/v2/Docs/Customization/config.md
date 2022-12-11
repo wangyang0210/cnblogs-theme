@@ -1082,7 +1082,7 @@ window.cnblogsConfig = {
 }
 ```
 
-![]()
+![banner背景图自动切换动效](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/animate-bg.gif)
 
 
 ### mouse - 鼠标动效
@@ -1123,6 +1123,8 @@ window.cnblogsConfig = {
 }
 ```
 
+![mouse效果](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/animate-click.gif)
+
 #### bubble - 鼠标移动粒子效果
 
 ?> 版本 >= v2.1.9
@@ -1147,24 +1149,6 @@ window.cnblogsConfig = {
                   size: 5
               }
           },
-          mo: {
-              enable: false,
-              options: {
-                  radius:   { "0": 100 },
-                  count:    5,
-                  children: {
-                      shape:      'polygon',
-                      fill:       { 'cyan' : 'yellow' },
-                      radius:     20,
-                      rotate:      { "360": 0 },
-                      duration:   2000
-                  }
-              }
-          },
-          click: {
-              enable: false,
-              options: {}
-          }
       },
   }
 }
@@ -1205,6 +1189,7 @@ window.cnblogsConfig = {
 }
 ```
 
+![mojs实现的鼠标点击效果](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/animate-click-1.gif)
 
 #### click - 粒子炸开效果
 
@@ -1226,6 +1211,7 @@ window.cnblogsConfig = {
 }
 ```
 
+![粒子炸开效果](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/animate-click-2.gif)
 
 ### avatar - 头像旋转特效
 
@@ -1243,6 +1229,7 @@ window.cnblogsConfig = {
   }
 }
 ```
+![头像旋转特效](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/animate-avatar.gif)
 
 ## code - 代码
 
@@ -1375,6 +1362,8 @@ window.cnblogsConfig = {
 }
 ```
 
+![文章目录定位](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211171815.png)
+
 ### minBodyWeight - 文章目录隐藏宽度
 
 ?> 版本 >= v2.0.7
@@ -1426,6 +1415,8 @@ window.cnblogsConfig = {
 }
 ```
 
+![链接分享小尾巴](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211172117.png)
+
 ### iconfont - 文章标题前的iconfont
 
 ?> 版本 >= v2.1.4
@@ -1451,6 +1442,8 @@ window.cnblogsConfig = {
 }
 ```
 
+![iconfont](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211172359.png)
+
 ## articleSuffix - 文章后缀
 
 ### imgUrl - 左侧图片
@@ -1469,6 +1462,8 @@ window.cnblogsConfig = {
   },
 }
 ```
+
+![左侧图片](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211172458.png)
 
 ### aboutHtml - 关于博主
 
