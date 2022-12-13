@@ -8,9 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production && postcss ./src/style/simple-memory.css > ./dist/simple-memory.css",
-    "analyz": "webpack --profile --json > stats.json && webpack-bundle-analyzer --port 9090 ./dist/stats.json"
+    "dev": "npx webpack --mode development",
+    "build": "npx webpack --config config/webpack.prod.js && npx postcss ./src/style/simple-memory.css > ./dist/simple-memory.css",
+    "analyz": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer --port 9090 ./dist/stats.json"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
     "webpack-bundle-analyzer": "^4.7.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
     "yamljs": "^0.3.0"
   },
   "dependencies": {
