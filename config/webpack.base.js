@@ -9,6 +9,9 @@ module.exports = {
         chunkFilename:'script/[name].[contenthash:8].js',
         clean: true
     },
+    experiments: {
+        topLevelAwait: true,
+    },
     plugins: [
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',

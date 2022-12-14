@@ -9,7 +9,7 @@
 
 export default function main(options) {
 
-    $.__tools.dynamicLoadingJs('https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/mo-js/0.288.2/mo.min.js', () => {
+    $.__tools.dynamicLoadingJs($.__config.default.mojs, () => {
         const burst = new mojs.Burst({
             left: 0, top: 0,
             ...options

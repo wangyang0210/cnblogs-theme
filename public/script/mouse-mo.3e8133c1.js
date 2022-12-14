@@ -1,0 +1,44 @@
+"use strict";
+(self["webpackChunkcnblogs_theme"] = self["webpackChunkcnblogs_theme"] || []).push([["mouse-mo"],{
+
+/***/ "./src/components/mouse/mo.js":
+/*!************************************!*\
+  !*** ./src/components/mouse/mo.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ main; }
+/* harmony export */ });
+/**
+ * UPDATES AND DOCS AT: https://github.com/wangyang0210
+ * https://www.cnblogs.com/wangyang0210/
+ * @author: WangYang, wangyang.0210@foxmail.com
+ * @Date 2022-09-04 19:36
+ * ----------------------------------------------
+ * @describe: 使用mo.js实现各种效果
+ */
+
+function main(options) {
+
+    $.__tools.dynamicLoadingJs($.__config.default.mojs, () => {
+        const burst = new mojs.Burst({
+            left: 0, top: 0,
+            ...options
+        })
+        burst.el.style.zIndex = 999999;
+        document.addEventListener( 'click', function (e) {
+            burst
+                .tune({ x: e.pageX, y: e.pageY })
+                .setSpeed(3)
+                .replay()
+        })
+    })
+}
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=mouse-mo.3e8133c1.js.map

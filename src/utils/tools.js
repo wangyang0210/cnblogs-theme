@@ -7,8 +7,8 @@
  * @describe: 工具处理类
  */
 
-import moment from 'dayjs'
-import advancedFormat from 'dayjs/plugin/advancedFormat'
+let moment = await import($.__config.default.dayjs)
+let advancedFormat = await import($.__config.default.advancedFormat)
 import {request} from './request'
 import packageInfo from '../../package.json'
 moment.extend(advancedFormat)

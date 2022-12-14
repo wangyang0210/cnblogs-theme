@@ -307,6 +307,17 @@
 
   // -- 缺省配置 --
   default: {
-    avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp'
+    avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
+    mojs: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/mo-js/0.288.2/mo.min.js',
+    dayjs: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/dayjs/1.10.8/dayjs.min.js',
+    advancedFormat: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/dayjs/1.10.8/plugin/advancedFormat.min.js',
+    gsap: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gsap/3.9.1/gsap.min.js',
+    highlight: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js',
+//    https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/base16/atelier-seaside.min.css
+//    https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/a11y-dark.min.css
+    hljscss: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/',
+    fancybox: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js',
+
+
   }
 }
