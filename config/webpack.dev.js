@@ -1,28 +1,25 @@
 const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const baseWebpackConfig = require('./webpack.base')
+const webpackMerge = require('webpack-merge')
+const webpackBaseConfig= require('./webpack.base.js')
 
-
-module.exports = {
+let webpackDevelopmentConfig = {
     mode: 'development',
-    entry: '../src/main.js',
     output: {
         path: path.resolve(__dirname, '../public'),
-        clean: true
     },
     plugins: [
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'disabled',
-            generateStatsFile: true
-        }),
+        new BundleAnalyzerPlugin(),
     ],
-    devtool: false,
+    devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, '../public'),
         },
         compress: true,
         port: 9000,
-    },
+    }
 };
+
+module.exports = webpackMerge.merge(webpackBaseConfig, webpackDevelopmentConfig)

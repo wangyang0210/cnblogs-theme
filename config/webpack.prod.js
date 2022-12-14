@@ -6,7 +6,7 @@ const cssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
 
-let webpackProdConfig= {
+let webpackProdConfig = {
     mode: 'production',
     entry: './src/main.js',
     output: {
@@ -15,13 +15,6 @@ let webpackProdConfig= {
         path: path.resolve(__dirname, '../dist'),
         clean: true
     },
-    plugins: [
-        new miniCssExtractPlugin({
-            filename: 'style/[name].[contenthash:8].css',
-            chunkFilename:'style/[name].[contenthash:8].css',
-            ignoreOrder: true
-        }),
-    ],
     devtool: false,
     optimization: {
         minimize: true,

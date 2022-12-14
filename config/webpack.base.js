@@ -1,15 +1,21 @@
 const json5 = require('json5')
-
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 
 
 module.exports = {
-    entry: '../src/main.js',
+    entry: './src/main.js',
     output: {
         filename: 'simple-memory.js',
         chunkFilename:'script/[name].[contenthash:8].js',
         clean: true
     },
+    plugins: [
+        new miniCssExtractPlugin({
+            filename: 'style/[name].[contenthash:8].css',
+            chunkFilename:'style/[name].[contenthash:8].css',
+            ignoreOrder: true
+        }),
+    ],
     module: {
         rules: [
             {

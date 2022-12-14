@@ -8,9 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack --mode development",
+    "dev": "npx webpack --config config/webpack.dev.js",
     "build": "npx webpack --config config/webpack.prod.js && npx postcss ./src/style/simple-memory.css > ./dist/simple-memory.css",
-    "analyz": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer --port 9090 ./dist/stats.json"
+    "analyz": "npx webpack --config config/webpack.dev.js  && npx webpack-bundle-analyzer"
   },
   "repository": {
     "type": "git",
