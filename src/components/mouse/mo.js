@@ -7,18 +7,19 @@
  * @describe: 使用mo.js实现各种效果
  */
 
-// TODO MOJS
 export default function main(options) {
 
-    const burst = new mojs.Burst({
-        left: 0, top: 0,
-       ...options
-    });
-    burst.el.style.zIndex = 999999;
-    document.addEventListener( 'click', function (e) {
-        burst
-            .tune({ x: e.pageX, y: e.pageY })
-            .setSpeed(3)
-            .replay()
-    });
+    $.__tools.dynamicLoadingJs('https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/mo-js/0.288.2/mo.min.js', () => {
+        const burst = new mojs.Burst({
+            left: 0, top: 0,
+            ...options
+        })
+        burst.el.style.zIndex = 999999;
+        document.addEventListener( 'click', function (e) {
+            burst
+                .tune({ x: e.pageX, y: e.pageY })
+                .setSpeed(3)
+                .replay()
+        })
+    })
 }

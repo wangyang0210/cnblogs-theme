@@ -93,7 +93,7 @@ export default function main() {
      */
     (() => {
         window.setInterval(() => {
-            let runDate = $.__tools.getRunDate( $.__config.info.startDate ? $.__config.info.startDate : '2021-01-01');
+            let runDate = $.__tools.getRunDate( $.__config.info.startDate ||= '2021-01-01');
             $('#blogRunTimeSpan').text('This blog has running : ' + runDate.daysold + ' d ' + runDate.hrsold + ' h ' + runDate.minsold + ' m ' + runDate.seconds + ' s');
         }, 500);
     })();

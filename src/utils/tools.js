@@ -50,7 +50,9 @@ export default {
     getTodayDate: () => { return moment().format('MM-DD') },
 
     /**
-     * 处理文章信息分类(type=1)和标签(type = 2)
+     * 处理文章信息分类和标签
+     * @param obj {object} 获取的dom对象
+     * @param type {number} 1为分类2为标签
      */
     articleInfo: (obj, type) => {
         let iconfont = type === 1 ? 'icon-marketing_fill' : 'icon-label-fill';
@@ -64,6 +66,9 @@ export default {
 
     /**
      * 模版替换
+     * @param temp {String} 模板文件
+     * @param par {String} 需查找的字符串
+     * @param str {String} 替换后的内容
      */
     tempReplacement: (temp, par, str) => {
         let re = new RegExp('##' + par + '##', "g");
@@ -72,6 +77,8 @@ export default {
 
     /**
      * 批量模版替换
+     * @param temp {String} 模板内容
+     * @param list {String} 需查找的字符串
      */
     batchTempReplacement: (temp, list) => {
         let t = temp;
@@ -84,21 +91,37 @@ export default {
     },
 
     /**
-     * 加载CSS文件
+     * 动态加载CSS文件
+     * @param href {String} CSS文件地址
      */
-    dynamicLoadingCss: (path) => {
-        if (!path || path.length === 0) {
-            throw new Error('argument "path" is required !');
-        }
-        let head = document.getElementsByTagName('head')[0], link = document.createElement('link');
-        link.href = path;
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        head.appendChild(link);
+    dynamicLoadingCss: (href) => {
+        if (!href || href.length === 0)  throw new Error('argument "path" is required !');
+        $('head').append('<link>')
+        const link = $('head').children(':last')
+        link.attr({ rel: 'stylesheet', type: 'text/css',  href, })
+    },
+
+    /**
+     * 动态加载JS文件
+     * @param url {String} JavaScript文件地址
+     * @param callback {function} 回调函数
+     *
+     */
+    dynamicLoadingJs: (url, callback = () => {}) => {
+        $.ajax({
+            type: 'GET',
+            dataType: 'script',
+            cache: true,
+            url,
+            success() {
+                callback()
+            },
+        })
     },
 
     /**
      * 过滤HTML中JavaScript代码
+     * @param str {String} html代码内容
      */
     htmlFiltrationScript: (str) => {
         let subStr = new RegExp('\<script.*\<\/script\>', 'ig');
@@ -107,11 +130,14 @@ export default {
 
     /**
      * 清除单个定时器
+     * @param timeId {number} 定时器ID
      */
     clearIntervalTimeId: (timeId) => { null != timeId && window.clearInterval(timeId) },
 
     /**
      * 滚动主体滚动条到指定位置
+     * @param endScroll {number} 结束位置
+     * @param time {number} 滚动时间
      */
     actScroll: (endScroll, time) => {
         $('html,body').stop().animate({ scrollTop: endScroll }, time)
@@ -119,6 +145,7 @@ export default {
 
     /**
      * 获取页面滚动百分比
+     * @return {string}
      */
     getScrollPercent: () => {
         let scrollTo = $(window).scrollTop(),
@@ -130,6 +157,9 @@ export default {
 
     /**
      * 随机数
+     * @param minNum {number} 最小值
+     * @param maxNum {number} 最大值
+     * @return {number}
      */
     randomNum: function (minNum, maxNum) {
         switch (arguments.length) {
@@ -149,12 +179,12 @@ export default {
 
     /**
      * 运行时间
-     * @param dateString 年-月-日
+     * @param dateString {String} 年-月-日
      */
     getRunDate: (dateString) => {
-        dateString = (dateString).toString().split('-');
+        let temp = dateString.split('-');
         let date = new Date();
-        date.setUTCFullYear(dateString[0], dateString[1] - 1, dateString[2]);
+        date.setUTCFullYear(temp[0], temp[1] - 1, temp[2]);
         date.setUTCHours(0, 0, 0, 0);
         let birthDay = date;
         let today = new Date();
@@ -172,8 +202,8 @@ export default {
 
     /**
      * 设置 cookie
-     * @param key
-     * @param value
+     * @param key {String} key名
+     * @param value {String} key值
      * @param expires 过期时间，单位秒
      */
     setCookie: (key, value, expires) => {
@@ -184,7 +214,7 @@ export default {
 
     /**
      * 获取 cookie
-     * @param key
+     * @param key {String} key名
      * @returns {string|null}
      */
     getCookie: (key) => {
@@ -196,6 +226,7 @@ export default {
 
     /**
      * 随机字符串
+     * @param len {number} 字符串长度
      */
     randomString: (len) => {
         len = len || 32;
@@ -208,14 +239,22 @@ export default {
 
     /**
      * 分钟转换为时间格式
+     * @param min {number} 文章内容长度
+     * @return {String} 阅读时间范围
      */
     minToTime: (min) => {
-        let minTime = parseInt(min);
-        let second = parseInt((min - minTime) * 60);
+        let minTime = min;
+        let second = (min - minTime) * 60;
         second = ('' + second).length === 1 ? '0' + second : second;
         return `${minTime}:${second}`;
     },
 
+    /**
+     * 版本对比
+     * @param v1 {string} 当前版本
+     * @param v2 {string} 最新版本
+     * @return {number} 是否为最新版本
+     */
     compareVersion: (v1, v2) => {
         const nums1 = v1.split('.')
         const nums2 = v2.split('.')
@@ -231,6 +270,10 @@ export default {
         return 0
     },
 
+    /**
+     * 获取当前版本是否为最新版本
+     * @return {number}
+     */
     getVersion: () => {
         let localVersion = localStorage.getItem('version')
         if (!localVersion) {
