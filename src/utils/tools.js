@@ -7,8 +7,10 @@
  * @describe: 工具处理类
  */
 
-let moment = await import($.__config.default.dayjs ||='https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/dayjs/1.10.8/dayjs.min.js')
-let advancedFormat = await import($.__config.default.advancedFormat ||='https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/dayjs/1.10.8/plugin/advancedFormat.min.js')
+import moment from 'dayjs'
+// let moment = await import($.__config.default.dayjs)
+// let advancedFormat = await import($.__config.default.advancedFormat)
+import advancedFormat from 'dayjs/plugin/advancedFormat'
 import {request} from './request'
 import packageInfo from '../../package.json'
 moment.extend(advancedFormat)
