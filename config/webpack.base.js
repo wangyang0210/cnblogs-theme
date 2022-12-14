@@ -12,6 +12,10 @@ module.exports = {
     experiments: {
         topLevelAwait: true,
     },
+    externals: {
+        dayjs: 'dayjs',
+        "dayjs/plugin/advancedFormat": 'advancedFormat'
+    },
     plugins: [
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',
