@@ -22,6 +22,7 @@
 - MOJS通过CDN引入mojs
 - 播放器使用国内CDN资源
 - 文档内容更新调整,增加图片
+- 增加配置`articleContent.iconfontArr`,配置iconfont图标
 - 音乐开启通过配置项设置  // todo
 - 版本更新提示 //TODO
 
