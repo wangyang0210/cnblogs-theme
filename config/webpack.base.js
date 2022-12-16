@@ -14,7 +14,6 @@ module.exports = {
     },
     externals: {
         moment: 'moment',
-        "dayjs/plugin/advancedFormat": 'advancedFormat'
     },
     plugins: [
         new miniCssExtractPlugin({

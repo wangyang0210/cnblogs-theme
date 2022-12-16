@@ -19,8 +19,11 @@ $(document).ready(function () {
     $.__tools = tools;  // 公共处理工具
     $.__timeIds = {};       // 定时器
     $.__event = {};       // 事件
+    $.__config.info.name ||= $.__status.user;
+    // 基础资源加载
+    tools.dynamicLoadingJs(defaultConfig.default.moment).catch(e => console.error('moment.js', e))
 
-    if ( $.__config.info.name === '') $.__config.info.name = $.__status.user;
+
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {

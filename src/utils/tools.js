@@ -7,11 +7,9 @@
  * @describe: 工具处理类
  */
 
-import moment from 'moment'
-// import advancedFormat from 'dayjs/plugin/advancedFormat'
+// import moment from 'moment'
 import {request} from './request'
 import packageInfo from '../../package.json'
-// moment.extend(advancedFormat)
 
 export default {
 
@@ -104,18 +102,22 @@ export default {
     /**
      * 动态加载JS文件
      * @param url {String} JavaScript文件地址
-     * @param callback {function} 回调函数
      *
      */
-    dynamicLoadingJs: (url, callback = () => {}) => {
-        $.ajax({
-            type: 'GET',
-            dataType: 'script',
-            cache: true,
-            url,
-            success() {
-                callback()
-            },
+    dynamicLoadingJs: (url) => {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                type: 'GET',
+                dataType: 'script',
+                cache: true,
+                url,
+                success:function (data) {
+                    resolve(data)
+                },
+                error:function (err) {
+                    reject(err)
+                }
+            })
         })
     },
 

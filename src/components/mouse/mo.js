@@ -8,8 +8,7 @@
  */
 
 export default function main(options) {
-
-    $.__tools.dynamicLoadingJs($.__config.default.mojs, () => {
+    $.__tools.dynamicLoadingJs($.__config.default.mojs).then(() => {
         const burst = new mojs.Burst({
             left: 0, top: 0,
             ...options
@@ -21,5 +20,5 @@ export default function main(options) {
                 .setSpeed(3)
                 .replay()
         })
-    })
+    }).catch(e => console.error('mo.js: ', e))
 }
