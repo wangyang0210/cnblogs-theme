@@ -98,23 +98,7 @@ export default function main() {
     (() => {
         let titleInfo = $('#cnblogs_post_body').find(':header');
         if ( $.__config.articleContent.iconfont && titleInfo.length > 0) {
-            let iconfonts = [
-                'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
-                'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
-                'banji','danta','qingning','lajiao','shizi','mojituo','pijiu','putaojiu','kouxiangtang','xiangcaobingqilin',
-                'jiaozi','tilamisu','huoguo','hongshu','bingkuai','mianhuatang','paobing','meishikafei','mantou','qishui',
-                'ganlan','jiroujuan','guodong','baozi','pingguo','chengzi','qingjiao','jidan','xihongshi','mangguo','baocai',
-                'niunai','mianbao','huluobu','zhangyu','pangxie','longxia','yangcong','rou','jitui','huage','xianyu','mogu',
-                'qiezi','xilanhua','ningmeng','liulian','banli','sanwenyu','tudou','xigua','nangua','huolongguo','fantuan',
-                'zhusun','shuiluobu','shanzhu','lanmei','shiliu','yezi','tiangua','mihoutao','boluo','kaixinguo','hetao',
-                'xiaweiyiguo','huasheng','bigenguo','kuihuazi','songzi','xiguazi','badanmu','yaoguo','danhuangsu','dangao',
-                'binggan','buding','tangguo','qiaokeli','hongzao','candou','putaogan','manyuemei','taozi','xiangjiao','caomei',
-                'niuyouguo','hamigua','chelizi','li','bale','kafei1','shutiao','zhenzhunaicha','xuegao','nailao','kele','tiantong',
-                'hanbao','xiezishousi','baomihua','regou','makalong','tianfuluo','juzi','baixiangguo','putao','shaomai','yumi','pipa',
-                'yangtao','youzi','lianwu','wuhuaguo','paomian','wandou','huanggua','suantou','tiantianquan','shupian','huafubing',
-                'bangbangtang','shousi','lizhi','doufu','mocha','boluomi','zhouzi','bingsha','suannai','pisa','haixing','haizhe',
-                'tongluoshao','nuomici','kuangquanshui','roujiamo','cha','zhangyuxiaowanzi','chengzhi','yuancaitou','baicai'
-            ]
+            let iconfonts = $.__config.articleContent.iconfontArr
             titleInfo.html((i, c) => {
                 let arr = []
                 let num=Math.floor((Math.random()*(iconfonts.length-i))+i);

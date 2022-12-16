@@ -8,9 +8,9 @@
  */
 import "../../style/articleDirectory.css";
 import articleDirectoryTemp from '../../template/articleDirectory.html';
-import "bootstrap/dist/js/bootstrap.min";
 
 export default function main() {
+    $.__tools.dynamicLoadingJs($.__config.default.bootstrap).catch(e => console.error('bootstrap.js', e))
     let body     = $('body');
     let postBody = $('#cnblogs_post_body');
     let header   = postBody.find(':header');

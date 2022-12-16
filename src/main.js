@@ -22,7 +22,7 @@ $(document).ready(function () {
     $.__config.info.name ||= $.__status.user;
     // 基础资源加载
     tools.dynamicLoadingJs(defaultConfig.default.moment).catch(e => console.error('moment.js', e))
-
+    tools.dynamicLoadingJs(defaultConfig.default.iconfont).catch(e => console.error('iconfont.js', e))
 
 
     // 开启渲染

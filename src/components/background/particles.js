@@ -7,10 +7,10 @@
  * @describe: 背景鼠标滚动动画
  */
 import particlesTemp from '../../template/particles.html'
-import {gsap} from 'gsap/dist/gsap.min'
 import '../../style/particles.css'
 
 export default function main(options) {
+    $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
     $('#footer').after(particlesTemp)
     let wrapper = document.getElementById("particles"),
         ela  = wrapper.querySelector(".particles-layer--1"),

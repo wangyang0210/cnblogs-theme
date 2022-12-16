@@ -12,9 +12,9 @@ module.exports = {
     experiments: {
         topLevelAwait: true,
     },
-    externals: {
-        moment: 'moment',
-    },
+    // externals: {
+    //     moment: 'moment',
+    // },
     plugins: [
         new miniCssExtractPlugin({
             filename: 'style/[name].[contenthash:8].css',

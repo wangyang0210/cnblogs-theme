@@ -299,7 +299,24 @@
   // -- 文章内容效果 --
   articleContent: {
     link: false,
-    iconfont: false
+    iconfont: false,
+    iconfontArr: [
+      'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
+      'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
+      'banji','danta','qingning','lajiao','shizi','mojituo','pijiu','putaojiu','kouxiangtang','xiangcaobingqilin',
+      'jiaozi','tilamisu','huoguo','hongshu','bingkuai','mianhuatang','paobing','meishikafei','mantou','qishui',
+      'ganlan','jiroujuan','guodong','baozi','pingguo','chengzi','qingjiao','jidan','xihongshi','mangguo','baocai',
+      'niunai','mianbao','huluobu','zhangyu','pangxie','longxia','yangcong','rou','jitui','huage','xianyu','mogu',
+      'qiezi','xilanhua','ningmeng','liulian','banli','sanwenyu','tudou','xigua','nangua','huolongguo','fantuan',
+      'zhusun','shuiluobu','shanzhu','lanmei','shiliu','yezi','tiangua','mihoutao','boluo','kaixinguo','hetao',
+      'xiaweiyiguo','huasheng','bigenguo','kuihuazi','songzi','xiguazi','badanmu','yaoguo','danhuangsu','dangao',
+      'binggan','buding','tangguo','qiaokeli','hongzao','candou','putaogan','manyuemei','taozi','xiangjiao','caomei',
+      'niuyouguo','hamigua','chelizi','li','bale','kafei1','shutiao','zhenzhunaicha','xuegao','nailao','kele','tiantong',
+      'hanbao','xiezishousi','baomihua','regou','makalong','tianfuluo','juzi','baixiangguo','putao','shaomai','yumi','pipa',
+      'yangtao','youzi','lianwu','wuhuaguo','paomian','wandou','huanggua','suantou','tiantianquan','shupian','huafubing',
+      'bangbangtang','shousi','lizhi','doufu','mocha','boluomi','zhouzi','bingsha','suannai','pisa','haixing','haizhe',
+      'tongluoshao','nuomici','kuangquanshui','roujiamo','cha','zhangyuxiaowanzi','chengzhi','yuancaitou','baicai'
+    ]
   },
 
   // -- 钩子 --
@@ -307,16 +324,20 @@
 
   // -- 缺省配置 --
   default: {
+    version: 'v2.2.4',
+    iconfont: 'https://at.alicdn.com/t/c/font_3628204_br29bzmhrps.js',
     avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
     mojs: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/mo-js/0.288.2/mo.min.js',
     moment: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/moment.js/2.29.1/moment.min.js',
     gsap: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gsap/3.9.1/gsap.min.js',
     highlight: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js',
-//    https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/base16/atelier-seaside.min.css
-//    https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/a11y-dark.min.css
     hljscss: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/',
     fancybox: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js',
-
-
+    fancyboxcss: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.css',
+    bootstrap: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.0.0-beta3/js/bootstrap.min.js',
+    clipboard: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js',
+    optiscroll: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.min.js',
+    optiscrollcss: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.css',
+    snapsvg: 'https://npm.elemecdn.com/snapsvg-cjs@0.0.6/dist/snap.svg-cjs.js',
   }
 }

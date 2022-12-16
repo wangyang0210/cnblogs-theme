@@ -6,10 +6,10 @@
  * ----------------------------------------------
  * @describe: 图片灯箱处理
  */
-import "../../vendor/fancybox/jquery.fancybox";
-import "../../vendor/fancybox/jquery.fancybox.min.css";
 
 export default function main() {
+    $.__tools.dynamicLoadingCss($.__config.default.fancyboxcss)
+    $.__tools.dynamicLoadingJs($.__config.default.fancybox).catch(e => console.error('fancybox.js', e))
     setTimeout(() =>  {
         let imgLength   = $('#cnblogs_post_body img').length -1;
         if (!imgLength) return;

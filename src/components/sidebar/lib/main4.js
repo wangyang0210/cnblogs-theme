@@ -7,12 +7,11 @@
  * @describe: 侧边栏处理
  */
 import cla from './classie';
-import Snap from 'snapsvg-cjs';
-import optiscroll from 'optiscroll/dist/optiscroll.min';
-import 'optiscroll/dist/optiscroll.css'
 
 export default function main() {
-
+    $.__tools.dynamicLoadingJs($.__config.default.snapsvg).catch(e => console.error('snapsvg-cjs.js', e))
+    $.__tools.dynamicLoadingJs($.__config.default.optiscroll).catch(e => console.log('optiscroll.js', e))
+    $.__tools.dynamicLoadingCss($.__config.default.optiscrollcss)
     let bodyEl = document.body,
         content = document.querySelector('.content-wrap'),
         openbtn = document.getElementById('open-button'),
@@ -41,9 +40,7 @@ export default function main() {
 
     function initEvents() {
         openbtn.addEventListener('click', toggleMenu);
-        if (closebtn) {
-            closebtn.addEventListener('click', toggleMenu);
-        }
+        if (closebtn)  closebtn.addEventListener('click', toggleMenu);
 
         // close the menu element if the target it麓s not the menu element or one of its descendants..
         content.addEventListener('click', function (ev) {

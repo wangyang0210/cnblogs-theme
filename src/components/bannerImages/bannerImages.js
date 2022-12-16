@@ -7,18 +7,14 @@
  * @describe: banner背景切换处理
  */
 
-import {gsap, Power4} from "gsap/dist/gsap.min";
-
 export default function main(id, images, cols, time, sort, current) {
-    const bgMain = document.getElementById(id);
-
+    $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
+    let bgMain = document.getElementById(id);
     let parts = []; // 列容器对象
     let playing = false; // 是否执行动画
 
     // 生成图片对象
-    for (let i in images) {
-        new Image().src = images[i];
-    }
+    for (let i in images) { new Image().src = images[i]; }
 
     // 生成列dom
     for (let col = 0; col < cols; col++) {

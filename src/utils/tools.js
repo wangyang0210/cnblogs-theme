@@ -7,9 +7,7 @@
  * @describe: 工具处理类
  */
 
-// import moment from 'moment'
 import {request} from './request'
-import packageInfo from '../../package.json'
 
 export default {
 
@@ -93,7 +91,6 @@ export default {
      * @param href {String} CSS文件地址
      */
     dynamicLoadingCss: (href) => {
-        if (!href || href.length === 0)  throw new Error('argument "path" is required !');
         $('head').append('<link>')
         const link = $('head').children(':last')
         link.attr({ rel: 'stylesheet', type: 'text/css',  href, })
@@ -284,7 +281,7 @@ export default {
                 localStorage.setItem('repoUrl', r.html_url)
             })
         } else {
-            return this.compareVersion(localVersion, packageInfo.version)
+            return this.compareVersion(localVersion, $.__config.default.version)
         }
     }
 }

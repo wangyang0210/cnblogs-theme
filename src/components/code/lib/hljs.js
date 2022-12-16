@@ -6,14 +6,12 @@
  * ----------------------------------------------
  * @describe: hljs渲染代码
  */
-import hljs from 'highlight.js/lib/common';
-
 export default function main(setCodeLine) {
-    let theme = $.__config.code.options.hljs.theme.toLowerCase();
+    $.__tools.dynamicLoadingJs($.__config.default.highlight).catch(e => console.error('hightlight.js', e))
+    let theme = $.__config.code.options.hljs.theme.toLowerCase()
 
-    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `../../../../node_modules/highlight.js/styles/${theme}.css`).then(module => {
-        let code  = $('code-box pre code');
-
+    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `${$.__config.default.hljscss + theme}.css`).then(module => {
+        let code  = $('code-box pre code')
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
             'idea', 'isbl-editor-light', 'qtcreator_light',
@@ -35,20 +33,15 @@ export default function main(setCodeLine) {
             // 渲染代码
             $.each(code, function (i, e) {
                 let obj = $(code[i]);
-
                 // 做一次换行兼容处理/padding处理
                 obj.css('white-space', 'pre').html().replace(/\<br\>/g, '\n');
                 obj.css({'padding': 0})
-
                 // 清除代码原有样式
                 obj.text(obj.text());
-
                 // 替换白色背景的主题
                 bgFlg && obj.css('background', '#f5f5fa');
-
                 // 开始渲染代码
                 hljs.highlightElement(e);
-
                 // 设置复制按钮颜色
                 $('.clipboard[boxid='+ obj.attr('boxid') +']').addClass('hljs-comment');
             });
@@ -83,8 +76,6 @@ export default function main(setCodeLine) {
         /**
          * 设置行号
          */
-        (() => {
-            setCodeLine();
-        })();
+        (() => { setCodeLine(); })();
     });
 }

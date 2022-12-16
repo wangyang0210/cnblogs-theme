@@ -6,13 +6,12 @@
  * ----------------------------------------------
  * @describe: 代码高亮处理
  */
-import ClipboardJS from "clipboard/dist/clipboard.min";
 import beforeCode from "../../hooks/beforeCode";
 import afterCode from "../../hooks/afterCode";
 
 export default function main() {
+    $.__tools.dynamicLoadingJs($.__config.default.clipboard).catch(e => console.error('clipboard.js', e))
     let preList = $('#main pre');
-
     beforeCode();
 
     /**
@@ -134,6 +133,7 @@ export default function main() {
     }
 
     /**
+     * TODO
      * 代码对比
      */
     function codeDiff() {
