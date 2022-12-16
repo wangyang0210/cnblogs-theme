@@ -20,10 +20,6 @@ $(document).ready(function () {
     $.__timeIds = {};       // 定时器
     $.__event = {};       // 事件
     $.__config.info.name ||= $.__status.user;
-    // 基础资源加载
-    tools.dynamicLoadingJs(defaultConfig.default.moment).catch(e => console.error('moment.js', e))
-    tools.dynamicLoadingJs(defaultConfig.default.iconfont).catch(e => console.error('iconfont.js', e))
-
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {

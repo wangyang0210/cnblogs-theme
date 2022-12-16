@@ -8,6 +8,7 @@
  */
 import comArticle from "./common/com-article";
 import imgBox from "../components/imgBox/imgBox";
+$.__tools.dynamicLoadingJs($.__config.default.iconfont).catch(e => console.error('iconfont.js', e))
 
 export default function main() {
 

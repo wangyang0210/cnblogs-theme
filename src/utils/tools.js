@@ -8,7 +8,7 @@
  */
 
 import {request} from './request'
-
+$.__tools.dynamicLoadingJs($.__config.default.moment).catch(e => console.error('moment.js', e))
 export default {
 
     /**

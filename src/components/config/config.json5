@@ -338,6 +338,6 @@
     clipboard: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js',
     optiscroll: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.min.js',
     optiscrollcss: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.css',
-    snapsvg: 'https://npm.elemecdn.com/snapsvg-cjs@0.0.6/dist/snap.svg-cjs.js',
+    snapsvg: 'https://npm.elemecdn.com/snapsvg-cjs@0.0.6/dist/snap.svg.js',
   }
 }
