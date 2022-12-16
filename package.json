@@ -54,6 +54,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "gsap": "^3.10.4"
   },
   "browserslist": {

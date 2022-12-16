@@ -8,8 +8,6 @@
  */
 
 import moment from 'dayjs'
-// let moment = await import($.__config.default.dayjs)
-// let advancedFormat = await import($.__config.default.advancedFormat)
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import {request} from './request'
 import packageInfo from '../../package.json'
