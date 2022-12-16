@@ -8,9 +8,8 @@
  */
 
 import {request} from './request'
-this.dynamicLoadingJs($.__config.default.moment).catch(e => console.error('moment.js', e))
-export default {
 
+export default {
     /**
      * 获取当天00:00:00的13位时间戳
      * @return {string}
@@ -43,7 +42,9 @@ export default {
      * 获取当天的日期
      * @return {string}
      */
-    getTodayDate: () => { return moment().format('MM-DD') },
+    getTodayDate: () => {
+        return moment().format('MM-DD')
+    },
 
     /**
      * 处理文章信息分类和标签

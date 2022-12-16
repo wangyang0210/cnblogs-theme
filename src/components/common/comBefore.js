@@ -22,6 +22,9 @@ export default function main() {
     // 谷歌字体
     import(/* webpackChunkName: "google-fonts" */ /* webpackPreload: true */ '../../style/google-fonts.css');
 
+    // moment.js
+    $.__tools.dynamicLoadingJs($.__config.default.moment).catch(e => console.error('moment.js', e));
+
     /**
      * 开启 loading
      */
