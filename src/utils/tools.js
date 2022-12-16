@@ -7,11 +7,11 @@
  * @describe: 工具处理类
  */
 
-import moment from 'dayjs'
-import advancedFormat from 'dayjs/plugin/advancedFormat'
+import moment from 'moment'
+// import advancedFormat from 'dayjs/plugin/advancedFormat'
 import {request} from './request'
 import packageInfo from '../../package.json'
-moment.extend(advancedFormat)
+// moment.extend(advancedFormat)
 
 export default {
 

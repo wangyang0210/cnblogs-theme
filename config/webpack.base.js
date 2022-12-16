@@ -13,7 +13,7 @@ module.exports = {
         topLevelAwait: true,
     },
     externals: {
-        dayjs: 'dayjs',
+        moment: 'moment',
         "dayjs/plugin/advancedFormat": 'advancedFormat'
     },
     plugins: [
