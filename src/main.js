@@ -11,7 +11,7 @@ import status from './components/status/status';
 import tools from './utils/tools';
 import event from "./components/event/event";
 
-$(document).ready(async function () {
+$(document).ready(function () {
 
     // 初始化
     $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
