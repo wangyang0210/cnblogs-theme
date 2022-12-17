@@ -94,7 +94,7 @@ export default {
     dynamicLoadingCss: (href) => {
         $('head').append('<link>')
         const link = $('head').children(':last')
-        link.attr({ rel: 'stylesheet', type: 'text/css',  href, })
+        link.attr({ rel: 'stylesheet', type: 'text/css',  href })
     },
 
     /**

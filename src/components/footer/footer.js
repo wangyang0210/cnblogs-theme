@@ -24,11 +24,11 @@ export default function main() {
      */
     (() => {
         if (config.aplayer.enable) {
-            $.__tools.dynamicLoadingCss($.__config.default.aplayecss)
             Promise.all([
                 $.__tools.dynamicLoadingJs($.__config.default.aplayer),
                 $.__tools.dynamicLoadingJs($.__config.default.meting),
             ]).then(r => {
+                $.__tools.dynamicLoadingCss($.__config.default.aplayercss)
                 $('#footer').append(`
                <meting-js 
                   id="${config.aplayer.options.id}"
