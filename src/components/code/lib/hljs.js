@@ -6,8 +6,9 @@
  * ----------------------------------------------
  * @describe: hljs渲染代码
  */
+await $.__tools.dynamicLoadingJs($.__config.default.highlight).catch(e => console.error('hightlight.js', e))
 export default function main(setCodeLine) {
-    $.__tools.dynamicLoadingJs($.__config.default.highlight).catch(e => console.error('hightlight.js', e))
+
     let theme = $.__config.code.options.hljs.theme.toLowerCase()
 
     import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `${$.__config.default.hljscss + theme}.css`).then(module => {

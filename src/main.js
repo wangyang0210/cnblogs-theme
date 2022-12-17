@@ -20,30 +20,30 @@ $(document).ready(async function () {
     $.__timeIds = {};  // 定时器
     $.__event = {};   // 事件
     $.__config.info.name ||= $.__status.user;
-   await $.__tools.dynamicLoadingJs($.__config.default.moment).catch(e => console.error('moment.js', e));
+    $.__tools.dynamicLoadingJs($.__config.default.moment).then(r => {
+       import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {
+           const page = module.default;
 
-    // 开启渲染
-    import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {
-        const page = module.default;
+           // 前置公共处理
+           import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
+               const comBefore = beforeModule.default;
+               comBefore();
 
-        // 前置公共处理
-        import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
-            const comBefore = beforeModule.default;
-            comBefore();
+               // 页面逻辑处理
+               page();
 
-            // 页面逻辑处理
-            page();
+               // 后置公共处理
+               import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
+                   const comAfter = afterModule.default;
+                   comAfter();
+                   (() => {
+                       $.__tools.setDomHomePosition(); // 文章主体位置修正
+                       event.handle.scroll(); // 触发滚动处理
+                       event.handle.resize(); // 触发窗口大小变化处理
+                   })();
+               });
+           });
+       });
+   }).catch(e => console.error('moment.js', e));
 
-            // 后置公共处理
-            import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
-                const comAfter = afterModule.default;
-                comAfter();
-                (() => {
-                    $.__tools.setDomHomePosition(); // 文章主体位置修正
-                    event.handle.scroll(); // 触发滚动处理
-                    event.handle.resize(); // 触发窗口大小变化处理
-                })();
-            });
-        });
-    });
 })

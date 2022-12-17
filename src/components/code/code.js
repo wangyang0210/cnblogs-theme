@@ -8,9 +8,9 @@
  */
 import beforeCode from "../../hooks/beforeCode";
 import afterCode from "../../hooks/afterCode";
-
+await $.__tools.dynamicLoadingJs($.__config.default.clipboard).catch(e => console.error('clipboard.js', e))
 export default function main() {
-    $.__tools.dynamicLoadingJs($.__config.default.clipboard).catch(e => console.error('clipboard.js', e))
+
     let preList = $('#main pre');
     beforeCode();
 

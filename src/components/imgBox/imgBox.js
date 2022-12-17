@@ -6,10 +6,10 @@
  * ----------------------------------------------
  * @describe: 图片灯箱处理
  */
-
+await $.__tools.dynamicLoadingCss($.__config.default.fancyboxcss)
+await $.__tools.dynamicLoadingJs($.__config.default.fancybox).catch(e => console.error('fancybox.js', e))
 export default function main() {
-    $.__tools.dynamicLoadingCss($.__config.default.fancyboxcss)
-    $.__tools.dynamicLoadingJs($.__config.default.fancybox).catch(e => console.error('fancybox.js', e))
+
     setTimeout(() =>  {
         let imgLength   = $('#cnblogs_post_body img').length -1;
         if (!imgLength) return;

@@ -7,11 +7,10 @@
  * @describe: 侧边栏处理
  */
 import cla from './classie';
-
-export default async function main() {
-    await $.__tools.dynamicLoadingJs($.__config.default.snapsvg).catch(e => console.error('snapsvg-cjs.js', e))
-    await $.__tools.dynamicLoadingJs($.__config.default.optiscroll).catch(e => console.log('optiscroll.js', e))
-    await $.__tools.dynamicLoadingCss($.__config.default.optiscrollcss)
+await $.__tools.dynamicLoadingJs($.__config.default.snapsvg).catch(e => console.error('snapsvg-cjs.js', e))
+await $.__tools.dynamicLoadingJs($.__config.default.optiscroll).catch(e => console.log('optiscroll.js', e))
+await $.__tools.dynamicLoadingCss($.__config.default.optiscrollcss)
+export default function main() {
     let bodyEl = document.body,
         content = document.querySelector('.content-wrap'),
         openbtn = document.getElementById('open-button'),

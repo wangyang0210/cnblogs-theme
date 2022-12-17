@@ -8,9 +8,8 @@
  */
 import particlesTemp from '../../template/particles.html'
 import '../../style/particles.css'
-
+await $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
 export default function main(options) {
-    $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
     $('#footer').after(particlesTemp)
     let wrapper = document.getElementById("particles"),
         ela  = wrapper.querySelector(".particles-layer--1"),

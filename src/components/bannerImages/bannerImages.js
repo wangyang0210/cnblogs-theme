@@ -7,8 +7,9 @@
  * @describe: banner背景切换处理
  */
 
+await $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
 export default function main(id, images, cols, time, sort, current) {
-    $.__tools.dynamicLoadingJs($.__config.default.gsap).catch(e => console.error('gsap.js', e))
+
     let bgMain = document.getElementById(id);
     let parts = []; // 列容器对象
     let playing = false; // 是否执行动画
