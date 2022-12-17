@@ -6,14 +6,15 @@
  * ----------------------------------------------
  * @describe: 头部进度条处理
  */
-import ToProgress from "../../vendor/ToProgress/ToProgress";
 
 export default function main() {
-    $('#blog-news').prepend('<div id="progressBar"></div>');
-    let progressBar = ToProgress && new window.ToProgress( $.__config.progressBar, '#progressBar');
+    $.__tools.dynamicLoadingJs($.__config.default.toprogress).then(r => {
+        $('#blog-news').prepend('<div id="progressBar"></div>');
+        let progressBar = ToProgress && new window.ToProgress( $.__config.progressBar, '#progressBar');
 
-    // 添加事件监听
-    $.__event.scroll.handle.push(() => {
-        progressBar.setProgress( $.__tools.getScrollPercent());
-    });
+        // 添加事件监听
+        $.__event.scroll.handle.push(() => {
+            progressBar.setProgress( $.__tools.getScrollPercent());
+        });
+    }).catch(e => console.log('toprogress.js', e))
 }

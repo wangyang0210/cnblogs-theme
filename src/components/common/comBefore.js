@@ -10,7 +10,7 @@ import loading from "../loading/loading";
 import sidebar from "../sidebar/sidebar";
 import banner from "../banner/banner";
 import event from "../event/event";
-import "../../vendor/rotate/jquery.rotate.min"
+await $.__tools.dynamicLoadingJs($.__config.default.jqueryrotate).catch(e => console.error('jqueryrotate.js', e))
 
 export default function main() {
 

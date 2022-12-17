@@ -9,19 +9,14 @@
 - 本地开发环境搭建 //TODO
 
 # 2022.11.20 - TODO
-- 默认输出的github仓库信息
-- particles图片引用更改
-- particles代码优化
-- status代码优化
-- config代码去除
-- tools代码优化
-- event代码优化
+- 修复默认输出的github仓库信息
+- 修复particles图片引用错误
+- 部分代码优化
 - \#79问题
 - \#80问题,最多支持12个汉+字,超出会自动省略
 - simple-memory.css压缩输出
-- MOJS通过CDN引入mojs
-- 播放器使用国内CDN资源
-- 文档内容更新调整,增加图片
+- 外部静态资源使用字节跳动和elementCDN引入
+- 文档内容更新调整,增加相应图片示例
 - 增加配置`articleContent.iconfontArr`,配置iconfont图标
 - 音乐开启通过配置项设置  // todo
 - 版本更新提示 //TODO
