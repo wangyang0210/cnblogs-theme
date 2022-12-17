@@ -20,6 +20,22 @@ export default function main() {
     footerHtml = $.__tools.tempReplacement(footerHtml, 'footerText', footerText);
 
     /**
+     * 设置音乐播放器
+     */
+    (() => {
+        if (!config.aplayer.enable) return;
+        $.__tools.dynamicLoadingCss($.__config.default.aplayecss)
+        Promise.all([
+            $.__tools.dynamicLoadingJs($.__config.default.aplayer),
+            $.__tools.dynamicLoadingJs($.__config.default.meting),
+        ]).then(
+            $('#footer').append("<meting-js ${config.aplayer.options} > </meting-js>")
+        ).catch(e => console.error('aplayer|meting', e))
+
+
+    })();
+
+    /**
      * 设置标语
      */
     (() => {

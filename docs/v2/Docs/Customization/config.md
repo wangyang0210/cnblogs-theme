@@ -655,6 +655,28 @@ window.cnblogsConfig = {
 
 ### aplayer - 音乐播放器
 
+!> 使用分隔符的配置请转为驼峰写法 <br /> 如: lrc-type => lrcType
+
+| option          | default     | description                                                  |
+| --------------- | ----------- | ------------------------------------------------------------ |
+| id              | **require** | song id / playlist id / album id / search keyword            |
+| server          | **require** | music platform: `netease`, `tencent`, `kugou`, `xiami`, `baidu` |
+| type            | **require** | `song`, `playlist`, `album`, `search`, `artist`              |
+| auto            | options     | music link, support: `netease`, `tencent`, `xiami`           |
+| fixed           | `true`     | enable fixed mode                                            |
+| mini            | `false`     | enable mini mode                                             |
+| autoplay        | `false`     | audio autoplay                                               |
+| theme           | `#2980b9`   | main color                                                   |
+| loop            | `all`       | player loop play, values: 'all', 'one', 'none'               |
+| order           | `random`      | player play order, values: 'list', 'random'                  |
+| preload         | `auto`      | values: 'none', 'metadata', 'auto'                           |
+| volume          | `0.7`       | default volume, notice that player will remember user setting, default volume will not work after user set volume themselves |
+| mutex           | `true`      | prevent to play multiple player at the same time, pause other players when this player start play |
+| lrcType        | `0`         | lyric type                                                   |
+| listFolded     | `true`     | indicate whether list should folded at first                 |
+| listMaxHeight | `340px`     | list max height                                              |
+| storageHame    | `metingjs`  | localStorage key that store player setting                   |
+
 * 类型：```Object```
 * 相关文档: [音乐播放器](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/player)
 * 默认值：
@@ -663,12 +685,22 @@ window.cnblogsConfig = {
   enable: false,
   options: {
     id: "3778678",
-    "lrc-type": "0",
     server: "netease",
-    order: "random",
     type: "playlist",
+    auto: "netease",
     fixed: "true",
-    "list-olded": "true"
+    mini: "true",
+    autoplay: "false",
+    theme: "#2980b9",
+    loop: "all",
+    order: "random",
+    preload: "auto",
+    volume: "0.7",
+    mutex: "true",
+    lrcType: "0",
+    listFolded: "true",
+    listMaxHeight: "340px",
+    storageHame: "metingjs"
   }
 }
 ```
