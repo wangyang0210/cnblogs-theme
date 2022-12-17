@@ -17,7 +17,7 @@
 - 文档内容更新调整,增加相应图片示例
 - 增加配置`articleContent.iconfontArr`,配置iconfont图标
 - 增加配置`default`外部静态资源使用字节跳动和elementCDN引入
-- 音乐开启通过配置项设置  // todo
+- 增加配置`footer.aplayer`来设置音乐播放器
 - 版本更新提示 //TODO
 
 
