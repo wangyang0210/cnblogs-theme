@@ -29,7 +29,7 @@ export default function main() {
                 $.__tools.dynamicLoadingJs($.__config.default.aplayer),
                 $.__tools.dynamicLoadingJs($.__config.default.meting),
             ]).then(r => {
-                let metingHtml = `
+                $('#footer').append(`
                <meting-js 
                   id="${config.aplayer.options.id}"
                   server="${config.aplayer.options.server}"
@@ -49,8 +49,7 @@ export default function main() {
                   list-max-height="${config.aplayer.options.listMaxHeight}"
                   storage-hame="${config.aplayer.options.storageHame}"
                > 
-              </meting-js>`
-                $('#footer').append(metingHtml)
+              </meting-js>`)
             }).catch(e => console.error('aplayer|meting', e))
         }
     })();
