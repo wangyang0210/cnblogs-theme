@@ -243,8 +243,8 @@ export default {
      * @return {String} 阅读时间范围
      */
     minToTime: (min) => {
-        let minTime = min;
-        let second = (min - minTime) * 60;
+        let minTime =  parseInt(min);
+        let second =  parseInt((min - minTime) * 60);
         second = ('' + second).length === 1 ? '0' + second : second;
         return `${minTime}:${second}`;
     },
