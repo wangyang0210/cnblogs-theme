@@ -11,15 +11,16 @@ import status from './components/status/status';
 import tools from './utils/tools';
 import event from "./components/event/event";
 
-$(document).ready(function () {
+$(document).ready(async function () {
 
     // 初始化
     $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
     $.__status = status; // 页面状态信息
     $.__tools = tools;  // 公共处理工具
-    $.__timeIds = {};       // 定时器
-    $.__event = {};       // 事件
+    $.__timeIds = {};  // 定时器
+    $.__event = {};   // 事件
     $.__config.info.name ||= $.__status.user;
+   await $.__tools.dynamicLoadingJs($.__config.default.moment).catch(e => console.error('moment.js', e));
 
     // 开启渲染
     import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {

@@ -8,10 +8,10 @@
  */
 import cla from './classie';
 
-export default function main() {
-    $.__tools.dynamicLoadingJs($.__config.default.snapsvg).catch(e => console.error('snapsvg-cjs.js', e))
-    $.__tools.dynamicLoadingJs($.__config.default.optiscroll).catch(e => console.log('optiscroll.js', e))
-    $.__tools.dynamicLoadingCss($.__config.default.optiscrollcss)
+export default async function main() {
+    await $.__tools.dynamicLoadingJs($.__config.default.snapsvg).catch(e => console.error('snapsvg-cjs.js', e))
+    await $.__tools.dynamicLoadingJs($.__config.default.optiscroll).catch(e => console.log('optiscroll.js', e))
+    await $.__tools.dynamicLoadingCss($.__config.default.optiscrollcss)
     let bodyEl = document.body,
         content = document.querySelector('.content-wrap'),
         openbtn = document.getElementById('open-button'),
@@ -32,7 +32,7 @@ export default function main() {
         initEvents();
 
         // 初始化滚动条
-        myOptiscrollInstance = new optiscroll(document.querySelector('#menuWrap'), {
+        myOptiscrollInstance = new Optiscroll(document.querySelector('#menuWrap'), {
             preventParentScroll: true,
             forceScrollbars: true
         });
