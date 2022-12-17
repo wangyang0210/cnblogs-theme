@@ -28,9 +28,30 @@ export default function main() {
         Promise.all([
             $.__tools.dynamicLoadingJs($.__config.default.aplayer),
             $.__tools.dynamicLoadingJs($.__config.default.meting),
-        ]).then(
-            $('#footer').append("<meting-js ${config.aplayer.options} > </meting-js>")
-        ).catch(e => console.error('aplayer|meting', e))
+        ]).then(r => {
+            let metingHtml = `
+               <meting-js 
+                  id="${config.aplayer.options.id}"
+                  server="${config.aplayer.options.server}"
+                  type="${config.aplayer.options.type}"
+                  auto="${config.aplayer.options.auto}"
+                  fixed="${config.aplayer.options.fixed}"
+                  mini="${config.aplayer.options.mini}"
+                  autoplay="${config.aplayer.options.autoplay}"
+                  theme="${config.aplayer.options.theme}"
+                  loop="${config.aplayer.options.loop}"
+                  order="${config.aplayer.options.order}"
+                  preload="${config.aplayer.options.preload}"
+                  volume="${config.aplayer.options.volume}"
+                  mutex="${config.aplayer.options.mutex}"
+                  lrc-type="${config.aplayer.options.lrcType}"
+                  list-folded="${config.aplayer.options.listFolded}"
+                  list-max-height="${config.aplayer.options.listMaxHeight}"
+                  storage-hame="${config.aplayer.options.storageHame}"
+               > 
+              </meting-js>`
+            $('#footer').append(metingHtml)
+        }).catch(e => console.error('aplayer|meting', e))
 
 
     })();

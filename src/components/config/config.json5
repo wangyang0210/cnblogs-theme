@@ -118,13 +118,12 @@
     aplayer: {
       enable: false,
       options: {
-        options: {
           id: "3778678",
           server: "netease",
           type: "playlist",
           auto: "netease",
           fixed: "true",
-          mini: "false",
+          mini: "true",
           autoplay: "false",
           theme: "#2980b9",
           loop: "all",
@@ -136,7 +135,6 @@
           listFolded: "true",
           listMaxHeight: "340px",
           storageHame: "metingjs"
-        }
       }
     }
   },
