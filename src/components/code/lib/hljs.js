@@ -10,8 +10,7 @@ await $.__tools.dynamicLoadingJs($.__config.default.highlight).catch(e => consol
 export default function main(setCodeLine) {
 
     let theme = $.__config.code.options.hljs.theme.toLowerCase()
-
-    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `${$.__config.default.hljscss + theme}.min.css`).then(module => {
+    $.__tools.dynamicLoadingCss(`${$.__config.default.hljscss + theme}.min.css`).then(r => {
         let code  = $('code-box pre code')
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
@@ -78,5 +77,5 @@ export default function main(setCodeLine) {
          * 设置行号
          */
         (() => { setCodeLine(); })();
-    });
+    })
 }
