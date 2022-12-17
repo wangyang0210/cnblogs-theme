@@ -151,7 +151,8 @@ footer-background {
 #attention .rightMenuSpan::before,
 #toUpDown .rightMenuSpan::before,
 #rtaDirectory .rightMenuSpan::before,
-#rightMenuSite .rightMenuSpan::before
+#rightMenuSite .rightMenuSpan::before,
+#update .rightMenuSpan::before
 {
     color: #999 !important;
 }
@@ -162,6 +163,7 @@ div#rightMenu .rightMenuItem,
 #rightDiggit .rightMenuSpan,
 #rightBuryit .rightMenuSpan,
 #attention .rightMenuSpan,
+#update .rightMenuSpan,
 #toUpDown .rightMenuSpan,
 #rtaDirectory .rightMenuSpan,
 #rightMenuSite .rightMenuSpan,
@@ -171,6 +173,7 @@ div#rightMenu .rightMenuItem,
 #attention .rightMenuSpan::before,
 #toUpDown .rightMenuSpan::before,
 #rtaDirectory .rightMenuSpan::before,
+#update .rightMenuSpan::before,
 #rightMenuSite .rightMenuSpan::before
 {
     -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.5), inset 0 0px 0 0 rgba(0,0,0,.5) !important;
