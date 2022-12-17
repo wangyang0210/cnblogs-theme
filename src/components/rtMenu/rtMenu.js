@@ -52,7 +52,6 @@ export default function main() {
      * 上下滚动
      */
     (() => {
-
         // 点击事件
         $('#toUpDown').click(function () {
             let ac = $(this).attr('data');
@@ -71,7 +70,6 @@ export default function main() {
                 $.__tools.actScroll(0, 900)
             }
         });
-
         // 滚动事件
         $.__event.scroll.handle.push(() => {
             let toUpDown = $("#toUpDown"),
@@ -142,9 +140,7 @@ export default function main() {
      * 二维码
      */
     (() => {
-        if ( $.__config.rtMenu.qrCode) {
-            $('#rightGzh').show().find('.ds-gzh img').attr('src', $.__config.rtMenu.qrCode);
-        }
+        if ($.__config.rtMenu.qrCode) $('#rightGzh').show().find('.ds-gzh img').attr('src', $.__config.rtMenu.qrCode);
     })();
 
 
@@ -154,12 +150,8 @@ export default function main() {
     (() => {
         if ( $.__config.rtMenu.reward.alipay || $.__config.rtMenu.reward.wechatpay) {
             $('#rightDashang').show();
-
-            $.__config.rtMenu.reward.alipay
-            && $('#rightDashang .ds-alipay').show().find('img').attr('src', $.__config.rtMenu.reward.alipay);
-
-            $.__config.rtMenu.reward.wechatpay
-            && $('#rightDashang .ds-wecat').show().find('img').attr('src', $.__config.rtMenu.reward.wechatpay);
+            ($.__config.rtMenu.reward.alipay) && $('#rightDashang .ds-alipay').show().find('img').attr('src', $.__config.rtMenu.reward.alipay);
+            ($.__config.rtMenu.reward.wechatpay) && $('#rightDashang .ds-wecat').show().find('img').attr('src', $.__config.rtMenu.reward.wechatpay);
         }
     })();
 
@@ -167,7 +159,6 @@ export default function main() {
      * 顶踩
      */
     (() => {
-
         // 顶
         $.__timeIds.diggitTId = window.setInterval(() => {
             let diggit = $(".diggit");
@@ -268,5 +259,15 @@ export default function main() {
                 window.location.href = $.__status.homeUrl;
             });
         }
+    })();
+
+    /**
+     * 更新
+     */
+    (()=> {
+        // TODO
+        // 判断是否当前博主
+        // 比较版本等级
+        // 显示更新按钮 && 控制台打印最新版本
     })();
 }
