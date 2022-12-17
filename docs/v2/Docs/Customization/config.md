@@ -583,8 +583,6 @@ window.cnblogsConfig = {
 ```
 ![footer_02](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/footer_02.png)
 
-
-
 ### text - 页脚标语
 
 #### left - 页脚标语左侧文字
@@ -629,7 +627,7 @@ window.cnblogsConfig = {
 * 类型：```Object```
 * 默认值：```""```
 
-```json
+```json5
 {
     icon:  "icon-xinlv", // iconfont 图标名称
     color: "red", // 图标颜色
@@ -654,6 +652,27 @@ window.cnblogsConfig = {
 ```
 
 ![字体图标](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211015443.png)
+
+### aplayer - 音乐播放器
+
+* 类型：```Object```
+* 相关文档: [音乐播放器](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/player)
+* 默认值：
+```json5
+{
+  enable: false,
+  options: {
+    id: "3778678",
+    "lrc-type": "0",
+    server: "netease",
+    order: "random",
+    type: "playlist",
+    fixed: "true",
+    "list-olded": "true"
+  }
+}
+```
+![aplayer](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221217235132.png)
 
 ## links - 友情链接
 

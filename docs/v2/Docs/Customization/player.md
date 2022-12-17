@@ -2,7 +2,7 @@
 
 播放器使用开源项目：[metowolf/MetingJS](https://github.com/metowolf/MetingJS)
 
-如需使用播放器，请根据项目文档配置代码，添加至页脚Html代码中。
+如需使用播放器，请根据配置文档进行配置。
 
 !> 已知问题：使用此播放器插件，会导致博客园原有的页面锚点链接失效（主题设置的不受影响）！不影响基本使用，请大家权衡是否使用！
 
@@ -13,7 +13,7 @@
 <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" rel="prefetch"></script>
 <script src="https://cdn.staticfile.org/meting/2.0.1/Meting.min.js" rel="prefetch"></script>
 <meting-js
-        id="594243151"
+        id="3778678"
         lrc-type="0"
         server="netease"
         order="random"
@@ -22,3 +22,5 @@
         list-olded="true">
 </meting-js>
 ```
+?> 榜单ID获取 | 默认配置为热歌榜
+![img](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221217233703.png)
