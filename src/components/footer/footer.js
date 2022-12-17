@@ -23,13 +23,13 @@ export default function main() {
      * 设置音乐播放器
      */
     (() => {
-        if (!config.aplayer.enable) return;
-        $.__tools.dynamicLoadingCss($.__config.default.aplayecss)
-        Promise.all([
-            $.__tools.dynamicLoadingJs($.__config.default.aplayer),
-            $.__tools.dynamicLoadingJs($.__config.default.meting),
-        ]).then(r => {
-            let metingHtml = `
+        if (config.aplayer.enable) {
+            $.__tools.dynamicLoadingCss($.__config.default.aplayecss)
+            Promise.all([
+                $.__tools.dynamicLoadingJs($.__config.default.aplayer),
+                $.__tools.dynamicLoadingJs($.__config.default.meting),
+            ]).then(r => {
+                let metingHtml = `
                <meting-js 
                   id="${config.aplayer.options.id}"
                   server="${config.aplayer.options.server}"
@@ -50,10 +50,9 @@ export default function main() {
                   storage-hame="${config.aplayer.options.storageHame}"
                > 
               </meting-js>`
-            $('#footer').append(metingHtml)
-        }).catch(e => console.error('aplayer|meting', e))
-
-
+                $('#footer').append(metingHtml)
+            }).catch(e => console.error('aplayer|meting', e))
+        }
     })();
 
     /**
