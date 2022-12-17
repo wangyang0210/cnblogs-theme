@@ -11,7 +11,7 @@ export default function main(setCodeLine) {
 
     let theme = $.__config.code.options.hljs.theme.toLowerCase()
 
-    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `${$.__config.default.hljscss + theme}.css`).then(module => {
+    import(/* webpackChunkName: "hljs/[request]" */ /* webpackPrefetch: true */ `${$.__config.default.hljscss + theme}.min.css`).then(module => {
         let code  = $('code-box pre code')
         let bgFlg = $.inArray(theme, [
             'github-gist', 'googlecode', 'grayscale',
