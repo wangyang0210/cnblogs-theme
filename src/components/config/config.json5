@@ -347,7 +347,7 @@
   // -- 缺省配置 --
   default: {
     version: 'v2.2.5',
-    iconfont: 'https://at.alicdn.com/t/c/font_3628204_br29bzmhrps.js',
+    iconfont: 'https://at.alicdn.com/t/c/font_3628204_t6n3fw8b1zn.js',
     avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
     mojs: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/mo-js/0.288.2/mo.min.js',
     moment: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/moment.js/2.29.1/moment.min.js',
