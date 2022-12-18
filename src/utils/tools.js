@@ -275,14 +275,14 @@ export default {
      * @return {number}
      */
     getVersion: () => {
-        let localVersion = localStorage.getItem('version')
-        if (!localVersion) {
+        let remoteVersion = localStorage.getItem('version')
+        if (!remoteVersion) {
             request('https://api.github.com/repos/wangyang0210/cnblogs-theme/releases/latest').then(r => {
-                localStorage.setItem('localVersion', r.tag_name)
+                localStorage.setItem('version', r.tag_name)
                 localStorage.setItem('repoUrl', r.html_url)
             })
         } else {
-            return this.compareVersion(localVersion, $.__config.default.version)
+            return this.compareVersion(remoteVersion, $.__config.default.version)
         }
     }
 }

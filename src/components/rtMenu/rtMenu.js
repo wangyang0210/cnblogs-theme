@@ -265,9 +265,10 @@ export default function main() {
      * 更新
      */
     (()=> {
-        // TODO
-        // 判断是否当前博主
-        // 比较版本等级
-        // 显示更新按钮 && 控制台打印最新版本
+        if (window.isBlogOwner && window.isLogined &&  $.__tools.getVersion()) {
+            $('#update').show();
+            console.log('\n  🎉%c新版本已经发布了,快点击下方链接查看吧~ \n', 'color: #fefefe;text-shadow: 0 0 0.5em #0ae642, 0 0 0.2em #5c5c5c;')
+            console.log(`\n %c ${localStorage.getItem('version')} %c ${localStorage.getItem('repoUrl')}  \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; color:#000;padding:5px 0;`);
+        }
     })();
 }
