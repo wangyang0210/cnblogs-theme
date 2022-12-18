@@ -1,12 +1,15 @@
 # todo
 - 首页文章增加图片显示配置 | 左边简介右边图片 | 右边图片左边简介 |或者左右随机 // TODO
 - 下划线，删除线改为手绘 | rough-notation
+  - https://jsrun.net/2z7Kp/edit
+  - 创建特定的markdown语法 
+  - notation样式及颜色配置
 - 增加点赞特效
 - 增加默认的mojs效果
-- 自动更新设置
-- 本地开发环境搭建 //TODO
+- 自动更新设置 
+- 本地开发环境搭建
 
-# 2022.11.20 - TODO
+# 2022.11.20 - v2.2.5
 - 修复默认输出的github仓库信息
 - 修复particles图片引用错误
 - 部分代码优化
@@ -17,7 +20,7 @@
 - 增加配置`articleContent.iconfontArr`,配置iconfont图标
 - 增加配置`default`外部静态资源使用字节跳动和elementCDN引入
 - 增加配置`footer.aplayer`来设置音乐播放器
-- 版本更新提示 //TODO
+- 版本更新提示
 
 
 
