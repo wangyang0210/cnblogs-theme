@@ -131,15 +131,4 @@ export default function main() {
             pre.addClass('code-pre-line');
         });
     }
-
-    /**
-     * TODO
-     * 代码对比
-     */
-    function codeDiff() {
-        $("code-box pre code").html((i,c) => {
-            if(/\+&gt;&gt;([\s\S]*)\+&lt;&lt;/.test(c)) return c.replace(/\+&gt;&gt;([\s\S]*)\+&lt;&lt;/, `<span style='background-color: #e6ffec;'>$1</span>`);
-            if(/\-&gt;&gt;([\s\S]*)\-&lt;&lt;/.test(c)) return c.replace(/\-&gt;&gt;([\s\S]*)\-&lt;&lt;/, `<span style='background-color: #ffebe9;'>$1</span>`);
-        })
-    }
 }
