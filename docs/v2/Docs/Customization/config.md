@@ -707,9 +707,12 @@ window.cnblogsConfig = {
 
 ```javascript
 window.cnblogsConfig = {
-    aplayer: {
-        enable: false,    
+    footer: {
+        aplayer: {
+            enable: false,
+        }
     },
+        
 }
 ```
 ![aplayer](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221217235132.png)
