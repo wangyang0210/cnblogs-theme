@@ -127,20 +127,25 @@ export default function main() {
      */
     (() => {
         $(".blogpost-body p").html((i,c) => {
-            if (/~~b/.test(c)) return c.replace(/~~b/g, '<mbox>');
-            if (/b~~/.test(c)) return c.replace(/b~~/g, '</mbox>')
-            if (/~~c/.test(c)) return c.replace(/~~c/g, '<mc>');
-            if (/c~~/.test(c)) return c.replace(/c~~/g, '</mc>');
-            if (/~~u/.test(c)) return c.replace(/~~u/g, '<mu>');
-            if (/u~~/.test(c)) return c.replace(/u~~/g, '</mu>');
-            if (/~~h/.test(c)) return c.replace(/~~h/g, '<mhl>');
-            if (/h~~/.test(c)) return c.replace(/h~~/g, '</mhl>');
-            if (/~~bk/.test(c)) return c.replace(/~~bk/g, '<mbk>');
-            if (/bk~~/.test(c)) return c.replace(/bk~~/g, '</mbk>');
-            if (/~~s/.test(c)) return c.replace(/~~s/g, '<mst>');
-            if (/s~~/.test(c)) return c.replace(/s~~/g, '</mst>');
-            if (/~~x/.test(c)) return c.replace(/~~x/g, '<mco>');
-            if (/x~~/.test(c)) return c.replace(/x~~/g, '</mco>');
+            return  c.replace(/~bk|bk~|~b|b~|~c|c~|~u|u~|~s|s~|~x|x~/g, function(matchStr) {
+                let tokenMap = {
+                    '~bk':'<mbk>',
+                    '~bk':'</mbk>',
+                    '~b': '<mbox>',
+                    'b~': '</mbox>',
+                    '~c': '<mc>',
+                    'c~': '</mc>',
+                    '~u': '<mu>',
+                    'u~': '</mu>',
+                    'h~':'<mhl>',
+                    '~h':'</mhl>',
+                    '~s':'<mst>',
+                    's~':'</mst>',
+                    '~x':'<mco>',
+                    'x~':'</mco>',
+                };
+                return tokenMap[matchStr];
+            });
         })
     })();
 
