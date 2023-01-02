@@ -42,7 +42,8 @@ export default function main() {
 
             let num = uniqTagList.indexOf(h);
             let str = num === 0 || num === -1 ? '' : '&nbsp;&nbsp;&nbsp;&nbsp;'.repeat(num);
-            html += '<li class="nav-item"><a class="nav-link" href="#' + hid + '" goto="' + titleId + '" onclick="return false;">' + `"${str}${obj.text()}"` + '</a></li>';
+            let text = str + obj.text()
+            html += '<li class="nav-item"><a class="nav-link" href="#' + hid + '" goto="' + titleId + '" onclick="return false;">' + text + '</a></li>';
         });
 
         let dirHtml = $.__tools.tempReplacement(articleDirectoryTemp, 'dirHtml', html);
