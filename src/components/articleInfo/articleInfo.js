@@ -127,7 +127,7 @@ export default function main() {
      */
     (() => {
         $(".blogpost-body p").html((i,c) => {
-            return  c.replace(/~bk|bk~|~b|b~|~c|c~|~u|u~|~s|s~|~x|x~/g, function(matchStr) {
+            return  c.replace(/~bk|bk~|~b|b~|~c|c~|~u|u~|~h|h~|~s|s~|~x|x~/g, function(matchStr) {
                 let tokenMap = {
                     '~bk':'<mbk>',
                     'bk~':'</mbk>',
@@ -137,8 +137,8 @@ export default function main() {
                     'c~': '</mc>',
                     '~u': '<mu>',
                     'u~': '</mu>',
-                    'h~':'</mhl>',
                     '~h':'<mhl>',
+                    'h~':'</mhl>',
                     '~s':'<mst>',
                     's~':'</mst>',
                     '~x':'<mco>',
