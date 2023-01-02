@@ -130,15 +130,15 @@ export default function main() {
             return  c.replace(/~bk|bk~|~b|b~|~c|c~|~u|u~|~s|s~|~x|x~/g, function(matchStr) {
                 let tokenMap = {
                     '~bk':'<mbk>',
-                    '~bk':'</mbk>',
+                    'bk~':'</mbk>',
                     '~b': '<mbox>',
                     'b~': '</mbox>',
                     '~c': '<mc>',
                     'c~': '</mc>',
                     '~u': '<mu>',
                     'u~': '</mu>',
-                    'h~':'<mhl>',
-                    '~h':'</mhl>',
+                    'h~':'</mhl>',
+                    '~h':'<mhl>',
                     '~s':'<mst>',
                     's~':'</mst>',
                     '~x':'<mco>',
