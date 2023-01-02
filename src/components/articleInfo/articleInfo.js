@@ -156,14 +156,13 @@ export default function main() {
             const n6 = document.querySelector('mst') || '';
             const n7 = document.querySelector('mco') || "";
 
-            // todo config
-            const a1 = annotate(n1, { type: 'underline', color: 'blue' });
-            const a2 = annotate(n2, { type: 'circle', color: 'red' });
-            const a3 = annotate(n3, { type: 'box', color: 'orange' });
-            const a4 = annotate(n4, { type: 'highlight', color: 'yellow', iterations: 1, multiline: true });
-            const a5 = annotate(n5, { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3 })
-            const a6 = annotate(n6, { type: 'strike-through', color: 'red' })
-            const a7 = annotate(n7, { type: 'crossed-off', color: 'red' })
+            const a1 = annotate(n1, $.__config.articleContent.roughNotation.underline);
+            const a2 = annotate(n2, $.__config.articleContent.roughNotation.circle);
+            const a3 = annotate(n3, $.__config.articleContent.roughNotation.box);
+            const a4 = annotate(n4, $.__config.articleContent.roughNotation.highlight);
+            const a5 = annotate(n5, $.__config.articleContent.roughNotation.bracket)
+            const a6 = annotate(n6, $.__config.articleContent.roughNotation.strikeThrough)
+            const a7 = annotate(n7, $.__config.articleContent.roughNotation.crossedOff)
             const ag = annotationGroup([a1, a2, a3, a4, a5, a6, a7]);
             ag.show();
         })
