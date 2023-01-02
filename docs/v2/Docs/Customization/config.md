@@ -1523,6 +1523,42 @@ window.cnblogsConfig = {
 
 ![iconfont](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211172359.png)
 
+### roughNotation - 手绘风格的符号
+* 类型：```Object```
+* 默认值：
+```json5
+{
+      enable: false,
+      'underline': {type: 'underline', color: 'blue' },
+      'circle': { type: 'circle', color: 'red' },
+      'box': { type: 'box', color: 'orange' },
+      'highlight': { type: 'highlight', color: 'yellow', iterations: 1, multiline: true },
+      'bracket': { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3 },
+      'strikeThrough': { type: 'strike-through', color: 'red' },
+      'crossedOff': { type: 'crossed-off', color: 'red' }
+
+    }
+```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        roughNotation: {
+            enable: false,
+            'underline': {type: 'underline', color: 'blue' },
+            'circle': { type: 'circle', color: 'red' },
+            'box': { type: 'box', color: 'orange' },
+            'highlight': { type: 'highlight', color: 'yellow', iterations: 1, multiline: true },
+            'bracket': { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3 },
+            'strikeThrough': { type: 'strike-through', color: 'red' },
+            'crossedOff': { type: 'crossed-off', color: 'red' }
+
+        }
+    },
+}
+```
+![roughnotation](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20230102230137.png)
+
 ## articleSuffix - 文章后缀
 
 ### imgUrl - 左侧图片
