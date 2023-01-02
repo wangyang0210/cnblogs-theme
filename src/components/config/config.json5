@@ -378,6 +378,6 @@
     aplayer: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js',
     aplayercss: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css',
     meting: 'https://cdn.staticfile.org/meting/2.0.1/Meting.min.js',
-    roughNotation: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/rough-notation/0.5.1/rough-notation.min.js',
+    roughNotation: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/rough-notation/0.5.1/rough-notation.iife.min.js',
   }
 }

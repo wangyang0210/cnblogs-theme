@@ -148,6 +148,7 @@ export default function main() {
             });
         })
         $.__tools.dynamicLoadingJs($.__config.default.roughNotation).then(r => {
+            const { annotate, annotationGroup } = window.RoughNotation
             const n1 = document.querySelector('mu') || '';
             const n2 = document.querySelector('mc') || '';
             const n3 = document.querySelector('mbox') || '';
