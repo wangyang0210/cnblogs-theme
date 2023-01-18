@@ -7,7 +7,6 @@
 - 修复版本更新提示
 - 新增配置`roughNotation`，配置手绘风格的图画
 - 修复导航渲染问题[#82](https://github.com/wangyang0210/cnblogs-theme/issues/82)
-- 增加默认的mojs效果// todo
 
 # 2022.11.20 - v2.2.5
 - 修复默认输出的github仓库信息
