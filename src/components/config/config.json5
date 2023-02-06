@@ -350,7 +350,6 @@
       'crossedOff': { type: 'crossed-off', color: 'red' }
 
     }
-
   },
 
   // -- 钩子 --
