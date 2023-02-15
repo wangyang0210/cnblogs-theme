@@ -1480,7 +1480,6 @@ window.cnblogsConfig = {
 ![链接分享小尾巴](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20221211172117.png)
 
 ### iconfont - 文章标题前的iconfont
-
 ?> 版本 >= v2.1.4
 
 ```javascript
@@ -1558,6 +1557,21 @@ window.cnblogsConfig = {
 }
 ```
 ![roughnotation](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20230102230137.png)
+
+### commentTyping - 评论增加打字特效
+
+* 类型：```Boolean```
+* 默认值：```false```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        commentTyping: false,
+    },
+}
+```
+
+![commentTyping](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/commentTyping.gif)
 
 ## articleSuffix - 文章后缀
 

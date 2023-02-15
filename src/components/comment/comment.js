@@ -8,6 +8,7 @@
  */
 
 export default function main() {
+   if ($.__config.articleContent.commentTyping) $.__tools.dynamicLoadingJs($.__config.default.commentTyping).catch(e => console.error('commentTyping.js', e))
     let setComment = () => {
         let feedbackItem = $('.feedbackItem');
         if (feedbackItem.length > 0) {
