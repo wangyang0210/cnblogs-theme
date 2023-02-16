@@ -182,7 +182,6 @@ export default function main() {
                     const burst = new mojs.Burst({
                         left: 0, top: 0,
                         radius: {0: 50},
-                        parent: '#rightDiggit',
                         easing:  mojs.easing.bezier(0.1, 1, 0.3, 1),
                         delay: 300,
                         children: {
@@ -197,18 +196,17 @@ export default function main() {
                         count: 10,
                     });
 
-
+                    burst.el.style.zIndex = 999999;
                     const timeline = new mojs.Timeline({ speed: 1.5 });
 
                     timeline.add( burst, circle );
 
-                    document.addEventListener( 'click', function (e) {
+                    $(document).on("click touchend", ".diggit, #rightDiggit", function (e) {
                         const coords = { x: e.pageX, y: e.pageY };
                         burst.tune(coords);
                         circle.tune(coords);
                         timeline.replay();
                     });
-
                 }).catch(e => console.error('rtMenu-mo.js: ', e))
                 rightDiggit.attr('onclick', diggit.attr("onclick"));
                 rightMenuSpan.text($('#digg_count').text());
