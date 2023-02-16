@@ -1585,7 +1585,7 @@ window.cnblogsConfig = {
     },
 }
 ```
-![diggit]()
+![diggit](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/diggit.gif)
 
 ## articleSuffix - 文章后缀
 
