@@ -167,7 +167,49 @@ export default function main() {
 
                 let rightDiggit = $('#rightDiggit');
                 let rightMenuSpan = rightDiggit.find('.rightMenuSpan');
+                $.__tools.dynamicLoadingJs($.__config.default.mojs).then(() => {
+                    const RADIUS = 28;
+                    const circle = new mojs.Shape({
+                        left: 0, top: 0,
+                        stroke:   '#FF9C00',
+                        strokeWidth: { [2*RADIUS] : 0 },
+                        fill:     'none',
+                        scale:    { 0: 1, easing: 'quad.out' },
+                        radius:   RADIUS,
+                        duration:  450
+                    });
 
+                    const burst = new mojs.Burst({
+                        left: 0, top: 0,
+                        radius: {0: 50},
+                        parent: '#rightDiggit',
+                        easing:  mojs.easing.bezier(0.1, 1, 0.3, 1),
+                        delay: 300,
+                        children: {
+                            duration: 750,
+                            radius: {0: 'rand(5, 25)'},
+                            shape: ['circle','rect','polygon'],
+                            fill: ['#1abc9c', '#2ecc71', '#00cec9', '#3498db', '#9b59b6', '#fdcb6e', '#f1c40f', '#e67e22', '#e74c3c', '#e84393'],
+                            degreeShift: 'rand(-90, 90)',
+                            delay: 'stagger(0, 40)',
+                        },
+                        opacity: 0.6,
+                        count: 10,
+                    });
+
+
+                    const timeline = new mojs.Timeline({ speed: 1.5 });
+
+                    timeline.add( burst, circle );
+
+                    document.addEventListener( 'click', function (e) {
+                        const coords = { x: e.pageX, y: e.pageY };
+                        burst.tune(coords);
+                        circle.tune(coords);
+                        timeline.replay();
+                    });
+
+                }).catch(e => console.error('rtMenu-mo.js: ', e))
                 rightDiggit.attr('onclick', diggit.attr("onclick"));
                 rightMenuSpan.text($('#digg_count').text());
 
