@@ -323,6 +323,7 @@
     link: false,
     iconfont: false,
     commentTyping: false,
+    diggit: false,
     iconfontArr: [
       'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
       'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
