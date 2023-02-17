@@ -1,3 +1,6 @@
+# 2022.2.16 
+- 修复diggit的配置项
+
 # 2022.2.15 - v2.2.7
 - 新增评论打字特效配置`articleContent.commentTyping`
 - 新增点赞特效配置`articleContent.diggit`
