@@ -167,7 +167,7 @@ export default function main() {
 
                 let rightDiggit = $('#rightDiggit');
                 let rightMenuSpan = rightDiggit.find('.rightMenuSpan');
-                $.__tools.dynamicLoadingJs($.__config.default.mojs).then(() => {
+                ($.__config.articleContent.diggit) && $.__tools.dynamicLoadingJs($.__config.default.mojs).then(() => {
                     const RADIUS = 28;
                     const circle = new mojs.Shape({
                         left: 0, top: 0,
