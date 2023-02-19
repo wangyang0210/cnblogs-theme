@@ -27,8 +27,6 @@
       pointsRank: false,
       // 最新随笔
       latestPosts: false,
-      // 最新评论
-      latestComment: false,
       // 我的标签
       myTags: false,
       // 随笔分类
@@ -39,12 +37,14 @@
       readRank: false,
       // 推荐排行
       recommendRank: false,
-      // 帖子档案
+      // 最新评论
+      latestComment: false,
+      // 随笔档案
       postsArchive: false,
       // 文章档案
       articleArchive: false,
       // 自定义列表
-      customList: false
+      customList: false,
     }
   },
 
