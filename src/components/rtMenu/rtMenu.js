@@ -306,8 +306,6 @@ export default function main() {
      */
     (()=> {
         if (window.isBlogOwner && window.isLogined &&  $.__tools.getVersion()) {
-            // https://i.cnblogs.com/api/settings PUT
-            // https://i.cnblogs.com/settings GET
             $('#update').show();
             $('#update').click(function () {
                 window.open(localStorage.getItem('repoUrl'))

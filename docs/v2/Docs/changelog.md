@@ -1,5 +1,6 @@
 # 2022.2.16 
 - 修复diggit的配置项
+- 修复非文章页更新图表显示异常问题
 
 # 2022.2.15 - v2.2.7
 - 新增评论打字特效配置`articleContent.commentTyping`
