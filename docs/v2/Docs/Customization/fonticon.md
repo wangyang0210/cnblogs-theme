@@ -16,12 +16,29 @@ window.cnblogsConfig = {
 
 ## 内置图标
 
-> 本主题内置图标
+> 内置图标分为基本图标和文章图标， 两则加载的文件和位置均不同；
+
+### 基本图标
+
+?> 用于主题基本图标的配置，默认以CSS方式进行加载，主题初始化时就会加载；
 
 <iframe  
 height=850
 width=90%
-src="https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html"  
+src="https://docs.wangyangyang.vip/iconfont/base/demo_index.html"  
 frameborder=0  
 allowfullscreen>
 </iframe>
+
+### 文章图标
+
+?> 用于文章标题前的修饰，默认以JS方式进行加载，只会在文章页进行加载；
+
+<iframe  
+height=850
+width=90%
+src="https://docs.wangyangyang.vip/iconfont/posts/demo_index.html"  
+frameborder=0  
+allowfullscreen>
+</iframe>
+

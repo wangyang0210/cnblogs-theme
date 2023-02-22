@@ -120,7 +120,7 @@ window.cnblogsConfig = {
 ### navList - 菜单导航
 
 * 类型：```Array```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
+* 相关文档：[字体图标库](fonticon.md)
 * 默认值：```[]```
 
 自定义菜单导航，显示在默认导航下方。
@@ -145,7 +145,7 @@ window.cnblogsConfig = {
 ### customList - 菜单数据
 
 * 类型：```Object```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
+* 相关文档：[字体图标库](fonticon.md)
 * 默认值：```{}```
 
 自定义菜单数据，显示在默认数据上方。
@@ -448,7 +448,7 @@ window.cnblogsConfig = {
 ## fontIconExtend - 字体图标库
 
 * 类型：```Url```
-* 相关文档：[字体图标库](https://wangyang0210.github.io/cnblogs-theme/v2/iconfontDemo/demo_index.html)
+* 相关文档：[字体图标库](fonticon.md)
 * 默认值：```""```
 
 字体图标库扩展css的Url,可用于自定义列表配置等icon配置。
