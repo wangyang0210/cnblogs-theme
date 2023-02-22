@@ -11,7 +11,6 @@ import sidebar from "../sidebar/sidebar";
 import banner from "../banner/banner";
 import event from "../event/event";
 await $.__tools.dynamicLoadingJs($.__config.default.jqueryrotate).catch(e => console.error('jqueryrotate.js', e))
-await $.__tools.dynamicLoadingJs($.__config.default.iconfont).catch(e => console.error('iconfont.js', e))
 
 export default function main() {
 
