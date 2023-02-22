@@ -322,7 +322,13 @@
   articleContent: {
     link: false,
     iconfont: false,
-    commentTyping: false,
+    commentTyping: {
+      enable: false,
+      options: {
+        colorful: true,
+        shake: false,
+      }
+    },
     diggit: false,
     iconfontArr: [
       'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',

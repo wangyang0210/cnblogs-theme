@@ -1559,14 +1559,21 @@ window.cnblogsConfig = {
 ![roughnotation](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20230102230137.png)
 
 ### commentTyping - 评论增加打字特效
-
-* 类型：```Boolean```
-* 默认值：```false```
+* 类型：```Object```
+* 默认值：```{}```
 
 ```javascript
 window.cnblogsConfig = {
     articleContent: {
-        commentTyping: false,
+        commentTyping: {
+            enable: false,
+            options: {
+                // 是否多彩粒子
+                colorful: true,
+                // 是否抖动
+                shake: false,
+            }
+        },
     },
 }
 ```

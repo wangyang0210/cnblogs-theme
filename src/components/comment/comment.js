@@ -8,7 +8,13 @@
  */
 
 export default function main() {
-   if ($.__config.articleContent.commentTyping) $.__tools.dynamicLoadingJs($.__config.default.commentTyping).catch(e => console.error('commentTyping.js', e))
+
+    if($.__config.articleContent.commentTyping.enable) {
+        const POWERMODE  = require('./commentTyping/commentTyping')
+        POWERMODE.colorful = $.__config.articleContent.commentTyping.options.colorful;
+        POWERMODE.shake = $.__config.articleContent.commentTyping.options.shake;
+        document.body.addEventListener('input', POWERMODE);
+    }
     let setComment = () => {
         let feedbackItem = $('.feedbackItem');
         if (feedbackItem.length > 0) {
