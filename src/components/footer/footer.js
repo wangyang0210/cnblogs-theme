@@ -45,7 +45,7 @@ export default function main() {
                   preload="${config.aplayer.options.preload}"
                   volume="${config.aplayer.options.volume}"
                   mutex="${config.aplayer.options.mutex}"
-                  lrcType="${config.aplayer.options.lrcType}"
+                  ${Number(config.aplayer.options.lrcType) ? `lrcType` : `lrc-type` }="${config.aplayer.options.lrcType}"
                   listFolded="${config.aplayer.options.listFolded}"
                   listMaxHeight="${config.aplayer.options.listMaxHeight}"
                   storageName="${config.aplayer.options.storageName}"

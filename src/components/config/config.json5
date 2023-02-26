@@ -118,6 +118,9 @@
     aplayer: {
       enable: false,
       options: {
+         // todo
+          lrcColor: "#00ab08",
+          lrcCurrentColor: "#FDD835",
           id: "3778678",
           api: "",
           server: "netease",

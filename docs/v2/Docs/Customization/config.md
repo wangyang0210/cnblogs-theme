@@ -655,8 +655,6 @@ window.cnblogsConfig = {
 
 ### aplayer - 音乐播放器
 
-!> 使用分隔符的配置请转为驼峰写法 <br /> 如: lrc-type => lrcType
-
 | option          | default     | description                                                  |
 | --------------- | ----------- | ------------------------------------------------------------ |
 | id              | **require** | song id / playlist id / album id / search keyword            |
@@ -672,11 +670,11 @@ window.cnblogsConfig = {
 | preload         | `auto`      | values: 'none', 'metadata', 'auto'                           |
 | volume          | `0.7`       | default volume, notice that player will remember user setting, default volume will not work after user set volume themselves |
 | mutex           | `true`      | prevent to play multiple player at the same time, pause other players when this player start play |
-| lrcType        | `0`         | lyric type                                                   |
+| lrcType        | `0`         | lyric type , Don't display lyrics when the value is 0                                                   |
 | listFolded     | `true`     | indicate whether list should folded at first                 |
 | listMaxHeight | `340px`     | list max height                                              |
 | storageName    | `cnblogsTheme`  | localStorage key that store player setting                   |
-|api | `https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r`| When there is a problem with the API, you can use a different API instead |
+| api | `https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r`| When there is a problem with the API, you can use a different API instead |
 
 * 类型：```Object```
 * 相关文档: [音乐播放器](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/player)
