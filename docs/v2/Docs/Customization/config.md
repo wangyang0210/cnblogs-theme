@@ -675,7 +675,8 @@ window.cnblogsConfig = {
 | lrcType        | `0`         | lyric type                                                   |
 | listFolded     | `true`     | indicate whether list should folded at first                 |
 | listMaxHeight | `340px`     | list max height                                              |
-| storageHame    | `metingjs`  | localStorage key that store player setting                   |
+| storageName    | `cnblogsTheme`  | localStorage key that store player setting                   |
+|api | `https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r`| When there is a problem with the API, you can use a different API instead |
 
 * 类型：```Object```
 * 相关文档: [音乐播放器](https://wangyang0210.github.io/cnblogs-theme/v2/#/Docs/Customization/player)
@@ -700,7 +701,7 @@ window.cnblogsConfig = {
     lrcType: "0",
     listFolded: "true",
     listMaxHeight: "340px",
-    storageHame: "metingjs"
+    storageName: "cnblogsTheme"
   }
 }
 ```

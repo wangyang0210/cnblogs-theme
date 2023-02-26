@@ -119,6 +119,7 @@
       enable: false,
       options: {
           id: "3778678",
+          api: "",
           server: "netease",
           type: "playlist",
           auto: "netease",
@@ -134,7 +135,7 @@
           lrcType: "0",
           listFolded: "true",
           listMaxHeight: "340px",
-          storageHame: "metingjs"
+          storageName: "cnblogsTheme"
       }
     }
   },

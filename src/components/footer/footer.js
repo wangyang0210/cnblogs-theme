@@ -32,6 +32,7 @@ export default function main() {
                 $('#footer').append(`
                <meting-js 
                   id="${config.aplayer.options.id}"
+                  api="${config.aplayer.options.api}"
                   server="${config.aplayer.options.server}"
                   type="${config.aplayer.options.type}"
                   auto="${config.aplayer.options.auto}"
@@ -44,10 +45,10 @@ export default function main() {
                   preload="${config.aplayer.options.preload}"
                   volume="${config.aplayer.options.volume}"
                   mutex="${config.aplayer.options.mutex}"
-                  lrc-type="${config.aplayer.options.lrcType}"
-                  list-folded="${config.aplayer.options.listFolded}"
-                  list-max-height="${config.aplayer.options.listMaxHeight}"
-                  storage-hame="${config.aplayer.options.storageHame}"
+                  lrcType="${config.aplayer.options.lrcType}"
+                  listFolded="${config.aplayer.options.listFolded}"
+                  listMaxHeight="${config.aplayer.options.listMaxHeight}"
+                  storageName="${config.aplayer.options.storageName}"
                > 
               </meting-js>`)
             }).catch(e => console.error('aplayer|meting', e))
