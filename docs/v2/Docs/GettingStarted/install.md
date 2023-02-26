@@ -14,7 +14,7 @@
 
 !> 侧边栏设置的时候格式要记得选Html
 
-<img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_01.png width="750" />
+<img src="https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/install_01.png" width="750" />
 
 本主题当前页面所涉及的配置有：
 
