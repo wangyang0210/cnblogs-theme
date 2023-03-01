@@ -10,6 +10,7 @@
 export default function main() {
 
     // 评论框背景图片
+    window.onbeforeunload = () => { localStorage.removeItem("isDay")}
     let setBackground = (dayStatus) => {
             dayStatus == 'day' ? $("textarea").css("background", $.__config.articleContent.commentBackground.options.day) : $("textarea").css("background", $.__config.articleContent.commentBackground.options.night)
             localStorage.setItem('isDay', dayStatus )
