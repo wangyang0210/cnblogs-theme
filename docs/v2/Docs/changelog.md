@@ -1,6 +1,6 @@
 # 2023.3.1 - v2.2.9_pre
 - 新增评论框背景图片配置`articleContent.commentBackground`(修图贼费时间)
-- 影单页面
+- 影单页面[discuss]
 
 
 # 2023.2.16 - v2.2.8

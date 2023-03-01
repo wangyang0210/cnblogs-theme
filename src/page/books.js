@@ -23,11 +23,10 @@ export default function main() {
      * 书单页处理
      */
     (() => {
-        if ( $.__config.bookList.length) {
+        if ($.__config.bookList.length) {
             import(/* webpackChunkName: "gf-blink" */ /* webpackPrefetch: true */ '../style/gf-blink.css');
 
-            let postBody = $('#cnblogs_post_body'),
-                html = '';
+            let postBody = $('#cnblogs_post_body'),html = '';
             $.each( $.__config.bookList, (i) => {
                 let list = $.__config.bookList[i];
                 if (list.title) html += '<h1 class=`iconfont ${list.icon}`>' + list.title + '</h1>';
@@ -35,14 +34,11 @@ export default function main() {
                 html += '<div class="book-cards">';
                 $.each(list.books, (j) => {
                     let cardHtml = booksTemp, books = list.books[j];
-
                     // 评星
                     let scoreHtml = '';
                     if (typeof books.score !== 'undefined' && books.score > 0) {
                         scoreHtml += '<i class="iconfont icon-star-full"></i>'.repeat(parseInt(books.score));
-                        if (books.score > parseInt(books.score)) {
-                            scoreHtml += '<i class="iconfont icon-star-half"></i>';
-                        }
+                        if (books.score > parseInt(books.score))  scoreHtml += '<i class="iconfont icon-star-half"></i>';
                         scoreHtml += '<i class="iconfont icon-icon-star"></i>'.repeat(parseInt(5 - books.score));
                     } else {
                         scoreHtml += '<i class="iconfont icon-icon-star"></i>'.repeat(5);
