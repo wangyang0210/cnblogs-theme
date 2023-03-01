@@ -59,7 +59,7 @@ export default function main() {
     $.__timeIds.commentTId = window.setInterval(() =>{
         let isDay = localStorage.getItem('isDay');
         let dayStatus = $.__tools.getCookie('cnblogs_config_isNight');
-        if ($.__config.articleContent.commentBackground.enabled && (!isDay || isDay != dayStatus)) setBackground(dayStatus);
+        if ($.__config.articleContent.commentBackground.enable && (!isDay || isDay != dayStatus)) setBackground(dayStatus);
         if ($('.feedbackItem').length > 0) {
             setComment();
             $.__tools.clearIntervalTimeId( $.__timeIds.commentTId);
