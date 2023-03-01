@@ -1593,6 +1593,30 @@ window.cnblogsConfig = {
 ```
 ![diggit](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/diggit.gif)
 
+
+
+### commentBackground - 评论框背景图片
+
+* 类型：```Oject```
+* 默认值：```{}```
+
+```javascript
+window.cnblogsConfig = {
+    articleContent: {
+        commentBackground: {
+            enabled: false,
+            options: {
+                day: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073716_comment_bg_day.png") no-repeat scroll 100% 31% / 35% padding-box border-box',
+                night: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073520_comment_bg_dark.png") no-repeat scroll 100% 31% / 35% padding-box border-box'
+            }
+        },
+    },
+}
+```
+
+![评论框背景图片](https://cdn.jsdelivr.net/gh/wangyang0210/pic/imgs/project/cnblogs/20230301171033.png)
+
+
 ## articleSuffix - 文章后缀
 
 ### imgUrl - 左侧图片

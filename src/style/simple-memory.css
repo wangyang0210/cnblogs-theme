@@ -4136,4 +4136,7 @@ table#blogCalendar > tbody > tr > td > a {
     #dayNightSwitch .onOff .sunMoon .cloud.part2:before {
         width: 15px
     }
+    #tbCommentBody {
+        background-size: calc(70% - 10%) !important;
+    }
 }

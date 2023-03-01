@@ -9,12 +9,20 @@
 
 export default function main() {
 
+    // 评论框背景图片
+    let setBackground = (dayStatus) => {
+            dayStatus == 'day' ? $("textarea").css("background", $.__config.articleContent.commentBackground.options.day) : $("textarea").css("background", $.__config.articleContent.commentBackground.options.night)
+            localStorage.setItem('isDay', dayStatus )
+    }
+
+    // 评论框打字特效
     if($.__config.articleContent.commentTyping.enable) {
         const POWERMODE  = require('./commentTyping/commentTyping')
         POWERMODE.colorful = $.__config.articleContent.commentTyping.options.colorful;
         POWERMODE.shake = $.__config.articleContent.commentTyping.options.shake;
         document.body.addEventListener('input', POWERMODE);
     }
+
     let setComment = () => {
         let feedbackItem = $('.feedbackItem');
         if (feedbackItem.length > 0) {
@@ -47,7 +55,11 @@ export default function main() {
             $.__config.animate.avatar.enable && $('.feedbackAvatar').addClass('img-rounded')
         }
     }
+
     $.__timeIds.commentTId = window.setInterval(() =>{
+        let isDay = localStorage.getItem('isDay');
+        let dayStatus = $.__tools.getCookie('cnblogs_config_isNight');
+        if ($.__config.articleContent.commentBackground.enabled && (!isDay || isDay != dayStatus)) setBackground(dayStatus);
         if ($('.feedbackItem').length > 0) {
             setComment();
             $.__tools.clearIntervalTimeId( $.__timeIds.commentTId);

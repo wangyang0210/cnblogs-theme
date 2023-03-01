@@ -1,11 +1,16 @@
-# 2022.2.16 - v2.2.8
+# 2023.3.1 - v2.2.9_pre
+- 新增评论框背景图片配置`articleContent.commentBackground`(修图贼费时间)
+- 影单页面
+
+
+# 2023.2.16 - v2.2.8
 - 修复diggit的配置项
 - 修复Meting的配置项
 - 修复非文章页更新图标显示异常问题
 - 优化评论打字特效，调整配置`articleContent.commentTyping`
 - 文档更新
 
-# 2022.2.15 - v2.2.7
+# 2023.2.15 - v2.2.7
 - 新增评论打字特效配置`articleContent.commentTyping`
 - 新增点赞特效配置`articleContent.diggit`
 
