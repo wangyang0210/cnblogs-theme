@@ -10,11 +10,7 @@
 export default function main() {
 
     // 评论框背景图片
-    window.onbeforeunload = () => { localStorage.removeItem("isDay")}
-    let setBackground = (dayStatus) => {
-            dayStatus == 'day' ? $("textarea").css("background", $.__config.articleContent.commentBackground.options.day) : $("textarea").css("background", $.__config.articleContent.commentBackground.options.night)
-            localStorage.setItem('isDay', dayStatus )
-    }
+    $.__config.articleContent.commentBackground.enable && $.__tools.setCommentBackground($.__tools.getCookie('cnblogs_config_isNight'));
 
     // 评论框打字特效
     if($.__config.articleContent.commentTyping.enable) {
@@ -58,14 +54,12 @@ export default function main() {
     }
 
     $.__timeIds.commentTId = window.setInterval(() =>{
-        let isDay = localStorage.getItem('isDay');
-        let dayStatus = $.__tools.getCookie('cnblogs_config_isNight');
-        if ($.__config.articleContent.commentBackground.enable && (!isDay || isDay != dayStatus)) setBackground(dayStatus);
         if ($('.feedbackItem').length > 0) {
             setComment();
             $.__tools.clearIntervalTimeId( $.__timeIds.commentTId);
         }
     },1000);
+
 
     $(document).ajaxSuccess(function (event, xhr, settings) {
         if (settings.url.includes("GetComments.aspx")) setComment();

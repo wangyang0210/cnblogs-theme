@@ -289,6 +289,14 @@ function getVersion() {
     return compareVersion(localStorage.getItem('version'), $.__config.default.version)
 }
 
+/**
+ * 设置评论框背景
+ * @param dayStatus {string} 当前主题模式
+ */
+function setCommentBackground(dayStatus){
+    dayStatus == 'day' ? $("textarea").css("background", $.__config.articleContent.commentBackground.options.day) : $("textarea").css("background", $.__config.articleContent.commentBackground.options.night)
+}
+
 
 export default {
     getTodayStart,
@@ -314,4 +322,5 @@ export default {
     minToTime,
     compareVersion,
     getVersion,
+    setCommentBackground,
 }

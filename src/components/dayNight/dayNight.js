@@ -64,11 +64,13 @@ export default function main() {
                 $(this).removeClass('daySwitch');
                 loadDarkCss();
                 dayNightControl('night');
+                $.__config.articleContent.commentBackground.enable && $.__tools.setCommentBackground('night')
             } else { // 日间
                 $.__tools.setCookie(cookieKey, 'day', exp);
                 $(this).addClass('daySwitch');
                 $('head link#baseDarkCss').remove();
                 dayNightControl( 'day');
+                $.__config.articleContent.commentBackground.enable && $.__tools.setCommentBackground('day')
             }
         });
     })();
