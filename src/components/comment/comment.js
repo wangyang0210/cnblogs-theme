@@ -9,9 +9,6 @@
 
 export default function main() {
 
-    // 评论框背景图片
-    $.__config.articleContent.commentBackground.enable && $.__tools.setCommentBackground($.__tools.getCookie('cnblogs_config_isNight'));
-
     // 评论框打字特效
     if($.__config.articleContent.commentTyping.enable) {
         const POWERMODE  = require('./commentTyping/commentTyping')
