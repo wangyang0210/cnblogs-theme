@@ -7,396 +7,535 @@
  * @describe: 主题默认配置信息
  */
 {
-  // -- 基础信息 --
-  info: {
-    name: '',
-    startDate: '2021-01-01',
-    avatar: '',
-    blogIcon: '',
-  },
-
-  // -- 侧边栏 --
-  sidebar: {
-    navList: [],
-    customList: {},
-    infoBackground: '',
-    titleMsg: '欢迎访问本博客~',
-    blogStatus: true,
-    submenu: {
-      // 积分排行
-      pointsRank: false,
-      // 最新随笔
-      latestPosts: false,
-      // 我的标签
-      myTags: false,
-      // 随笔分类
-      postsClassify: false,
-      // 文章分类
-      articleClassify: false,
-      // 阅读排行
-      readRank: false,
-      // 推荐排行
-      recommendRank: false,
-      // 最新评论
-      latestComment: false,
-      // 随笔档案
-      postsArchive: false,
-      // 文章档案
-      articleArchive: false,
-      // 自定义列表
-      customList: false,
-    }
-  },
-
-  // -- 头图 --
-  banner: {
-    text: false,
-    home: {
-      background: [],
-      title: [],
-      titleSource: 'jinrishici',
+    // -- 基础信息 --
+    info: {
+        name: '',
+        startDate: '2021-01-01',
+        avatar: '',
+        blogIcon: '',
     },
-    article: {
-      background: []
-    }
-  },
 
-  // -- Loading --
-  loading: {
-    rebound: {
-      tension: 16,
-      friction: 5
+    // -- 侧边栏 --
+    sidebar: {
+        navList: [],
+        customList: {},
+        infoBackground: '',
+        titleMsg: '欢迎访问本博客~',
+        blogStatus: true,
+        submenu: {
+            // 积分排行
+            pointsRank: false,
+            // 最新随笔
+            latestPosts: false,
+            // 我的标签
+            myTags: false,
+            // 随笔分类
+            postsClassify: false,
+            // 文章分类
+            articleClassify: false,
+            // 阅读排行
+            readRank: false,
+            // 推荐排行
+            recommendRank: false,
+            // 最新评论
+            latestComment: false,
+            // 随笔档案
+            postsArchive: false,
+            // 文章档案
+            articleArchive: false,
+            // 自定义列表
+            customList: false,
+        },
     },
-    spinner: {
-      id: 'spinner',
-      radius: 90,
-      sides: 3,
-      depth: 4,
-      colors: {
-        background: '#f0f0f0',
-        stroke: '#272633',
-        base: null,
-        child: '#272633'
-      },
-      alwaysForward: true,
-      restAt: 0.5,
-      renderBase: false
-    }
-  },
 
-  // -- fontIcon --
-  fontIconExtend: '',
-
-  // -- 进度条 --
-  progressBar: {
-    id: 'top-progress-bar',
-    color: '#77b6ff',
-    height: '2px',
-    duration: 0.2
-  },
-
-  // -- 页面 title --
-  title: {
-    onblur: '(oﾟvﾟ)ノ Hi',
-    onblurTime: 500,
-    focus: '(*´∇｀*) 欢迎回来！',
-    focusTime: 1000
-  },
-
-  // -- footer --
-  footer: {
-    text: {
-      left: '',
-      right: '',
-      iconFont: {
-        icon:  "icon-xinlv",
-        color: "red",
-        fontSize: "16px"
-      }
+    // -- 头图 --
+    banner: {
+        text: false,
+        home: {
+            background: [],
+            title: [],
+            titleSource: 'jinrishici',
+        },
+        article: {
+            background: [],
+        },
     },
-    style: 2,
-    aplayer: {
-      enable: false,
-      options: {
-         // todo
-          lrcColor: "#00ab08",
-          lrcCurrentColor: "#FDD835",
-          id: "3778678",
-          api: "",
-          server: "netease",
-          type: "playlist",
-          auto: "netease",
-          fixed: "true",
-          mini: "true",
-          autoplay: "false",
-          theme: "#2980b9",
-          loop: "all",
-          order: "random",
-          preload: "auto",
-          volume: "0.7",
-          mutex: "true",
-          lrcType: "0",
-          listFolded: "true",
-          listMaxHeight: "340px",
-          storageName: "cnblogsTheme"
-      }
-    }
-  },
 
-  // -- 友情链接 --
-  links: {
-    footer: [],
-    page: []
-  },
+    // -- Loading --
+    loading: {
+        rebound: {
+            tension: 16,
+            friction: 5,
+        },
+        spinner: {
+            id: 'spinner',
+            radius: 90,
+            sides: 3,
+            depth: 4,
+            colors: {
+                background: '#f0f0f0',
+                stroke: '#272633',
+                base: null,
+                child: '#272633',
+            },
+            alwaysForward: true,
+            restAt: 0.5,
+            renderBase: false,
+        },
+    },
 
-  // -- umami --
-  umami: {
-    url: '',
-    shareId: ''
-  },
+    // -- fontIcon --
+    fontIconExtend: '',
 
-  // -- 右下角菜单 --
-  rtMenu: {
-    qrCode: '',
-    reward: {
-      alipay: '',
-      wechatpay: ''
+    // -- 进度条 --
+    progressBar: {
+        id: 'top-progress-bar',
+        color: '#77b6ff',
+        height: '2px',
+        duration: 0.2,
     },
-    downScrollDom: '',
-  },
 
-  // -- 日/夜模式 --
-  switchDayNight: {
-    enable: true,
-    nightMode: false,
-    auto: {
-      enable: false,
-      dayHour: 5,
-      nightHour: 19
-    }
-  },
+    // -- 页面 title --
+    title: {
+        onblur: '(oﾟvﾟ)ノ Hi',
+        onblurTime: 500,
+        focus: '(*´∇｀*) 欢迎回来！',
+        focusTime: 1000,
+    },
 
-  // -- 动效 --
-  animate: {
-    bannerImages: {
-      enable: false,
-      options: {
-        itemNum: 5,
-        current: 0,
-        sort: 1,
-        time: 30000
-      }
+    // -- footer --
+    footer: {
+        text: {
+            left: '',
+            right: '',
+            iconFont: {
+                icon: 'icon-xinlv',
+                color: 'red',
+                fontSize: '16px',
+            },
+        },
+        style: 2,
+        aplayer: {
+            enable: false,
+            options: {
+                // todo
+                lrcColor: '#00ab08',
+                lrcCurrentColor: '#FDD835',
+                id: '3778678',
+                api: '',
+                server: 'netease',
+                type: 'playlist',
+                auto: 'netease',
+                fixed: 'true',
+                mini: 'true',
+                autoplay: 'false',
+                theme: '#2980b9',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: '0.7',
+                mutex: 'true',
+                lrcType: '0',
+                listFolded: 'true',
+                listMaxHeight: '340px',
+                storageName: 'cnblogsTheme',
+            },
+        },
     },
-    homeBanner: {
-      enable: false,
-      options: {
-        radius: 15,
-        density: 0.2,
-        color: 'rgba(255,255,255, .2)',
-        clearOffset: 0.3
-      }
+
+    // -- 友情链接 --
+    links: {
+        footer: [],
+        page: [],
     },
-    articleTitle: {
-      enable: true
+
+    // -- umami --
+    umami: {
+        url: '',
+        shareId: '',
     },
-    articleBanner: {
-      enable: false
+
+    // -- 右下角菜单 --
+    rtMenu: {
+        qrCode: '',
+        reward: {
+            alipay: '',
+            wechatpay: '',
+        },
+        downScrollDom: '',
     },
-    background: {
-      ribbons: {
-        enable: false,
+
+    // -- 日/夜模式 --
+    switchDayNight: {
+        enable: true,
+        nightMode: false,
+        auto: {
+            enable: false,
+            dayHour: 5,
+            nightHour: 19,
+        },
+    },
+
+    // -- 动效 --
+    animate: {
+        bannerImages: {
+            enable: false,
+            options: {
+                itemNum: 5,
+                current: 0,
+                sort: 1,
+                time: 30000,
+            },
+        },
+        homeBanner: {
+            enable: false,
+            options: {
+                radius: 15,
+                density: 0.2,
+                color: 'rgba(255,255,255, .2)',
+                clearOffset: 0.3,
+            },
+        },
+        articleTitle: {
+            enable: true,
+        },
+        articleBanner: {
+            enable: false,
+        },
+        background: {
+            ribbons: {
+                enable: false,
+                options: {
+                    colorSaturation: '60%',
+                    colorBrightness: '50%',
+                    colorAlpha: 0.5,
+                    colorCycleSpeed: 5,
+                    verticalPosition: 'random',
+                    horizontalSpeed: 200,
+                    ribbonCount: 3,
+                    strokeSize: 0,
+                    parallaxAmount: -0.2,
+                    animateSections: true,
+                },
+            },
+            particles: {
+                enable: false,
+                options: {},
+            },
+            season: {
+                enable: false,
+                options: {
+                    img: '',
+                    size: 40,
+                },
+            },
+        },
+        mouse: {
+            bubble: {
+                enable: false,
+                options: {
+                    live: 30,
+                    colors: ['149, 197, 252', '224, 199, 252'],
+                    quantity: 15,
+                    size: 5,
+                },
+            },
+            mouse: {
+                enable: false,
+                options: {
+                    size: 8,
+                    sizeF: 36,
+                },
+            },
+            mo: {
+                enable: false,
+                options: {
+                    radius: { '0': 100 },
+                    count: 5,
+                    children: {
+                        shape: 'polygon',
+                        fill: { cyan: 'yellow' },
+                        radius: 20,
+                        rotate: { '360': 0 },
+                        duration: 2000,
+                    },
+                },
+            },
+            click: {
+                enable: false,
+                options: {},
+            },
+        },
+        infoName: {
+            enable: false,
+        },
+        avatar: {
+            enable: false,
+        },
+    },
+
+    // -- 代码 --
+    code: {
+        type: '', // hljs
         options: {
-          colorSaturation: "60%",
-          colorBrightness: "50%",
-          colorAlpha: 0.5,
-          colorCycleSpeed: 5,
-          verticalPosition: "random",
-          horizontalSpeed: 200,
-          ribbonCount: 3,
-          strokeSize: 0,
-          parallaxAmount: -0.2,
-          animateSections: true
-        }
-      },
-      particles: {
-        enable: false,
-        options: {
-
-        }
-      },
-      season: {
-        enable: false,
-        options: {
-          img: "",
-          size: 40,
-        }
-      }
+            hljs: {
+                theme: 'atom-one-dark-reasonable',
+                languages: [],
+            },
+            maxHeight: '',
+            line: false,
+            macStyle: true,
+        },
     },
-    mouse: {
-      bubble: {
-        enable: false,
-        options: {
-          live: 30,
-          colors: [
-            "149, 197, 252",
-            "224, 199, 252"
-          ],
-          quantity: 15,
-          size: 5
-        }
-      },
-      mouse: {
-        enable: false,
-        options: {
-          size: 8,
-          sizeF: 36
-        }
-      },
-      mo: {
-        enable: false,
-        options: {
-          radius:   { "0": 100 },
-          count:    5,
-          children: {
-            shape:      'polygon',
-            fill:       { 'cyan' : 'yellow' },
-            radius:     20,
-            rotate:      { "360": 0 },
-            duration:   2000
-          }
-        }
-      },
-      click: {
-        enable: false,
-        options: {}
-      }
+
+    // -- 文章后缀 --
+    articleSuffix: {
+        imgUrl: '',
+        aboutHtml: '',
+        copyrightHtml: '',
+        supportHtml: '',
+        copyText: {
+            enable: false,
+            length: 100,
+            copyright: '',
+        },
     },
-    infoName: {
-      enable: false,
+
+    // -- 文章目录 --
+    articleDirectory: {
+        position: 'right',
+        minBodyWeight: 900,
+        autoWidthScroll: false,
     },
-    avatar: {
-      enable: false,
-    }
-  },
 
-  // -- 代码 --
-  code: {
-    type: '',  // hljs
-    options: {
-      hljs: {
-        theme: 'atom-one-dark-reasonable',
-        languages: []
-      },
-      maxHeight: '',
-      line: false,
-      macStyle: true,
+    // -- 控制台输出 --
+    consoleList: [],
+
+    // -- 书单信息 --
+    bookList: [],
+
+    // -- 公祭日和缅怀的日子 --
+    memorialDays: ['12-13'],
+
+    // -- 文章内容效果 --
+    articleContent: {
+        link: false,
+        iconfont: false,
+        commentTyping: {
+            enable: false,
+            options: {
+                colorful: true,
+                shake: false,
+            },
+        },
+        commentBackground: {
+            enable: false,
+            options: {
+                day: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073716_comment_bg_day.png") no-repeat scroll 100% 31% / 35% padding-box border-box',
+                night: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073520_comment_bg_dark.png") no-repeat scroll 100% 31% / 35% padding-box border-box',
+            },
+        },
+        diggit: false,
+        iconfontArr: [
+            'hebaodan',
+            'bingtanghulu',
+            'kesong',
+            'qianceng',
+            'fengmi',
+            'feiyuguantou',
+            'shengjian',
+            'youtiao',
+            'yuzijiang',
+            'zhutongfan',
+            'doujiang',
+            'sanmingzhi',
+            'paofu',
+            'shanbei',
+            'dangaojuan',
+            'futejia',
+            'huangyou',
+            'xiangchang',
+            'banji',
+            'danta',
+            'qingning',
+            'lajiao',
+            'shizi',
+            'mojituo',
+            'pijiu',
+            'putaojiu',
+            'kouxiangtang',
+            'xiangcaobingqilin',
+            'jiaozi',
+            'tilamisu',
+            'huoguo',
+            'hongshu',
+            'bingkuai',
+            'mianhuatang',
+            'paobing',
+            'meishikafei',
+            'mantou',
+            'qishui',
+            'ganlan',
+            'jiroujuan',
+            'guodong',
+            'baozi',
+            'pingguo',
+            'chengzi',
+            'qingjiao',
+            'jidan',
+            'xihongshi',
+            'mangguo',
+            'baocai',
+            'niunai',
+            'mianbao',
+            'huluobu',
+            'zhangyu',
+            'pangxie',
+            'longxia',
+            'yangcong',
+            'rou',
+            'jitui',
+            'huage',
+            'xianyu',
+            'mogu',
+            'qiezi',
+            'xilanhua',
+            'ningmeng',
+            'liulian',
+            'banli',
+            'sanwenyu',
+            'tudou',
+            'xigua',
+            'nangua',
+            'huolongguo',
+            'fantuan',
+            'zhusun',
+            'shuiluobu',
+            'shanzhu',
+            'lanmei',
+            'shiliu',
+            'yezi',
+            'tiangua',
+            'mihoutao',
+            'boluo',
+            'kaixinguo',
+            'hetao',
+            'xiaweiyiguo',
+            'huasheng',
+            'bigenguo',
+            'kuihuazi',
+            'songzi',
+            'xiguazi',
+            'badanmu',
+            'yaoguo',
+            'danhuangsu',
+            'dangao',
+            'binggan',
+            'buding',
+            'tangguo',
+            'qiaokeli',
+            'hongzao',
+            'candou',
+            'putaogan',
+            'manyuemei',
+            'taozi',
+            'xiangjiao',
+            'caomei',
+            'niuyouguo',
+            'hamigua',
+            'chelizi',
+            'li',
+            'bale',
+            'kafei1',
+            'shutiao',
+            'zhenzhunaicha',
+            'xuegao',
+            'nailao',
+            'kele',
+            'tiantong',
+            'hanbao',
+            'xiezishousi',
+            'baomihua',
+            'regou',
+            'makalong',
+            'tianfuluo',
+            'juzi',
+            'baixiangguo',
+            'putao',
+            'shaomai',
+            'yumi',
+            'pipa',
+            'yangtao',
+            'youzi',
+            'lianwu',
+            'wuhuaguo',
+            'paomian',
+            'wandou',
+            'huanggua',
+            'suantou',
+            'tiantianquan',
+            'shupian',
+            'huafubing',
+            'bangbangtang',
+            'shousi',
+            'lizhi',
+            'doufu',
+            'mocha',
+            'boluomi',
+            'zhouzi',
+            'bingsha',
+            'suannai',
+            'pisa',
+            'haixing',
+            'haizhe',
+            'tongluoshao',
+            'nuomici',
+            'kuangquanshui',
+            'roujiamo',
+            'cha',
+            'zhangyuxiaowanzi',
+            'chengzhi',
+            'yuancaitou',
+            'baicai',
+        ],
+        roughNotation: {
+            enable: false,
+            underline: { type: 'underline', color: 'blue' },
+            circle: { type: 'circle', color: 'red' },
+            box: { type: 'box', color: 'orange' },
+            highlight: { type: 'highlight', color: 'yellow', iterations: 1, multiline: true },
+            bracket: { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3 },
+            strikeThrough: { type: 'strike-through', color: 'red' },
+            crossedOff: { type: 'crossed-off', color: 'red' },
+        },
     },
-  },
 
-  // -- 文章后缀 --
-  articleSuffix: {
-    imgUrl: '',
-    aboutHtml: '',
-    copyrightHtml: '',
-    supportHtml: '',
-    copyText: {
-      enable: false,
-      length: 100,
-      copyright: ''
+    // -- 钩子 --
+    hooks: {},
+
+    // -- 缺省配置 --
+    default: {
+        version: 'v2.2.9',
+        commentTyping: 'https://files.cnblogs.com/files/wangyang0210/commentTyping.js?t=1676464468',
+        iconfont: 'https://at.alicdn.com/t/c/font_3628204_t6n3fw8b1zn.js',
+        avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
+        mojs: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/mo-js/0.288.2/mo.min.js',
+        moment: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/moment.js/2.29.1/moment.min.js',
+        gsap: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gsap/3.9.1/gsap.min.js',
+        highlight: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js',
+        hljscss: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/',
+        fancybox: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js',
+        fancyboxcss: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.css',
+        bootstrap: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.0.0-beta3/js/bootstrap.min.js',
+        clipboard: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js',
+        optiscroll: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.min.js',
+        optiscrollcss: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.css',
+        snapsvg: 'https://npm.elemecdn.com/snapsvg-cjs@0.0.6/dist/snap.svg.js',
+        toprogress: 'https://npm.elemecdn.com/toprogress@0.1.3/ToProgress.min.js',
+        jqueryrotate: 'https://files.cnblogs.com/files/wangyang0210/jQueryRotateCompressed.js?t=1677086282',
+        aplayer: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js',
+        aplayercss: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css',
+        meting: 'https://cdn.staticfile.org/meting/2.0.1/Meting.min.js',
+        roughNotation: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/rough-notation/0.5.1/rough-notation.iife.min.js',
     },
-  },
-
-  // -- 文章目录 --
-  articleDirectory: {
-    position: 'right',
-    minBodyWeight: 900,
-    autoWidthScroll: false
-  },
-
-  // -- 控制台输出 --
-  consoleList: [],
-
-  // -- 书单信息 --
-  bookList: [],
-
-  // -- 公祭日和缅怀的日子 --
-  memorialDays: ['12-13'],
-
-  // -- 文章内容效果 --
-  articleContent: {
-    link: false,
-    iconfont: false,
-    commentTyping: {
-      enable: false,
-      options: {
-        colorful: true,
-        shake: false,
-      }
-    },
-    commentBackground: {
-      enable: false,
-      options: {
-        day: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073716_comment_bg_day.png") no-repeat scroll 100% 31% / 35% padding-box border-box',
-        night: 'rgba(0, 0, 0, 0) url("https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_230301073520_comment_bg_dark.png") no-repeat scroll 100% 31% / 35% padding-box border-box'
-      }
-    },
-    diggit: false,
-    iconfontArr: [
-      'hebaodan','bingtanghulu','kesong','qianceng','fengmi','feiyuguantou','shengjian','youtiao','yuzijiang',
-      'zhutongfan','doujiang','sanmingzhi','paofu','shanbei','dangaojuan','futejia','huangyou','xiangchang',
-      'banji','danta','qingning','lajiao','shizi','mojituo','pijiu','putaojiu','kouxiangtang','xiangcaobingqilin',
-      'jiaozi','tilamisu','huoguo','hongshu','bingkuai','mianhuatang','paobing','meishikafei','mantou','qishui',
-      'ganlan','jiroujuan','guodong','baozi','pingguo','chengzi','qingjiao','jidan','xihongshi','mangguo','baocai',
-      'niunai','mianbao','huluobu','zhangyu','pangxie','longxia','yangcong','rou','jitui','huage','xianyu','mogu',
-      'qiezi','xilanhua','ningmeng','liulian','banli','sanwenyu','tudou','xigua','nangua','huolongguo','fantuan',
-      'zhusun','shuiluobu','shanzhu','lanmei','shiliu','yezi','tiangua','mihoutao','boluo','kaixinguo','hetao',
-      'xiaweiyiguo','huasheng','bigenguo','kuihuazi','songzi','xiguazi','badanmu','yaoguo','danhuangsu','dangao',
-      'binggan','buding','tangguo','qiaokeli','hongzao','candou','putaogan','manyuemei','taozi','xiangjiao','caomei',
-      'niuyouguo','hamigua','chelizi','li','bale','kafei1','shutiao','zhenzhunaicha','xuegao','nailao','kele','tiantong',
-      'hanbao','xiezishousi','baomihua','regou','makalong','tianfuluo','juzi','baixiangguo','putao','shaomai','yumi','pipa',
-      'yangtao','youzi','lianwu','wuhuaguo','paomian','wandou','huanggua','suantou','tiantianquan','shupian','huafubing',
-      'bangbangtang','shousi','lizhi','doufu','mocha','boluomi','zhouzi','bingsha','suannai','pisa','haixing','haizhe',
-      'tongluoshao','nuomici','kuangquanshui','roujiamo','cha','zhangyuxiaowanzi','chengzhi','yuancaitou','baicai'
-    ],
-    roughNotation: {
-      enable: false,
-      'underline': {type: 'underline', color: 'blue' },
-      'circle': { type: 'circle', color: 'red' },
-      'box': { type: 'box', color: 'orange' },
-      'highlight': { type: 'highlight', color: 'yellow', iterations: 1, multiline: true },
-      'bracket': { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3 },
-      'strikeThrough': { type: 'strike-through', color: 'red' },
-      'crossedOff': { type: 'crossed-off', color: 'red' }
-
-    }
-  },
-
-  // -- 钩子 --
-  hooks: {},
-
-  // -- 缺省配置 --
-  default: {
-    version: 'v2.2.8',
-    commentTyping: 'https://files.cnblogs.com/files/wangyang0210/commentTyping.js?t=1676464468',
-    iconfont: 'https://at.alicdn.com/t/c/font_3628204_t6n3fw8b1zn.js',
-    avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
-    mojs: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/mo-js/0.288.2/mo.min.js',
-    moment: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/moment.js/2.29.1/moment.min.js',
-    gsap: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/gsap/3.9.1/gsap.min.js',
-    highlight: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/highlight.min.js',
-    hljscss: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/highlight.js/11.4.0/styles/',
-    fancybox: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js',
-    fancyboxcss: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.css',
-    bootstrap: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.0.0-beta3/js/bootstrap.min.js',
-    clipboard: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/clipboard.js/2.0.10/clipboard.min.js',
-    optiscroll: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.min.js',
-    optiscrollcss: 'https://npm.elemecdn.com/optiscroll@3.2.1/dist/optiscroll.css',
-    snapsvg: 'https://npm.elemecdn.com/snapsvg-cjs@0.0.6/dist/snap.svg.js',
-    toprogress: 'https://npm.elemecdn.com/toprogress@0.1.3/ToProgress.min.js',
-    jqueryrotate: 'https://files.cnblogs.com/files/wangyang0210/jQueryRotateCompressed.js?t=1677086282',
-    aplayer: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js',
-    aplayercss: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css',
-    meting: 'https://cdn.staticfile.org/meting/2.0.1/Meting.min.js',
-    roughNotation: 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/rough-notation/0.5.1/rough-notation.iife.min.js',
-  }
 }
