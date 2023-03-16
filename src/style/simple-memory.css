@@ -2410,7 +2410,7 @@ div#tbCommentBodyPreview {
     -webkit-animation: fade-in-down 1s both;
     mix-blend-mode: screen;
     font-size: 5rem;
-    font-family: Playball, youyuan, Arial, cursive;
+    font-family: Playball, cursive, kaiti, Arial;
 }
 
 @keyframes pageTitleText {
