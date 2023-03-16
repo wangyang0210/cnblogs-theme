@@ -1,96 +1,119 @@
-#EntryTag, #blogTitle h1 {
-    margin-top: 20px
+#EntryTag,
+#blogTitle h1 {
+    margin-top: 20px;
 }
 
-#EntryTag a, .postSticky {
-    background: #6fa3ef
+#EntryTag a,
+.postSticky {
+    background: #6fa3ef;
 }
 
-#blogTitle h1 a:hover, .dayTitle a, a, a:active, a:link, a:visited {
-    color: #5c8ec6
+#blogTitle h1 a:hover,
+.dayTitle a,
+a,
+a:active,
+a:link,
+a:visited {
+    color: #5c8ec6;
 }
 
-#calendar table a:hover, #navList a:hover, .postDesc a:hover, a:active, a:hover, a:link, a:visited, button {
-    text-decoration: none
+#calendar table a:hover,
+#navList a:hover,
+.postDesc a:hover,
+a:active,
+a:hover,
+a:link,
+a:visited,
+button {
+    text-decoration: none;
 }
 
-#mainContent, #sideBar, #topics {
-    -o-text-overflow: ellipsis
+#mainContent,
+#sideBar,
+#topics {
+    -o-text-overflow: ellipsis;
 }
 
-*, .Cal {
-    padding: 0
+*,
+.Cal {
+    padding: 0;
 }
 
 ::-moz-selection {
-    color: #FFF;
-    background: #807dd4
+    color: #fff;
+    background: #807dd4;
 }
 
 ::selection {
     background: #807dd4;
-    color: #FFF
+    color: #fff;
 }
 
 ::-webkit-selection {
     background: #807dd4;
-    color: #FFF
+    color: #fff;
 }
 
 ::-webkit-scrollbar {
     width: 3px;
-    height: 3px
+    height: 3px;
 }
 
 ::-webkit-scrollbar-track {
     width: 3px;
-    background-color: #f9f9f9
+    background-color: #f9f9f9;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #999;
     background-clip: padding-box;
-    min-height: 100px
+    min-height: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555
+    background-color: #555;
 }
 
-#mainContent, #sideBar, #topics {
+#mainContent,
+#sideBar,
+#topics {
     text-overflow: ellipsis;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #BlogPostCategory a {
-    background: #E8A258
+    background: #e8a258;
 }
 
-#BlogPostCategory a span, #EntryTag a span {
-    margin-right: 3px
+#BlogPostCategory a span,
+#EntryTag a span {
+    margin-right: 3px;
 }
 
 .topicListFooter {
     text-align: right;
     margin-right: 10px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
-#navList a, .dayTitle, button {
-    text-align: center
+#navList a,
+.dayTitle,
+button {
+    text-align: center;
 }
 
-#home, .inner {
-    margin: 0 auto
+#home,
+.inner {
+    margin: 0 auto;
 }
 
 #divRefreshComments {
     margin-right: 10px;
-    font-size: 9pt
+    font-size: 9pt;
 }
 
 * {
-    margin: 0
+    margin: 0;
 }
 
 html {
@@ -103,8 +126,8 @@ html {
 body {
     background-color: #fff;
     font-size: 12px;
-    font-family: Merriweather, "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif;
-    color: #3A4145;
+    font-family: Merriweather, 'Open Sans', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif;
+    color: #3a4145;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     overflow-x: hidden !important;
@@ -112,15 +135,16 @@ body {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
-fieldset, img {
-    border: 0
+fieldset,
+img {
+    border: 0;
 }
 
 li {
-    list-style: none
+    list-style: none;
 }
 
 img {
@@ -128,21 +152,21 @@ img {
 }
 
 a {
-    outline: 0
+    outline: 0;
 }
 
 a:hover {
-    color: #f60
+    color: #f60;
 }
 
 .clear {
-    clear: both
+    clear: both;
 }
 
 button {
     width: auto;
     display: inline-block;
-    padding: .1rem 1.5rem;
+    padding: 0.1rem 1.5rem;
     cursor: pointer;
     outline: 0;
     color: #fff;
@@ -153,20 +177,20 @@ button {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: none;
-    border-radius: .3rem;
-    border: .1em solid rgba(0, 0, 0, .05);
-    background: #5ba4e5
+    border-radius: 0.3rem;
+    border: 0.1em solid rgba(0, 0, 0, 0.05);
+    background: #5ba4e5;
 }
 
 b {
-    font-weight: 400
+    font-weight: 400;
 }
 
 details {
     margin: 1.5rem 0;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     background: #448aff1a;
-    border: 1px solid #1B86F9;
+    border: 1px solid #1b86f9;
     border-radius: 3px;
 }
 
@@ -176,42 +200,41 @@ summary {
     cursor: pointer;
 }
 
-details>summary:before {
-    font-family: "iconfont" !important;
-    font-style: normal!important;
-    left: .6rem;
+details > summary:before {
+    font-family: 'iconfont' !important;
+    font-style: normal !important;
+    left: 0.6rem;
     color: #448aff;
     font-size: 1.5rem;
-    content: "\e6f2";
+    content: '\e6f2';
 }
-
 
 #home {
     width: 70%;
     max-width: 900px;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 0 20px 30px;
-    box-shadow: 0 0 20px 10px rgba(220, 220, 220, .3)
+    box-shadow: 0 0 20px 10px rgba(220, 220, 220, 0.3);
 }
 
 #header {
     padding-bottom: 5px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #blogTitle {
     height: 60px;
-    clear: both
+    clear: both;
 }
 
 #blogTitle h1 {
     font-size: 26px;
     font-weight: 700;
-    line-height: 1.5em
+    line-height: 1.5em;
 }
 
 #blogTitle h1 a {
-    color: #515151
+    color: #515151;
 }
 
 #blogTitle h2 {
@@ -219,11 +242,11 @@ details>summary:before {
     font-size: 13px;
     line-height: 1.846153846;
     color: #757575;
-    float: left
+    float: left;
 }
 
 #blogLogo {
-    float: right
+    float: right;
 }
 
 #navigator {
@@ -232,25 +255,29 @@ details>summary:before {
     border-top: 1px solid #ededed;
     height: 50px;
     clear: both;
-    margin-top: 25px
+    margin-top: 25px;
 }
 
 #bannerbar {
     display: none;
 }
 
-#blog-calendar td, #blog-calendar th, .Cal, .btn_my_zzk, .dayTitle {
-    font-size: 12px
+#blog-calendar td,
+#blog-calendar th,
+.Cal,
+.btn_my_zzk,
+.dayTitle {
+    font-size: 12px;
 }
 
 #navList {
     min-height: 30px;
-    float: left
+    float: left;
 }
 
 #navList li {
     float: left;
-    margin: 0 40px 0 0
+    margin: 0 40px 0 0;
 }
 
 #navList a {
@@ -258,16 +285,18 @@ details>summary:before {
     width: 5em;
     height: 22px;
     float: left;
-    padding-top: 19px
+    padding-top: 19px;
 }
 
-#navList a:active, #navList a:link, #navList a:visited {
+#navList a:active,
+#navList a:link,
+#navList a:visited {
     color: #6a6a6a;
-    font-weight: 700
+    font-weight: 700;
 }
 
 #navList a:hover {
-    color: #000
+    color: #000;
 }
 
 .blogStats {
@@ -275,18 +304,18 @@ details>summary:before {
     color: #757575;
     margin-top: 19px;
     margin-right: 2px;
-    text-align: right
+    text-align: right;
 }
 
 #main {
     margin-top: 30px;
     width: 100%;
-    text-align: left
+    text-align: left;
 }
 
 #mainContent .forFlow {
     float: none;
-    width: auto
+    width: auto;
 }
 
 #mainContent {
@@ -294,31 +323,36 @@ details>summary:before {
     padding: 0 0 10px;
     float: none;
     margin: auto;
-    width: 100%
+    width: 100%;
 }
 
-.day, .entrylistItem:not(:last-of-type) {
+.day,
+.entrylistItem:not(:last-of-type) {
     min-height: 10px;
-    border-bottom: #e9e9e9 1px solid
+    border-bottom: #e9e9e9 1px solid;
 }
 
-.day:after, .entrylistItem:not(:last-of-type):after {
-    content: "";
+.day:after,
+.entrylistItem:not(:last-of-type):after {
+    content: '';
     width: 7px;
     height: 7px;
     bottom: -5px;
-    left: 50%
+    left: 50%;
 }
 
 .day {
     position: relative;
     margin: 3.5rem auto;
     padding-bottom: 3.3rem;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
-.btn_my_zzk, .c_b_p_desc_img, .day:after, .dayTitle {
-    position: absolute
+.btn_my_zzk,
+.c_b_p_desc_img,
+.day:after,
+.dayTitle {
+    position: absolute;
 }
 
 .c_b_p_desc_readmore {
@@ -333,16 +367,16 @@ details>summary:before {
     width: 85px;
     text-align: center;
     color: #555 !important;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .day:after {
     display: block;
     border: 1px solid #e9e9e9;
     margin-left: -5px;
-    background: #FFF;
+    background: #fff;
     border-radius: 100%;
-    box-shadow: rgba(255, 255, 255, .7) 0 0 0 5px
+    box-shadow: rgba(255, 255, 255, 0.7) 0 0 0 5px;
 }
 
 .dayTitle {
@@ -355,28 +389,28 @@ details>summary:before {
     margin: 15px 15px 15px -100px;
     width: 63px;
     clear: both;
-    top: -15px
+    top: -15px;
 }
 
 .dayTitle a {
     display: inline-block;
     margin-top: 15px;
-    width: 60px
+    width: 60px;
 }
 
 .desc_img {
-    display: none
+    display: none;
 }
 
 .c_b_p_desc_img {
     width: calc(39% - 20px);
     height: 100%;
-    opacity: .9;
+    opacity: 0.9;
     top: -5px;
     border-left: 1px dashed #e9e9e9;
     right: 0;
     padding-left: 13px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .c_b_p_desc_img div {
@@ -384,48 +418,53 @@ details>summary:before {
     width: 100%;
     height: 100%;
     margin: 0;
-    opacity: .95
+    opacity: 0.95;
 }
 
-.postCon, .postDesc, .postSeparator, .postTitle {
+.postCon,
+.postDesc,
+.postSeparator,
+.postTitle {
     width: 100%;
-    clear: both
+    clear: both;
 }
 
 .postTitle {
     font-size: 20px;
-    float: right
+    float: right;
 }
 
-.postTitle a:active, .postTitle a:visited {
-    color: #4A4A4A;
-    transition: color .3s ease
+.postTitle a:active,
+.postTitle a:visited {
+    color: #4a4a4a;
+    transition: color 0.3s ease;
 }
 
 .postTitle a:link {
     background-color: rgba(0, 0, 0, 0);
     color: #4a4a4a;
-    font-family: "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif;
+    font-family: 'Open Sans', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif;
     font-size: 3.1rem;
     font-weight: 700;
     letter-spacing: -1px;
     transition-delay: 0s;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     transition-property: color;
     transition-timing-function: ease;
     word-wrap: break-word;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 #topics .postTitle a:link {
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .3)
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .postTitle a:hover {
-    color: #000
+    color: #000;
 }
 
-.entrylistPostSummary, .postCon {
+.entrylistPostSummary,
+.postCon {
     font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     line-height: 1.7em;
     word-wrap: break-word;
@@ -440,7 +479,7 @@ details>summary:before {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
-    -webkit-margin-end: 0
+    -webkit-margin-end: 0;
 }
 
 .postMeta {
@@ -454,11 +493,11 @@ details>summary:before {
 
 .postMeta > i {
     font-size: 15px;
-    margin: 0 5px
+    margin: 0 5px;
 }
 
 .postMeta > i:not(:first-child) {
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 .postDesc {
@@ -466,11 +505,11 @@ details>summary:before {
     text-align: left;
     padding-right: 5px;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    color: #9EABB3;
-    display: none
+    color: #9eabb3;
+    display: none;
 }
 
 #cnblogs_post_body h1 {
@@ -512,16 +551,13 @@ details>summary:before {
     margin: 10px 0;
 }
 
-
-
 #cnblogs_post_body h1:hover::after,
 #cnblogs_post_body h2:hover::after,
 #cnblogs_post_body h3:hover::after,
 #cnblogs_post_body h4:hover::after,
-#cnblogs_post_body h5:hover::after
-{
-    content: "#";
-    color: rgba(13,110,253,0.5);
+#cnblogs_post_body h5:hover::after {
+    content: '#';
+    color: rgba(13, 110, 253, 0.5);
     margin-left: 5px;
     transition: color 0.15s ease-in-out;
 }
@@ -529,25 +565,27 @@ details>summary:before {
 p.article-info-text > .postMeta {
     font-size: 16px;
     font-weight: 700;
-    color: rgba(255, 255, 255, .9);
+    color: rgba(255, 255, 255, 0.9);
     font-family: Noto Sans SC, serif;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .5)
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 p.article-info-text > .postMeta i {
-    font-size: 16px
+    font-size: 16px;
 }
 
 p.article-info-text > .postMeta br {
     display: none;
 }
 
-.postDesc a:active, .postDesc a:link, .postDesc a:visited {
-    color: #666
+.postDesc a:active,
+.postDesc a:link,
+.postDesc a:visited {
+    color: #666;
 }
 
 .postDesc a:hover {
-    color: #5c8ec6
+    color: #5c8ec6;
 }
 
 .postSticky {
@@ -557,34 +595,34 @@ p.article-info-text > .postMeta br {
     padding: 1px 3px;
     border-radius: 3px;
     position: relative;
-    top: -6px
+    top: -6px;
 }
 
 .postSeparator {
     height: 1px;
     float: right;
-    margin: 0 auto 15px
+    margin: 0 auto 15px;
 }
 
 #sideBar {
     margin-top: -15px;
     width: 230px;
     padding: 0 0 0 5px;
-    float: right
+    float: right;
 }
 
 #sideBar a {
-    color: #757575
+    color: #757575;
 }
 
 #sideBar a:hover {
     color: #5c8ec6;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 #sb_widget_my_zzk {
     width: 100%;
-    text-align: center
+    text-align: center;
 }
 
 .btn_my_zzk {
@@ -594,100 +632,122 @@ p.article-info-text > .postMeta br {
     border: 0;
     cursor: pointer;
     top: 1px;
-    right: -35px
+    right: -35px;
 }
 
-.input_my_zzk:focus, .input_my_zzk:hover {
-    border: 1px solid #666
+.input_my_zzk:focus,
+.input_my_zzk:hover {
+    border: 1px solid #666;
 }
 
 .input_my_zzk:hover {
-    transition: all .4s linear 0s
+    transition: all 0.4s linear 0s;
 }
 
-.catList, .catListArticleArchive, .catListArticleCategory, .catListBlogRank, .catListComment, .catListEssay, .catListFeedback, .catListImageCategory, .catListLink, .catListNoteBook, .catListPostArchive, .catListPostCategory, .catListTag, .catListView, .mySearch, .newsItem {
+.catList,
+.catListArticleArchive,
+.catListArticleCategory,
+.catListBlogRank,
+.catListComment,
+.catListEssay,
+.catListFeedback,
+.catListImageCategory,
+.catListLink,
+.catListNoteBook,
+.catListPostArchive,
+.catListPostCategory,
+.catListTag,
+.catListView,
+.mySearch,
+.newsItem {
     background: #fff;
     margin-bottom: 35px;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 #blog-calendar {
     margin: 10px 5px 5px 10px;
-    visibility: hidden
+    visibility: hidden;
 }
 
 #blog-calendar td {
-    font-family: "Comic Sans MS";
-    text-align: center
+    font-family: 'Comic Sans MS';
+    text-align: center;
 }
 
 #calendar {
     width: 228px;
     padding-bottom: 5px;
     margin-bottom: 35px;
-    border: 1px solid #EDEDED;
-    box-shadow: 0 1px 3px #ccc
+    border: 1px solid #ededed;
+    box-shadow: 0 1px 3px #ccc;
 }
 
 .calendar {
-    border: 0 solid #000
+    border: 0 solid #000;
 }
 
 #calendar .Cal {
     width: 100%;
-    line-height: 1.5em
+    line-height: 1.5em;
 }
 
 #calendar td {
-    font-family: "Comic Sans MS";
-    background: #FFF;
-    padding-top: 2px
+    font-family: 'Comic Sans MS';
+    background: #fff;
+    padding-top: 2px;
 }
 
 .Cal {
     border: none;
     color: #666;
     width: 100%;
-    font-family: arial
+    font-family: arial;
 }
 
-.CalOtherMonthDay, .CalWeekendDay {
+.CalOtherMonthDay,
+.CalWeekendDay {
     padding-top: 4px;
-    padding-bottom: 4px
+    padding-bottom: 4px;
 }
 
-#calendar table a:active, #calendar table a:link, #calendar table a:visited {
-    font-weight: 700
+#calendar table a:active,
+#calendar table a:link,
+#calendar table a:visited {
+    font-weight: 700;
 }
 
 #calendar table a:hover {
-    color: #fff
+    color: #fff;
 }
 
 .CalTodayDay {
     color: #b8b8b8;
     font-weight: 700;
-    background: #2d2d2b
+    background: #2d2d2b;
 }
 
-.CalDayHeader, .CalWeekendDay {
-    background: #111
+.CalDayHeader,
+.CalWeekendDay {
+    background: #111;
 }
 
 .CalOtherMonthDay {
-    color: #3c3c3c
+    color: #3c3c3c;
 }
 
-#calendar .CalNextPrev a:active, #calendar .CalNextPrev a:link, #calendar .CalNextPrev a:visited {
+#calendar .CalNextPrev a:active,
+#calendar .CalNextPrev a:link,
+#calendar .CalNextPrev a:visited {
     font-weight: 700;
     padding-left: 10px;
-    padding-right: 15px
+    padding-right: 15px;
 }
 
 .CalDayHeader {
     font-weight: 700;
     padding-bottom: 5px;
-    padding-top: 5px
+    padding-top: 5px;
 }
 
 .CalTitle {
@@ -697,32 +757,34 @@ p.article-info-text > .postMeta br {
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    padding: 5px 0
+    padding: 5px 0;
 }
 
 .CalTitle td {
     background: #000;
     font-family: verdana;
     font-size: 12px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .Cal td {
     height: 20px;
-    font-size: 10px
+    font-size: 10px;
 }
 
-.Cal a:active, .Cal a:link, .Cal a:visited {
+.Cal a:active,
+.Cal a:link,
+.Cal a:visited {
     color: #ff9;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .Cal a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .CalSelector {
-    background: #efefef
+    background: #efefef;
 }
 
 .catListTitle {
@@ -731,21 +793,24 @@ p.article-info-text > .postMeta br {
     font-size: 110%;
     margin-top: 15px;
     margin-bottom: 10px;
-    text-align: left
+    text-align: left;
 }
 
-#sideBarMain ul, .catListComment, .page-description, .pfl_feedback_area_title {
-    line-height: 1.5em
+#sideBarMain ul,
+.catListComment,
+.page-description,
+.pfl_feedback_area_title {
+    line-height: 1.5em;
 }
 
 .divRecentComment {
     text-indent: 2em;
     color: #494949;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 #sideBarMain li {
-    line-height: 1.8
+    line-height: 1.8;
 }
 
 #topics {
@@ -753,7 +818,8 @@ p.article-info-text > .postMeta br {
     min-height: 200px;
     padding: 0 0 10px;
     margin: 15px auto 4rem;
-    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei,
+        sans-serif;
 }
 
 #topics .postTitle {
@@ -762,14 +828,22 @@ p.article-info-text > .postMeta br {
     font-weight: 700;
     line-height: 1.5;
     width: 100%;
-    padding-left: 5px
+    padding-left: 5px;
 }
 
-#BlogPostCategory, #BlogPostCategory a:active, #BlogPostCategory a:link, #BlogPostCategory a:visited, #EntryTag, #EntryTag a:active, #EntryTag a:link, #EntryTag a:visited {
-    color: #666
+#BlogPostCategory,
+#BlogPostCategory a:active,
+#BlogPostCategory a:link,
+#BlogPostCategory a:visited,
+#EntryTag,
+#EntryTag a:active,
+#EntryTag a:link,
+#EntryTag a:visited {
+    color: #666;
 }
 
-#BlogPostCategory a, #EntryTag a {
+#BlogPostCategory a,
+#EntryTag a {
     height: 20px;
     line-height: 20px;
     color: #fff !important;
@@ -777,12 +851,13 @@ p.article-info-text > .postMeta br {
     border-radius: 3px;
     margin: 2px 5px 0;
     text-decoration: none;
-    font-size: 14px
+    font-size: 14px;
 }
 
-#BlogPostCategory a:hover, #EntryTag a:hover {
-    transition: all .3s linear 0s;
-    opacity: .8
+#BlogPostCategory a:hover,
+#EntryTag a:hover {
+    transition: all 0.3s linear 0s;
+    opacity: 0.8;
 }
 
 #topics .postDesc {
@@ -791,69 +866,74 @@ p.article-info-text > .postMeta br {
     text-align: left;
     color: #666;
     margin-top: 5px;
-    background: 0 0
+    background: 0 0;
 }
 
-.feedbackListSubtitle-louzhu:after, .feedbackListSubtitle:after, .feedbackListSubtitle:before {
+.feedbackListSubtitle-louzhu:after,
+.feedbackListSubtitle:after,
+.feedbackListSubtitle:before {
     top: 11px;
     right: 100%;
     left: -16px;
     width: 0;
     height: 0;
-    content: " ";
+    content: ' ';
     border-style: solid solid outset;
     position: absolute;
     display: block;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .feedback_area_title {
-    font: normal normal 16px/35px "Microsoft YaHei";
-    margin: 10px 0 30px
+    font: normal normal 16px/35px 'Microsoft YaHei';
+    margin: 10px 0 30px;
 }
 
 .louzhu {
-    margin: 0 2px
+    margin: 0 2px;
 }
 
-.feedbackListSubtitle a:active, .feedbackListSubtitle a:link, .feedbackListSubtitle a:visited {
+.feedbackListSubtitle a:active,
+.feedbackListSubtitle a:link,
+.feedbackListSubtitle a:visited {
     color: #777;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .feedbackListSubtitle a:hover {
     color: #5c8ec6;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .feedbackListSubtitle b {
-    color: #5c8ec6
+    color: #5c8ec6;
 }
 
 .feedbackListSubtitle:before {
     border-color: transparent #d1d5da transparent transparent;
-    border-width: 8px
+    border-width: 8px;
 }
 
-.feedbackListSubtitle-louzhu:after, .feedbackListSubtitle:after {
+.feedbackListSubtitle-louzhu:after,
+.feedbackListSubtitle:after {
     border-color: transparent;
     margin-top: 1px;
     margin-left: 2px;
-    border-width: 7px
+    border-width: 7px;
 }
 
 .feedbackListSubtitle:after {
-    border-right-color: #f6f8fa
+    border-right-color: #f6f8fa;
 }
 
 .feedbackListSubtitle-louzhu:after {
-    border-right-color: #f1f8ff !important
+    border-right-color: #f1f8ff !important;
 }
 
 .feedbackManage {
     width: 200px;
     text-align: right;
-    float: right
+    float: right;
 }
 
 .feedbackCon {
@@ -865,19 +945,19 @@ p.article-info-text > .postMeta br {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background: #fff;
-    position: relative
+    position: relative;
 }
 
 .feedbackListSubtitle-louzhu {
     background-color: #f1f8ff !important;
-    border-bottom-color: #c0d3eb !important
+    border-bottom-color: #c0d3eb !important;
 }
 
 .feedbackItem {
     position: relative;
     padding: 15px 0 15px 60px;
     margin: 0;
-    font-size: 13px
+    font-size: 13px;
 }
 
 .feedbackItem:before {
@@ -888,13 +968,13 @@ p.article-info-text > .postMeta br {
     display: block;
     z-index: 0;
     width: 2px;
-    content: "";
-    background-color: #e1e4e8
+    content: '';
+    background-color: #e1e4e8;
 }
 
 .feedbackAvatar {
     position: absolute;
-    left: 1px
+    left: 1px;
 }
 
 .feedbackAvatar img {
@@ -902,16 +982,16 @@ p.article-info-text > .postMeta br {
     height: 40px;
     border: 1px solid #d1d5da;
     padding: 2px;
-    border-radius: 3px
+    border-radius: 3px;
 }
 
 div#tbCommentBodyPreview {
-    border: 0
+    border: 0;
 }
 
 #divRefreshComments {
     text-align: right;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .commenttb {
@@ -922,33 +1002,36 @@ div#tbCommentBodyPreview {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    width: 320px
+    width: 320px;
 }
 
-.commentTextBox:hover, .commenttb:hover {
+.commentTextBox:hover,
+.commenttb:hover {
     color: #333;
-    border-color: rgba(82, 168, 236, .8);
-    transition: all .4s linear 0s
+    border-color: rgba(82, 168, 236, 0.8);
+    transition: all 0.4s linear 0s;
 }
 
 .commenttb:hover {
     outline: 0;
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6);
-    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6)
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
 }
 
-#Profile1_panelAdd input[type=text]:hover, #Profile1_txtContent:hover, .commentTextBox:hover {
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6);
-    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6);
+#Profile1_panelAdd input[type='text']:hover,
+#Profile1_txtContent:hover,
+.commentTextBox:hover {
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
     outline: 0;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .075), 0 0 4px rgba(82, 168, 236, .6)
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6);
 }
 
 .commentTextBox {
     width: 410px !important;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #AjaxHolder_PostComment_btnSubmit {
@@ -961,44 +1044,44 @@ div#tbCommentBodyPreview {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     outline: 0;
-    text-decoration: none
+    text-decoration: none;
 }
 
 #AjaxHolder_PostComment_btnSubmit:hover {
-    background: #333
+    background: #333;
 }
 
 #AjaxHolder_PostComment_divCommnentArea tr {
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .comment_vote {
-    padding-right: 10px
+    padding-right: 10px;
 }
 
 .comment_vote a {
-    color: #999
+    color: #999;
 }
 
 .comment_vote a:hover {
-    color: #5c8ec6
+    color: #5c8ec6;
 }
 
 #commentform_title {
-    font: normal normal 16px/35px "Microsoft YaHei";
+    font: normal normal 16px/35px 'Microsoft YaHei';
     margin: 0;
     background-image: none;
-    padding: 0
+    padding: 0;
 }
 
 #comment_form_container .author {
@@ -1010,16 +1093,16 @@ div#tbCommentBodyPreview {
     -webkit-border-radius: 3px;
     width: 320px;
     height: 20px;
-    background-image: none
+    background-image: none;
 }
 
 #comment_form_container p {
     font-size: 14px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .commentbox_title_left {
-    font-size: 14px
+    font-size: 14px;
 }
 
 #comment_form_container .comment_textarea {
@@ -1033,44 +1116,50 @@ div#tbCommentBodyPreview {
     -webkit-border-radius: 3px;
     min-height: 250px;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 #comment_form_container .comment_textarea:hover {
     border-color: #5c8ec6;
     outline: 0;
-    transition: all .4s linear 0s
+    transition: all 0.4s linear 0s;
 }
 
 #comment_form_container .comment_textarea:focus {
-    outline: 0
+    outline: 0;
 }
 
-.commentbox_tab.active, .commentbox_tab:hover {
+.commentbox_tab.active,
+.commentbox_tab:hover {
     border-bottom: 0;
-    color: #5c8ec6
+    color: #5c8ec6;
 }
 
 .comment_btn {
     border: none;
-    background-color: #5c8ec6
+    background-color: #5c8ec6;
 }
 
 .comment_btn:hover {
-    background: #71ace5
+    background: #71ace5;
 }
 
-.PostListTitle, .entrylistTitle, .thumbTitle {
+.PostListTitle,
+.entrylistTitle,
+.thumbTitle {
     height: 38px;
     line-height: 38px;
-    font: normal normal 16px/35px "Microsoft YaHei";
+    font: normal normal 16px/35px 'Microsoft YaHei';
     margin: 10px 0 30px;
     background-image: none;
-    padding: 0
+    padding: 0;
 }
 
-.dev__developer, .entrylistPosttitle a:active, .entrylistPosttitle a:link, .entrylistPosttitle a:visited {
-    font-family: "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif
+.dev__developer,
+.entrylistPosttitle a:active,
+.entrylistPosttitle a:link,
+.entrylistPosttitle a:visited {
+    font-family: 'Open Sans', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif;
 }
 
 .entrylistDescription {
@@ -1079,52 +1168,55 @@ div#tbCommentBodyPreview {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .entrylistItem {
     position: relative;
     margin: 3.5rem auto;
     padding-bottom: 3.3rem;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .entrylistItem:after {
     display: block;
-    border: 1px solid #E7EEF2;
+    border: 1px solid #e7eef2;
     position: absolute;
     margin-left: -5px;
-    background: #FFF;
+    background: #fff;
     border-radius: 100%;
-    box-shadow: #FFF 0 0 0 5px
+    box-shadow: #fff 0 0 0 5px;
 }
 
 .entrylistPosttitle {
     font-size: 20px;
-    width: 100%
+    width: 100%;
 }
 
-.entrylistPosttitle a:active, .entrylistPosttitle a:link, .entrylistPosttitle a:visited {
-    transition: all .4s linear 0s;
+.entrylistPosttitle a:active,
+.entrylistPosttitle a:link,
+.entrylistPosttitle a:visited {
+    transition: all 0.4s linear 0s;
     background-color: rgba(0, 0, 0, 0);
     color: #4a4a4a;
     font-size: 3.2rem;
     font-weight: 700;
     letter-spacing: -1px;
     transition-delay: 0s;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     transition-property: color;
     transition-timing-function: ease;
     word-wrap: break-word;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 .entrylistPosttitle a:hover {
-    color: #000
+    color: #000;
 }
 
-.entrylistItemPostDesc, .sb-title {
-    font-family: "Open Sans", sans-serif
+.entrylistItemPostDesc,
+.sb-title {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .entrylistItemPostDesc {
@@ -1136,16 +1228,18 @@ div#tbCommentBodyPreview {
     margin: 0;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    color: #9EABB3;
-    display: none
+    color: #9eabb3;
+    display: none;
 }
 
-.entrylistItemPostDesc a:active, .entrylistItemPostDesc a:link, .entrylistItemPostDesc a:visited {
-    color: #666
+.entrylistItemPostDesc a:active,
+.entrylistItemPostDesc a:link,
+.entrylistItemPostDesc a:visited {
+    color: #666;
 }
 
 .entrylistItemPostDesc a:hover {
-    color: #5c8ec6
+    color: #5c8ec6;
 }
 
 .entrylist .postSeparator {
@@ -1156,67 +1250,75 @@ div#tbCommentBodyPreview {
     margin: 0;
     padding: 0;
     height: 0;
-    border: none
+    border: none;
 }
 
-#footer, .pager {
-    font-size: 12px
+#footer,
+.pager {
+    font-size: 12px;
 }
 
-.divPhoto, .pager {
-    margin-right: 10px
+.divPhoto,
+.pager {
+    margin-right: 10px;
 }
 
 .divRecentCommentAticle a {
-    color: #000
+    color: #000;
 }
 
 .pager {
     text-align: right;
-    color: #9EABB3
+    color: #9eabb3;
 }
 
-#nav_next_page a, .pager a {
+#nav_next_page a,
+.pager a {
     display: inline-block;
     min-width: 18px;
     text-align: center;
     border: 1px solid #bfc8cd;
     text-decoration: none;
     border-radius: 4px;
-    color: #9EABB3 !important;
-    transition: all .2s ease
+    color: #9eabb3 !important;
+    transition: all 0.2s ease;
 }
 
-#nav_next_page a:active, #nav_next_page a:link, #nav_next_page a:visited, .pager a:active, .pager a:link, .pager a:visited {
-    color: #9EABB3 !important
+#nav_next_page a:active,
+#nav_next_page a:link,
+#nav_next_page a:visited,
+.pager a:active,
+.pager a:link,
+.pager a:visited {
+    color: #9eabb3 !important;
 }
 
 .pager a {
-    padding: 0 5px
+    padding: 0 5px;
 }
 
 #nav_next_page a {
-    padding: 3px 5px
+    padding: 3px 5px;
 }
 
-#nav_next_page a:hover, .pager a:hover {
+#nav_next_page a:hover,
+.pager a:hover {
     background: #fff;
     color: #889093;
-    border-color: #98a0a4
+    border-color: #98a0a4;
 }
 
 .img-rounded {
-    transition: transform .5s ease-out;
-    -webkit-transition: transform .6s ease-out;
-    -moz-transition: transform .5s ease-out;
-    -ms-transition: transform .5s ease-out;
-    -o-transition: transform .5s ease-out;
+    transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.6s ease-out;
+    -moz-transition: transform 0.5s ease-out;
+    -ms-transition: transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
 }
 
 .img-rounded:hover {
-    transform: rotate(1turn)
+    transform: rotate(1turn);
 }
-
 
 .PostList {
     border-bottom: 1px dashed #e9e9e9;
@@ -1224,99 +1326,103 @@ div#tbCommentBodyPreview {
     min-height: 1.5em;
     padding-top: 20px;
     margin-bottom: 20px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
 .postTitl2 {
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .postDesc2 {
     color: #666;
-    float: right
+    float: right;
 }
 
 .postText2 {
     clear: both;
-    color: #757575
+    color: #757575;
 }
 
 .pfl_feedback_area_title {
     text-align: right;
     font-weight: 700;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .pfl_feedbackItem {
     border: 1px dashed #ccc;
     padding: 10px;
     border-radius: 3px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .pfl_feedbacksubtitle {
     width: 100%;
-    height: 1.5em
+    height: 1.5em;
 }
 
 .pfl_feedbackname {
-    float: left
+    float: left;
 }
 
-.commentbox_title_right, .pfl_feedbackManage {
-    float: right
+.commentbox_title_right,
+.pfl_feedbackManage {
+    float: right;
 }
 
 .pfl_feedbackname a {
     color: #5c8ec6;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .pfl_feedbackCon {
     color: #000;
     padding-top: 5px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .pfl_feedbackAnswer {
-    color: #F40;
-    text-indent: 2em
+    color: #f40;
+    text-indent: 2em;
 }
 
 .tdSentMessage {
-    text-align: right
+    text-align: right;
 }
 
 .errorMessage {
     width: 300px;
-    float: left
+    float: left;
 }
 
-#Profile1_panelAdd input[type=text], #Profile1_txtContent {
+#Profile1_panelAdd input[type='text'],
+#Profile1_txtContent {
     padding: 8px;
     margin-bottom: 10px;
     color: #555;
     border: 1px solid #ddd;
     border-radius: 3px;
     -moz-border-radius: 3px;
-    -webkit-border-radius: 3px
+    -webkit-border-radius: 3px;
 }
 
-#Profile1_panelAdd input[type=text]:hover, #Profile1_txtContent:hover {
+#Profile1_panelAdd input[type='text']:hover,
+#Profile1_txtContent:hover {
     color: #333;
-    border-color: rgba(82, 168, 236, .8);
-    transition: all .4s linear 0s
+    border-color: rgba(82, 168, 236, 0.8);
+    transition: all 0.4s linear 0s;
 }
 
-#Profile1_panelAdd input[type=text]:focus, #Profile1_txtContent:focus {
+#Profile1_panelAdd input[type='text']:focus,
+#Profile1_txtContent:focus {
     outline: 0;
-    border-color: rgba(82, 168, 236, .8)
+    border-color: rgba(82, 168, 236, 0.8);
 }
 
-#Profile1_panelAdd input[type=submit] {
+#Profile1_panelAdd input[type='submit'] {
     padding: 8px 20px;
     text-align: center;
     font-size: 14px;
@@ -1326,20 +1432,20 @@ div#tbCommentBodyPreview {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     outline: 0;
-    text-decoration: none
+    text-decoration: none;
 }
 
-#Profile1_panelAdd input[type=submit]:hover {
-    background: #333
+#Profile1_panelAdd input[type='submit']:hover {
+    background: #333;
 }
 
 .feedbackListSubtitle {
@@ -1355,16 +1461,18 @@ div#tbCommentBodyPreview {
     padding: 10px 20px;
     position: relative;
     white-space: nowrap;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
 }
 
-#footer, .main-header, .scroll-down {
-    position: absolute
+#footer,
+.main-header,
+.scroll-down {
+    position: absolute;
 }
 
 .divPhoto {
     border: 1px solid #ccc;
-    padding: 2px
+    padding: 2px;
 }
 
 .thumbDescription {
@@ -1373,7 +1481,7 @@ div#tbCommentBodyPreview {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 #footer {
@@ -1383,745 +1491,857 @@ div#tbCommentBodyPreview {
     right: 0;
     padding: 15px 0;
     color: #888;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .my-face {
     animation: my-face 5s infinite ease-in-out;
     display: inline-block;
-    margin: 0 5px
+    margin: 0 5px;
 }
 
 @-moz-keyframes my-face {
-    2%, 24%, 80% {
+    2%,
+    24%,
+    80% {
         -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(1.5deg);
         -o-transform: translate(0, 1.5px) rotate(1.5deg);
-        transform: translate(0, 1.5px) rotate(1.5deg)
+        transform: translate(0, 1.5px) rotate(1.5deg);
     }
-    4%, 68%, 98% {
-        -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, -1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, -1.5px) rotate(-.5deg);
-        -o-transform: translate(0, -1.5px) rotate(-.5deg);
-        transform: translate(0, -1.5px) rotate(-.5deg)
+    4%,
+    68%,
+    98% {
+        -webkit-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, -1.5px) rotate(-0.5deg);
+        transform: translate(0, -1.5px) rotate(-0.5deg);
     }
-    38%, 6% {
+    38%,
+    6% {
         -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(-1.5deg);
         -o-transform: translate(0, 1.5px) rotate(-1.5deg);
-        transform: translate(0, 1.5px) rotate(-1.5deg)
+        transform: translate(0, 1.5px) rotate(-1.5deg);
     }
-    8%, 86% {
+    8%,
+    86% {
         -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(-1.5deg);
         -o-transform: translate(0, -1.5px) rotate(-1.5deg);
-        transform: translate(0, -1.5px) rotate(-1.5deg)
+        transform: translate(0, -1.5px) rotate(-1.5deg);
     }
-    10%, 72% {
+    10%,
+    72% {
         -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(1.5deg);
         -o-transform: translate(0, 2.5px) rotate(1.5deg);
-        transform: translate(0, 2.5px) rotate(1.5deg)
+        transform: translate(0, 2.5px) rotate(1.5deg);
     }
-    12%, 64%, 78%, 96% {
-        -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(1.5deg);
-        -o-transform: translate(0, -.5px) rotate(1.5deg);
-        transform: translate(0, -.5px) rotate(1.5deg)
+    12%,
+    64%,
+    78%,
+    96% {
+        -webkit-transform: translate(0, -0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(1.5deg);
+        transform: translate(0, -0.5px) rotate(1.5deg);
     }
-    14%, 54% {
+    14%,
+    54% {
         -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(1.5deg);
         -o-transform: translate(0, -1.5px) rotate(1.5deg);
-        transform: translate(0, -1.5px) rotate(1.5deg)
+        transform: translate(0, -1.5px) rotate(1.5deg);
     }
     16% {
-        -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(-1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(-1.5deg);
-        -o-transform: translate(0, -.5px) rotate(-1.5deg);
-        transform: translate(0, -.5px) rotate(-1.5deg)
+        -webkit-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(-1.5deg);
+        transform: translate(0, -0.5px) rotate(-1.5deg);
     }
-    18%, 22% {
-        -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-        -moz-transform: translate(0, .5px) rotate(-1.5deg);
-        -ms-transform: translate(0, .5px) rotate(-1.5deg);
-        -o-transform: translate(0, .5px) rotate(-1.5deg);
-        transform: translate(0, .5px) rotate(-1.5deg)
+    18%,
+    22% {
+        -webkit-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-1.5deg);
+        transform: translate(0, 0.5px) rotate(-1.5deg);
     }
-    20%, 36%, 46% {
+    20%,
+    36%,
+    46% {
         -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
         -moz-transform: translate(0, -1.5px) rotate(2.5deg);
         -ms-transform: translate(0, -1.5px) rotate(2.5deg);
         -o-transform: translate(0, -1.5px) rotate(2.5deg);
-        transform: translate(0, -1.5px) rotate(2.5deg)
+        transform: translate(0, -1.5px) rotate(2.5deg);
     }
-    26%, 50% {
-        -webkit-transform: translate(0, .5px) rotate(.5deg);
-        -moz-transform: translate(0, .5px) rotate(.5deg);
-        -ms-transform: translate(0, .5px) rotate(.5deg);
-        -o-transform: translate(0, .5px) rotate(.5deg);
-        transform: translate(0, .5px) rotate(.5deg)
+    26%,
+    50% {
+        -webkit-transform: translate(0, 0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(0.5deg);
+        transform: translate(0, 0.5px) rotate(0.5deg);
     }
     28% {
-        -webkit-transform: translate(0, .5px) rotate(1.5deg);
-        -moz-transform: translate(0, .5px) rotate(1.5deg);
-        -ms-transform: translate(0, .5px) rotate(1.5deg);
-        -o-transform: translate(0, .5px) rotate(1.5deg);
-        transform: translate(0, .5px) rotate(1.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(1.5deg);
+        transform: translate(0, 0.5px) rotate(1.5deg);
     }
-    30%, 40%, 62%, 76%, 88% {
-        -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-        -moz-transform: translate(0, -.5px) rotate(2.5deg);
-        -ms-transform: translate(0, -.5px) rotate(2.5deg);
-        -o-transform: translate(0, -.5px) rotate(2.5deg);
-        transform: translate(0, -.5px) rotate(2.5deg)
+    30%,
+    40%,
+    62%,
+    76%,
+    88% {
+        -webkit-transform: translate(0, -0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(2.5deg);
+        -o-transform: translate(0, -0.5px) rotate(2.5deg);
+        transform: translate(0, -0.5px) rotate(2.5deg);
     }
-    32%, 34%, 66% {
-        -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(-.5deg);
-        -o-transform: translate(0, 1.5px) rotate(-.5deg);
-        transform: translate(0, 1.5px) rotate(-.5deg)
+    32%,
+    34%,
+    66% {
+        -webkit-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(-0.5deg);
+        transform: translate(0, 1.5px) rotate(-0.5deg);
     }
     42% {
         -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(-1.5deg);
         -o-transform: translate(0, 2.5px) rotate(-1.5deg);
-        transform: translate(0, 2.5px) rotate(-1.5deg)
+        transform: translate(0, 2.5px) rotate(-1.5deg);
     }
-    44%, 70% {
-        -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(.5deg);
-        -o-transform: translate(0, 1.5px) rotate(.5deg);
-        transform: translate(0, 1.5px) rotate(.5deg)
+    44%,
+    70% {
+        -webkit-transform: translate(0, 1.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(0.5deg);
+        transform: translate(0, 1.5px) rotate(0.5deg);
     }
-    48%, 74%, 82% {
-        -webkit-transform: translate(0, -.5px) rotate(.5deg);
-        -moz-transform: translate(0, -.5px) rotate(.5deg);
-        -ms-transform: translate(0, -.5px) rotate(.5deg);
-        -o-transform: translate(0, -.5px) rotate(.5deg);
-        transform: translate(0, -.5px) rotate(.5deg)
+    48%,
+    74%,
+    82% {
+        -webkit-transform: translate(0, -0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(0.5deg);
+        -o-transform: translate(0, -0.5px) rotate(0.5deg);
+        transform: translate(0, -0.5px) rotate(0.5deg);
     }
-    52%, 56%, 60% {
+    52%,
+    56%,
+    60% {
         -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
         -moz-transform: translate(0, 2.5px) rotate(2.5deg);
         -ms-transform: translate(0, 2.5px) rotate(2.5deg);
         -o-transform: translate(0, 2.5px) rotate(2.5deg);
-        transform: translate(0, 2.5px) rotate(2.5deg)
+        transform: translate(0, 2.5px) rotate(2.5deg);
     }
     58% {
-        -webkit-transform: translate(0, .5px) rotate(2.5deg);
-        -moz-transform: translate(0, .5px) rotate(2.5deg);
-        -ms-transform: translate(0, .5px) rotate(2.5deg);
-        -o-transform: translate(0, .5px) rotate(2.5deg);
-        transform: translate(0, .5px) rotate(2.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(2.5deg);
+        -o-transform: translate(0, 0.5px) rotate(2.5deg);
+        transform: translate(0, 0.5px) rotate(2.5deg);
     }
     84% {
         -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
         -moz-transform: translate(0, 1.5px) rotate(2.5deg);
         -ms-transform: translate(0, 1.5px) rotate(2.5deg);
         -o-transform: translate(0, 1.5px) rotate(2.5deg);
-        transform: translate(0, 1.5px) rotate(2.5deg)
+        transform: translate(0, 1.5px) rotate(2.5deg);
     }
     90% {
-        -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(-.5deg);
-        -o-transform: translate(0, 2.5px) rotate(-.5deg);
-        transform: translate(0, 2.5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(-0.5deg);
+        transform: translate(0, 2.5px) rotate(-0.5deg);
     }
     92% {
-        -webkit-transform: translate(0, .5px) rotate(-.5deg);
-        -moz-transform: translate(0, .5px) rotate(-.5deg);
-        -ms-transform: translate(0, .5px) rotate(-.5deg);
-        -o-transform: translate(0, .5px) rotate(-.5deg);
-        transform: translate(0, .5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-0.5deg);
+        transform: translate(0, 0.5px) rotate(-0.5deg);
     }
     94% {
-        -webkit-transform: translate(0, 2.5px) rotate(.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(.5deg);
-        -o-transform: translate(0, 2.5px) rotate(.5deg);
-        transform: translate(0, 2.5px) rotate(.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(0.5deg);
+        transform: translate(0, 2.5px) rotate(0.5deg);
     }
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translate(0, 0) rotate(0);
         -moz-transform: translate(0, 0) rotate(0);
         -ms-transform: translate(0, 0) rotate(0);
         -o-transform: translate(0, 0) rotate(0);
-        transform: translate(0, 0) rotate(0)
+        transform: translate(0, 0) rotate(0);
     }
 }
 
 @-webkit-keyframes my-face {
-    2%, 24%, 80% {
+    2%,
+    24%,
+    80% {
         -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(1.5deg);
         -o-transform: translate(0, 1.5px) rotate(1.5deg);
-        transform: translate(0, 1.5px) rotate(1.5deg)
+        transform: translate(0, 1.5px) rotate(1.5deg);
     }
-    4%, 68%, 98% {
-        -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, -1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, -1.5px) rotate(-.5deg);
-        -o-transform: translate(0, -1.5px) rotate(-.5deg);
-        transform: translate(0, -1.5px) rotate(-.5deg)
+    4%,
+    68%,
+    98% {
+        -webkit-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, -1.5px) rotate(-0.5deg);
+        transform: translate(0, -1.5px) rotate(-0.5deg);
     }
-    38%, 6% {
+    38%,
+    6% {
         -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(-1.5deg);
         -o-transform: translate(0, 1.5px) rotate(-1.5deg);
-        transform: translate(0, 1.5px) rotate(-1.5deg)
+        transform: translate(0, 1.5px) rotate(-1.5deg);
     }
-    8%, 86% {
+    8%,
+    86% {
         -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(-1.5deg);
         -o-transform: translate(0, -1.5px) rotate(-1.5deg);
-        transform: translate(0, -1.5px) rotate(-1.5deg)
+        transform: translate(0, -1.5px) rotate(-1.5deg);
     }
-    10%, 72% {
+    10%,
+    72% {
         -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(1.5deg);
         -o-transform: translate(0, 2.5px) rotate(1.5deg);
-        transform: translate(0, 2.5px) rotate(1.5deg)
+        transform: translate(0, 2.5px) rotate(1.5deg);
     }
-    12%, 64%, 78%, 96% {
-        -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(1.5deg);
-        -o-transform: translate(0, -.5px) rotate(1.5deg);
-        transform: translate(0, -.5px) rotate(1.5deg)
+    12%,
+    64%,
+    78%,
+    96% {
+        -webkit-transform: translate(0, -0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(1.5deg);
+        transform: translate(0, -0.5px) rotate(1.5deg);
     }
-    14%, 54% {
+    14%,
+    54% {
         -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(1.5deg);
         -o-transform: translate(0, -1.5px) rotate(1.5deg);
-        transform: translate(0, -1.5px) rotate(1.5deg)
+        transform: translate(0, -1.5px) rotate(1.5deg);
     }
     16% {
-        -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(-1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(-1.5deg);
-        -o-transform: translate(0, -.5px) rotate(-1.5deg);
-        transform: translate(0, -.5px) rotate(-1.5deg)
+        -webkit-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(-1.5deg);
+        transform: translate(0, -0.5px) rotate(-1.5deg);
     }
-    18%, 22% {
-        -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-        -moz-transform: translate(0, .5px) rotate(-1.5deg);
-        -ms-transform: translate(0, .5px) rotate(-1.5deg);
-        -o-transform: translate(0, .5px) rotate(-1.5deg);
-        transform: translate(0, .5px) rotate(-1.5deg)
+    18%,
+    22% {
+        -webkit-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-1.5deg);
+        transform: translate(0, 0.5px) rotate(-1.5deg);
     }
-    20%, 36%, 46% {
+    20%,
+    36%,
+    46% {
         -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
         -moz-transform: translate(0, -1.5px) rotate(2.5deg);
         -ms-transform: translate(0, -1.5px) rotate(2.5deg);
         -o-transform: translate(0, -1.5px) rotate(2.5deg);
-        transform: translate(0, -1.5px) rotate(2.5deg)
+        transform: translate(0, -1.5px) rotate(2.5deg);
     }
-    26%, 50% {
-        -webkit-transform: translate(0, .5px) rotate(.5deg);
-        -moz-transform: translate(0, .5px) rotate(.5deg);
-        -ms-transform: translate(0, .5px) rotate(.5deg);
-        -o-transform: translate(0, .5px) rotate(.5deg);
-        transform: translate(0, .5px) rotate(.5deg)
+    26%,
+    50% {
+        -webkit-transform: translate(0, 0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(0.5deg);
+        transform: translate(0, 0.5px) rotate(0.5deg);
     }
     28% {
-        -webkit-transform: translate(0, .5px) rotate(1.5deg);
-        -moz-transform: translate(0, .5px) rotate(1.5deg);
-        -ms-transform: translate(0, .5px) rotate(1.5deg);
-        -o-transform: translate(0, .5px) rotate(1.5deg);
-        transform: translate(0, .5px) rotate(1.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(1.5deg);
+        transform: translate(0, 0.5px) rotate(1.5deg);
     }
-    30%, 40%, 62%, 76%, 88% {
-        -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-        -moz-transform: translate(0, -.5px) rotate(2.5deg);
-        -ms-transform: translate(0, -.5px) rotate(2.5deg);
-        -o-transform: translate(0, -.5px) rotate(2.5deg);
-        transform: translate(0, -.5px) rotate(2.5deg)
+    30%,
+    40%,
+    62%,
+    76%,
+    88% {
+        -webkit-transform: translate(0, -0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(2.5deg);
+        -o-transform: translate(0, -0.5px) rotate(2.5deg);
+        transform: translate(0, -0.5px) rotate(2.5deg);
     }
-    32%, 34%, 66% {
-        -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(-.5deg);
-        -o-transform: translate(0, 1.5px) rotate(-.5deg);
-        transform: translate(0, 1.5px) rotate(-.5deg)
+    32%,
+    34%,
+    66% {
+        -webkit-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(-0.5deg);
+        transform: translate(0, 1.5px) rotate(-0.5deg);
     }
     42% {
         -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(-1.5deg);
         -o-transform: translate(0, 2.5px) rotate(-1.5deg);
-        transform: translate(0, 2.5px) rotate(-1.5deg)
+        transform: translate(0, 2.5px) rotate(-1.5deg);
     }
-    44%, 70% {
-        -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(.5deg);
-        -o-transform: translate(0, 1.5px) rotate(.5deg);
-        transform: translate(0, 1.5px) rotate(.5deg)
+    44%,
+    70% {
+        -webkit-transform: translate(0, 1.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(0.5deg);
+        transform: translate(0, 1.5px) rotate(0.5deg);
     }
-    48%, 74%, 82% {
-        -webkit-transform: translate(0, -.5px) rotate(.5deg);
-        -moz-transform: translate(0, -.5px) rotate(.5deg);
-        -ms-transform: translate(0, -.5px) rotate(.5deg);
-        -o-transform: translate(0, -.5px) rotate(.5deg);
-        transform: translate(0, -.5px) rotate(.5deg)
+    48%,
+    74%,
+    82% {
+        -webkit-transform: translate(0, -0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(0.5deg);
+        -o-transform: translate(0, -0.5px) rotate(0.5deg);
+        transform: translate(0, -0.5px) rotate(0.5deg);
     }
-    52%, 56%, 60% {
+    52%,
+    56%,
+    60% {
         -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
         -moz-transform: translate(0, 2.5px) rotate(2.5deg);
         -ms-transform: translate(0, 2.5px) rotate(2.5deg);
         -o-transform: translate(0, 2.5px) rotate(2.5deg);
-        transform: translate(0, 2.5px) rotate(2.5deg)
+        transform: translate(0, 2.5px) rotate(2.5deg);
     }
     58% {
-        -webkit-transform: translate(0, .5px) rotate(2.5deg);
-        -moz-transform: translate(0, .5px) rotate(2.5deg);
-        -ms-transform: translate(0, .5px) rotate(2.5deg);
-        -o-transform: translate(0, .5px) rotate(2.5deg);
-        transform: translate(0, .5px) rotate(2.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(2.5deg);
+        -o-transform: translate(0, 0.5px) rotate(2.5deg);
+        transform: translate(0, 0.5px) rotate(2.5deg);
     }
     84% {
         -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
         -moz-transform: translate(0, 1.5px) rotate(2.5deg);
         -ms-transform: translate(0, 1.5px) rotate(2.5deg);
         -o-transform: translate(0, 1.5px) rotate(2.5deg);
-        transform: translate(0, 1.5px) rotate(2.5deg)
+        transform: translate(0, 1.5px) rotate(2.5deg);
     }
     90% {
-        -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(-.5deg);
-        -o-transform: translate(0, 2.5px) rotate(-.5deg);
-        transform: translate(0, 2.5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(-0.5deg);
+        transform: translate(0, 2.5px) rotate(-0.5deg);
     }
     92% {
-        -webkit-transform: translate(0, .5px) rotate(-.5deg);
-        -moz-transform: translate(0, .5px) rotate(-.5deg);
-        -ms-transform: translate(0, .5px) rotate(-.5deg);
-        -o-transform: translate(0, .5px) rotate(-.5deg);
-        transform: translate(0, .5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-0.5deg);
+        transform: translate(0, 0.5px) rotate(-0.5deg);
     }
     94% {
-        -webkit-transform: translate(0, 2.5px) rotate(.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(.5deg);
-        -o-transform: translate(0, 2.5px) rotate(.5deg);
-        transform: translate(0, 2.5px) rotate(.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(0.5deg);
+        transform: translate(0, 2.5px) rotate(0.5deg);
     }
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translate(0, 0) rotate(0);
         -moz-transform: translate(0, 0) rotate(0);
         -ms-transform: translate(0, 0) rotate(0);
         -o-transform: translate(0, 0) rotate(0);
-        transform: translate(0, 0) rotate(0)
+        transform: translate(0, 0) rotate(0);
     }
 }
 
 @-o-keyframes my-face {
-    2%, 24%, 80% {
+    2%,
+    24%,
+    80% {
         -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(1.5deg);
         -o-transform: translate(0, 1.5px) rotate(1.5deg);
-        transform: translate(0, 1.5px) rotate(1.5deg)
+        transform: translate(0, 1.5px) rotate(1.5deg);
     }
-    4%, 68%, 98% {
-        -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, -1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, -1.5px) rotate(-.5deg);
-        -o-transform: translate(0, -1.5px) rotate(-.5deg);
-        transform: translate(0, -1.5px) rotate(-.5deg)
+    4%,
+    68%,
+    98% {
+        -webkit-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, -1.5px) rotate(-0.5deg);
+        transform: translate(0, -1.5px) rotate(-0.5deg);
     }
-    38%, 6% {
+    38%,
+    6% {
         -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(-1.5deg);
         -o-transform: translate(0, 1.5px) rotate(-1.5deg);
-        transform: translate(0, 1.5px) rotate(-1.5deg)
+        transform: translate(0, 1.5px) rotate(-1.5deg);
     }
-    8%, 86% {
+    8%,
+    86% {
         -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(-1.5deg);
         -o-transform: translate(0, -1.5px) rotate(-1.5deg);
-        transform: translate(0, -1.5px) rotate(-1.5deg)
+        transform: translate(0, -1.5px) rotate(-1.5deg);
     }
-    10%, 72% {
+    10%,
+    72% {
         -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(1.5deg);
         -o-transform: translate(0, 2.5px) rotate(1.5deg);
-        transform: translate(0, 2.5px) rotate(1.5deg)
+        transform: translate(0, 2.5px) rotate(1.5deg);
     }
-    12%, 64%, 78%, 96% {
-        -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(1.5deg);
-        -o-transform: translate(0, -.5px) rotate(1.5deg);
-        transform: translate(0, -.5px) rotate(1.5deg)
+    12%,
+    64%,
+    78%,
+    96% {
+        -webkit-transform: translate(0, -0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(1.5deg);
+        transform: translate(0, -0.5px) rotate(1.5deg);
     }
-    14%, 54% {
+    14%,
+    54% {
         -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(1.5deg);
         -o-transform: translate(0, -1.5px) rotate(1.5deg);
-        transform: translate(0, -1.5px) rotate(1.5deg)
+        transform: translate(0, -1.5px) rotate(1.5deg);
     }
     16% {
-        -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(-1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(-1.5deg);
-        -o-transform: translate(0, -.5px) rotate(-1.5deg);
-        transform: translate(0, -.5px) rotate(-1.5deg)
+        -webkit-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(-1.5deg);
+        transform: translate(0, -0.5px) rotate(-1.5deg);
     }
-    18%, 22% {
-        -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-        -moz-transform: translate(0, .5px) rotate(-1.5deg);
-        -ms-transform: translate(0, .5px) rotate(-1.5deg);
-        -o-transform: translate(0, .5px) rotate(-1.5deg);
-        transform: translate(0, .5px) rotate(-1.5deg)
+    18%,
+    22% {
+        -webkit-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-1.5deg);
+        transform: translate(0, 0.5px) rotate(-1.5deg);
     }
-    20%, 36%, 46% {
+    20%,
+    36%,
+    46% {
         -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
         -moz-transform: translate(0, -1.5px) rotate(2.5deg);
         -ms-transform: translate(0, -1.5px) rotate(2.5deg);
         -o-transform: translate(0, -1.5px) rotate(2.5deg);
-        transform: translate(0, -1.5px) rotate(2.5deg)
+        transform: translate(0, -1.5px) rotate(2.5deg);
     }
-    26%, 50% {
-        -webkit-transform: translate(0, .5px) rotate(.5deg);
-        -moz-transform: translate(0, .5px) rotate(.5deg);
-        -ms-transform: translate(0, .5px) rotate(.5deg);
-        -o-transform: translate(0, .5px) rotate(.5deg);
-        transform: translate(0, .5px) rotate(.5deg)
+    26%,
+    50% {
+        -webkit-transform: translate(0, 0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(0.5deg);
+        transform: translate(0, 0.5px) rotate(0.5deg);
     }
     28% {
-        -webkit-transform: translate(0, .5px) rotate(1.5deg);
-        -moz-transform: translate(0, .5px) rotate(1.5deg);
-        -ms-transform: translate(0, .5px) rotate(1.5deg);
-        -o-transform: translate(0, .5px) rotate(1.5deg);
-        transform: translate(0, .5px) rotate(1.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(1.5deg);
+        transform: translate(0, 0.5px) rotate(1.5deg);
     }
-    30%, 40%, 62%, 76%, 88% {
-        -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-        -moz-transform: translate(0, -.5px) rotate(2.5deg);
-        -ms-transform: translate(0, -.5px) rotate(2.5deg);
-        -o-transform: translate(0, -.5px) rotate(2.5deg);
-        transform: translate(0, -.5px) rotate(2.5deg)
+    30%,
+    40%,
+    62%,
+    76%,
+    88% {
+        -webkit-transform: translate(0, -0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(2.5deg);
+        -o-transform: translate(0, -0.5px) rotate(2.5deg);
+        transform: translate(0, -0.5px) rotate(2.5deg);
     }
-    32%, 34%, 66% {
-        -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(-.5deg);
-        -o-transform: translate(0, 1.5px) rotate(-.5deg);
-        transform: translate(0, 1.5px) rotate(-.5deg)
+    32%,
+    34%,
+    66% {
+        -webkit-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(-0.5deg);
+        transform: translate(0, 1.5px) rotate(-0.5deg);
     }
     42% {
         -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(-1.5deg);
         -o-transform: translate(0, 2.5px) rotate(-1.5deg);
-        transform: translate(0, 2.5px) rotate(-1.5deg)
+        transform: translate(0, 2.5px) rotate(-1.5deg);
     }
-    44%, 70% {
-        -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(.5deg);
-        -o-transform: translate(0, 1.5px) rotate(.5deg);
-        transform: translate(0, 1.5px) rotate(.5deg)
+    44%,
+    70% {
+        -webkit-transform: translate(0, 1.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(0.5deg);
+        transform: translate(0, 1.5px) rotate(0.5deg);
     }
-    48%, 74%, 82% {
-        -webkit-transform: translate(0, -.5px) rotate(.5deg);
-        -moz-transform: translate(0, -.5px) rotate(.5deg);
-        -ms-transform: translate(0, -.5px) rotate(.5deg);
-        -o-transform: translate(0, -.5px) rotate(.5deg);
-        transform: translate(0, -.5px) rotate(.5deg)
+    48%,
+    74%,
+    82% {
+        -webkit-transform: translate(0, -0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(0.5deg);
+        -o-transform: translate(0, -0.5px) rotate(0.5deg);
+        transform: translate(0, -0.5px) rotate(0.5deg);
     }
-    52%, 56%, 60% {
+    52%,
+    56%,
+    60% {
         -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
         -moz-transform: translate(0, 2.5px) rotate(2.5deg);
         -ms-transform: translate(0, 2.5px) rotate(2.5deg);
         -o-transform: translate(0, 2.5px) rotate(2.5deg);
-        transform: translate(0, 2.5px) rotate(2.5deg)
+        transform: translate(0, 2.5px) rotate(2.5deg);
     }
     58% {
-        -webkit-transform: translate(0, .5px) rotate(2.5deg);
-        -moz-transform: translate(0, .5px) rotate(2.5deg);
-        -ms-transform: translate(0, .5px) rotate(2.5deg);
-        -o-transform: translate(0, .5px) rotate(2.5deg);
-        transform: translate(0, .5px) rotate(2.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(2.5deg);
+        -o-transform: translate(0, 0.5px) rotate(2.5deg);
+        transform: translate(0, 0.5px) rotate(2.5deg);
     }
     84% {
         -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
         -moz-transform: translate(0, 1.5px) rotate(2.5deg);
         -ms-transform: translate(0, 1.5px) rotate(2.5deg);
         -o-transform: translate(0, 1.5px) rotate(2.5deg);
-        transform: translate(0, 1.5px) rotate(2.5deg)
+        transform: translate(0, 1.5px) rotate(2.5deg);
     }
     90% {
-        -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(-.5deg);
-        -o-transform: translate(0, 2.5px) rotate(-.5deg);
-        transform: translate(0, 2.5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(-0.5deg);
+        transform: translate(0, 2.5px) rotate(-0.5deg);
     }
     92% {
-        -webkit-transform: translate(0, .5px) rotate(-.5deg);
-        -moz-transform: translate(0, .5px) rotate(-.5deg);
-        -ms-transform: translate(0, .5px) rotate(-.5deg);
-        -o-transform: translate(0, .5px) rotate(-.5deg);
-        transform: translate(0, .5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-0.5deg);
+        transform: translate(0, 0.5px) rotate(-0.5deg);
     }
     94% {
-        -webkit-transform: translate(0, 2.5px) rotate(.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(.5deg);
-        -o-transform: translate(0, 2.5px) rotate(.5deg);
-        transform: translate(0, 2.5px) rotate(.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(0.5deg);
+        transform: translate(0, 2.5px) rotate(0.5deg);
     }
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translate(0, 0) rotate(0);
         -moz-transform: translate(0, 0) rotate(0);
         -ms-transform: translate(0, 0) rotate(0);
         -o-transform: translate(0, 0) rotate(0);
-        transform: translate(0, 0) rotate(0)
+        transform: translate(0, 0) rotate(0);
     }
 }
 
 @keyframes my-face {
-    2%, 24%, 80% {
+    2%,
+    24%,
+    80% {
         -webkit-transform: translate(0, 1.5px) rotate(1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(1.5deg);
         -o-transform: translate(0, 1.5px) rotate(1.5deg);
-        transform: translate(0, 1.5px) rotate(1.5deg)
+        transform: translate(0, 1.5px) rotate(1.5deg);
     }
-    4%, 68%, 98% {
-        -webkit-transform: translate(0, -1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, -1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, -1.5px) rotate(-.5deg);
-        -o-transform: translate(0, -1.5px) rotate(-.5deg);
-        transform: translate(0, -1.5px) rotate(-.5deg)
+    4%,
+    68%,
+    98% {
+        -webkit-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, -1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, -1.5px) rotate(-0.5deg);
+        transform: translate(0, -1.5px) rotate(-0.5deg);
     }
-    38%, 6% {
+    38%,
+    6% {
         -webkit-transform: translate(0, 1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 1.5px) rotate(-1.5deg);
         -o-transform: translate(0, 1.5px) rotate(-1.5deg);
-        transform: translate(0, 1.5px) rotate(-1.5deg)
+        transform: translate(0, 1.5px) rotate(-1.5deg);
     }
-    8%, 86% {
+    8%,
+    86% {
         -webkit-transform: translate(0, -1.5px) rotate(-1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(-1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(-1.5deg);
         -o-transform: translate(0, -1.5px) rotate(-1.5deg);
-        transform: translate(0, -1.5px) rotate(-1.5deg)
+        transform: translate(0, -1.5px) rotate(-1.5deg);
     }
-    10%, 72% {
+    10%,
+    72% {
         -webkit-transform: translate(0, 2.5px) rotate(1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(1.5deg);
         -o-transform: translate(0, 2.5px) rotate(1.5deg);
-        transform: translate(0, 2.5px) rotate(1.5deg)
+        transform: translate(0, 2.5px) rotate(1.5deg);
     }
-    12%, 64%, 78%, 96% {
-        -webkit-transform: translate(0, -.5px) rotate(1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(1.5deg);
-        -o-transform: translate(0, -.5px) rotate(1.5deg);
-        transform: translate(0, -.5px) rotate(1.5deg)
+    12%,
+    64%,
+    78%,
+    96% {
+        -webkit-transform: translate(0, -0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(1.5deg);
+        transform: translate(0, -0.5px) rotate(1.5deg);
     }
-    14%, 54% {
+    14%,
+    54% {
         -webkit-transform: translate(0, -1.5px) rotate(1.5deg);
         -moz-transform: translate(0, -1.5px) rotate(1.5deg);
         -ms-transform: translate(0, -1.5px) rotate(1.5deg);
         -o-transform: translate(0, -1.5px) rotate(1.5deg);
-        transform: translate(0, -1.5px) rotate(1.5deg)
+        transform: translate(0, -1.5px) rotate(1.5deg);
     }
     16% {
-        -webkit-transform: translate(0, -.5px) rotate(-1.5deg);
-        -moz-transform: translate(0, -.5px) rotate(-1.5deg);
-        -ms-transform: translate(0, -.5px) rotate(-1.5deg);
-        -o-transform: translate(0, -.5px) rotate(-1.5deg);
-        transform: translate(0, -.5px) rotate(-1.5deg)
+        -webkit-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, -0.5px) rotate(-1.5deg);
+        transform: translate(0, -0.5px) rotate(-1.5deg);
     }
-    18%, 22% {
-        -webkit-transform: translate(0, .5px) rotate(-1.5deg);
-        -moz-transform: translate(0, .5px) rotate(-1.5deg);
-        -ms-transform: translate(0, .5px) rotate(-1.5deg);
-        -o-transform: translate(0, .5px) rotate(-1.5deg);
-        transform: translate(0, .5px) rotate(-1.5deg)
+    18%,
+    22% {
+        -webkit-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-1.5deg);
+        transform: translate(0, 0.5px) rotate(-1.5deg);
     }
-    20%, 36%, 46% {
+    20%,
+    36%,
+    46% {
         -webkit-transform: translate(0, -1.5px) rotate(2.5deg);
         -moz-transform: translate(0, -1.5px) rotate(2.5deg);
         -ms-transform: translate(0, -1.5px) rotate(2.5deg);
         -o-transform: translate(0, -1.5px) rotate(2.5deg);
-        transform: translate(0, -1.5px) rotate(2.5deg)
+        transform: translate(0, -1.5px) rotate(2.5deg);
     }
-    26%, 50% {
-        -webkit-transform: translate(0, .5px) rotate(.5deg);
-        -moz-transform: translate(0, .5px) rotate(.5deg);
-        -ms-transform: translate(0, .5px) rotate(.5deg);
-        -o-transform: translate(0, .5px) rotate(.5deg);
-        transform: translate(0, .5px) rotate(.5deg)
+    26%,
+    50% {
+        -webkit-transform: translate(0, 0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(0.5deg);
+        transform: translate(0, 0.5px) rotate(0.5deg);
     }
     28% {
-        -webkit-transform: translate(0, .5px) rotate(1.5deg);
-        -moz-transform: translate(0, .5px) rotate(1.5deg);
-        -ms-transform: translate(0, .5px) rotate(1.5deg);
-        -o-transform: translate(0, .5px) rotate(1.5deg);
-        transform: translate(0, .5px) rotate(1.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(1.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(1.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(1.5deg);
+        -o-transform: translate(0, 0.5px) rotate(1.5deg);
+        transform: translate(0, 0.5px) rotate(1.5deg);
     }
-    30%, 40%, 62%, 76%, 88% {
-        -webkit-transform: translate(0, -.5px) rotate(2.5deg);
-        -moz-transform: translate(0, -.5px) rotate(2.5deg);
-        -ms-transform: translate(0, -.5px) rotate(2.5deg);
-        -o-transform: translate(0, -.5px) rotate(2.5deg);
-        transform: translate(0, -.5px) rotate(2.5deg)
+    30%,
+    40%,
+    62%,
+    76%,
+    88% {
+        -webkit-transform: translate(0, -0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(2.5deg);
+        -o-transform: translate(0, -0.5px) rotate(2.5deg);
+        transform: translate(0, -0.5px) rotate(2.5deg);
     }
-    32%, 34%, 66% {
-        -webkit-transform: translate(0, 1.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(-.5deg);
-        -o-transform: translate(0, 1.5px) rotate(-.5deg);
-        transform: translate(0, 1.5px) rotate(-.5deg)
+    32%,
+    34%,
+    66% {
+        -webkit-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(-0.5deg);
+        transform: translate(0, 1.5px) rotate(-0.5deg);
     }
     42% {
         -webkit-transform: translate(0, 2.5px) rotate(-1.5deg);
         -moz-transform: translate(0, 2.5px) rotate(-1.5deg);
         -ms-transform: translate(0, 2.5px) rotate(-1.5deg);
         -o-transform: translate(0, 2.5px) rotate(-1.5deg);
-        transform: translate(0, 2.5px) rotate(-1.5deg)
+        transform: translate(0, 2.5px) rotate(-1.5deg);
     }
-    44%, 70% {
-        -webkit-transform: translate(0, 1.5px) rotate(.5deg);
-        -moz-transform: translate(0, 1.5px) rotate(.5deg);
-        -ms-transform: translate(0, 1.5px) rotate(.5deg);
-        -o-transform: translate(0, 1.5px) rotate(.5deg);
-        transform: translate(0, 1.5px) rotate(.5deg)
+    44%,
+    70% {
+        -webkit-transform: translate(0, 1.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 1.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 1.5px) rotate(0.5deg);
+        -o-transform: translate(0, 1.5px) rotate(0.5deg);
+        transform: translate(0, 1.5px) rotate(0.5deg);
     }
-    48%, 74%, 82% {
-        -webkit-transform: translate(0, -.5px) rotate(.5deg);
-        -moz-transform: translate(0, -.5px) rotate(.5deg);
-        -ms-transform: translate(0, -.5px) rotate(.5deg);
-        -o-transform: translate(0, -.5px) rotate(.5deg);
-        transform: translate(0, -.5px) rotate(.5deg)
+    48%,
+    74%,
+    82% {
+        -webkit-transform: translate(0, -0.5px) rotate(0.5deg);
+        -moz-transform: translate(0, -0.5px) rotate(0.5deg);
+        -ms-transform: translate(0, -0.5px) rotate(0.5deg);
+        -o-transform: translate(0, -0.5px) rotate(0.5deg);
+        transform: translate(0, -0.5px) rotate(0.5deg);
     }
-    52%, 56%, 60% {
+    52%,
+    56%,
+    60% {
         -webkit-transform: translate(0, 2.5px) rotate(2.5deg);
         -moz-transform: translate(0, 2.5px) rotate(2.5deg);
         -ms-transform: translate(0, 2.5px) rotate(2.5deg);
         -o-transform: translate(0, 2.5px) rotate(2.5deg);
-        transform: translate(0, 2.5px) rotate(2.5deg)
+        transform: translate(0, 2.5px) rotate(2.5deg);
     }
     58% {
-        -webkit-transform: translate(0, .5px) rotate(2.5deg);
-        -moz-transform: translate(0, .5px) rotate(2.5deg);
-        -ms-transform: translate(0, .5px) rotate(2.5deg);
-        -o-transform: translate(0, .5px) rotate(2.5deg);
-        transform: translate(0, .5px) rotate(2.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(2.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(2.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(2.5deg);
+        -o-transform: translate(0, 0.5px) rotate(2.5deg);
+        transform: translate(0, 0.5px) rotate(2.5deg);
     }
     84% {
         -webkit-transform: translate(0, 1.5px) rotate(2.5deg);
         -moz-transform: translate(0, 1.5px) rotate(2.5deg);
         -ms-transform: translate(0, 1.5px) rotate(2.5deg);
         -o-transform: translate(0, 1.5px) rotate(2.5deg);
-        transform: translate(0, 1.5px) rotate(2.5deg)
+        transform: translate(0, 1.5px) rotate(2.5deg);
     }
     90% {
-        -webkit-transform: translate(0, 2.5px) rotate(-.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(-.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(-.5deg);
-        -o-transform: translate(0, 2.5px) rotate(-.5deg);
-        transform: translate(0, 2.5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(-0.5deg);
+        transform: translate(0, 2.5px) rotate(-0.5deg);
     }
     92% {
-        -webkit-transform: translate(0, .5px) rotate(-.5deg);
-        -moz-transform: translate(0, .5px) rotate(-.5deg);
-        -ms-transform: translate(0, .5px) rotate(-.5deg);
-        -o-transform: translate(0, .5px) rotate(-.5deg);
-        transform: translate(0, .5px) rotate(-.5deg)
+        -webkit-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -moz-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -ms-transform: translate(0, 0.5px) rotate(-0.5deg);
+        -o-transform: translate(0, 0.5px) rotate(-0.5deg);
+        transform: translate(0, 0.5px) rotate(-0.5deg);
     }
     94% {
-        -webkit-transform: translate(0, 2.5px) rotate(.5deg);
-        -moz-transform: translate(0, 2.5px) rotate(.5deg);
-        -ms-transform: translate(0, 2.5px) rotate(.5deg);
-        -o-transform: translate(0, 2.5px) rotate(.5deg);
-        transform: translate(0, 2.5px) rotate(.5deg)
+        -webkit-transform: translate(0, 2.5px) rotate(0.5deg);
+        -moz-transform: translate(0, 2.5px) rotate(0.5deg);
+        -ms-transform: translate(0, 2.5px) rotate(0.5deg);
+        -o-transform: translate(0, 2.5px) rotate(0.5deg);
+        transform: translate(0, 2.5px) rotate(0.5deg);
     }
-    0%, 100% {
+    0%,
+    100% {
         -webkit-transform: translate(0, 0) rotate(0);
         -moz-transform: translate(0, 0) rotate(0);
         -ms-transform: translate(0, 0) rotate(0);
         -o-transform: translate(0, 0) rotate(0);
-        transform: translate(0, 0) rotate(0)
+        transform: translate(0, 0) rotate(0);
     }
 }
 
 .personInfo {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .pages {
-    text-align: right
+    text-align: right;
 }
 
 .postBody {
     color: #23263b;
     font-size: 1.55rem;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
-.postBody p, .postCon p {
-    margin: 0 auto 1em
+.postBody p,
+.postCon p {
+    margin: 0 auto 1em;
 }
 
-.postCon a:active, .postCon a:link, .postCon a:visited {
-    color: #9EABB3
+.postCon a:active,
+.postCon a:link,
+.postCon a:visited {
+    color: #9eabb3;
 }
 
 .postCon a:hover {
-    color: #98a0a4
+    color: #98a0a4;
 }
 
-.postBody ul, .postCon ul {
-    margin-left: 2em
+.postBody ul,
+.postCon ul {
+    margin-left: 2em;
 }
 
 .myposts_title {
     font-weight: 700;
-    text-align: center
+    text-align: center;
 }
 
 #sideBar {
-    font-size: 12px
+    font-size: 12px;
 }
 
 #sideBar h3 {
-    font-size: 14px
+    font-size: 14px;
 }
 
 #cnblogs_post_body img {
     max-width: 700px;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 .main-header {
@@ -2135,7 +2355,7 @@ div#tbCommentBodyPreview {
     top: 0;
     left: 0;
     z-index: 3;
-    box-shadow: 0 1px 2px rgba(150, 150, 150, .7);
+    box-shadow: 0 1px 2px rgba(150, 150, 150, 0.7);
     background: #333;
 }
 
@@ -2167,16 +2387,17 @@ div#tbCommentBodyPreview {
     position: relative;
     width: 80%;
     max-width: 800px;
-    padding: 10px
+    padding: 10px;
 }
 
-.page-title, .sb-title {
+.page-title,
+.sb-title {
     letter-spacing: -1px;
     font-weight: 700;
     color: #fff;
-    -webkit-animation-delay: .6s;
-    animation-delay: .5s;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .3)
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.5s;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .sb-title {
@@ -2189,29 +2410,52 @@ div#tbCommentBodyPreview {
     -webkit-animation: fade-in-down 1s both;
     mix-blend-mode: screen;
     font-size: 5rem;
-    font-family: Playball, cursive
+    font-family: Playball, youyuan, Arial, cursive;
 }
 
 @keyframes pageTitleText {
-    0% {text-shadow: 2px 0 0 tomato;}
-    10%{text-shadow: -2px -2px 0 gold;}
-    20% {text-shadow: 2px 0 0 lime;}
-    30% {text-shadow: 2px 0 0 turquoise;}
-    40% {text-shadow: 2px 2px 0 tomato;}
-    50%{text-shadow:  0 -2px 0 gold;}
-    60% {text-shadow: 0 2px 0 lime;}
-    70% {text-shadow: 2px 0 0 turquoise;}
-    80% {text-shadow: 2px -4px 0 tomato;}
-    90%{text-shadow: 2px 2px 0 gold;}
-    100% {text-shadow: 2px 0 0 lime;}
+    0% {
+        text-shadow: 2px 0 0 tomato;
+    }
+    10% {
+        text-shadow: -2px -2px 0 gold;
+    }
+    20% {
+        text-shadow: 2px 0 0 lime;
+    }
+    30% {
+        text-shadow: 2px 0 0 turquoise;
+    }
+    40% {
+        text-shadow: 2px 2px 0 tomato;
+    }
+    50% {
+        text-shadow: 0 -2px 0 gold;
+    }
+    60% {
+        text-shadow: 0 2px 0 lime;
+    }
+    70% {
+        text-shadow: 2px 0 0 turquoise;
+    }
+    80% {
+        text-shadow: 2px -4px 0 tomato;
+    }
+    90% {
+        text-shadow: 2px 2px 0 gold;
+    }
+    100% {
+        text-shadow: 2px 0 0 lime;
+    }
 }
 
-#footer .footer-text, .page-description {
-    font-family: 'Long Cang', cursive
+#footer .footer-text,
+.page-description {
+    font-family: 'Long Cang', cursive;
 }
 
 .sb-title {
-    font-size: 3.55rem
+    font-size: 3.55rem;
 }
 
 .vertical {
@@ -2223,34 +2467,35 @@ div#tbCommentBodyPreview {
     align-items: center;
 }
 
-.page-author, .page-description {
+.page-author,
+.page-description {
     margin: 0;
-    letter-spacing: .01rem;
-    color: rgba(255, 255, 255, .8);
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    letter-spacing: 0.01rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     display: none;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .page-description {
     font-size: 2.2rem;
-    -webkit-animation: fade-in-down .9s;
-    animation: fade-in-down .9s both;
-    -webkit-animation-delay: .1s;
-    animation-delay: .3s;
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.3s;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 10;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .page-author {
     font-size: 1.5rem !important;
     line-height: 1.3em;
     font-family: 'Ubuntu Mono', monospace;
-    -webkit-animation: fade-in-down .9s;
-    animation: fade-in-down .9s both;
-    -webkit-animation-delay: .1s;
-    animation-delay: .3s
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.3s;
 }
 
 .scroll-down {
@@ -2268,58 +2513,68 @@ div#tbCommentBodyPreview {
     transform: rotate(-90deg);
     -webkit-animation: bounce 4s 2s infinite;
     animation: bounce 4s 2s infinite;
-    text-decoration: none !important
+    text-decoration: none !important;
 }
 
-.hidden, .m-list-title, .post-del-title {
-    display: none
+.hidden,
+.m-list-title,
+.post-del-title {
+    display: none;
 }
 
 .scroll-down-icon {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 34px !important;
     position: relative;
-    bottom: 7px
+    bottom: 7px;
 }
 
 .scroll-down:hover {
     color: #fff;
     -webkit-animation: none;
-    animation: none
+    animation: none;
 }
 
 .hidden {
     text-indent: -9999px;
-    visibility: hidden
+    visibility: hidden;
 }
 
 @-webkit-keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
         -webkit-transform: translateY(0) rotate(-90deg);
-        transform: translateY(0) rotate(-90deg)
+        transform: translateY(0) rotate(-90deg);
     }
     20% {
         -webkit-transform: translateY(-10px) rotate(-90deg);
-        transform: translateY(-10px) rotate(-90deg)
+        transform: translateY(-10px) rotate(-90deg);
     }
     30% {
         -webkit-transform: translateY(-5px) rotate(-90deg);
-        transform: translateY(-5px) rotate(-90deg)
+        transform: translateY(-5px) rotate(-90deg);
     }
 }
 
 @keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
         -webkit-transform: translateY(0) rotate(-90deg);
-        transform: translateY(0) rotate(-90deg)
+        transform: translateY(0) rotate(-90deg);
     }
     20% {
         -webkit-transform: translateY(-10px) rotate(-90deg);
-        transform: translateY(-10px) rotate(-90deg)
+        transform: translateY(-10px) rotate(-90deg);
     }
     30% {
         -webkit-transform: translateY(-5px) rotate(-90deg);
-        transform: translateY(-5px) rotate(-90deg)
+        transform: translateY(-5px) rotate(-90deg);
     }
 }
 
@@ -2327,12 +2582,12 @@ div#tbCommentBodyPreview {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-10px);
-        transform: translateY(-10px)
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
@@ -2340,12 +2595,12 @@ div#tbCommentBodyPreview {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-10px);
-        transform: translateY(-10px)
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
@@ -2356,19 +2611,28 @@ div#tbCommentBodyPreview {
     border: 0 !important;
     background-image: linear-gradient(180deg, #fff, #f5f5fa) !important;
     -webkit-box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
-    box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%)
+    box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
 }
 
 .menu-button-scroll:before {
-    background: linear-gradient(#777aaf 20%, transparent 0, transparent 40%, #777aaf 0, #777aaf 60%, transparent 0, transparent 80%, #777aaf 0) !important
+    background: linear-gradient(
+        #777aaf 20%,
+        transparent 0,
+        transparent 40%,
+        #777aaf 0,
+        #777aaf 60%,
+        transparent 0,
+        transparent 80%,
+        #777aaf 0
+    ) !important;
 }
 
 .m-list-title {
     position: relative;
-    border-bottom: #3B3B3B 1px solid;
+    border-bottom: #3b3b3b 1px solid;
     word-wrap: break-word;
     margin: 24px 0;
-    font-family: Merriweather, "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif
+    font-family: Merriweather, 'Open Sans', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif;
 }
 
 .m-list-title-select {
@@ -2376,17 +2640,18 @@ div#tbCommentBodyPreview {
     font-size: 22px !important;
     position: absolute;
     right: -7px;
-    top: 1px
+    top: 1px;
 }
 
-#introduce div, #rightMenu {
+#introduce div,
+#rightMenu {
     right: 10px;
-    text-align: center
+    text-align: center;
 }
 
 .m-list-title-select:hover {
-    color: #B8B8B8;
-    cursor: pointer
+    color: #b8b8b8;
+    cursor: pointer;
 }
 
 .m-list-title > span {
@@ -2399,20 +2664,18 @@ div#tbCommentBodyPreview {
     margin-left: -5px;
     background: #000;
     box-shadow: #000 0 0 0 6px;
-    color: #B8B8B8;
-    line-height: 20px
+    color: #b8b8b8;
+    line-height: 20px;
 }
 
 .blogpost-body blockquote {
-    border-left: 3px solid rgba(84,104,255,.8) !important;
+    border-left: 3px solid rgba(84, 104, 255, 0.8) !important;
     border-right: none !important;
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
     background-color: #f7f7f7 !important;
-    background-image: linear-gradient(
-            180deg
-            ,#fff,#f5f5fa) !important;
+    background-image: linear-gradient(180deg, #fff, #f5f5fa) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2427,7 +2690,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: rgb(66 185 131 / 10%)!important;
+    background-color: rgb(66 185 131 / 10%) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2443,7 +2706,7 @@ div#tbCommentBodyPreview {
     border-top: none !important;
     border-bottom: none !important;
     padding: 15px !important;
-    background-color: rgb(255 102 102 / 10%)!important;
+    background-color: rgb(255 102 102 / 10%) !important;
     --text-opacity: 1 !important;
     color: #484c7a !important;
     box-shadow: 0 4px 11px 0 rgb(37 44 97 / 9%), 0 1px 3px 0 rgb(93 100 148 / 6%) !important;
@@ -2456,8 +2719,8 @@ div#tbCommentBodyPreview {
     background-color: #f66;
     border-radius: 100%;
     color: #fff;
-    content: "!";
-    font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+    content: '!';
+    font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     font-weight: 700;
     left: -12px;
@@ -2469,11 +2732,10 @@ div#tbCommentBodyPreview {
     top: 14px;
 }
 
-
 blockquote p {
     margin: 0 !important;
     padding: 0;
-    text-indent: 0 !important
+    text-indent: 0 !important;
 }
 
 .textUnselect {
@@ -2483,49 +2745,54 @@ blockquote p {
     user-select: none;
 }
 
-
 .titleIcon {
     position: relative;
     font-size: 34px !important;
     color: #5d69a5;
-    line-height: 50px
+    line-height: 50px;
 }
 
 #cnblogs_post_body ul {
     margin-left: 20px;
     margin-top: 5px;
-    padding-left: 0
+    padding-left: 0;
 }
 
-.postBody li, .postCon li {
+.postBody li,
+.postCon li {
     list-style-type: disc;
-    margin-bottom: .5em
+    margin-bottom: 0.5em;
 }
 
-#commentform_title, .entrylistTitle, .feedback_area_title {
-    border-bottom: none
+#commentform_title,
+.entrylistTitle,
+.feedback_area_title {
+    border-bottom: none;
 }
 
-#commentform_title:after, .entrylistTitle:after, .feedback_area_title:after {
+#commentform_title:after,
+.entrylistTitle:after,
+.feedback_area_title:after {
     content: '';
     display: block;
     width: 100%;
     text-align: center;
     position: relative;
     bottom: 16px;
-    border-bottom: 1px dashed #e9e9e9
+    border-bottom: 1px dashed #e9e9e9;
 }
 
 .entrylistTitle:after {
-    left: 200px
+    left: 200px;
 }
 
-#commentform_title:after, .feedback_area_title:after {
-    left: 80px
+#commentform_title:after,
+.feedback_area_title:after {
+    left: 80px;
 }
 
 #tbCommentBody {
-    width: 100% !important
+    width: 100% !important;
 }
 
 #rightMenu {
@@ -2533,7 +2800,7 @@ blockquote p {
     bottom: 10px;
     min-width: 24px;
     z-index: 2;
-    width: 40px
+    width: 40px;
 }
 
 div#rightMenu .rightMenuItem {
@@ -2549,7 +2816,7 @@ div#rightMenu .rightMenuItem {
     position: relative;
     display: block;
     -webkit-box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
-    box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%)
+    box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
 }
 
 #author_profile {
@@ -2566,7 +2833,8 @@ div#rightMenu .rightMenuItem {
     margin-top: 5px;
 }
 
-#div_digg .diggit, #div_digg .buryit  {
+#div_digg .diggit,
+#div_digg .buryit {
     text-align: center;
     cursor: pointer;
     padding-top: 0;
@@ -2590,7 +2858,8 @@ div#rightMenu .rightMenuItem {
     color: #6b7280;
 }
 
-#div_digg .diggit i,  #div_digg .buryit i {
+#div_digg .diggit i,
+#div_digg .buryit i {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -2610,7 +2879,7 @@ div#rightMenu .rightMenuItem {
 #rightMenu i {
     font-weight: 500;
     font-size: 16px;
-    display: block
+    display: block;
 }
 
 #rightMenu .hideRightMenu {
@@ -2618,30 +2887,37 @@ div#rightMenu .rightMenuItem {
 }
 
 #rightGzh i {
-    font-size: 18px
+    font-size: 18px;
 }
 
 #rightDashang i {
     font-size: 32px;
     position: relative;
-    left: -1px
+    left: -1px;
 }
 
 .rightMenuItem {
     cursor: pointer;
     color: #777aaf;
     filter: Alpha(opacity=50);
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
     position: relative;
-    background-image: linear-gradient(180deg, #fff, #f5f5fa)
+    background-image: linear-gradient(180deg, #fff, #f5f5fa);
 }
 
-#attention i, #update i, #rightBuryit i, #rightDiggit i, #toUpDownI i, #rtaDirectory i, #rightMenuHome i {
-    font-weight: 600
+#attention i,
+#update i,
+#rightBuryit i,
+#rightDiggit i,
+#toUpDownI i,
+#rtaDirectory i,
+#rightMenuHome i {
+    font-weight: 600;
 }
 
-#rightDashang .rightMenuSpan, #rightGzh .rightMenuSpan {
+#rightDashang .rightMenuSpan,
+#rightGzh .rightMenuSpan {
     position: absolute;
     left: -156px;
     font-size: 14px;
@@ -2649,11 +2925,11 @@ div#rightMenu .rightMenuItem {
     width: 140px;
     color: #777;
     text-align: right;
-    display: none
+    display: none;
 }
 
 #rightGzh .rightMenuSpan {
-    top: -25px
+    top: -25px;
 }
 
 #attention .rightMenuSpan,
@@ -2663,25 +2939,24 @@ div#rightMenu .rightMenuItem {
 #rightMenuHome .rightMenuSpan,
 #rightMenuSite .rightMenuSpan,
 #rtaDirectory .rightMenuSpan,
-#toUpDown .rightMenuSpan
-{
+#toUpDown .rightMenuSpan {
     position: absolute;
     left: -95px;
     font-size: 14px;
     width: 83px;
     background: #1b1c1d !important;
     color: #fff;
-    opacity: .9;
+    opacity: 0.9;
     white-space: nowrap;
     max-width: unset;
     border: 0;
-    -webkit-box-shadow: 0 0 6px -1px rgba(140, 146, 163, .5);
-    box-shadow: 0 0 6px -1px rgba(140, 146, 163, .5);
+    -webkit-box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
+    box-shadow: 0 0 6px -1px rgba(140, 146, 163, 0.5);
     font-weight: 400;
     font-style: normal;
     border-radius: 3px;
     text-align: center;
-    display: none
+    display: none;
 }
 
 #attention .rightMenuSpan::before,
@@ -2691,60 +2966,65 @@ div#rightMenu .rightMenuItem {
 #rightMenuHome .rightMenuSpan::before,
 #rightMenuSite .rightMenuSpan::before,
 #rtaDirectory .rightMenuSpan::before,
-#toUpDown .rightMenuSpan::before
-{
+#toUpDown .rightMenuSpan::before {
     background-attachment: scroll;
     background-clip: border-box;
     background-color: #1b1c1d;
-    box-shadow: rgba(179, 179, 179, .2) 1px -1px 0 0;
+    box-shadow: rgba(179, 179, 179, 0.2) 1px -1px 0 0;
     box-sizing: border-box;
     color: #fff;
-    content: "";
+    content: '';
     display: block;
     height: 8.98px;
     margin-top: -3.9px;
-    opacity: .9;
+    opacity: 0.9;
     position: absolute;
-    transform: matrix(.707107, .707107, -.707107, .707107, 0, 0);
+    transform: matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0);
     white-space: nowrap;
     width: 8.98px;
     top: 50%;
-    right: -.325em;
+    right: -0.325em;
     bottom: auto;
-    left: auto
+    left: auto;
 }
 
 .rightDanshanSpan {
-    bottom: -134px
+    bottom: -134px;
 }
 
 .ds-pay {
     width: 100%;
     height: 100%;
-    text-align: center
+    text-align: center;
 }
 
-.ds-alipay, .ds-gzh, .ds-wecat {
+.ds-alipay,
+.ds-gzh,
+.ds-wecat {
     cursor: pointer;
     text-align: center;
     width: 140px;
     height: 140px;
-    box-shadow: rgba(0, 0, 0, .3) 0 2px 7px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 7px;
     border-radius: 0 6px 6px;
     transition: all 1s ease-in-out 0s;
     margin: 3px 0;
     position: relative;
     padding: 5px;
-    background: #fff
+    background: #fff;
 }
 
-.ds-alipay img, .ds-gzh img, .ds-wecat img {
+.ds-alipay img,
+.ds-gzh img,
+.ds-wecat img {
     width: 100%;
     height: 100%;
-    border-radius: 6px
+    border-radius: 6px;
 }
 
-.ds-alipay span, .ds-gzh span, .ds-wecat span {
+.ds-alipay span,
+.ds-gzh span,
+.ds-wecat span {
     position: absolute;
     font-family: 'Ubuntu Mono', monospace;
     left: -32px;
@@ -2754,17 +3034,20 @@ div#rightMenu .rightMenuItem {
     background: #fff;
     color: #777;
     padding: 0 6px 2px;
-    box-shadow: rgba(0, 0, 0, .1) 0 4px 7px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 7px;
     border-radius: 0 0 6px 6px;
-    font-size: .85em;
+    font-size: 0.85em;
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-    -o-transform: rotate(90deg)
+    -o-transform: rotate(90deg);
 }
 
-#cnblogs_post_body table td, #cnblogs_post_body table th, .feedbackCon table td, .feedbackCon table th {
+#cnblogs_post_body table td,
+#cnblogs_post_body table th,
+.feedbackCon table td,
+.feedbackCon table th {
     height: 40px;
     box-sizing: border-box;
     background-clip: padding-box;
@@ -2772,30 +3055,32 @@ div#rightMenu .rightMenuItem {
     position: relative;
     border: 0;
     text-overflow: ellipsis;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .attentionSpan {
-    top: 2px
+    top: 2px;
 }
 
-.cnblogs-markdown .cnblogs_code_copy a, .rightBuryitSpan {
-    top: 0
+.cnblogs-markdown .cnblogs_code_copy a,
+.rightBuryitSpan {
+    top: 0;
 }
 
 .rightDiggitSpan {
-    top: 7px
+    top: 7px;
 }
 
 .toUpDownSpan {
-    top: 3px
+    top: 3px;
 }
 
-#cnblogs_post_body table,.feedbackCon table {
+#cnblogs_post_body table,
+.feedbackCon table {
     position: relative;
-    overflow: hidden!important;
+    overflow: hidden !important;
     box-sizing: border-box;
-    width: 100%!important;
+    width: 100% !important;
     background-color: #fff;
     border: 1px solid #ebeef5;
     font-size: 14px;
@@ -2804,36 +3089,38 @@ div#rightMenu .rightMenuItem {
     padding: 0;
     border-right: 0;
     border-bottom: 0;
-    display: table!important;
-    border-collapse: initial!important
+    display: table !important;
+    border-collapse: initial !important;
 }
 
 .feedbackCon table {
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-
-#cnblogs_post_body table thead, .feedbackCon table thead {
+#cnblogs_post_body table thead,
+.feedbackCon table thead {
     color: #909399;
     font-weight: 500;
     font-size: 16px;
 }
 
-#cnblogs_post_body table tr,.feedbackCon table tr {
-    border: 0
+#cnblogs_post_body table tr,
+.feedbackCon table tr {
+    border: 0;
 }
 
-
-#cnblogs_post_body table tr:nth-child(2n),.feedbackCon table tr:nth-child(2n) {
+#cnblogs_post_body table tr:nth-child(2n),
+.feedbackCon table tr:nth-child(2n) {
     background: #fafafa;
 }
 
-
-#cnblogs_post_body table tr:hover,.feedbackCon table tr:hover {
-    background-color: #ecf5ff
+#cnblogs_post_body table tr:hover,
+.feedbackCon table tr:hover {
+    background-color: #ecf5ff;
 }
 
-#cnblogs_post_body table th,.feedbackCon table th {
+#cnblogs_post_body table th,
+.feedbackCon table th {
     border-bottom: 1px solid #ebeef5;
     border-right: 1px solid #ebeef5;
     background-color: #fff;
@@ -2843,7 +3130,8 @@ div#rightMenu .rightMenuItem {
     min-width: 100px;
 }
 
-#cnblogs_post_body table td,.feedbackCon table td {
+#cnblogs_post_body table td,
+.feedbackCon table td {
     border-bottom: 1px solid #ebeef5;
     border-right: 1px solid #ebeef5;
     min-width: 0;
@@ -2853,65 +3141,80 @@ div#rightMenu .rightMenuItem {
 #cnblogs_post_body > p {
     margin: 13px auto;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Segoe UI',
+        'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
-    letter-spacing: .015em;
-    font-feature-settings: "tnum";
+    letter-spacing: 0.015em;
+    font-feature-settings: 'tnum';
     font-variant: tabular-nums;
     font-weight: 400;
     line-height: 1.8;
-    word-break: break-word
+    word-break: break-word;
 }
 
 #cnblogs_post_body ul li {
-    margin-left: 18px
+    margin-left: 18px;
 }
 
-.cnblogs_code, pre {
-    font-size: 14px !important
+.cnblogs_code,
+pre {
+    font-size: 14px !important;
 }
 
-.cnblogs_code, .cnblogs_code span, pre, .cnblogs_code pre {
-    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace !important;
-    font-weight: 400
+.cnblogs_code,
+.cnblogs_code span,
+pre,
+.cnblogs_code pre {
+    font-family: 'Source Code Pro', Consolas, Menlo, Monaco, 'Courier New', monospace !important;
+    font-weight: 400;
 }
 
 .header__span .dev__developer {
     top: 12px;
     left: 90px;
-    min-height: 34px
+    min-height: 34px;
 }
 
-.dev__developer, .dev__fe, .dev__fe i, .dev__slash, .dev__ux, .dev__ux i {
-    transition: all .6s cubic-bezier(.555, -.375, 0, 1.615)
+.dev__developer,
+.dev__fe,
+.dev__fe i,
+.dev__slash,
+.dev__ux,
+.dev__ux i {
+    transition: all 0.6s cubic-bezier(0.555, -0.375, 0, 1.615);
 }
 
 .header__dev--open .dev__fe i {
-    text-indent: 5px !important
+    text-indent: 5px !important;
 }
 
 .header__dev--open .dev__ux i {
-    text-indent: 11px !important
+    text-indent: 11px !important;
 }
 
 .header__dev--open .dev__developer {
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
-    opacity: .6
+    opacity: 0.6;
 }
 
 .header__dev--open .dev__slash {
-    -webkit-transform: scale(.9) rotateZ(0);
-    transform: scale(.9) rotateZ(0)
+    -webkit-transform: scale(0.9) rotateZ(0);
+    transform: scale(0.9) rotateZ(0);
 }
 
-.header__dev--slow .dev__developer, .header__dev--slow .dev__fe, .header__dev--slow .dev__fe i, .header__dev--slow .dev__slash, .header__dev--slow .dev__ux, .header__dev--slow .dev__ux i {
-    transition: all 1.2s cubic-bezier(.555, -.375, 0, 1.615)
+.header__dev--slow .dev__developer,
+.header__dev--slow .dev__fe,
+.header__dev--slow .dev__fe i,
+.header__dev--slow .dev__slash,
+.header__dev--slow .dev__ux,
+.header__dev--slow .dev__ux i {
+    transition: all 1.2s cubic-bezier(0.555, -0.375, 0, 1.615);
 }
 
 #m-nav-list li {
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #m-nav-list li a i {
@@ -2923,12 +3226,25 @@ div#rightMenu .rightMenuItem {
     color: #888;
 }
 
-#comment_nav, #header, #leftcontentcontainer, #profile_block, #top_nav, .catListTitle {
-    display: none !important
+#comment_nav,
+#header,
+#leftcontentcontainer,
+#profile_block,
+#top_nav,
+.catListTitle {
+    display: none !important;
 }
 
-#ad_c1, #ad_c2, #ad_t1, #ad_t2, #cnblogs_c1, #cnblogs_c2, #commentform_title a, #under_post_kb, #under_post_news {
-    display: none
+#ad_c1,
+#ad_c2,
+#ad_t1,
+#ad_t2,
+#cnblogs_c1,
+#cnblogs_c2,
+#commentform_title a,
+#under_post_kb,
+#under_post_news {
+    display: none;
 }
 
 #progressBar {
@@ -2936,13 +3252,14 @@ div#rightMenu .rightMenuItem {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 998
+    z-index: 998;
 }
 
-span.cnblogs_code, #home code:not([class]) {
+span.cnblogs_code,
+#home code:not([class]) {
     border: 0;
     padding: 2px 4px;
-    color: #D83B64;
+    color: #d83b64;
     display: inline;
     background-color: #f9f2f4;
     border-radius: 3px;
@@ -2958,7 +3275,7 @@ span.cnblogs_code, #home code:not([class]) {
     position: relative;
     overflow: hidden;
     border: 0;
-    padding: 0
+    padding: 0;
 }
 
 pre {
@@ -2973,7 +3290,7 @@ pre {
 }
 
 .postBody pre:not(.hljs) {
-    color: #23263b
+    color: #23263b;
 }
 
 pre .line-numbers-rows {
@@ -2985,9 +3302,10 @@ pre .line-numbers-rows {
     color: #999;
 }
 
-.code-pre-line, code-box {
+.code-pre-line,
+code-box {
     position: relative;
-    display: block
+    display: block;
 }
 
 code-box {
@@ -3008,7 +3326,7 @@ code-box {
     border-radius: 2px;
     color: #999;
     font-size: 12px;
-    background-color: hsla(0, 0%, 90.2%, .1);
+    background-color: hsla(0, 0%, 90.2%, 0.1);
     visibility: hidden;
 }
 
@@ -3023,7 +3341,7 @@ code-box .code-tools {
     align-items: center;
     overflow: hidden;
     min-height: 1.2rem;
-    color: rgba(238,255,255,0.8);
+    color: rgba(238, 255, 255, 0.8);
     font-size: 14px;
     border-radius: 4px 4px 0 0;
     height: 16px;
@@ -3044,11 +3362,11 @@ code-box .code-tools:after {
 }
 
 pre .line-numbers-rows:before {
-    content: counter(itemcounter)
+    content: counter(itemcounter);
 }
 
 .code-pre-line {
-    padding-left: 44px !important
+    padding-left: 44px !important;
 }
 
 .code-copay-btn {
@@ -3069,17 +3387,17 @@ pre .line-numbers-rows:before {
     color: #999;
     opacity: 0;
     visibility: hidden;
-    background-color: hsla(0, 0%, 90.2%, .2);
+    background-color: hsla(0, 0%, 90.2%, 0.2);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     z-index: 1;
 }
 
 .cnblogs_code div {
-    background-color: transparent
+    background-color: transparent;
 }
 
 .cnblogs_code_collapse {
@@ -3090,16 +3408,18 @@ pre .line-numbers-rows:before {
     top: 1px;
     font-weight: 700;
     position: relative;
-    font-family: Merriweather, "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif !important;
-    display: inline
+    font-family: Merriweather, 'Open Sans', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif !important;
+    display: inline;
 }
 
-#sideToolbar, .cnblogs_code_copy img, .list .out .icontd {
-    display: none
+#sideToolbar,
+.cnblogs_code_copy img,
+.list .out .icontd {
+    display: none;
 }
 
 .cnblogs_code_toolbar {
-    height: 0
+    height: 0;
 }
 
 .cnblogs_code_copy a {
@@ -3109,24 +3429,32 @@ pre .line-numbers-rows:before {
     margin: 0;
     width: 16px;
     height: 16px;
-    position: absolute
+    position: absolute;
 }
 
-.code_img_closed, .code_img_opened {
-    cursor: pointer
+.code_img_closed,
+.code_img_opened {
+    cursor: pointer;
 }
 
-.cnblogs_code_toolbar a:active, .cnblogs_code_toolbar a:hover, .cnblogs_code_toolbar a:link, .cnblogs_code_toolbar a:link img, .cnblogs_code_toolbar a:visited, .cnblogs_code_toolbar a:visited img {
+.cnblogs_code_toolbar a:active,
+.cnblogs_code_toolbar a:hover,
+.cnblogs_code_toolbar a:link,
+.cnblogs_code_toolbar a:link img,
+.cnblogs_code_toolbar a:visited,
+.cnblogs_code_toolbar a:visited img {
     background-color: transparent !important;
-    border: none !important
+    border: none !important;
 }
 
-.cnblogs-markdown code, .cnblogs-post-body code {
+.cnblogs-markdown code,
+.cnblogs-post-body code {
     background-color: unset !important;
-    border: 0 !important
+    border: 0 !important;
 }
 
-.postBody .cnblogs-markdown code:not(.language-env), .postBody .cnblogs-post-body code:not(.language-env) {
+.postBody .cnblogs-markdown code:not(.language-env),
+.postBody .cnblogs-post-body code:not(.language-env) {
     padding: 2px 4px !important;
     color: #d83b64;
     background-color: #f9f2f4 !important;
@@ -3137,15 +3465,15 @@ pre .line-numbers-rows:before {
     bottom: 1px;
     font-size: 13px !important;
     font-weight: 600;
-    font-family: "Ubuntu Mono", monospace !important
+    font-family: 'Ubuntu Mono', monospace !important;
 }
 
 #cnblogs_post_body > pre .cnblogs_code_copy a {
-    right: 5px
+    right: 5px;
 }
 
 #cnblogs_post_body > pre {
-    margin: 10px 15px !important
+    margin: 10px 15px !important;
 }
 
 #pageAnimationOffOn {
@@ -3153,27 +3481,27 @@ pre .line-numbers-rows:before {
     position: absolute;
     top: 15px;
     right: 20px;
-    color: rgba(255, 255, 255, .6);
-    cursor: pointer
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
 
 #pageAnimationOffOnIcon {
     display: inline-block;
     font-weight: 700;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .toc {
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .article-info {
     color: #fff;
-    margin-top: 0
+    margin-top: 0;
 }
 
 .article-info-text {
-    margin-bottom: 18px
+    margin-bottom: 18px;
 }
 
 .article-info-tag {
@@ -3194,25 +3522,26 @@ pre .line-numbers-rows:before {
     color: #fff;
     width: fit-content;
     width: -webkit-fit-content;
-    width: -moz-fit-content
+    width: -moz-fit-content;
 }
 
 .article-tag-class-color {
-    background-color: #E8A258
+    background-color: #e8a258;
 }
 
 .article-tag-color {
-    background-color: #6fa3ef
+    background-color: #6fa3ef;
 }
 
-a[name=top], div#loading {
+a[name='top'],
+div#loading {
     background-color: #f0f0f0;
     z-index: 1099;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh
+    height: 100vh;
 }
 
 #evanyou {
@@ -3221,7 +3550,7 @@ a[name=top], div#loading {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1
+    z-index: -1;
 }
 
 #green_channel {
@@ -3235,14 +3564,19 @@ a[name=top], div#loading {
     width: 100% !important;
     text-align: center;
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 #blog_post_info #green_channel a {
     display: none;
 }
 
-#btn_comment_submit, a#green_channel_digg, a#green_channel_favorite, a#green_channel_follow, a#green_channel_wechat, a#green_channel_weibo {
+#btn_comment_submit,
+a#green_channel_digg,
+a#green_channel_favorite,
+a#green_channel_follow,
+a#green_channel_wechat,
+a#green_channel_weibo {
     text-decoration: none;
     color: #fff;
     margin: 10px auto auto;
@@ -3255,82 +3589,94 @@ a[name=top], div#loading {
     letter-spacing: 2px;
     border-radius: 3px;
     text-transform: uppercase;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
     position: relative;
-    background-image: none
+    background-image: none;
 }
 
-a#green_channel_digg:hover, a#green_channel_favorite:hover, a#green_channel_follow:hover, a#green_channel_wechat:hover, a#green_channel_weibo:hover {
-    transform: scale(1.02, 1.02)
+a#green_channel_digg:hover,
+a#green_channel_favorite:hover,
+a#green_channel_follow:hover,
+a#green_channel_wechat:hover,
+a#green_channel_weibo:hover {
+    transform: scale(1.02, 1.02);
 }
 
-a#green_channel_digg:active, a#green_channel_favorite:active, a#green_channel_follow:active, a#green_channel_wechat:active, a#green_channel_weibo:active {
-    transform: scale(.95, .95);
-    transition: all .4s -125ms
+a#green_channel_digg:active,
+a#green_channel_favorite:active,
+a#green_channel_follow:active,
+a#green_channel_wechat:active,
+a#green_channel_weibo:active {
+    transform: scale(0.95, 0.95);
+    transition: all 0.4s -125ms;
 }
 
 a#green_channel_digg {
     background-color: #5c8ec6;
-    box-shadow: 0 15px 18px -6px rgba(95, 193, 206, .65)
+    box-shadow: 0 15px 18px -6px rgba(95, 193, 206, 0.65);
 }
 
 a#green_channel_follow {
     background-color: #e33100 !important;
-    box-shadow: 0 15px 18px -6px rgba(227, 49, 0, .65);
-    margin-left: 10px
+    box-shadow: 0 15px 18px -6px rgba(227, 49, 0, 0.65);
+    margin-left: 10px;
 }
 
 a#green_channel_favorite {
     background-color: #ffb515;
-    box-shadow: 0 15px 18px -6px rgba(255, 198, 75, .65);
-    margin-left: 10px
+    box-shadow: 0 15px 18px -6px rgba(255, 198, 75, 0.65);
+    margin-left: 10px;
 }
 
 a#green_channel_weibo {
     background-color: #ff464b !important;
-    box-shadow: 0 15px 18px -6px rgba(255, 70, 75, .65) !important;
+    box-shadow: 0 15px 18px -6px rgba(255, 70, 75, 0.65) !important;
     margin-left: 10px;
-    width: 45px
+    width: 45px;
 }
 
 a#green_channel_wechat {
     background-color: #3cb034 !important;
-    box-shadow: 0 15px 18px -6px rgba(60, 176, 52, .65) !important;
+    box-shadow: 0 15px 18px -6px rgba(60, 176, 52, 0.65) !important;
     margin-left: 10px;
-    width: 45px
+    width: 45px;
 }
 
 #author_profile_info img.author_avatar {
     border-radius: 100%;
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.4);
     border: 3px solid #f7f7f7;
     padding: 0;
     margin-left: 3px;
-    margin-right: 7px
+    margin-right: 7px;
 }
 
 div#green_channel img {
     height: 20px;
-    width: 20px
+    width: 20px;
 }
 
 @keyframes beating {
-    0%, 100%, 30%, 70% {
-        transform: scale(1)
+    0%,
+    100%,
+    30%,
+    70% {
+        transform: scale(1);
     }
-    20%, 50% {
-        transform: scale(1.6)
+    20%,
+    50% {
+        transform: scale(1.6);
     }
 }
 
 .footer-t1 {
     min-height: 130px !important;
     margin: 250px 0 0 !important;
-    background: #232323
+    background: #232323;
 }
 
 .footer-image {
@@ -3339,21 +3685,21 @@ div#green_channel img {
     position: absolute;
     width: 100%;
     top: -293px;
-    pointer-events: none
+    pointer-events: none;
 }
 
 #footer .footer-box {
     width: 70%;
     max-width: 900px;
     text-align: center;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 #footer .footer-text {
     font-size: 16px;
     padding-bottom: 5px;
     border-bottom: 1px dashed #333;
-    margin: 0 auto 5px
+    margin: 0 auto 5px;
 }
 
 #footer .footer-text .footer-text-icon {
@@ -3361,7 +3707,7 @@ div#green_channel img {
     margin: 0 7px;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
-    animation: iconAnimate 1.33s ease-in-out infinite
+    animation: iconAnimate 1.33s ease-in-out infinite;
 }
 
 footer footer-background {
@@ -3371,7 +3717,7 @@ footer footer-background {
     position: absolute;
     width: 100%;
     z-index: -1;
-    transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0);
 }
 
 footer footer-background figure {
@@ -3380,131 +3726,161 @@ footer footer-background figure {
     height: 15rem;
     margin: 0;
     position: absolute;
-    width: 100%
+    width: 100%;
 }
 
-footer footer-background .background, footer footer-background .clouds, footer footer-background .foreground {
+footer footer-background .background,
+footer footer-background .clouds,
+footer footer-background .foreground {
     right: 0;
     bottom: 0;
     left: 0;
     position: absolute;
-    background-repeat: repeat-x !important
+    background-repeat: repeat-x !important;
 }
 
 footer footer-background .foreground {
     background-size: 225em 15em !important;
-    top: 1rem !important
+    top: 1rem !important;
 }
 
 footer footer-background .background {
     background-size: 225em 21.313em !important;
-    top: -1em !important
+    top: -1em !important;
 }
 
 footer footer-background .clouds {
     background-size: 225em 15em !important;
-    top: -2em !important
+    top: -2em !important;
 }
 
 table#blogCalendar > tbody > tr > td > a {
-    color: #bbb
+    color: #bbb;
 }
 
 .art-dialog {
-    background-color: rgba(0, 0, 0, .7) !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
     border: unset !important;
-    color: #f9f9f9 !important
+    color: #f9f9f9 !important;
 }
 
 .art-dialog-header {
-    border-bottom: 1px solid #444 !important
+    border-bottom: 1px solid #444 !important;
 }
 
 .art-dialog-footer {
-    padding: 0 20px 10px !important
+    padding: 0 20px 10px !important;
 }
 
 .art-dialog-button button {
     padding: 2px 6px !important;
     color: #f9f9f9 !important;
     border: unset !important;
-    font-size: 12px !important
+    font-size: 12px !important;
 }
 
-.art-dialog-button button[i-id=cancel] {
-    background-color: #d98d6f !important
+.art-dialog-button button[i-id='cancel'] {
+    background-color: #d98d6f !important;
 }
 
 .art-dialog-statusbar {
-    padding: 0 0 0 16px !important
+    padding: 0 0 0 16px !important;
 }
 
-.art-dialog-button button[i-id=cancel]:hover {
-    background-color: #ca8966 !important
+.art-dialog-button button[i-id='cancel']:hover {
+    background-color: #ca8966 !important;
 }
 
 .art-dialog-statusbar a {
-    color: #ff9128
+    color: #ff9128;
 }
 
 .art-dialog-content a {
-    color: #85d6d9
+    color: #85d6d9;
 }
 
 .art-dialog-close {
     color: #fff !important;
-    text-shadow: unset !important
+    text-shadow: unset !important;
 }
 
-.art-dialog-button button[i-id="注册"] {
-    background-color: #5fcc7d !important
+.art-dialog-button button[i-id='注册'] {
+    background-color: #5fcc7d !important;
 }
 
 @-moz-keyframes iconAnimate {
-    0%, 100% {
-        transform: scale(1)
+    0%,
+    100% {
+        transform: scale(1);
     }
-    10%, 30% {
-        transform: scale(.9)
+    10%,
+    30% {
+        transform: scale(0.9);
     }
-    20%, 40%, 50%, 60%, 70%, 80% {
-        transform: scale(1.1)
+    20%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80% {
+        transform: scale(1.1);
     }
 }
 
 @-webkit-keyframes iconAnimate {
-    0%, 100% {
-        transform: scale(1)
+    0%,
+    100% {
+        transform: scale(1);
     }
-    10%, 30% {
-        transform: scale(.9)
+    10%,
+    30% {
+        transform: scale(0.9);
     }
-    20%, 40%, 50%, 60%, 70%, 80% {
-        transform: scale(1.1)
+    20%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80% {
+        transform: scale(1.1);
     }
 }
 
 @-o-keyframes iconAnimate {
-    0%, 100% {
-        transform: scale(1)
+    0%,
+    100% {
+        transform: scale(1);
     }
-    10%, 30% {
-        transform: scale(.9)
+    10%,
+    30% {
+        transform: scale(0.9);
     }
-    20%, 40%, 50%, 60%, 70%, 80% {
-        transform: scale(1.1)
+    20%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80% {
+        transform: scale(1.1);
     }
 }
 
 @keyframes iconAnimate {
-    0%, 100% {
-        transform: scale(1)
+    0%,
+    100% {
+        transform: scale(1);
     }
-    10%, 30% {
-        transform: scale(.9)
+    10%,
+    30% {
+        transform: scale(0.9);
     }
-    20%, 40%, 50%, 60%, 70%, 80% {
-        transform: scale(1.1)
+    20%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80% {
+        transform: scale(1.1);
     }
 }
 
@@ -3514,8 +3890,8 @@ table#blogCalendar > tbody > tr > td > a {
     z-index: 4;
     right: 20px;
     top: 25px;
-    opacity: .65;
-    cursor: pointer
+    opacity: 0.65;
+    cursor: pointer;
 }
 
 #dayNightSwitch .onOff {
@@ -3523,18 +3899,18 @@ table#blogCalendar > tbody > tr > td > a {
     width: 65px;
     height: 25px;
     border-radius: 25px;
-    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
     border: 2px solid #1e2d50;
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 
 #dayNightSwitch .onOff * {
-    transition: all .4s ease
+    transition: all 0.4s ease;
 }
 
 #dayNightSwitch .onOff.daySwitch {
-    border: 2px solid #52a6bf
+    border: 2px solid #52a6bf;
 }
 
 #dayNightSwitch .onOff.daySwitch .sky {
@@ -3545,24 +3921,24 @@ table#blogCalendar > tbody > tr > td > a {
     left: 0;
     top: 0;
     transform: translate(0, 0);
-    animation: none !important
+    animation: none !important;
 }
 
 #dayNightSwitch .onOff.daySwitch .sunMoon {
     background: #ffdf61;
     border: 2px solid #d9b31c;
-    left: calc(100% - 23px)
+    left: calc(100% - 23px);
 }
 
 #dayNightSwitch .onOff.daySwitch .sunMoon .crater {
-    transform: scale(0) !important
+    transform: scale(0) !important;
 }
 
 #dayNightSwitch .onOff.daySwitch .sunMoon .cloud {
     opacity: 1;
     transform: translatex(0);
-    transition-delay: .2s;
-    animation: cloudAnim 2.5s linear infinite
+    transition-delay: 0.2s;
+    animation: cloudAnim 2.5s linear infinite;
 }
 
 #dayNightSwitch .onOff .sunMoon {
@@ -3573,7 +3949,7 @@ table#blogCalendar > tbody > tr > td > a {
     border: 2px solid #ccc091;
     position: absolute;
     left: 3px;
-    top: 2.5px
+    top: 2.5px;
 }
 
 #dayNightSwitch .onOff .sunMoon .crater {
@@ -3583,19 +3959,19 @@ table#blogCalendar > tbody > tr > td > a {
     border-radius: 13px;
     position: absolute;
     left: 50%;
-    top: 20%
+    top: 20%;
 }
 
 #dayNightSwitch .onOff .sunMoon .crater.crater1 {
     left: 30%;
     top: 45%;
-    transform: scale(.5)
+    transform: scale(0.5);
 }
 
 #dayNightSwitch .onOff .sunMoon .crater.crater2 {
     left: 55%;
     top: 60%;
-    transform: scale(.7)
+    transform: scale(0.7);
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud {
@@ -3604,54 +3980,54 @@ table#blogCalendar > tbody > tr > td > a {
     position: absolute;
     opacity: 0;
     transform: translatex(-20px);
-    transition-delay: 0s
+    transition-delay: 0s;
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud.part1 {
     width: 20px;
     height: 2px;
     left: -12px;
-    top: calc(50% - 1.5px)
+    top: calc(50% - 1.5px);
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud.part1:before {
-    content: "";
+    content: '';
     background: #fff;
     border-radius: 3px;
     position: absolute;
     width: 3px;
     height: 3px;
     left: 40%;
-    top: -100%
+    top: -100%;
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud.part1:after {
-    content: "";
+    content: '';
     background: #fff;
     border-radius: 3px;
     position: absolute;
     width: 15px;
     height: 2px;
     left: 20%;
-    top: -200%
+    top: -200%;
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud.part2 {
     width: 3px;
     height: 3px;
     left: -1px;
-    top: calc(50% + .3px)
+    top: calc(50% + 0.3px);
 }
 
 #dayNightSwitch .onOff .sunMoon .cloud.part2:before {
-    content: "";
+    content: '';
     background: #fff;
     border-radius: 3px;
     position: absolute;
     width: 18px;
     height: 2px;
     left: -8px;
-    top: 100%
+    top: 100%;
 }
 
 #dayNightSwitch .onOff .star {
@@ -3662,36 +4038,36 @@ table#blogCalendar > tbody > tr > td > a {
     position: absolute;
     left: 50%;
     top: 10%;
-    transform: translate(20px, 5px)
+    transform: translate(20px, 5px);
 }
 
 #dayNightSwitch .onOff .star.star1 {
-    transform: translate(10px, 15px) scale(.3);
-    animation: starAnim1 3s -2.4s linear infinite
+    transform: translate(10px, 15px) scale(0.3);
+    animation: starAnim1 3s -2.4s linear infinite;
 }
 
 #dayNightSwitch .onOff .star.star2 {
-    transform: translate(15px, -7px) scale(.6);
-    animation: starAnim2 3s -1.1s linear infinite
+    transform: translate(15px, -7px) scale(0.6);
+    animation: starAnim2 3s -1.1s linear infinite;
 }
 
 #dayNightSwitch .onOff .star.star3 {
-    transform: translate(35px, -12px) scale(.9);
-    animation: starAnim3 3s -1.5s linear infinite
+    transform: translate(35px, -12px) scale(0.9);
+    animation: starAnim3 3s -1.5s linear infinite;
 }
 
 #dayNightSwitch .onOff .star.star4 {
-    transform: translate(30px, 12px) scale(.4);
-    animation: starAnim4 3s -1.9s linear infinite
+    transform: translate(30px, 12px) scale(0.4);
+    animation: starAnim4 3s -1.9s linear infinite;
 }
 
 #dayNightSwitch .onOff .star.star5 {
-    transform: translate(0, 0) scale(.6);
-    animation: starAnim5 3s -2.8s linear infinite
+    transform: translate(0, 0) scale(0.6);
+    animation: starAnim5 3s -2.8s linear infinite;
 }
 
 #dayNightSwitch .onOff .star.sky {
-    animation: skyAnim 3s -.4s linear infinite
+    animation: skyAnim 3s -0.4s linear infinite;
 }
 
 .htmlGray {
@@ -3703,121 +4079,122 @@ table#blogCalendar > tbody > tr > td > a {
 
 @keyframes starAnim1 {
     0% {
-        transform: translate(5px, 30px) scale(.3)
+        transform: translate(5px, 30px) scale(0.3);
     }
     20% {
-        transform: translate(8px, 17px) scale(.3)
+        transform: translate(8px, 17px) scale(0.3);
     }
     50% {
-        transform: translate(10px, 0) scale(.3)
+        transform: translate(10px, 0) scale(0.3);
     }
     80% {
-        transform: translate(8px, -17px) scale(.3)
+        transform: translate(8px, -17px) scale(0.3);
     }
     100% {
-        transform: translate(5px, -30px) scale(.3)
+        transform: translate(5px, -30px) scale(0.3);
     }
 }
 
 @keyframes starAnim2 {
     0% {
-        transform: translate(10px, 30px) scale(.6)
+        transform: translate(10px, 30px) scale(0.6);
     }
     20% {
-        transform: translate(13px, 17px) scale(.6)
+        transform: translate(13px, 17px) scale(0.6);
     }
     50% {
-        transform: translate(15px, 0) scale(.6)
+        transform: translate(15px, 0) scale(0.6);
     }
     80% {
-        transform: translate(13px, -17px) scale(.6)
+        transform: translate(13px, -17px) scale(0.6);
     }
     100% {
-        transform: translate(10px, -30px) scale(.6)
+        transform: translate(10px, -30px) scale(0.6);
     }
 }
 
 @keyframes starAnim3 {
     0% {
-        transform: translate(30px, 30px) scale(.9)
+        transform: translate(30px, 30px) scale(0.9);
     }
     20% {
-        transform: translate(33px, 17px) scale(.9)
+        transform: translate(33px, 17px) scale(0.9);
     }
     50% {
-        transform: translate(35px, 0) scale(.9)
+        transform: translate(35px, 0) scale(0.9);
     }
     80% {
-        transform: translate(33px, -17px) scale(.9)
+        transform: translate(33px, -17px) scale(0.9);
     }
     100% {
-        transform: translate(30px, -30px) scale(.9)
+        transform: translate(30px, -30px) scale(0.9);
     }
 }
 
 @keyframes starAnim4 {
     0% {
-        transform: translate(25px, 30px) scale(.4)
+        transform: translate(25px, 30px) scale(0.4);
     }
     20% {
-        transform: translate(28px, 17px) scale(.4)
+        transform: translate(28px, 17px) scale(0.4);
     }
     50% {
-        transform: translate(30px, 0) scale(.4)
+        transform: translate(30px, 0) scale(0.4);
     }
     80% {
-        transform: translate(28px, -17px) scale(.4)
+        transform: translate(28px, -17px) scale(0.4);
     }
     100% {
-        transform: translate(25px, -30px) scale(.4)
+        transform: translate(25px, -30px) scale(0.4);
     }
 }
 
 @keyframes starAnim5 {
     0% {
-        transform: translate(0, 30px) scale(.6)
+        transform: translate(0, 30px) scale(0.6);
     }
     20% {
-        transform: translate(3px, 17px) scale(.6)
+        transform: translate(3px, 17px) scale(0.6);
     }
     50% {
-        transform: translate(5px, 0) scale(.6)
+        transform: translate(5px, 0) scale(0.6);
     }
     80% {
-        transform: translate(3px, -17px) scale(.6)
+        transform: translate(3px, -17px) scale(0.6);
     }
     100% {
-        transform: translate(0, -30px) scale(.6)
+        transform: translate(0, -30px) scale(0.6);
     }
 }
 
 @keyframes skyAnim {
     0% {
-        transform: translate(15px, 30px) scale(1)
+        transform: translate(15px, 30px) scale(1);
     }
     20% {
-        transform: translate(18px, 17px) scale(1)
+        transform: translate(18px, 17px) scale(1);
     }
     50% {
-        transform: translate(20px, 0) scale(1)
+        transform: translate(20px, 0) scale(1);
     }
     80% {
-        transform: translate(18px, -17px) scale(1)
+        transform: translate(18px, -17px) scale(1);
     }
     100% {
-        transform: translate(15px, -30px) scale(1)
+        transform: translate(15px, -30px) scale(1);
     }
 }
 
 @keyframes cloudAnim {
-    0%, 100% {
-        transform: translatex(0)
+    0%,
+    100% {
+        transform: translatex(0);
     }
     14% {
-        transform: translatex(5px)
+        transform: translatex(5px);
     }
     56% {
-        transform: translatex(-10px)
+        transform: translatex(-10px);
     }
 }
 
@@ -3918,49 +4295,58 @@ table#blogCalendar > tbody > tr > td > a {
 
     #home {
         width: 85%;
-        max-width: 100vw
+        max-width: 100vw;
     }
 
-    .entrylistPosttitle a:link, .postTitle a:link {
-        font-size: 2.8rem
+    .entrylistPosttitle a:link,
+    .postTitle a:link {
+        font-size: 2.8rem;
     }
 
-    .entrylistItemPostDesc, .postDesc {
-        font-size: 1.3rem
+    .entrylistItemPostDesc,
+    .postDesc {
+        font-size: 1.3rem;
     }
 
-    .entrylistPosttitle, .page-title {
+    .entrylistPosttitle,
+    .page-title {
         font-size: 4rem;
-        letter-spacing: -1px
+        letter-spacing: -1px;
     }
 
     .sb-title {
         font-size: 3.3rem;
-        letter-spacing: -1px
+        letter-spacing: -1px;
     }
 
-    p.article-info-text > .postMeta, p.article-info-text > .postMeta i {
-        font-size: 15px
+    p.article-info-text > .postMeta,
+    p.article-info-text > .postMeta i {
+        font-size: 15px;
     }
 
     .page-description {
         font-size: 2rem;
         line-height: 2rem;
-        -webkit-line-clamp: 4
+        -webkit-line-clamp: 4;
     }
 
     .page-author {
         font-size: 1.3rem !important;
-        line-height: 1.3em
+        line-height: 1.3em;
     }
 
-    #aplayer, #evanyou, #music-box, #nhBannerAnimation, .scroll-down, body > meting-js {
-        display: none !important
+    #aplayer,
+    #evanyou,
+    #music-box,
+    #nhBannerAnimation,
+    .scroll-down,
+    body > meting-js {
+        display: none !important;
     }
 
     .c_b_p_desc_readmore {
         font-size: 14px;
-        width: 75px
+        width: 75px;
     }
 }
 
@@ -3975,27 +4361,31 @@ table#blogCalendar > tbody > tr > td > a {
     }
 
     #home {
-        width: auto
+        width: auto;
     }
 
     #pageAnimationOffOn {
-        display: none
+        display: none;
     }
 
-    #bgCanvas, #homeTopCanvas, #articleSuffix .articleSuffix-left, .c_b_p_desc_img {
-        display: none !important
+    #bgCanvas,
+    #homeTopCanvas,
+    #articleSuffix .articleSuffix-left,
+    .c_b_p_desc_img {
+        display: none !important;
     }
 
     #articleSuffix .articleSuffix-right {
         width: calc(100% - 12px) !important;
     }
 
-    .c_b_p_desc, .entrylistPostSummary {
-        width: 100% !important
+    .c_b_p_desc,
+    .entrylistPostSummary {
+        width: 100% !important;
     }
 
     .postCon {
-        min-height: unset !important
+        min-height: unset !important;
     }
 }
 
@@ -4006,70 +4396,89 @@ table#blogCalendar > tbody > tr > td > a {
     #cnblogs_post_body > p {
         padding: 0 10px;
         font-size: 1em;
-        line-height: 1.8em
+        line-height: 1.8em;
     }
 
     .main-header {
         margin-bottom: 15px;
         height: 40vh;
-        max-height: 40vh
+        max-height: 40vh;
     }
 
     #home {
         padding-left: 5px;
-        box-shadow: unset
+        box-shadow: unset;
     }
 
-    .entrylistPosttitle a:link, .postTitle a:link {
-        font-size: 2.3rem
+    .entrylistPosttitle a:link,
+    .postTitle a:link {
+        font-size: 2.3rem;
     }
 
-    .entrylistItemPostDesc, .entrylistPostSummary, .login_tips, .postCon, .postDesc {
-        font-size: 12px
+    .entrylistItemPostDesc,
+    .entrylistPostSummary,
+    .login_tips,
+    .postCon,
+    .postDesc {
+        font-size: 12px;
     }
 
-    .commentform, .menu-button {
+    .commentform,
+    .menu-button {
         border: none !important;
-        margin: 0 !important
+        margin: 0 !important;
     }
 
     .inner {
         width: auto;
-        margin: 2rem auto
+        margin: 2rem auto;
     }
 
-    .entrylistPosttitle, .page-title {
-        font-size: 2.6rem
+    .entrylistPosttitle,
+    .page-title {
+        font-size: 2.6rem;
     }
 
     .sb-title {
-        font-size: 2.8rem
+        font-size: 2.8rem;
     }
 
     .page-description {
         font-size: 1.6rem;
-        -webkit-line-clamp: 2
+        -webkit-line-clamp: 2;
     }
 
     .page-author {
-        font-size: 1rem !important
+        font-size: 1rem !important;
     }
 
     .menu-button-scroll {
         left: -5px !important;
-        width: 33px !important
+        width: 33px !important;
     }
 
-    #aplayer, #bgCanvas, #canvas, #articleSuffix, #evanyou, #homeTopCanvas, #music-box, #pageAnimationOffOn, .comment_date, .scroll-down, body > meting-js {
-        display: none !important
+    #aplayer,
+    #bgCanvas,
+    #canvas,
+    #articleSuffix,
+    #evanyou,
+    #homeTopCanvas,
+    #music-box,
+    #pageAnimationOffOn,
+    .comment_date,
+    .scroll-down,
+    body > meting-js {
+        display: none !important;
     }
 
     .postMeta {
-        font-size: 12px
+        font-size: 12px;
     }
 
-    .postMeta > i, p.article-info-text > .postMeta, p.article-info-text > .postMeta i {
-        font-size: 13px
+    .postMeta > i,
+    p.article-info-text > .postMeta,
+    p.article-info-text > .postMeta i {
+        font-size: 13px;
     }
 
     p.article-info-text > .postMeta br {
@@ -4077,64 +4486,65 @@ table#blogCalendar > tbody > tr > td > a {
     }
 
     .article-info-tag {
-        padding: 0 3px
+        padding: 0 3px;
     }
 
     .c_b_p_desc_readmore {
         font-size: 13px;
         width: 68px;
-        border-bottom: 1px solid #666
+        border-bottom: 1px solid #666;
     }
 
     .postSticky {
         font-size: 12px;
-        top: -4px
+        top: -4px;
     }
 
     #footer .footer-box {
-        width: 95%
+        width: 95%;
     }
 
-    #dayNightSwitch .onOff, #dayNightSwitch .onOff.daySwitch .sky {
+    #dayNightSwitch .onOff,
+    #dayNightSwitch .onOff.daySwitch .sky {
         width: 50px;
         height: 18px;
-        border-radius: 18px
+        border-radius: 18px;
     }
 
     #dayNightSwitch .onOff .sunMoon {
         height: 12px;
         width: 12px;
-        top: 1px
+        top: 1px;
     }
 
     #dayNightSwitch .onOff.daySwitch .sunMoon {
-        left: calc(100% - 19px)
+        left: calc(100% - 19px);
     }
 
     #dayNightSwitch {
         right: 12px;
-        top: 15px
+        top: 15px;
     }
 
     #dayNightSwitch .onOff .star {
-        top: -50%
+        top: -50%;
     }
 
     #dayNightSwitch .onOff .sunMoon .crater {
         width: 3px;
-        height: 3px
+        height: 3px;
     }
 
     #dayNightSwitch .onOff .sunMoon .cloud.part1 {
-        width: 17px
+        width: 17px;
     }
 
     #dayNightSwitch .onOff .sunMoon .cloud.part1:after {
-        width: 12px
+        width: 12px;
     }
 
     #dayNightSwitch .onOff .sunMoon .cloud.part2:before {
-        width: 15px
+        width: 15px;
     }
     #tbCommentBody {
         background-size: calc(70% - 10%) !important;
