@@ -70,15 +70,24 @@ window.cnblogsConfig.bookList = [
                 year: '2016-8',
                 score: 5,
             },
+        ],
+    },
+    {
+        title: '已观',
+        books: [
             {
-                cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s2180473.jpg',
-                name: '厚黑学',
-                formerName: '',
-                author: '李宗吾',
-                translator: '',
-                press: '群言出版社',
-                year: '2006-9',
-                score: 3,
+                cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s29934992.jpg',
+                name: '',
+                direct: '',
+                scenarist: '',
+                star: '',
+                type: '',
+                productionCountry: '',
+                language: '',
+                releaseDate: '',
+                filmLength: '',
+                alias: '',
+                score: '',
             },
         ],
     },
@@ -87,26 +96,26 @@ window.cnblogsConfig.bookList = [
 
 !> 请按照此格式配置，无内容可以不配置。
 
-|           **Key**           |   **Description**   |
-| :-------------------------: | :-----------------: |
-|          **title**          | 书目标题，可以不填  |
-|          **books**          |    书目/电影数据    |
-|       **books.cover**       |        封面         |
-|       **books.name**        |     书名/电影名     |
-|    **books.formerName**     |       原书名        |
-|      **books.author**       |        作者         |
-|    **books.translator**     |        译者         |
-|       **books.press**       |       出版社        |
-|       **books.year**        |       出版年        |
-|       **books.score**       | 评级 1 ～ 5，支持.5 |
-|     **books.readDate**      |      阅读日期       |
-|  **books.readPercentage**   |      阅读进度       |
-|      **books.direct**       |        导演         |
-|     **books.scenarist**     |        编剧         |
-|       **books.star**        |        主演         |
-|       **books.type**        |        类型         |
-| **books.productionCountry** |    制片国家/地区    |
-|     **books.language**      |        语言         |
-|    **books.releaseDate**    |      上映日期       |
-|    **books.filmLength**     |        片长         |
-|       **books.alias**       |        别名         |
+|           **Key**           |      **Description**       |
+| :-------------------------: | :------------------------: |
+|          **title**          |     书目标题，可以不填     |
+|          **books**          |       书目/电影数据        |
+|       **books.cover**       |            封面            |
+|       **books.name**        |        书名/电影名         |
+|    **books.formerName**     |           原书名           |
+|      **books.author**       |            作者            |
+|    **books.translator**     |            译者            |
+|       **books.press**       |           出版社           |
+|       **books.year**        |           出版年           |
+|       **books.score**       | 书/电影评级 1 ～ 5，支持.5 |
+|     **books.readDate**      |          阅读日期          |
+|  **books.readPercentage**   |          阅读进度          |
+|      **books.direct**       |            导演            |
+|     **books.scenarist**     |            编剧            |
+|       **books.star**        |            主演            |
+|       **books.type**        |            类型            |
+| **books.productionCountry** |       制片国家/地区        |
+|     **books.language**      |            语言            |
+|    **books.releaseDate**    |          上映日期          |
+|    **books.filmLength**     |            片长            |
+|       **books.alias**       |            别名            |

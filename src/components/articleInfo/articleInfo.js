@@ -72,9 +72,9 @@ export default function main() {
      */
     ;(() => {
         $.__timeIds.articleInfoClassTId = window.setInterval(() => {
-            $.__tools.htmlReplace('#BlogPostCategory', /,/g, '')
             let obj = $('#BlogPostCategory').find('a')
             if (obj.length > 0) {
+                $.__tools.htmlReplace('#BlogPostCategory', /,/g, '')
                 $.__tools.articleInfo(obj, 1)
                 $.__tools.setDomHomePosition()
                 $.__tools.clearIntervalTimeId($.__timeIds.articleInfoClassTId)
@@ -87,9 +87,9 @@ export default function main() {
      */
     ;(() => {
         $.__timeIds.articleInfoTagTId = window.setInterval(() => {
-            $.__tools.htmlReplace('#EntryTag', /,/g, '')
             let obj = $('#EntryTag').find('a')
             if (obj.length > 0) {
+                $.__tools.htmlReplace('#EntryTag', /,/g, '')
                 $.__tools.articleInfo(obj, 2)
                 $.__tools.setDomHomePosition()
                 $.__tools.clearIntervalTimeId($.__timeIds.articleInfoTagTId)
