@@ -46,7 +46,7 @@ export default function main() {
                         scoreHtml += '<i class="iconfont icon-icon-star"></i>'.repeat(5)
                     }
 
-                    // 电影/图书信息
+                    // 图书信息
                     let infoHtml = ''
 
                     const infoObj = {

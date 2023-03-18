@@ -1,5 +1,7 @@
 # 书单/影单
 
+> 考虑到兼容直接在现有的 books 字段中增加影单相应的字段
+
 样式参考：[https://www.cnblogs.com/wangyang0210/p/16535755.html](https://www.cnblogs.com/wangyang0210/p/16535755.html)
 
 ## 配置方式
@@ -76,18 +78,18 @@ window.cnblogsConfig.bookList = [
         title: '已观',
         books: [
             {
-                cover: 'https://images.weserv.nl/?url=https://img3.doubanio.com/view/subject/l/public/s29934992.jpg',
-                name: '',
-                direct: '',
-                scenarist: '',
-                star: '',
-                type: '',
-                productionCountry: '',
-                language: '',
-                releaseDate: '',
-                filmLength: '',
-                alias: '',
-                score: '',
+                cover: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/2205307/o_230318061444_p2614500649.webp',
+                name: '疯狂动物城 Zootopia (2016)',
+                direct: ' 拜伦·霍华德 / 瑞奇·摩尔 / 杰拉德·布什',
+                scenarist:
+                    ' 拜伦·霍华德 / 瑞奇·摩尔 / 杰拉德·布什 / 吉姆·里尔顿 / 乔西·特立尼达 / 菲尔·约翰斯顿 / 珍妮弗·李',
+                star: ' 金妮弗·古德温 / 杰森·贝特曼 / 伊德里斯·艾尔巴 / 珍妮·斯蕾特 / 内特·托伦斯 / 邦尼·亨特 / 唐·雷克 / 汤米·钟 / J·K·西蒙斯 / 奥克塔维亚·斯宾瑟 / 艾伦·图代克 / 夏奇拉 / 雷蒙德·S·佩尔西 / 德拉·萨巴 / 莫里斯·拉马奇 / 菲尔·约翰斯顿 / 约翰·迪·马吉欧 / 凯蒂·洛斯 / 吉塔·雷迪 / 杰西·科尔蒂 / 汤米·利斯特 / 乔希·达拉斯 / 瑞奇·摩尔 / 凯斯·索西 / 彼得·曼斯布里奇 / 拜伦·霍华德 / 杰拉德·布什 / 马克·史密斯 / 乔西·特立尼达 / 约翰·拉维尔 / 克里斯汀·贝尔 / 吉尔·科德斯 / 梅利莎·古德温',
+                type: ' 喜剧 / 动画 / 冒险',
+                productionCountry: ' 美国',
+                language: ' 英语 / 挪威语',
+                releaseDate: ' 2016-03-04(中国大陆/美国) / 2020-07-24(中国大陆重映)',
+                filmLength: ' 109分钟(中国大陆) / 108分钟',
+                alias: ' 优兽大都会(港) / 动物方城市(台) / 动物乌托邦 / 动物大都会 / Zootropolis',
             },
         ],
     },

@@ -1,4 +1,4 @@
-# 2023.3.1 - v2.2.9_pre
+# 2023.3.1 - v2.2.9
 
 -   新增评论框背景图片配置`articleContent.commentBackground`(修图贼费时间)
 -   优化删除评论时未完全移除
