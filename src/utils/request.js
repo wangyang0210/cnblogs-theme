@@ -7,15 +7,18 @@
  * @describe: fetch封装
  */
 
-export async function request(url = '', method = 'GET', data = {}) {
+export async function request(url = '', method = 'GET', data = {}, headers = {}) {
     let options = {
         method: method,
         mode: 'cors',
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
     }
-    if(Object.keys(data).length) {
-        options.body=JSON.stringify(data)
+    if (Object.keys(headers).length) {
+        options.headers = headers
+    }
+    if (Object.keys(data).length) {
+        options.body = JSON.stringify(data)
     }
     const response = await fetch(url, options)
     return response.json()
