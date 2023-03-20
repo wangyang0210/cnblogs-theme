@@ -1,3 +1,7 @@
+# 2023.3.22 - v2.1.10
+
+-   适配 umami 最新版本
+
 # 2023.3.1 - v2.2.9
 
 -   新增评论框背景图片配置`articleContent.commentBackground`(修图贼费时间)
