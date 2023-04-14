@@ -142,11 +142,11 @@ export default function main() {
         if ($.__config.umami?.url && $.__config.umami?.shareId) {
             const baseUrl = $.__config.umami.url
             $.__timeIds.umamiTId = window.setInterval(() => {
-                request(`${baseUrl}api/share/${$.__config.umami.shareId}`).then(r => {
+                request(`${baseUrl}/api/share/${$.__config.umami.shareId}`).then(r => {
                     Promise.all([
-                        request(`${baseUrl}api/websites/${r.id}/stats?start_at=${$.__tools.getTodayStart()}&end_at=${$.__tools.getTodayEnd()}`, 'GET', {}, { 'x-umami-share-token': r.token }),
-                        request(`${baseUrl}api/websites/${r.id}/stats?start_at=${$.__tools.getYesterdayStart()}&end_at=${$.__tools.getYesterdayEnd()}`, 'GET', {}, { 'x-umami-share-token': r.token }),
-                        request(`${baseUrl}api/websites/${r.id}/active`, 'GET', {}, { 'x-umami-share-token': r.token }),
+                        request(`${baseUrl}/api/websites/${r.id}/stats?start_at=${$.__tools.getTodayStart()}&end_at=${$.__tools.getTodayEnd()}`, 'GET', {}, { 'x-umami-share-token': r.token }),
+                        request(`${baseUrl}/api/websites/${r.id}/stats?start_at=${$.__tools.getYesterdayStart()}&end_at=${$.__tools.getYesterdayEnd()}`, 'GET', {}, { 'x-umami-share-token': r.token }),
+                        request(`${baseUrl}/api/websites/${r.id}/active`, 'GET', {}, { 'x-umami-share-token': r.token }),
                     ]).then(function (results) {
                         const todayState = results[0]
                         const yesterdayState = results[1]
