@@ -57,12 +57,19 @@ export default function main() {
         }
     }
 
+    $(document).ajaxSuccess(function (event, xhr, settings) {
+        if (settings.url.includes("GetComments.aspx")) {
+            $.__tools.clearIntervalTimeId($.__timeIds.commentTId);
+        }
+    });
+
     $.__timeIds.commentTId = window.setInterval(() => {
         if ($('.feedbackItem').length > 0) {
             setComment()
             $.__tools.clearIntervalTimeId($.__timeIds.commentTId)
         }
     }, 1000)
+
 
     $(document).ajaxSuccess(function (event, xhr, settings) {
         if (settings.url.includes('Add.aspx')) setComment()
