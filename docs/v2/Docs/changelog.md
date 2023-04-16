@@ -13,6 +13,7 @@
     https://files.cnblogs.com/files/wangyang0210/precision.gif?t=1681261712
     https://files.cnblogs.com/files/wangyang0210/normal.gif?t=1681261712
 -   优化未开启找一找功能时，显示异常
+-   适配博客园评论接口
 
 # 2023.3.22 - v2.1.10
 
