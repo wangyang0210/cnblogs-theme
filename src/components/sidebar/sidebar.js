@@ -274,6 +274,7 @@ export default function main() {
         if ($.__config.animate.avatar.enable) {
             $('#menuBlogAvatar').addClass('img-rounded')
             $('.author_avatar').addClass('img-rounded')
+            $('.feedbackAvatar').addClass('img-rounded')
         }
     })()
 

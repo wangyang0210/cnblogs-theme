@@ -53,7 +53,7 @@ export default function main() {
             })
             $(feedbackItem[0]).css('padding-top', '0')
             $(feedbackItem[feedbackItem.length - 1]).css('padding-bottom', '0')
-            $.__config.animate.avatar.enable && $('.feedbackAvatar').addClass('img-rounded')
+
         }
     }
 
