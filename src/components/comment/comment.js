@@ -66,7 +66,7 @@ export default function main() {
        let comment =  `<div class="feedbackItem" style="padding-bottom: 0px;">
                         <div class="feedbackAvatar">
                             <a href="${userBlogAddress}" target="_blank">
-                                <img src="${defaultAvatarImg}">
+                                <img src="${$.__config.default.avatar}">
                             </a>
                         </div>
                         <div class="feedbackListSubtitle ${ window.isBlogOwner && 'feedbackListSubtitle-louzhu'}">
