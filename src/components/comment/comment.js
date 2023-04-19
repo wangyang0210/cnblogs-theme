@@ -85,17 +85,17 @@ export default function main() {
         $(".comment_my_posted").remove()
     }
 
-    _.__timeIds.commentTId = window.setInterval(() =>{
+    $.__timeIds.commentTId = window.setInterval(() =>{
         if ($('.feedbackItem').length > 0) {
             setComment();
-            _.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
+            $.__tools.clearIntervalTimeId($.__timeIds.commentTId);
         }
     }, 1000);
 
     $(document).ajaxSuccess(function (event, xhr, settings) {
         // 评论重新排序
         if (settings.url.includes('GetComments.aspx')) {
-             _.__tools.clearIntervalTimeId(_.__timeIds.commentTId);
+             $.__tools.clearIntervalTimeId($.__timeIds.commentTId);
             setComment()
         }
 
