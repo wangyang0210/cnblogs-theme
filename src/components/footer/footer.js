@@ -27,7 +27,7 @@ export default function main() {
                 .then(r => {
                     $.__tools.dynamicLoadingCss($.__config.default.aplayercss)
                     $('#footer').append(`
-               <meting-js 
+               <meting-js
                   id="${config.aplayer.options.id}"
                   api="${config.aplayer.options.api}"
                   server="${config.aplayer.options.server}"
@@ -46,7 +46,7 @@ export default function main() {
                   listFolded="${config.aplayer.options.listFolded}"
                   listMaxHeight="${config.aplayer.options.listMaxHeight}"
                   storageName="${config.aplayer.options.storageName}"
-               > 
+               >
               </meting-js>`)
                 })
                 .catch(e => console.error('aplayer|meting', e))
