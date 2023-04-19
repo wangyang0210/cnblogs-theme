@@ -1,19 +1,8 @@
-# 2023.4.6 - todo
+# 2023.4.6 - v2.1.11
 
--   用户自定义配色 [todo]
--   增加看板娘 [todo]
--   ctrl+k 全局搜索 [todo]
--   树形目录结构配置 [todo]
--   鼠标指针
-    https://files.cnblogs.com/files/wangyang0210/normal.gif?t=1681261712
-    https://files.cnblogs.com/files/wangyang0210/alternate.gif?t=1681261713
-    https://files.cnblogs.com/files/wangyang0210/working.gif?t=1681261712
-    https://files.cnblogs.com/files/wangyang0210/link.gif?t=1681261712
-    https://files.cnblogs.com/files/wangyang0210/help.gif?t=1681261712
-    https://files.cnblogs.com/files/wangyang0210/precision.gif?t=1681261712
-    https://files.cnblogs.com/files/wangyang0210/normal.gif?t=1681261712
 -   优化未开启找一找功能时，显示异常
 -   评论优化
+
 
 # 2023.3.22 - v2.1.10
 
