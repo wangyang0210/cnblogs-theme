@@ -508,6 +508,10 @@
             strikeThrough: { type: 'strike-through', color: 'red' },
             crossedOff: { type: 'crossed-off', color: 'red' },
         },
+        hide: {
+            recommendPosts: false,
+            readingRanking: false,
+        }
     },
 
     // -- 钩子 --
