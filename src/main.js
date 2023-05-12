@@ -10,40 +10,45 @@ import defaultConfig from './components/config/config.json5';
 import status from './components/status/status';
 import tools from './utils/tools';
 import event from "./components/event/event";
+import loading from "./components/loading/loading";
 
 $(document).ready(function () {
 
     // 初始化
-    $.__config = $.extend( true, defaultConfig,  window?.cnblogsConfig || {}); // 配置信息
+    $.__config = $.extend(true, defaultConfig, window?.cnblogsConfig || {}); // 配置信息
     $.__status = status; // 页面状态信息
     $.__tools = tools;  // 公共处理工具
     $.__timeIds = {};  // 定时器
     $.__event = {};   // 事件
     $.__config.info.name ||= $.__status.user;
+    $.__loading = loading()
+    $.__loading.start()
     $.__tools.dynamicLoadingJs($.__config.default.moment).then(r => {
-       import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${ $.__status.pageType}`).then(module => {
-           const page = module.default;
+        import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${$.__status.pageType}`).then(module => {
+            const page = module.default;
 
-           // 前置公共处理
-           import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
-               const comBefore = beforeModule.default;
-               comBefore();
+            // 前置公共处理
+            import(/* webpackChunkName: "com-before" */ /* webpackPrefetch: true */ './components/common/comBefore').then(beforeModule => {
+                const comBefore = beforeModule.default;
+                comBefore();
 
-               // 页面逻辑处理
-               page();
+                // 页面逻辑处理
+                page();
 
-               // 后置公共处理
-               import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
-                   const comAfter = afterModule.default;
-                   comAfter();
-                   (() => {
-                       $.__tools.setDomHomePosition(); // 文章主体位置修正
-                       event.handle.scroll(); // 触发滚动处理
-                       event.handle.resize(); // 触发窗口大小变化处理
-                   })();
-               });
-           });
-       });
-   }).catch(e => console.error('moment.js', e));
-
+                // 后置公共处理
+                import(/* webpackChunkName: "com-after" */ /* webpackPrefetch: true */ './components/common/comAfter').then(afterModule => {
+                    const comAfter = afterModule.default;
+                    comAfter();
+                    (() => {
+                        $.__tools.setDomHomePosition(); // 文章主体位置修正
+                        event.handle.scroll(); // 触发滚动处理
+                        event.handle.resize(); // 触发窗口大小变化处理
+                    })();
+                });
+            });
+        });
+    }).catch(e => console.error('moment.js', e));
+    window.addEventListener('load', () => {
+        $.__loading.stop()
+    })
 })
