@@ -9,63 +9,39 @@
  * @param isCycle boolean 是否循环
  * @param callback fun 每个文字设置后回调
  */
-export default function main(words, id, conId, colors, isCycle, callback) {
-    if (colors === undefined) colors = ['#fff'];
-
+export default function main(words, id, containerId, isCycle) {
+    let textIndex = 0;
     let visible = true;
-    let con = document.getElementById(conId);
-    let letterCount = 1;
-    let x = 1;
-    let waiting = false;
-    let target = document.getElementById(id);
+    let containerElement = document.getElementById(containerId);
+    let targetElement = document.getElementById(id);
+    containerElement.innerHTML = '_';
 
-    con.innerHTML = '_';
-    target.setAttribute('style', 'color:' + colors[0]);
-
-    let conTId = window.setInterval(function () {
-
-        if (letterCount === 0 && waiting === false) {
-            waiting = true;
-            target.innerHTML = words[0].substring(0, letterCount);
-
-            window.setTimeout(function () {
-                let usedColor = colors.shift();
-                colors.push(usedColor);
-                let usedWord = words.shift();
-                words.push(usedWord);
-                x = 1;
-                target.setAttribute('style', 'color:' + colors[0]);
-                letterCount += x;
-                waiting = false;
-            }, 1000);
-
-        } else if (isCycle && letterCount === words[0].length + 1 && waiting === false) {
-            waiting = true;
-            window.setTimeout(function () {
-              x = -1;
-              letterCount += x;
-              waiting = false;
-            }, 1000);
-        } else if (waiting === false) {
-            let ih = words[0].substring(0, letterCount);
-            if (!isCycle && ih === words[0]) {
-                window.clearInterval(conTId);
-            } else {
-                target.innerHTML = words[0].substring(0, letterCount);
-                letterCount += x;
-            }
+    const deleteText = () => {
+        targetElement.innerHTML = targetElement.innerHTML.slice(0, -1)
+        if (targetElement.innerHTML.length > 0) {
+            setTimeout(deleteText, 200)
+        } else {
+            textIndex = 0
+            setTimeout(typeWriter, 200)
         }
+    }
+    const typeWriter = () => {
+        targetElement.innerHTML += words[textIndex++]
+        if (textIndex < words.length) {
+            setTimeout(typeWriter, 200)
+        } else if (isCycle) {
+            setTimeout(() => { deleteText() }, 1000)
+        }
+    }
 
-        callback && callback();
-    }, 180);
-
-    window.setInterval(function () {
-        if (visible === true) {
-            con.style.visibility = 'hidden';
+    window.setInterval(() => {
+        if (visible) {
+            containerElement.style.visibility = 'hidden';
             visible = false;
         } else {
-            con.style.visibility = 'visible';
+            containerElement.style.visibility = 'visible';
             visible = true;
         }
     }, 400);
+    setTimeout(typeWriter, 200);
 }
