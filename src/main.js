@@ -10,7 +10,6 @@ import defaultConfig from './components/config/config.json5';
 import status from './components/status/status';
 import tools from './utils/tools';
 import event from "./components/event/event";
-import loading from "./components/loading/loading";
 
 $(document).ready(function () {
 
@@ -21,8 +20,6 @@ $(document).ready(function () {
     $.__timeIds = {};  // 定时器
     $.__event = {};   // 事件
     $.__config.info.name ||= $.__status.user;
-    $.__loading = loading()
-    $.__loading.start()
     $.__tools.dynamicLoadingJs($.__config.default.moment).then(r => {
         import(/* webpackChunkName: "page-[request]" */ /* webpackPrefetch: true */ `./page/${$.__status.pageType}`).then(module => {
             const page = module.default;
@@ -48,7 +45,4 @@ $(document).ready(function () {
             });
         });
     }).catch(e => console.error('moment.js', e));
-    window.addEventListener('load', () => {
-        $.__loading.stop()
-    })
 })
