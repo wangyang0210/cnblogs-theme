@@ -34,6 +34,16 @@ button {
     -o-text-overflow: ellipsis;
 }
 
+img.sidebar-vip-logo {
+  height: 11px;
+  vertical-align: middle;
+  width: 11px;
+  position: absolute;
+  left: 76px;
+  top: 9px;
+}
+
+
 *,
 .Cal {
     padding: 0;

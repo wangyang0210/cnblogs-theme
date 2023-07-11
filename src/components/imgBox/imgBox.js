@@ -16,7 +16,7 @@ export default function main() {
 
         let cpb         = $('#cnblogs_post_body')
             ,imgList    = $(`#cnblogs_post_body img:lt(${imgLength})`)
-            ,comImgList = $('.feedbackItem img')
+            ,comImgList = $('.feedbackCon img')
             ,data       = [];
 
         $.each(imgList, function (i) {

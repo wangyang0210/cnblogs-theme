@@ -55,6 +55,7 @@ export default function main() {
         $.__timeIds.introduceTId = window.setInterval(() => {
             let introduceHtml = $('#profile_block').html(),
                 menuIntroduce = $('#introduce')
+            if($('#profile_block img')[0]) introduceHtml = introduceHtml.replace('<br>', '')
             if (typeof introduceHtml == 'string' && menuIntroduce.html() === '') {
                 menuIntroduce.html($.__tools.htmlFiltrationScript(introduceHtml))
                 $.__tools.clearIntervalTimeId($.__timeIds.introduceTId)
