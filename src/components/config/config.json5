@@ -520,7 +520,7 @@
     // -- 缺省配置 --
     default: {
         autoupdate: 'false',
-        version: 'v2.2.13',
+        version: 'v2.2.14',
         commentTyping: 'https://files.cnblogs.com/files/wangyang0210/commentTyping.js?t=1676464468',
         iconfont: 'https://at.alicdn.com/t/c/font_3628204_t6n3fw8b1zn.js',
         avatar: 'https://images.cnblogs.com/cnblogs_com/wangyang0210/1943283/o_221114123823_default_avatar.webp',
