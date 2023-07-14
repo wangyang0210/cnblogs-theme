@@ -59,18 +59,13 @@ img.sidebar-vip-logo {
 }
 
 ::-webkit-scrollbar {
-  height: 3px;
-  width: 3px;
+  height: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar:hover {
   width: 9px;
   height: 9px;
-}
-
-::-webkit-scrollbar-track {
-  width: 3px;
-  background-color: #f9f9f9;
 }
 
 ::-webkit-scrollbar-thumb {
