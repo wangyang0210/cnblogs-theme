@@ -65,6 +65,7 @@ img.sidebar-vip-logo {
 
 ::-webkit-scrollbar:hover {
   width: 9px;
+  height: 9px;
 }
 
 ::-webkit-scrollbar-track {
@@ -3373,7 +3374,7 @@ span.cnblogs_code,
 }
 
 pre {
-  padding: 10px;
+  padding: 10px 0px 0px 10px;
   white-space: pre;
   margin: 0;
   border-radius: 0 0 4px 4px !important;
