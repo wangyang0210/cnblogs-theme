@@ -16,6 +16,15 @@ export default function main() {
 
     if (header.length) {
         const tagList = header.map((index, element) => parseInt(element.tagName.replace(/H/g, ''))).get();
+        const uniqueTags = [...new Set(tagList)].sort();
+        const minLevel = Math.min(...uniqueTags);
+        
+        // 用于跟踪各级标题的编号
+        const counters = {};
+        uniqueTags.forEach(level => {
+            counters[level] = 0;
+        });
+        
         const html = header
             .map((index, element) => {
                 const obj = $(element);
@@ -32,9 +41,35 @@ export default function main() {
                     obj.attr('id', hid);
                 }
 
-                const num = [...new Set(tagList)].sort().indexOf(h);
+                const num = uniqueTags.indexOf(h);
                 const str = num === 0 || num === -1 ? '' : '&nbsp;&nbsp;&nbsp;&nbsp;'.repeat(num);
-                const text = str + obj.text().replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                
+                let numberPrefix = '';
+                if ($.__config.articleDirectory.number) {
+                    // 当前级别计数器加1
+                    counters[h]++;
+                    
+                    // 重置更低级别的计数器
+                    uniqueTags.forEach(level => {
+                        if (level > h) {
+                            counters[level] = 0;
+                        }
+                    });
+                    
+                    // 生成编号
+                    const numberParts = [];
+                    uniqueTags.forEach(level => {
+                        if (level <= h && counters[level] > 0) {
+                            numberParts.push(counters[level]);
+                        }
+                    });
+                    
+                    if (numberParts.length > 0) {
+                        numberPrefix = numberParts.join('.') + '. ';
+                    }
+                }
+                
+                const text = str + numberPrefix + obj.text().replace(/</g, '&lt;').replace(/>/g, '&gt;');
                 return `<li class="nav-item"><a class="nav-link" href="#${hid}" goto="${titleId}" onclick="return false;">${text}</a></li>`;
             })
             .get()

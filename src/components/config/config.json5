@@ -295,6 +295,7 @@
         position: 'right',
         minBodyWeight: 900,
         autoWidthScroll: false,
+        number: true, // 自动将列表编号添加到目录
     },
 
     // -- 控制台输出 --
