@@ -17,7 +17,6 @@ export default function main() {
     if (header.length) {
         const tagList = header.map((index, element) => parseInt(element.tagName.replace(/H/g, ''))).get();
         const uniqueTags = [...new Set(tagList)].sort();
-        const minLevel = Math.min(...uniqueTags);
         
         // 用于跟踪各级标题的编号
         const counters = {};
