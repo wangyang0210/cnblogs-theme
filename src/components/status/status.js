@@ -34,17 +34,7 @@ if (status.pageType === 'article') {
  * @returns {string} 页面类型
  */
 function getPageType(url, urlParts) {
-    // 检查是否有topics元素（文章页、分类页、标签页、档案页都有）
-    let topics = $('#topics').length;
-    
-    if (!topics) {
-        // 没有topics元素，判断为首页
-        return 'home';
-    }
-    
-    // 有topics元素，进一步判断页面类型
-    
-    // 检查特殊页面标识
+    // 检查特殊页面标识（优先级最高）
     if ($('#bookListFlg').length) {
         return 'books';
     }
@@ -74,13 +64,13 @@ function getPageType(url, urlParts) {
         return 'gallery';
     }
     
-    // 文章页: /p/文章ID
-    if (urlParts[4] === 'p' && urlParts[5] && !urlParts[5].includes('archive')) {
+    // 文章页: 只有文章页才有topics元素
+    if ($('#topics').length) {
         return 'article';
     }
     
-    // 默认返回文章页（兜底处理）
-    return 'article';
+    // 默认返回首页（当没有匹配到其他页面类型时）
+    return 'home';
 }
 
 export default status;
