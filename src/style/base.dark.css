@@ -171,7 +171,6 @@ div#rightMenu .rightMenuItem,
 #update .rightMenuSpan::before,
 #rightMenuSite .rightMenuSpan::before
 {
-    -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,.5), inset 0 0px 0 0 rgba(0,0,0,.5) !important;
     box-shadow: 0 1px 20px 0 rgba(0,0,0,.5), inset 0 0px 0 0 rgba(0,0,0,.5) !important;
 }
 

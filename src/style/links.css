@@ -89,11 +89,7 @@
     align-items: center;
     display: flex;
     border-radius: 6px;
-    -webkit-transform: rotate(360deg);
     animation: rotation 3s linear infinite;
-    -moz-animation: rotation 3s linear infinite;
-    -webkit-animation: rotation 3s linear infinite;
-    -o-animation: rotation 3s linear infinite;
     box-shadow: 0 1px 7px 2px #c7c9d3;
     transition: .3s ease;
 }
@@ -131,7 +127,7 @@
     font-size: 14px;
 }
 
-@-webkit-keyframes rotation {
-    from {-webkit-transform: rotate(0deg);}
-    to {-webkit-transform: rotate(360deg);}
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }

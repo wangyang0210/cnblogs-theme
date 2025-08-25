@@ -8,7 +8,7 @@
  */
 
 let status = {
-    url: window.location.href,
+    url: window.location.href.split('#')[0],
     user: '',
     pageType: '',
     articleId: '',
