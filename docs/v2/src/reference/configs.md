@@ -1218,6 +1218,21 @@ window.cnblogsConfig = {
 }
 ```
 
+### number - 文章目录标题编号
+
+* 类型：`Boolean`
+* 默认值：`false`
+
+文章目录中标题是否显示编号。
+
+```javascript
+window.cnblogsConfig = {
+    articleDirectory: {
+         number: false,
+    },
+}
+```
+
 ## articleContent - 文章内容
 
 ### commentBackground - 文章评论背景
