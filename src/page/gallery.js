@@ -60,8 +60,8 @@ export default function main() {
         
         // 动态加载Fancybox库用于图片预览
         if ($('[data-fancybox]').length > 0) {
-            $.__tools.dynamicLoadingCss($.__config.libraryLinks.fancyboxcss);
-            $.__tools.dynamicLoadingJs($.__config.libraryLinks.fancybox).then(() => {
+            $.__tools.dynamicLoadingCss($.__config.default.fancyboxcss);
+            $.__tools.dynamicLoadingJs($.__config.default.fancybox).then(() => {
                 // 初始化新版本 Fancybox
                 if (window.Fancybox) {
                     window.Fancybox.bind('[data-fancybox]', {

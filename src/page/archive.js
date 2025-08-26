@@ -54,7 +54,8 @@ export default function main() {
             
             if (postData) {
                 let { date, vnum, cnum, tnum } = postData;
-                
+                // TODO 没有正常显示
+                //  需要增加文章的归档页面
                 let metaHtml = `
                     <div class="postMeta">
                         <i class="iconfont icon-schedule"></i>发表于 ${date}

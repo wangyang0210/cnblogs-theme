@@ -39,6 +39,29 @@ export default function main() {
                     tem.remove();
                 }
             });
+            
+            // 初始化 Fancybox
+            setTimeout(() => {
+                if (window.Fancybox) {
+                    window.Fancybox.bind('[data-fancybox="gallery"]', {
+                        Toolbar: {
+                            display: {
+                                left: ["counter"],
+                                middle: [
+                                    "zoomIn",
+                                    "zoomOut",
+                                    "toggle1to1",
+                                    "rotateCCW",
+                                    "rotateCW",
+                                    "flipX",
+                                    "flipY",
+                                ],
+                                right: ["slideshow", "thumbs", "close"],
+                            },
+                        },
+                    });
+                }
+            }, 100);
         }
     }, 800);
 }
