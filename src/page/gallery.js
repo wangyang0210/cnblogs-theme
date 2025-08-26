@@ -22,10 +22,7 @@ export default function main() {
      * 设置相册页标题
      */
     (() => {
-        // 从相册页面的HTML结构中提取相册标题
-        let sbTitle = $('.entrylistTitle').text().trim() || 
-                     $('title').text().replace(' - 博客园', '').trim() || 
-                     '相册';
+        let sbTitle = $('.thumbTitle').text().trim() || '相册';
         
         if ($.__config.animate.articleTitle.enable) {
             consoleText([sbTitle], 'sbTitleText', 'sbTitleConsole', ['#fff'], false, $.__tools.setDomHomePosition);
@@ -39,14 +36,17 @@ export default function main() {
      */
     (() => {
         // 为相册图片添加点击放大效果
-        $('.gallery_image img, .entrylistPosttitle img').each(function() {
+        $('.gallery_image img, .entrylistPosttitle img, .divPhoto img, .ThumbNail img').each(function() {
             let $img = $(this);
             let src = $img.attr('src');
             
             if (src) {
-                // 包装图片为可点击的链接
+                // 将缩略图URL转换为原图URL（将't_'替换为'o_'）
+                let originalSrc = src.replace(/\/t_/g, '/o_');
+                
+                // 包装图片为可点击的链接，使用原图URL
                 if (!$img.parent('a[data-fancybox]').length) {
-                    $img.wrap(`<a data-fancybox="gallery" href="${src}"></a>`);
+                    $img.wrap(`<a data-fancybox="gallery" href="${originalSrc}"></a>`);
                 }
                 
                 // 添加图片加载效果
